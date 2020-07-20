@@ -1,12 +1,12 @@
-### 2020-1-CECD3-Generator-8
+# 2020-1-CECD3-Generator-8
 
-# Environment
+## Environment
 Checking python3 version
 ```
 python3 --version
 ```
 Python 3.6.9
-
+  
 Activating virtual environment
 ```
 source venv/bin/activate/
@@ -18,8 +18,8 @@ deactivate
 
 Running web server
 ```
-python manage.py runserver
+(venv) python manage.py runserver
 ```
 
-# Reference
+## Reference
 Tutorial from https://tutorial.djangogirls.org/ko/installation/
