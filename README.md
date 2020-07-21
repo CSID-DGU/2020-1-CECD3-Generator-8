@@ -29,6 +29,6 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 ```
 
 ## Reference
-Django Tutorial from https://tutorial.djangogirls.org/ko/installation/
-Sensor API docs https://documenter.getpostman.com/view/527712/SW14WcyW?version=latest#9b1079ca-8760-457f-8e38-bb8f6b8ef6ad
+Django Tutorial from https://tutorial.djangogirls.org/ko/installation/   
+Sensor API docs https://documenter.getpostman.com/view/527712/SW14WcyW?version=latest#9b1079ca-8760-457f-8e38-bb8f6b8ef6ad   
 django_table2 docs https://django-tables2.readthedocs.io/en/latest/
