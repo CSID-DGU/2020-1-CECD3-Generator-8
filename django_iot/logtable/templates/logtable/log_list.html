@@ -4,7 +4,11 @@
     </head>
     <body>
         <div>
-            <h1>Insert sensor table here</h1>
+            <h1>Title</h1>
+        </div>
+        <div>
+            {% load django_tables2 %} 
+            {% render_table table %}
         </div>
     </body>
 </html>
