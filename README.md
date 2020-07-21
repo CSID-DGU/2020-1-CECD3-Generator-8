@@ -1,6 +1,6 @@
 # 2020-1-CECD3-Generator-8
 
-## Environment
+## Useful Commands
  Checking python3 version
  ```
  python3 --version
@@ -20,6 +20,22 @@
  Running web server (default: http://127.0.0.1:8000)
  ```
  (myvenv) python manage.py runserver
+ ```
+ ***
+ Collecting static files
+ ```
+ (myvenv) python manage.py collectstatic
+ ```
+ ***
+ Running django shell
+ ```
+ (myvenv) python manage.py shell
+ ```
+ ***
+ After update models.py (Migrating to database)
+ ```
+ (myvenv) python manage.py makemigrations [APP_NAME]
+ (myvenv) python manage.py migrate [APP_NAME]
  ```
 
 ## Sensor API
