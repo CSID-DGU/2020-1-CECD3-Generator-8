@@ -10,6 +10,7 @@
  Activating / Deactivating virtual environment: 장고 프로그램은 항상 가상 환경 위에서 실행되어야 함 (각종 모듈도 가상 환경에만 설치하였음)
    > Activating
    > ```
+   > cd django_iot
    > source myvenv/bin/activate
    > ```
    > Deactivating
