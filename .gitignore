@@ -1,3 +1,8 @@
+# virtual environment files
 venv/
+
+# vscode cache files
 .vscode/
+
+# django python cache files
 __pycache__/
