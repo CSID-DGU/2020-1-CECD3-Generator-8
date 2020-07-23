@@ -73,7 +73,6 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 ## Demo
 ### Main Page
 ![Alt test](/res/main_page.png)
-![Alt test](/res/main_page.png)
 테이블 안의 내용은 임의로 집어넣은 것
 
 ## To-Do List
