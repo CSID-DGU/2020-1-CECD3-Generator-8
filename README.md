@@ -28,7 +28,7 @@ source venv/bin/activate # Activate venv
 ```
 
 ## 2. Useful Commands
- Activating / Deactivating virtual environment
+ Activating / Deactivating virtual environment: 장고 프로그램은 항상 가상 환경 위에서 실행되어야 함 (각종 모듈도 가상 환경에만 설치하였음)
    > Activating
    > ```
    > source venv/bin/activate
@@ -43,12 +43,12 @@ source venv/bin/activate # Activate venv
  (venv) python manage.py runserver
  ```
  ***
- Collecting static files
+ Collecting static files: CSS, 이미지 파일 등 장고에 쓰이는 정적 파일들을 불러오는 명령어
  ```
  (venv) python manage.py collectstatic
  ```
  ***
- Running django shell
+ Running django shell: 장고 쉘 실행
  ```
  (venv) python manage.py shell
  ```
@@ -73,3 +73,10 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 ## Demo
 ### Main Page
 ![Alt test](/res/main_page.png)
+![Alt test](/res/main_page.png)
+테이블 안의 내용은 임의로 집어넣은 것
+
+## To-Do List
+* 메인 화면에 띄울 빌딩 트리구조 구축할 데이터베이스 모델링, 웹 페이지에 올리는 방법 고민
+* 메인 화면에 현재 시각 띄울 것
+* 메인 화면에 5개의 메뉴 띄울 것
