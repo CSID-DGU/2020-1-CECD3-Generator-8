@@ -1,6 +1,6 @@
 # 2020-1-CECD3-Generator-8
 
-## 1. Installation (Linux)
+## 1. Installation
 ### 1.1. Django project
 #### 1. Check python3 version
 ```
@@ -9,9 +9,15 @@ python3 --version
 *Python 3.6.9* or later
 ***
 #### 2. Make a virtual environment
+Linux
 ```
 cd djagno_iot
 python3 -m venv venv # Make a virtual environment named 'venv'
+```
+Windows
+```
+cd djagno_iot
+python -m venv .\venv
 ```
 ***
 #### 3. Check venv's default python version
@@ -30,9 +36,14 @@ source venv/bin/activate # Activate venv
 ## 2. Useful Commands
  Activating / Deactivating virtual environment: 장고 프로그램은 항상 가상 환경 위에서 실행되어야 함 (각종 모듈도 가상 환경에만 설치하였음)
    > Activating
-   > ```
-   > source venv/bin/activate
-   > ```
+   >  > Linux
+   >  >```
+   >  >source venv/bin/activate
+   >  >```
+   >  > Windows (cmd)
+   >  >```
+   >  >venv\Scripts\activate.bat
+   >  >```
    > Deactivating
    > ```
    > (venv) deactivate
