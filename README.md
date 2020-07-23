@@ -69,6 +69,12 @@ source venv/bin/activate # Activate venv
  (venv) python manage.py makemigrations [APP_NAME]
  (venv) python manage.py migrate [APP_NAME]
  ```
+***
+Updating requirements.txt: 패키지를 추가하거나 삭제 등 수정이 이루어지면, 업데이트 할 것
+```
+(venv) pip freeze > requirements.txt
+```
+***
 
 ## Sensor API
 command getting each sensor's values by curl
