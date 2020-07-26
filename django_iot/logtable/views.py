@@ -7,3 +7,8 @@ def log_list(request):
     logs = Log.objects.all() # get all logs
     table = LogTable(logs) # make a table by logs
     return render(request, 'logtable/log_list.html', {'table':table}) # render table
+
+def dashboard(request):
+    logs = Log.objects.all() # get all logs
+    table = LogTable(logs) # make a table by logs
+    return render(request, 'logtable/dashboard.html', {'table':table}) # render table
