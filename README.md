@@ -94,5 +94,4 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 
 ## To-Do List
 * 메인 화면에 띄울 빌딩 트리구조 구축할 데이터베이스 모델링, 웹 페이지에 올리는 방법 고민
-* 메인 화면에 현재 시각 띄울 것
 * 메인 화면에 5개의 메뉴 띄울 것
