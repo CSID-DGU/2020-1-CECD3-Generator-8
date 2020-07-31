@@ -23,24 +23,24 @@ class Sensor(models.Model):
         ('RD','Radar'),
         ('RF','RF')
     )
-    sensor_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable = False)
-    sensor_type = models.CharField(max_length=2, choices = TYPE_CHOICES)
-    sensor_status = models.ForeignKey('Log',on_delete=models.CASCADE)
-    level_id = models.ForeignKey('Level', on_delete=models.CASCADE)
-    #position = models.CommaSeparatedIntegerField(max_length=10)
-
-class Log(models.Model): # Model for Logs displayed in main page.
     STATUS_CHOICES = (
         ('OP', 'Operational'),
         ('TE', 'Temporary Error'),
         ('BR', 'Broken'),
         ('ND', 'Not Defined')
     ) # Has 4 sensor status choices
-    sensor_name = models.CharField(max_length=10, db_index=True, primary_key=True)
+    sensor_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable = False)
+    sensor_type = models.CharField(max_length=2, choices = TYPE_CHOICES)
+    sensor_status=models.CharField(max_length=2, choices=STATUS_CHOICES, default='ND')
+    level_id = models.ForeignKey('Level', on_delete=models.CASCADE)
+    #position = models.CommaSeparatedIntegerField(max_length=10)
+
+# class recent_Log(Log):
+#     pass
+
+class Log(models.Model): # Model for Logs displayed in main page.
+    log_id = models.AutoField(primary_key=True)
+    sensor_name = models.CharField(max_length=10, db_index=True )
     updated_time = models.DateTimeField(default=timezone.now)
     sensor_id = models.ForeignKey('Sensor',on_delete=models.CASCADE)
-    status=models.CharField(
-        max_length=2,
-        choices=STATUS_CHOICES,
-        default='ND'
-    )
+    
