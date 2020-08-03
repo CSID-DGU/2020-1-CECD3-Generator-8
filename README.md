@@ -21,8 +21,15 @@ python -m venv .\venv
 ```
 ***
 #### 3. Check venv's default python version
+Linux
 ```
 source venv/bin/activate # Activate venv
+```
+Windows (cmd)
+```
+venv\Scripts\activate.bat
+```
+```
 (venv) python --version
 ```
 *Python 3.6.9* or later
@@ -78,6 +85,11 @@ Updating requirements.txt: 패키지를 추가하거나 삭제 등 수정이 이
 Get Log model's data in json: curl을 사용하여 Log의 데이터를 json 형식으로 가져오기
 ```
 curl -X GET http://127.0.0.1:8000/json
+```
+***
+Creating admin account: 어드민 페이지에 사용할 계정 새로 생성
+```
+(venv) python manage.py createsuperuser
 ```
 ***
 
