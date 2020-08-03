@@ -75,6 +75,11 @@ Updating requirements.txt: 패키지를 추가하거나 삭제 등 수정이 이
 (venv) pip freeze > requirements.txt
 ```
 ***
+Creating admin account: 어드민 페이지에 사용할 계정 새로 생성
+```
+(venv) python manage.py createsuperuser
+```
+***
 
 ## Sensor API
 command getting each sensor's values by curl
