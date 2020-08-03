@@ -18,7 +18,7 @@ class Building(models.Model): # Model for Building list displayed in main page.
     # Methods
     #basic methods
     def __str__(self):
-        return self.field_name
+        return self.building_name
     
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
@@ -33,12 +33,12 @@ class Level(models.Model): # Model for  floor of Buildings list diplayed in main
     building_id = models.ForeignKey('Building', on_delete=models.CASCADE,default = uuid.uuid4) # Foreign key. Building ID that floor is placed at(?). 
     # Metadata
     class Meta : 
-        ordering = ['level_id']
+        ordering = ['level_num']
     # Methods
     
     #basic methods
     def __str__(self):
-        return self.field_name
+        return str(self.level_num)
     
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
@@ -59,9 +59,10 @@ class Sensor(models.Model): # Model for IoT devices.
         ('BR', 'Broken'),
         ('ND', 'Not Defined')
     ) # Has 4 sensor status choices
-    sensor_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable = False) #Unique IoT device identifier
+    sensor_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable = False, unique = True) #Unique IoT device identifier
+    sensor_name = models.CharField(max_length=10, db_index=True , unique=True, null=True) #
     sensor_type = models.CharField(max_length=2, choices = TYPE_CHOICES) # Type of IoT device
-    sensor_status=models.CharField(max_length=2, choices=STATUS_CHOICES, default='ND', unique = True) # status that analyzed by data analyzing module.
+    sensor_status=models.CharField(max_length=2, choices=STATUS_CHOICES, default='ND') # status that analyzed by data analyzing module.
     level_id = models.ForeignKey('Level', on_delete=models.CASCADE) # Foreign key. Level ID that IoT Sensor is placed at(?)
     #position = models.CommaSeparatedIntegerField(max_length=10) # Absolute position of IoT device in the blueprint of level.
     
@@ -72,7 +73,7 @@ class Sensor(models.Model): # Model for IoT devices.
     # Methods
     #basic methods
     def __str__(self):
-        return self.field_name
+        return self.sensor_name
     
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
@@ -81,11 +82,17 @@ class Sensor(models.Model): # Model for IoT devices.
 
 class Log(models.Model): # Model for Logs displayed in main page.
     # Fields
+    STATUS_CHOICES = (
+        ('OP', 'Operational'),
+        ('TE', 'Temporary Error'),
+        ('BR', 'Broken'),
+        ('ND', 'Not Defined')
+    ) # Has 4 sensor status choices
     log_id = models.AutoField(primary_key=True) # Unique log identifier
-    sensor_name = models.CharField(max_length=10, db_index=True ) #
+    name = models.ForeignKey('Sensor',on_delete=models.CASCADE, to_field='sensor_name', null=True, related_name='name')
     updated_time = models.DateTimeField(default=timezone.now)
     sensor_id = models.ForeignKey('Sensor',on_delete=models.CASCADE, to_field='sensor_id', default= uuid.uuid4 )
-    status = models.ForeignKey('Sensor', on_delete=models.CASCADE, to_field='sensor_status', related_name='status', default='ND')
+    status = models.CharField(max_length=2, choices=STATUS_CHOICES, default='ND') # status that analyzed by data analyzing module.
     
     # Metadata
     class Meta : 
@@ -94,7 +101,7 @@ class Log(models.Model): # Model for Logs displayed in main page.
     # Methods
     #basic methods
     def __str__(self):
-        return self.field_name
+        return str(self.name)
     
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
