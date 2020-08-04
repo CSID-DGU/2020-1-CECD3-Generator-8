@@ -103,6 +103,7 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 [Django Tutorial](https://tutorial.djangogirls.org/ko/installation/)   
 [Sensor API Docs](https://documenter.getpostman.com/view/527712/SW14WcyW?version=latest#9b1079ca-8760-457f-8e38-bb8f6b8ef6ad)   
 [django_table2 Docs](https://django-tables2.readthedocs.io/en/latest/)
+[Django DB_View_Model Docs](https://books.agiliq.com/projects/django-orm-cookbook/en/latest/database_view.html)
 
 ## Demo
 ### Main Page
