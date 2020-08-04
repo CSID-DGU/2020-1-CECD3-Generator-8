@@ -10,10 +10,10 @@ headers = {
 
 response = requests.request("GET", url, headers=headers, data = payload)
 
-writeFile = open('/home/woojoo527/2020-1-CECD3-Generator-8/test.json','w')
+writeFile = open('test.json','w')
 writeFile.write(response.text)
 
-with open('/home/woojoo527/2020-1-CECD3-Generator-8/test.json','r') as f:
+with open('test.json','r') as f:
     json_data = json.load(f)
 
 my_code = json_data['result']
@@ -24,6 +24,8 @@ for i in my_code:
         seq = i['DEVICE_SEQ']
         send_time = i['DEVICE_DATA_REG_DTM']
         smodel = i['DEVICE_MODEL']
+
+        #print 
         print("디바이스 모델명 : " + smodel)
         print("디바이스 코드 : " + scode)
         print("디바이스 일련번호 : " + str(seq))
