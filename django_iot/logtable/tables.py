@@ -1,9 +1,9 @@
 import django_tables2 as tables
-from .models import Log
+from .models import LogView
 
 class LogTable(tables.Table):
     class Meta:
-        model = Log
+        model = LogView
         template_name = "django_tables2/bootstrap.html"
 
 """
