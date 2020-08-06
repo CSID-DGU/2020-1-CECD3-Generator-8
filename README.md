@@ -29,6 +29,7 @@ Windows (cmd)
 ```
 venv\Scripts\activate.bat
 ```
+***
 ```
 (venv) python --version
 ```
