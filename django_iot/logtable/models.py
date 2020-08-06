@@ -1,131 +1,124 @@
 from django.conf import settings
 from django.db import models
-from django_db_views.db_view import DBView
 from django.utils import timezone
 import uuid
 
 
 # Create your models here.
 
-class Building(models.Model): # Model for Building list displayed in main page.
+# Model for Building list displayed in main page.
+class Building(models.Model):
     # Fields
-    building_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable = False) #Unique Building identifier.
-    building_name = models.CharField(max_length=15) # Name of Building.
-    levels = models.IntegerField() #Number of floors in the building.
+    building_name = models.CharField(max_length=15)  # Name of Building.
+    levels = models.IntegerField()  # Number of floors in the building.
     # Metadata
-    class Meta : 
-        ordering = ['building_id']
+
+    class Meta:
+        #ordering = ['building_id']
+        ordering = ['building_name']
 
     # Methods
-    #basic methods
+    # basic methods
     def __str__(self):
         return self.building_name
-    
+
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])
 
 
-class Level(models.Model): # Model for  floor of Buildings list diplayed in main mage. 
+# Model for  floor of Buildings list diplayed in main mage.
+class Level(models.Model):
     # Fields
-    level_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable = False) # Unique Level identifier
-    level_num = models.IntegerField() #Number of floor(level).
-    img_file_path = models.CharField(max_length=200) #Path of blueprint image of the floor.
-    building_id = models.ForeignKey('Building', on_delete=models.CASCADE,default = uuid.uuid4) # Foreign key. Building ID that floor is placed at(?). 
+    level_num = models.IntegerField()  # Number of floor(level).
+    # Path of blueprint image of the floor.
+    img_file_path = models.CharField(max_length=200)
+    # Foreign key. Building ID that floor is placed at(?).
+    building_id = models.ForeignKey(
+        'Building', on_delete=models.CASCADE, default=uuid.uuid4)
     # Metadata
-    class Meta : 
+
+    class Meta:
         ordering = ['level_num']
     # Methods
-    
-    #basic methods
+
+    # basic methods
     def __str__(self):
         return str(self.level_num)
-    
+
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])
 
 
-
-class Sensor(models.Model): # Model for IoT devices.
+class Sensor(models.Model):  # Model for IoT devices.
     # Fields
     TYPE_CHOICES = (
-        ('IG','Intergration'),
-        ('RD','Radar'),
-        ('RF','RF')
-    ) # Type of IoT devices
+        ('IG', 'Intergration'),
+        ('RD', 'Radar'),
+        ('RF', 'RF')
+    )  # Type of IoT devices
     STATUS_CHOICES = (
         ('OP', 'Operational'),
         ('TE', 'Temporary Error'),
         ('BR', 'Broken'),
         ('ND', 'Not Defined')
-    ) # Has 4 sensor status choices
-    #sensor_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable = False, unique = True) #Unique IoT device identifier
-    sensor_code = models.CharField(max_length=10, primary_key=True, editable=False, unique = True, default="DGU") # Unique IoT device identifier
-    sensor_name = models.CharField(max_length=10, db_index=True, null=True, ) #
-    sensor_type = models.CharField(max_length=2, choices = TYPE_CHOICES) # Type of IoT device
-    sensor_status=models.CharField(max_length=2, choices=STATUS_CHOICES, default='ND') # status that analyzed by data analyzing module.
-    level_id = models.ForeignKey('Level', on_delete=models.CASCADE) # Foreign key. Level ID that IoT Sensor is placed at(?)
-    #position = models.CommaSeparatedIntegerField(max_length=10) # Absolute position of IoT device in the blueprint of level.
-    
+    )  # Has 4 sensor status choices
+    sensor_code = models.CharField(max_length=10, unique=True, default="DGU")
+    sensor_name = models.CharField(
+        max_length=10, db_index=True, null=True)
+    sensor_type = models.CharField(
+        max_length=2, choices=TYPE_CHOICES)  # Type of IoT device
+    # status that analyzed by data analyzing module.
+    sensor_status = models.CharField(
+        max_length=2, choices=STATUS_CHOICES, default='ND')
+    # Foreign key. Level ID that IoT Sensor is placed at(?)
+    level = models.ForeignKey('Level', on_delete=models.CASCADE)
+    # position = models.CommaSeparatedIntegerField(max_length=10) # Absolute position of IoT device in the blueprint of level.
+
     # Metadata
-    class Meta : 
+    class Meta:
+        #ordering = ['sensor_id']
         ordering = ['sensor_code']
-    
+
     # Methods
-    #basic methods
+    # basic methods
     def __str__(self):
         return self.sensor_code
-    
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])
 
 
 class Log(models.Model): # Model for Logs.
-    log_id = models.AutoField(primary_key=True) # Unique log identifier
-    sensor = models.ForeignKey('Sensor', on_delete=models.CASCADE, to_field='sensor_code', null=True, related_name='sensor')
+    sensor = models.ForeignKey('Sensor', on_delete=models.CASCADE, related_name='sensor')
     updated_time = models.DateTimeField(default=timezone.now)
     
     # Metadata
-    class Meta : 
-        ordering = ['-log_id']
-    
+    class Meta:
+        ordering = ['-id']
+
     # Methods
-    #basic methods
+    # basic methods
     def __str__(self):
         # Ex) DGU0012: 2020-08-04 15:38:47
-        return str(self.sensor) + ": " + str(updated_time)
+        return str(self.sensor.sensor_code) + ": " + str(self.updated_time)
+
+    def get_sensor_code(self):
+        return str(self.sensor.sensor_code)
+
+    def get_sensor_name(self):
+        return str(self.sensor.sensor_name)
+
+    def get_sensor_type(self):
+        return str(self.sensor.sensor_type)
+
+    def get_sensor_status(self):
+        return str(self.sensor.sensor_status)
     
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])
-
-class LogView(DBView): # Views for Logs displayed in main page.
-    log = models.ForeignKey(
-        Log,
-        on_delete="DO_NOTHING",
-        related_name='view_log'
-    )
-    sensor = models.ForeignKey(
-        Sensor,
-        on_delete="DO_NOTHING",
-        related_name='view_sensor'
-    )
-
-    view_definition = """
-        SELECT
-        row_number() over () as id,
-        sensor.sensor_name as Name,
-        sensor.sensor_code as Code,
-        log.updated_time as Updated_Time
-        FROM Log LEFT JOIN Sensor
-        ON sensor.sensor_code = log.sensor_id
-    """
-    class Meta:
-        managed=False
-        db_table = "LogView"
-
 
     """
     값 넣는 방법 :

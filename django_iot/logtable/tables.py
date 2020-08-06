@@ -1,25 +1,13 @@
 import django_tables2 as tables
-from .models import LogView
+from .models import Log
 
 class LogTable(tables.Table):
-    class Meta:
-        model = LogView
-        template_name = "django_tables2/bootstrap.html"
+    sensor_code_column = tables.Column(accessor='get_sensor_code', verbose_name='Sensor Code')
+    sensor_name_column = tables.Column(accessor='get_sensor_name', verbose_name='Sensor Name')
+    sensor_type_column = tables.Column(accessor='get_sensor_type', verbose_name='Sensor Type')
+    sensor_status_column = tables.Column(accessor='get_sensor_status', verbose_name='Status')
 
-"""
-class Log(models.Model): # Model for Logs displayed in main page.
-    STATUS_CHOICES = (
-        ('OP', 'Operational'),
-        ('TE', 'Temporary Error'),
-        ('BR', 'Broken'),
-        ('ND', 'Not Defined')
-    ) # Has 4 sensor status choices
-    sensor_name = models.CharField(max_length=10, db_index=True, primary_key=True)
-    updated_time = models.DateTimeField(default=timezone.now)
-    sensor_id = models.ForeignKey('Sensor',on_delete=models.CASCADE)
-    status=models.CharField(
-        max_length=2,
-        choices=STATUS_CHOICES,
-        default='ND'
-    )
-"""
+    class Meta:
+        fields = ['id', 'sensor_code_column', 'sensor_name_column', 'sensor_type_column','updated_time', 'sensor_status_column']
+        model = Log
+        template_name = "django_tables2/bootstrap.html"
