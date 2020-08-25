@@ -93,7 +93,9 @@ Creating admin account: 어드민 페이지에 사용할 계정 새로 생성
 ```
 ***
 Collecting logs and saving them into db: API 이용해서 json으로 긁어와 DB에 저장
-`(venv) python manage.py autocollect'
+```
+(venv) python manage.py autocollect
+```
 ***
 
 ## Sensor API
