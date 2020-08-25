@@ -9,3 +9,6 @@ __pycache__/
 
 # test.json file (센서로부터 값을 가져올 때 사용)
 test.json
+
+# migrations file
+migrations/
