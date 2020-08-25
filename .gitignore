@@ -12,3 +12,6 @@ test.json
 
 # migrations file
 migrations/
+
+# database file (자주 바뀌어서 현재 레포지에 올라간 데이터베이스를 기본으로 삼고, 더 이상의 수정사항은 올리지 않음)
+MYdatabase.sqlite3
