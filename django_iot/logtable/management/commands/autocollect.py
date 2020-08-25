@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 def run():
-    print('run() called')
+    #print('run() called')
     url = "http://115.68.37.90/api/logs/latest"
     payload = {}
     headers = {
@@ -25,7 +25,7 @@ def run():
 
     with open('result.json', 'r') as f:
         # result.json을 f로 하여 열고 json_data에 json파일 내용을 로드함
-        print('Opening result.json')
+        #print('Opening result.json')
         json_data = json.load(f)
 
     # json파일 내에 result에 있는 IoT 센서 정보를 IoTDevices 배열에 저장
