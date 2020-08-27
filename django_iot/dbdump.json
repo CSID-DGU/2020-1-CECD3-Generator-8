@@ -1,0 +1,1752 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "logtable",
+        "model": "building"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "logtable",
+        "model": "level"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "logtable",
+        "model": "sensor"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "logtable",
+        "model": "log"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "eukrujwp35ps9vvhey4x0lgrgvw5n8do",
+    "fields": {
+        "session_data": "MDg3MzNkYjFiNTg2OTJkMWZjNmZiZmFkNmI4MjFlYWYyNjI5YTI3MDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwNDRhYWUzOWIwZjYxNTIwZTY1ODhjMmNmZjBmOWI4OTQwOTJkNjI1In0=",
+        "expire_date": "2020-09-08T06:33:45.136Z"
+    }
+},
+{
+    "model": "logtable.building",
+    "pk": 2,
+    "fields": {
+        "building_name": "\uc2e0\uacf5\ud559\uad00",
+        "levels": 10
+    }
+},
+{
+    "model": "logtable.building",
+    "pk": 3,
+    "fields": {
+        "building_name": "N/A",
+        "levels": 0
+    }
+},
+{
+    "model": "logtable.level",
+    "pk": 3,
+    "fields": {
+        "level_num": "1",
+        "img_file_path": "/res/singong/lvl1",
+        "building_id": 2
+    }
+},
+{
+    "model": "logtable.level",
+    "pk": 4,
+    "fields": {
+        "level_num": "2",
+        "img_file_path": "/res/singong/lvl2",
+        "building_id": 2
+    }
+},
+{
+    "model": "logtable.level",
+    "pk": 5,
+    "fields": {
+        "level_num": "Unknown",
+        "img_file_path": "N/A",
+        "building_id": 3
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 3,
+    "fields": {
+        "sensor_code": "DGU0001",
+        "sensor_name": "SME20",
+        "sensor_type": "IG",
+        "sensor_status": "ND",
+        "level": 3
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 4,
+    "fields": {
+        "sensor_code": "DGU0002",
+        "sensor_name": "SME20",
+        "sensor_type": "IG",
+        "sensor_status": "ND",
+        "level": 4
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 5,
+    "fields": {
+        "sensor_code": "DGU0006",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 6,
+    "fields": {
+        "sensor_code": "DGU0004",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 7,
+    "fields": {
+        "sensor_code": "DGU0005",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 8,
+    "fields": {
+        "sensor_code": "DGU0003",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 9,
+    "fields": {
+        "sensor_code": "DGU0020",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 10,
+    "fields": {
+        "sensor_code": "DGU0008",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 11,
+    "fields": {
+        "sensor_code": "DGU0009",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 12,
+    "fields": {
+        "sensor_code": "DGU0010",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 13,
+    "fields": {
+        "sensor_code": "DGU0011",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 14,
+    "fields": {
+        "sensor_code": "DGU0012",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 15,
+    "fields": {
+        "sensor_code": "DGU0007",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 16,
+    "fields": {
+        "sensor_code": "DGU0013",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 17,
+    "fields": {
+        "sensor_code": "DGU0014",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 18,
+    "fields": {
+        "sensor_code": "DGU0015",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 19,
+    "fields": {
+        "sensor_code": "DGU0016",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 20,
+    "fields": {
+        "sensor_code": "DGU0017",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 21,
+    "fields": {
+        "sensor_code": "DGU0018",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 22,
+    "fields": {
+        "sensor_code": "DGU0021",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 23,
+    "fields": {
+        "sensor_code": "DGU0024",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 24,
+    "fields": {
+        "sensor_code": "DGU0025",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 25,
+    "fields": {
+        "sensor_code": "DGU0022",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 26,
+    "fields": {
+        "sensor_code": "DGU0026",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 27,
+    "fields": {
+        "sensor_code": "DGU0023",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 28,
+    "fields": {
+        "sensor_code": "DGU0019",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 29,
+    "fields": {
+        "sensor_code": "DGU0027",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 30,
+    "fields": {
+        "sensor_code": "DGU0028",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 31,
+    "fields": {
+        "sensor_code": "DGU0029",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 32,
+    "fields": {
+        "sensor_code": "DGU0030",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 33,
+    "fields": {
+        "sensor_code": "DGU0031",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 34,
+    "fields": {
+        "sensor_code": "DGU0032",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 35,
+    "fields": {
+        "sensor_code": "DGU0033",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 36,
+    "fields": {
+        "sensor_code": "DGU0034",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 37,
+    "fields": {
+        "sensor_code": "DGU0035",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 38,
+    "fields": {
+        "sensor_code": "DGU0036",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 39,
+    "fields": {
+        "sensor_code": "DGU0049",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 40,
+    "fields": {
+        "sensor_code": "DGU0050",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 41,
+    "fields": {
+        "sensor_code": "DGU0047",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 42,
+    "fields": {
+        "sensor_code": "DGU0048",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 43,
+    "fields": {
+        "sensor_code": "DGU0037",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 44,
+    "fields": {
+        "sensor_code": "DGU0038",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 45,
+    "fields": {
+        "sensor_code": "DGU0039",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 46,
+    "fields": {
+        "sensor_code": "DGU0041",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 47,
+    "fields": {
+        "sensor_code": "DGU0042",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 48,
+    "fields": {
+        "sensor_code": "DGU0044",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 49,
+    "fields": {
+        "sensor_code": "DGU0045",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 50,
+    "fields": {
+        "sensor_code": "DGU0043",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 51,
+    "fields": {
+        "sensor_code": "DGU0046",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.sensor",
+    "pk": 52,
+    "fields": {
+        "sensor_code": "DGU0040",
+        "sensor_name": "Unknown",
+        "sensor_type": "UK",
+        "sensor_status": "ND",
+        "level": 5
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 3,
+    "fields": {
+        "sensor": 3,
+        "updated_time": "2020-08-25T06:40:50Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 4,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-08-25T06:40:55Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 5,
+    "fields": {
+        "sensor": 5,
+        "updated_time": "2019-12-13T12:07:33Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 6,
+    "fields": {
+        "sensor": 3,
+        "updated_time": "2019-12-11T19:50:20Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 7,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-06-02T16:43:04Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 8,
+    "fields": {
+        "sensor": 6,
+        "updated_time": "2020-08-25T07:12:38Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 9,
+    "fields": {
+        "sensor": 7,
+        "updated_time": "2019-12-24T04:07:35Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 10,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2019-12-20T07:21:14Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 11,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2019-11-15T05:20:12Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 12,
+    "fields": {
+        "sensor": 10,
+        "updated_time": "2020-08-25T07:10:51Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 13,
+    "fields": {
+        "sensor": 11,
+        "updated_time": "2020-08-25T07:12:14Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 14,
+    "fields": {
+        "sensor": 12,
+        "updated_time": "2020-06-26T10:53:53Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 15,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-01-09T05:44:27Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 16,
+    "fields": {
+        "sensor": 14,
+        "updated_time": "2020-08-25T07:12:15Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 17,
+    "fields": {
+        "sensor": 15,
+        "updated_time": "2020-08-25T07:10:29Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 18,
+    "fields": {
+        "sensor": 16,
+        "updated_time": "2019-11-15T05:06:23Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 19,
+    "fields": {
+        "sensor": 17,
+        "updated_time": "2019-12-11T08:54:27Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 20,
+    "fields": {
+        "sensor": 18,
+        "updated_time": "2020-06-03T13:10:21Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 21,
+    "fields": {
+        "sensor": 19,
+        "updated_time": "2019-12-11T16:46:02Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 22,
+    "fields": {
+        "sensor": 20,
+        "updated_time": "2020-06-12T05:17:26Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 23,
+    "fields": {
+        "sensor": 21,
+        "updated_time": "2020-06-30T10:28:00Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 24,
+    "fields": {
+        "sensor": 22,
+        "updated_time": "2019-11-15T05:20:19Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 25,
+    "fields": {
+        "sensor": 23,
+        "updated_time": "2019-11-15T05:24:16Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 26,
+    "fields": {
+        "sensor": 24,
+        "updated_time": "2019-11-15T05:24:17Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 27,
+    "fields": {
+        "sensor": 25,
+        "updated_time": "2019-11-15T05:24:16Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 28,
+    "fields": {
+        "sensor": 26,
+        "updated_time": "2019-11-15T05:24:17Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 29,
+    "fields": {
+        "sensor": 27,
+        "updated_time": "2019-11-15T05:24:18Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 30,
+    "fields": {
+        "sensor": 28,
+        "updated_time": "2019-11-15T05:24:34Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 31,
+    "fields": {
+        "sensor": 29,
+        "updated_time": "2019-11-15T05:36:30Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 32,
+    "fields": {
+        "sensor": 30,
+        "updated_time": "2019-11-15T05:36:44Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 33,
+    "fields": {
+        "sensor": 31,
+        "updated_time": "2019-11-15T05:36:50Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 34,
+    "fields": {
+        "sensor": 32,
+        "updated_time": "2019-11-15T05:36:52Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 35,
+    "fields": {
+        "sensor": 33,
+        "updated_time": "2019-11-15T05:37:06Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 36,
+    "fields": {
+        "sensor": 34,
+        "updated_time": "2019-11-15T05:37:15Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 37,
+    "fields": {
+        "sensor": 35,
+        "updated_time": "2019-11-15T05:37:22Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 38,
+    "fields": {
+        "sensor": 36,
+        "updated_time": "2019-11-15T05:37:28Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 39,
+    "fields": {
+        "sensor": 37,
+        "updated_time": "2019-11-15T05:37:37Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 40,
+    "fields": {
+        "sensor": 38,
+        "updated_time": "2019-11-15T05:37:41Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 41,
+    "fields": {
+        "sensor": 39,
+        "updated_time": "2019-11-15T05:41:20Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 42,
+    "fields": {
+        "sensor": 40,
+        "updated_time": "2019-11-15T05:41:29Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 43,
+    "fields": {
+        "sensor": 41,
+        "updated_time": "2019-11-15T05:41:50Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 44,
+    "fields": {
+        "sensor": 42,
+        "updated_time": "2019-11-15T05:42:12Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 45,
+    "fields": {
+        "sensor": 43,
+        "updated_time": "2019-11-15T05:50:02Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 46,
+    "fields": {
+        "sensor": 44,
+        "updated_time": "2019-11-15T05:50:09Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 47,
+    "fields": {
+        "sensor": 45,
+        "updated_time": "2019-11-15T05:50:14Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 48,
+    "fields": {
+        "sensor": 46,
+        "updated_time": "2019-11-15T05:50:35Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 49,
+    "fields": {
+        "sensor": 47,
+        "updated_time": "2019-11-15T05:50:49Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 50,
+    "fields": {
+        "sensor": 48,
+        "updated_time": "2019-11-15T06:04:18Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 51,
+    "fields": {
+        "sensor": 49,
+        "updated_time": "2019-11-15T05:51:11Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 52,
+    "fields": {
+        "sensor": 50,
+        "updated_time": "2019-11-15T06:00:29Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 53,
+    "fields": {
+        "sensor": 51,
+        "updated_time": "2019-11-15T06:01:02Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 54,
+    "fields": {
+        "sensor": 52,
+        "updated_time": "2019-11-15T06:02:37Z"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 55,
+    "fields": {
+        "sensor": 15,
+        "updated_time": "2020-08-25T07:20:29Z"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add building",
+        "content_type": [
+            "logtable",
+            "building"
+        ],
+        "codename": "add_building"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change building",
+        "content_type": [
+            "logtable",
+            "building"
+        ],
+        "codename": "change_building"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete building",
+        "content_type": [
+            "logtable",
+            "building"
+        ],
+        "codename": "delete_building"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view building",
+        "content_type": [
+            "logtable",
+            "building"
+        ],
+        "codename": "view_building"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add level",
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "codename": "add_level"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change level",
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "codename": "change_level"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete level",
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "codename": "delete_level"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view level",
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "codename": "view_level"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add sensor",
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "codename": "add_sensor"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change sensor",
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "codename": "change_sensor"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete sensor",
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "codename": "delete_sensor"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view sensor",
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "codename": "view_sensor"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log",
+        "content_type": [
+            "logtable",
+            "log"
+        ],
+        "codename": "add_log"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log",
+        "content_type": [
+            "logtable",
+            "log"
+        ],
+        "codename": "change_log"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log",
+        "content_type": [
+            "logtable",
+            "log"
+        ],
+        "codename": "delete_log"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log",
+        "content_type": [
+            "logtable",
+            "log"
+        ],
+        "codename": "view_log"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$EP8MKZEDs9Ca$iDRtcRXPlaO04+5T0DggIRoPChK/NJfloJIzpML4Y0g=",
+        "last_login": "2020-08-25T06:33:45.122Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "what@ev.er",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-08-25T06:33:27.156Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2020-08-25T06:34:12.447Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "building"
+        ],
+        "object_id": "2",
+        "object_repr": "\uc2e0\uacf5\ud559\uad00",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2020-08-25T06:34:33.242Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "3",
+        "object_repr": "1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2020-08-25T06:34:48.810Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "3",
+        "object_repr": "2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"level_num\", \"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2020-08-25T06:35:02.358Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "3",
+        "object_repr": "1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"level_num\", \"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2020-08-25T06:35:13.739Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "4",
+        "object_repr": "2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2020-08-25T06:35:44.603Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "3",
+        "object_repr": "DGU0001",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2020-08-25T06:36:04.160Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "4",
+        "object_repr": "DGU0002",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2020-08-25T06:38:24.918Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "building"
+        ],
+        "object_id": "3",
+        "object_repr": "N/A",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2020-08-25T06:38:39.368Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "5",
+        "object_repr": "Unknown",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2020-08-25T06:40:54.099Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "log"
+        ],
+        "object_id": "3",
+        "object_repr": "DGU0001: 2020-08-25 15:40:50+09:00",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2020-08-25T06:40:58.137Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "log"
+        ],
+        "object_id": "4",
+        "object_repr": "DGU0002: 2020-08-25 15:40:55+09:00",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]
