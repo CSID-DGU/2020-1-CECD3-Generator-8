@@ -30,7 +30,7 @@ class Building(models.Model):
 # Model for  floor of Buildings list diplayed in main mage.
 class Level(models.Model):
     # Fields
-    level_num = models.IntegerField()  # Number of floor(level).
+    level_num = models.CharField(max_length=10)  # Number of floor(level).
     # Path of blueprint image of the floor.
     img_file_path = models.CharField(max_length=200)
     # Foreign key. Building ID that floor is placed at(?).
@@ -56,7 +56,8 @@ class Sensor(models.Model):  # Model for IoT devices.
     TYPE_CHOICES = (
         ('IG', 'Intergration'),
         ('RD', 'Radar'),
-        ('RF', 'RF')
+        ('RF', 'RF'),
+        ('UK', 'Unknown')
     )  # Type of IoT devices
     STATUS_CHOICES = (
         ('OP', 'Operational'),
@@ -85,15 +86,17 @@ class Sensor(models.Model):  # Model for IoT devices.
     # basic methods
     def __str__(self):
         return self.sensor_code
+
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])
 
 
-class Log(models.Model): # Model for Logs.
-    sensor = models.ForeignKey('Sensor', on_delete=models.CASCADE, related_name='sensor')
+class Log(models.Model):  # Model for Logs.
+    sensor = models.ForeignKey(
+        'Sensor', on_delete=models.CASCADE, related_name='sensor')
     updated_time = models.DateTimeField(default=timezone.now)
-    
+
     # Metadata
     class Meta:
         ordering = ['-id']
@@ -115,7 +118,7 @@ class Log(models.Model): # Model for Logs.
 
     def get_sensor_status(self):
         return str(self.sensor.sensor_status)
-    
+
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])

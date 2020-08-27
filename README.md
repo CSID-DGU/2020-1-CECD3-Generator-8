@@ -1,5 +1,9 @@
 # 2020-1-CECD3-Generator-8
 
+## Recent Update
+더 이상 데이터베이스 파일을 레포지토리에 올리지 않음 -> 대신 덤프한 파일을 올리고, 각자 로컬에서 덤프한 데이터를 불러와서 사용하길 바람   
+덤프 관련 명령어는 Useful Commands에 정리되어 있음
+
 ## 1. Installation
 ### 1.1. Django project
 #### 1. Check python3 version
@@ -93,6 +97,21 @@ Creating admin account: 어드민 페이지에 사용할 계정 새로 생성
 (venv) python manage.py createsuperuser
 ```
 ***
+Collecting logs and saving them into db: API 이용해서 json으로 긁어와 DB에 저장
+```
+(venv) python manage.py autocollect
+```
+***
+Dump database into dbdump.json: 현재 데이터베이스를 dbdump.json파일로 저장
+```
+(venv) python manage.py dumpdata --natural-foreign --natural-primary --indent=4 -o dbdump.json
+```
+***
+Load database from dumped file: 데이터베이스를 덤프한 파일에서 데이터베이스를 불러옴
+```
+(venv) python manage.py loaddata dbdump.json
+```
+***
 
 ## Sensor API
 command getting each sensor's values by curl
@@ -113,9 +132,8 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 ## To-Do List
 ### Django
 * 메인 화면 사이드메뉴에 보여질 빌딩 트리구조 구축할 데이터베이스 모델링, 웹 페이지에 올리는 방법 고민
-* 주기적으로 센서 값 가져와 데이터베이스에 쌓는 모듈
 ### RPA
 * 문서 자동작성 스크립트 작성
 * 웹 페이지 자동 감시 스크립트 작성
 ### Misc
-* SMS API 알아보고 개발
+* SMS API 알아보고 개발 -> 일단은 이메일로 대체
