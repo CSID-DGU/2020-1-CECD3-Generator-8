@@ -6,6 +6,7 @@ from django.core.management.base import BaseCommand
 from logtable.models import Sensor, Level, Log, Building
 from datetime import datetime
 
+
 def check_prerequisite():
     try:
         # Building 모델에 N/A 가 있는지 확인
@@ -14,14 +15,16 @@ def check_prerequisite():
         # 없으면 새로 만듦
         na_building = Building(building_name='N/A', levels=0)
         na_building.save()
-    
+
     try:
         # Level 모델에 Unknown 이 있는지 확인
         unknown_level = Level.objects.get(level_num='Unknown')
     except Level.DoesNotExist:
         # 없으면 새로 만듦
-        unknown_level = Level(level_num='Unknown', img_file_path='N/A', building_id=na_building)
+        unknown_level = Level(level_num='Unknown',
+                              img_file_path='N/A', building_id=na_building)
         unknown_level.save()
+
 
 def run():
     #print('run() called')
@@ -77,6 +80,7 @@ def run():
                 new_log = Log(sensor=current_sensor,
                               updated_time=send_time)
                 new_log.save()
+                print('New log is generated: ' + str(new_log))
     os.remove('result.json')  # 가져왔던 reuslt.json 삭제
 
 
@@ -84,7 +88,7 @@ class Command(BaseCommand):
     help = 'Automatically get data from api in json format, store them in the database'
 
     def handle(self, *args, **kwargs):
-        check_prerequisite() # 필요한 N/A 값 이 DB에 있는지 확인 후 없을 시 추가
+        check_prerequisite()  # 필요한 N/A 값 이 DB에 있는지 확인 후 없을 시 추가
 
         while True:
             SLEEP_PERIOD = 300  # 5분
