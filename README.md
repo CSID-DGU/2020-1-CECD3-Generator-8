@@ -1,8 +1,7 @@
 # 2020-1-CECD3-Generator-8
-
+RPA를 활용한 IoT 디바이스 제어 및 관리 서비스
 ## Recent Update
-더 이상 데이터베이스 파일을 레포지토리에 올리지 않음 -> 대신 덤프한 파일을 올리고, 각자 로컬에서 덤프한 데이터를 불러와서 사용하길 바람   
-덤프 관련 명령어는 Useful Commands에 정리되어 있음
+autocollect할 때 경고 메시지를 내뱉지 않도록 TimeZone 사용 안하도록 함, 로그 출력문 다듬음
 
 ## 1. Installation
 ### 1.1. Django project
