@@ -1,7 +1,8 @@
 # 2020-1-CECD3-Generator-8
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스
 ## Recent Update
-autocollect할 때 경고 메시지를 내뱉지 않도록 TimeZone 사용 안하도록 함, 로그 출력문 다듬음
+모니터링 화면 추가  
+\* *DB 새로 덤프하였으므로 마이그레이트 및 DB 로딩 필요* \*
 
 ## 1. Installation
 ### 1.1. Django project

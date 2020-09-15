@@ -57,7 +57,10 @@ ROOT_URLCONF = 'iotsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'iosite/templates'),
+            os.path.join(BASE_DIR, 'logtable/templates/logtable'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -66,13 +66,20 @@ class Sensor(models.Model):  # Model for IoT devices.
         ('ND', 'Not Defined')
     )  # Has 4 sensor status choices
     sensor_code = models.CharField(max_length=10, unique=True, default="DGU")
+
     sensor_name = models.CharField(
         max_length=10, db_index=True, null=True)
+
     sensor_type = models.CharField(
         max_length=2, choices=TYPE_CHOICES)  # Type of IoT device
+
     # status that analyzed by data analyzing module.
     sensor_status = models.CharField(
         max_length=2, choices=STATUS_CHOICES, default='ND')
+
+    is_handled = models.BooleanField(default='False')
+    updated_time = models.DateTimeField(default=timezone.now)
+
     # Foreign key. Level ID that IoT Sensor is placed at(?)
     level = models.ForeignKey('Level', on_delete=models.CASCADE)
     # position = models.CommaSeparatedIntegerField(max_length=10) # Absolute position of IoT device in the blueprint of level.
