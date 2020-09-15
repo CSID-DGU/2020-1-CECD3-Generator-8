@@ -8,7 +8,9 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v4.0.1">
-  <title>Main</title>
+  {% block titlename %}
+
+  {% endblock %}
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
 
@@ -32,7 +34,7 @@
     }
   </style>
   <!-- Custom styles for this template -->
-  <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+  <link href="{% static 'css/base.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -59,13 +61,13 @@
     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
       <li>
         <span class="navbar-text" id="timer">
-          Current time: 
+          Current time:
           <span id="currenttime"></span>
         </span>
       </li>
     </ul>
-    
-    
+
+
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
         <a class="nav-link" href="#">Sign out</a>
@@ -162,6 +164,7 @@
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+  <script src="{% static 'js/base.js' %}"></script>
 </body>
 
 </html>

@@ -1,60 +1,61 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block titlename %}
+<title>Dashboard</title>
+{% endblock %}
+
 {% block content %}
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-  
-  <div
-  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h2>Log Table</h2>
-  <div class="btn-toolbar mb-2 mb-md-0">
-    <div class="btn-group mr-2">
-      <button type="button" class="btn btn-sm btn-outline-secondary">
-        <span data-feather="printer"></span>
-        Print
-      </button>
-      <button type="button" class="btn btn-sm btn-outline-secondary">
-        <span data-feather="file-text"></span>
-        Export to file
-      </button>
-    </div>
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-      <label class="btn btn-outline-primary active">
-        <span data-feather="list"></span>
-        <input type="radio" name="options" id="show_table_option" autocomplete="off" checked> List 
-      </label>
-      <label class="btn btn-outline-primary">
-        <span data-feather="map-pin"></span>
-        <input type="radio" name="options" id="show_table_option" autocomplete="off"> Map
-      </label>
+
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h2>Log Table</h2>
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group mr-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">
+          <span data-feather="printer"></span>
+          Print
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">
+          <span data-feather="file-text"></span>
+          Export to file
+        </button>
+      </div>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-primary active">
+          <span data-feather="list"></span>
+          <input type="radio" name="options" id="show_table_option" autocomplete="off" checked> List
+        </label>
+        <label class="btn btn-outline-primary">
+          <span data-feather="map-pin"></span>
+          <input type="radio" name="options" id="show_table_option" autocomplete="off"> Map
+        </label>
+      </div>
     </div>
   </div>
-</div>
   <div class="table-responsive">
     {% load django_tables2 %}
     {% render_table table %}
   </div>
-  
-  
-  <div
-  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-  <h1 class="h2">Line Graph</h1>
-  <div class="btn-toolbar mb-2 mb-md-0">
-    <div class="btn-group mr-2">
-      <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-      <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+
+
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Line Graph</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group mr-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+      </div>
+      <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+        <span data-feather="calendar"></span>
+        This week
+      </button>
     </div>
-    <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-      <span data-feather="calendar"></span>
-      This week
-    </button>
   </div>
-</div>
-<canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+  <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-<script src="{% static 'js/dashboard.js' %}"></script>
 
 {% endblock %}
