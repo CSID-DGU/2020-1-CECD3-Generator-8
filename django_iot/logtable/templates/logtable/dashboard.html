@@ -17,10 +17,33 @@
           <span data-feather="printer"></span>
           Print
         </button>
-        <button type="button" class="btn btn-sm btn-outline-secondary">
+        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
           <span data-feather="file-text"></span>
           Export to file
         </button>
+        <div class = "modal fade" id = "exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document" style="max-width:100%;width=auto;display:table;">
+            <div class="modal-content">
+              <div class="modal=header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="exampleModalLabel"> Export to File!</h3>
+              </div>
+              <div class="modal-body">
+                <div class="table-responsive" name="modalTable">
+                  {% load django_tables2 %}
+                  {% render_table table %}
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick=" location.href='{% url 'export_file_dashboard' %}';" >Export</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
         <label class="btn btn-outline-primary active">
