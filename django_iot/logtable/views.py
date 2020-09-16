@@ -4,9 +4,8 @@ from django.http import HttpResponse
 from django.db.models import Max
 from .models import Log, Sensor
 from .tables import LogTableQuerySet, MonitoringTableQuerySet
-from bootstrap_modal_forms.generic import BSModalReadView
-from urllib.request import urlopen #crawler
-from bs4 import BeautifulSoup #crawler
+from urllib.request import urlopen  # crawler
+from bs4 import BeautifulSoup  # crawler
 
 
 def dashboard(request):
@@ -15,6 +14,8 @@ def dashboard(request):
     table = LogTableQuerySet(logs)  # make a table by logs
     # render table
     return render(request, 'logtable/dashboard.html', {'table': table})
+
+
 def dashboard_export(request):
     logs = Log.objects.raw(
         'SELECT "logtable_log"."id", "logtable_log"."sensor_id", "logtable_log"."updated_time" FROM "logtable_log" GROUP BY "sensor_id"')
@@ -23,7 +24,7 @@ def dashboard_export(request):
     print("Export it")
     html = urlopen("http://127.0.0.1:8000/dashboard")
     Datas = BeautifulSoup(html, 'html.parser')
-    tb = Datas.find('div',{'class':'table-responsive'})
+    tb = Datas.find('div', {'class': 'table-responsive'})
     data = []
     for tr in tb.find_all('tr'):
         print("tr")
@@ -39,13 +40,16 @@ def dashboard_export(request):
             SStatus = tds[5].text
 
             data.append([ID, SCode, SName, SType, UpdatedTime, SStatus])
-    with open('datas_dashboard.csv','w') as file:
-        file.write('ID,SensorCode,SensorName,SensorType,UpdatedTime0,SensorStatus\n')
+    with open('datas_dashboard.csv', 'w') as file:
+        file.write(
+            'ID,SensorCode,SensorName,SensorType,UpdatedTime0,SensorStatus\n')
         print("make file")
         for i in data:
-            file.write('{0},{1},{2},{3},{4},{5}\n'.format(i[0],i[1],i[2],i[3],i[4],i[5]))
-    
+            file.write('{0},{1},{2},{3},{4},{5}\n'.format(
+                i[0], i[1], i[2], i[3], i[4], i[5]))
+
     return render(request, 'logtable/dashboard.html', {'table': table})
+
 
 def json(request):
     logs = Log.objects.all()  # get all logs
@@ -59,6 +63,7 @@ def monitoring(request):
         sensors_with_problems)  # make a table by sensor queryset
     # render table
     return render(request, 'logtable/monitoring.html', {'table': table})
+
 
 def json(request):
     logs = Log.objects.all()  # get all logs
@@ -74,7 +79,7 @@ def monitoring_export(request):
     print("Export it")
     html = urlopen("http://127.0.0.1:8000/monitoring")
     Datas = BeautifulSoup(html, 'html.parser')
-    tb = Datas.find('div',{'class':'table-responsive'})
+    tb = Datas.find('div', {'class': 'table-responsive'})
     data = []
     for tr in tb.find_all('tr'):
         print("tr")
@@ -90,10 +95,12 @@ def monitoring_export(request):
             SStatus = tds[5].text
 
             data.append([ID, SCode, SName, SType, UpdatedTime, SStatus])
-    with open('datas_monitoring.csv','w') as file:
-        file.write('ID,SensorCode,SensorName,SensorType,UpdatedTime0,SensorStatus\n')
+    with open('datas_monitoring.csv', 'w') as file:
+        file.write(
+            'ID,SensorCode,SensorName,SensorType,UpdatedTime0,SensorStatus\n')
         print("make file")
         for i in data:
-            file.write('{0},{1},{2},{3},{4},{5}\n'.format(i[0],i[1],i[2],i[3],i[4],i[5]))
+            file.write('{0},{1},{2},{3},{4},{5}\n'.format(
+                i[0], i[1], i[2], i[3], i[4], i[5]))
 
     return render(request, 'logtable/monitoring.html', {'table': table})
