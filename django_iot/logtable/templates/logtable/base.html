@@ -81,13 +81,13 @@
         <div class="sidebar-sticky pt-3">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="/">
+              <a class="nav-link" href="/" id="dashboard">
                 <span data-feather="home"></span>
-                Dashboard <span class="sr-only">(current)</span>
+                Dashboard
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/monitoring">
+              <a class="nav-link" href="/monitoring" id="monitoring">
                 <span data-feather="file"></span>
                 Monitoring
               </a>
@@ -165,6 +165,11 @@
   <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
   <script src="{% static 'js/base.js' %}"></script>
+  <script>
+    var url = window.location.pathname;
+    var object_name = url.substring(url.lastIndexOf('/') + 1)
+    $("#" + object_name).addClass('active');
+  </script>
 </body>
 
 </html>
