@@ -1,8 +1,7 @@
 # 2020-1-CECD3-Generator-8
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스
 ## Recent Update
-모니터링 화면 추가  
-\* *DB 새로 덤프하였으므로 마이그레이트 및 DB 로딩 필요* \*
+대시보드 화면: *탭으로 표/약도 전환*
 
 ## 1. Installation
 ### 1.1. Django project
@@ -125,13 +124,20 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 [django_table2 Docs](https://django-tables2.readthedocs.io/en/latest/)   
 
 ## Demo
-### Main Page
-![Alt test](/res/main_page.png)
-테이블 안의 내용은 임의로 집어넣은 것
+### Dashboard의 표 출력 화면
+![dashboard_table](/res/dashboard_table.png)
+### Dashboard의 약도 출력 화면
+![dashboard_map](/res/dashboard_map.png)
+### Monitoring 출력 화면
+![monitoring](/res/monitoring.png)
 
 ## To-Do List
+### System
+* AWS 서버에 올리기
 ### Django
-* 메인 화면 사이드메뉴에 보여질 빌딩 트리구조 구축할 데이터베이스 모델링, 웹 페이지에 올리는 방법 고민
+* 메인 화면 사이드메뉴에 빌딩 리스트 출력
+* 레벨 클릭하면 해당 층의 센서만 출력되도록 출력
+* 약도 상에 센서 위치 표기 -> 센서 모델 수정 필요
 ### RPA
 * 문서 자동작성 스크립트 작성
 * 웹 페이지 자동 감시 스크립트 작성
