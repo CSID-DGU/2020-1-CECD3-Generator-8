@@ -16,6 +16,13 @@ def dashboard(request):
     return render(request, 'logtable/dashboard.html', {'table': table})
 
 
+def tabTest(request):
+    logs = Log.objects.raw(
+        'SELECT "logtable_log"."id", "logtable_log"."sensor_id", "logtable_log"."updated_time" FROM "logtable_log" GROUP BY "sensor_id"')
+    table = LogTableQuerySet(logs)  # make a table by logs
+    return render(request, 'logtable/tabTest.html', {'table':table})
+
+
 def dashboard_export(request):
     logs = Log.objects.raw(
         'SELECT "logtable_log"."id", "logtable_log"."sensor_id", "logtable_log"."updated_time" FROM "logtable_log" GROUP BY "sensor_id"')
