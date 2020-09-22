@@ -124,15 +124,12 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 [django_table2 Docs](https://django-tables2.readthedocs.io/en/latest/)   
 
 ## Demo
-### Main Page
+### Dashboard의 표 출력 화면
 ![dashboard_table](/res/dashboard_table.png)
-* Dashboard의 표 출력 화면  
-
+### Dashboard의 약도 출력 화면
 ![dashboard_map](/res/dashboard_map.png)
-* Dashboard의 약도 출력 화면  
-
+### Monitoring 출력 화면
 ![monitoring](/res/monitoring.png)
-* Monitoring 출력 화면
 
 ## To-Do List
 ### System
