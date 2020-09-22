@@ -11,6 +11,5 @@ urlpatterns = [
     path('monitoring', views.monitoring, name='monitoring'),
     path('monitoring2', views.monitoring_export,name='export_file_monitoring'),
     path('json', views.json, name='json'),
-    path('tabTest',views.tabTest,name='tabTest'),
 ]
 static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
