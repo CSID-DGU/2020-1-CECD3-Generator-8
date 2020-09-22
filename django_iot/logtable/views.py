@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core import serializers
 from django.http import HttpResponse
 from django.db.models import Max
@@ -15,18 +15,14 @@ def dashboard(request):
     # render table
     return render(request, 'logtable/dashboard.html', {'table': table})
 
+#method for crawling dashboard page
 def dashboard_export(request):
-    logs = Log.objects.raw(
-        'SELECT "logtable_log"."id", "logtable_log"."sensor_id", "logtable_log"."updated_time" FROM "logtable_log" GROUP BY "sensor_id"')
-    table = LogTableQuerySet(logs)  # make a table by logs
-    # render table
     print("Export it")
     html = urlopen("http://127.0.0.1:8000/dashboard")
     Datas = BeautifulSoup(html, 'html.parser')
     tb = Datas.find('div', {'class': 'table-responsive'})
     data = []
     for tr in tb.find_all('tr'):
-        print("tr")
         tds = list(tr.find_all('td'))
         if not tds:
             pass
@@ -47,8 +43,7 @@ def dashboard_export(request):
             file.write('{0},{1},{2},{3},{4},{5}\n'.format(
                 i[0], i[1], i[2], i[3], i[4], i[5]))
 
-    return render(request, 'logtable/dashboard.html', {'table': table})
-
+    return redirect('dashboard')
 
 def json(request):
     logs = Log.objects.all()  # get all logs
@@ -63,19 +58,14 @@ def monitoring(request):
     # render table
     return render(request, 'logtable/monitoring.html', {'table': table})
 
-
+#method for crawling monitoring page
 def monitoring_export(request):
-    sensors_with_problems = Sensor.objects.filter(is_handled='False')
-    table = MonitoringTableQuerySet(
-        sensors_with_problems)  # make a table by sensor queryset
-    # render table
     print("Export it")
     html = urlopen("http://127.0.0.1:8000/monitoring")
     Datas = BeautifulSoup(html, 'html.parser')
     tb = Datas.find('div', {'class': 'table-responsive'})
     data = []
     for tr in tb.find_all('tr'):
-        print("tr")
         tds = list(tr.find_all('td'))
         if not tds:
             pass
@@ -96,4 +86,4 @@ def monitoring_export(request):
             file.write('{0},{1},{2},{3},{4},{5}\n'.format(
                 i[0], i[1], i[2], i[3], i[4], i[5]))
 
-    return render(request, 'logtable/monitoring.html', {'table': table})
+    return redirect('monitoring')
