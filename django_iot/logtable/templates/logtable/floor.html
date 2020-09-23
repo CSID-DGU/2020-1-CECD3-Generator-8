@@ -2,117 +2,102 @@
 {% load static %}
 
 {% block titlename %}
-<title>Monitoring</title>
+<title>Floor Log Table</title>
 {% endblock %}
 
 {% block content %}
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-
-    <div
-        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h2>Monitoring Table</h2>
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-
-            <div class="btn-toolbar mb-2 mb-md-0">
-                <div class="btn-toolbar mb-2 mb-md-0">
-                    <div class="btn-group mr-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">
-                            <span data-feather="check-circle"></span>
-                            Process Checked
-                        </button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">
-                            <span data-feather="trash"></span>
-                            Delete Checked
-                        </button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-                            data-target="#exampleModal">
-                            <span data-feather="file-text"></span>
-                            Export to File
-                        </button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document" style="max-width:100%;width=auto;display:table;">
-                                <div class="modal-content">
-                                    <div class="modal=header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <h3 class="modal-title" id="exampleModalLabel"> Export to File!</h3>
-                                    </div>
-                                    <div class="modal-body">
-                                        
-                                        
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary"
-                                                onclick=" location.href='{% url 'export_file_monitoring' %}';">Export</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="btn-group mr-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">
-                            <span data-feather="skip-forward"></span>
-                            Process All
-                        </button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">
-                            <span data-feather="trash-2"></span>
-                            Delete All
-                        </button>
-                    </div>
+  <h2>DIDMS</h2> 
+  <h6>Dongguk university IoT Device Monitoring System</h6>
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h5> </h5> 
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group mr-2">
+        <button type="button" class="btn btn-sm btn-outline-secondary">
+          <span data-feather="printer"></span>
+          Print
+        </button>
+        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+          <span data-feather="file-text"></span>
+          Export to file
+        </button>
+        <div class = "modal fade" id = "exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document" style="max-width:100%;width=auto;display:table;">
+            <div class="modal-content">
+              <div class="modal=header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="exampleModalLabel"> Export to File!</h3>
+              </div>
+              <div class="modal-body">
+                <div class="table-responsive" name="modalTable">
+                  Export it or Make File!
                 </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick=" location.href='{% url 'export_file_dashboard' %}';" >Export</button>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#Logtable">Logtable</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#Minimap">Minimap</a>
+      </li>
+    </ul>
+    <div class="tab-content ">
+      <div class="tab-pane fade show active" id="Logtable">
+          <style>
+              table {
+                  width: 100%;
+                  border-top: 1px solid #444444;
+                  border-collapse: collapse;
+              }
 
-
-</main>
-
-<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-
-        <style>
-            table {
-                width: 100%;
-                border-top: 1px solid #444444;
-                border-collapse: collapse;
-            }
-
-            th,
-            td {
-                border-bottom: 1px solid #444444;
-                padding: 10px;
-            }
-        </style>
-        <table>
-            <thead>
-                <tr>
-                    <th>Sensor_name</th>
-                    <th>Sensor_code</th>
-                    <th>Sensor_type</th>
-                    <th>Updated_time</th>
-                    <th>Sensor_status</th>
-                </tr>
-            </thead>
-            <tbody>
-                {%for s in sensor%}
-                <tr>
-                    <td> {{s.sensor_name}}</td>
-                    <td> {{s.sensor_code}}</td>
-                    <td> {{s.sensor_type}}</td>
-                    <td> {{s.updated_time}}</td>
-                    <td> {{s.sensor_status}}</td>
-                </tr>
-                {%endfor%}
-            </tbody>
-        </table>
-    </div
-
-
+              th,
+              td {
+                  border-bottom: 1px solid #444444;
+                  padding: 10px;
+              }
+          </style>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Sensor_name</th>
+                      <th>Sensor_code</th>
+                      <th>Sensor_type</th>
+                      <th>Updated_time</th>
+                      <th>Sensor_status</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {%for s in sensor%}
+                  <tr>
+                      <td> {{s.sensor_name}}</td>
+                      <td> {{s.sensor_code}}</td>
+                      <td> {{s.sensor_type}}</td>
+                      <td> {{s.updated_time}}</td>
+                      <td> {{s.sensor_status}}</td>
+                  </tr>
+                  {%endfor%}
+              </tbody>
+          </table>
+      </div>
+      <div class="tab-pane fade" id="Minimap">
+        <img src="/static/img/map_img/level_1.png" class="img-fluid" alt="1st floor">
+      </div>
+    </div>
+  </div>
 </main>
 
 
