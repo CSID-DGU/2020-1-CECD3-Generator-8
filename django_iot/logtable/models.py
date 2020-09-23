@@ -9,7 +9,7 @@ import uuid
 # Model for Building list displayed in main page.
 class Building(models.Model):
     # Fields
-    building_name = models.CharField(max_length=15)  # Name of Building.
+    building_name = models.CharField(max_length=15,default="신공학관") # Name of Building.
     levels = models.IntegerField()  # Number of floors in the building.
     # Metadata
 
@@ -30,7 +30,7 @@ class Building(models.Model):
 # Model for  floor of Buildings list diplayed in main mage.
 class Level(models.Model):
     # Fields
-    level_num = models.CharField(max_length=10)  # Number of floor(level).
+    level_num = models.CharField(max_length=10,default="1F")  # Number of floor(level).
     # Path of blueprint image of the floor.
     img_file_path = models.CharField(max_length=200)
     # Foreign key. Building ID that floor is placed at(?).

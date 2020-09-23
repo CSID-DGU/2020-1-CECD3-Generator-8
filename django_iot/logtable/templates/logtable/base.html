@@ -101,6 +101,7 @@
                 Monitoring
               </a>
             </li>
+            {%block Menu%}
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <span data-feather="shopping-cart"></span>
@@ -126,42 +127,33 @@
               </a>
             </li>
           </ul>
-
+          {%endblock%}
+          {%block building%}
           <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span>Building List</span>
             <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
               <span data-feather="plus-circle"></span>
             </a>
           </h6>
+          {%for b in building%}
           <ul class="nav flex-column mb-2">
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <span data-feather="file-text"></span>
-                Builing1
-              </a>
-            </li>
+                <span data-feather="menu"></span>
+                {{b.building_name}}
+                {%for l in b.level_set.all%}
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text"></span>
-                Building2
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text"></span>
-                Building3
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="file-text"></span>
-                Building4
+              <a class="nav-link" href="{%url 'floor' b.id l.level_num%}">
+                &nbsp;&nbsp; <span data-feather="square"></span>
+                {{l.level_num}}</a>
+              {%endfor%}
+              {%endfor%}
               </a>
             </li>
           </ul>
         </div>
       </nav>
-
+      {% endblock %}
       {% block content %}
 
       {% endblock %}
