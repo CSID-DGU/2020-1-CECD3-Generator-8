@@ -108,6 +108,7 @@ Dump database into dbdump.json: 현재 데이터베이스를 dbdump.json파일�
 ***
 Load database from dumped file: 데이터베이스를 덤프한 파일에서 데이터베이스를 불러옴
 ```
+(venv) python manage.py flush
 (venv) python manage.py loaddata dbdump.json
 ```
 ***
