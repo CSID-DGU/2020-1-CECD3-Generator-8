@@ -66,20 +66,17 @@ def run():
             new_sensor.save()
             current_sensor = Sensor.objects.get(sensor_code=scode)
         finally:
-            existing_log = Log.objects.filter(sensor__exact=current_sensor)
             # 로그가 찍힌 시간을 체크
             send_time = datetime.strptime(
                 i['DEVICE_DATA_REG_DTM'], '%Y-%m-%d %H:%M:%S')
-            if existing_log:
-                if not existing_log.filter(updated_time=send_time):
-                    new_log = Log(sensor=current_sensor,
-                                  updated_time=send_time)
-                    new_log.save()
-            else:
-                # 로그가 아예 없으면 생성
+            # 이미 존재하는 로그인지 확인
+            existing_log = Log.objects.filter(sensor__exact=current_sensor).filter(updated_time=send_time)
+            if not existing_log:
                 new_log = Log(sensor=current_sensor,
-                              updated_time=send_time)
+                                  updated_time=send_time)
                 new_log.save()
+                current_sensor.updated_time=send_time; # 센서의 updated_time에도 적용
+                current_sensor.save()
                 print('New log is generated: ' + str(new_log))
     os.remove('result.json')  # 가져왔던 reuslt.json 삭제
 
@@ -87,11 +84,15 @@ def run():
 class Command(BaseCommand):
     help = 'Automatically get data from api in json format, store them in the database'
 
+    def add_arguments(self, parser):
+        # period 매개변수. 기본값은 300
+        parser.add_argument('period', type=int, nargs='?', default=300, help='Indicates the number of period between current and next running')
+
     def handle(self, *args, **kwargs):
         check_prerequisite()  # 필요한 N/A 값 이 DB에 있는지 확인 후 없을 시 추가
 
         while True:
-            SLEEP_PERIOD = 300  # 5분
+            SLEEP_PERIOD = kwargs['period']
             self.stdout.write("Collecting Logs...")
             run()
             self.stdout.write(
