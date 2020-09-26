@@ -102,9 +102,12 @@ def monitoring_export(request):
 
     return redirect('monitoring')
 def floor(request,b_id,l_num):
+    level_info = Level.objects.filter(level_num=l_num)
     sensor1 =Sensor.objects.filter(level__in=Subquery(Level.objects.filter(building_id=b_id, level_num=l_num).values('id')))
     building = Building.objects.all()
+    print(level_info)
     return render(request, 'logtable/floor.html', {
+        'level_info':level_info,
         'sensor':sensor1,
         'building':building,
     })
