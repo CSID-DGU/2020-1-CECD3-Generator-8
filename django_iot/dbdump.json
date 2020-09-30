@@ -71,6 +71,14 @@
 },
 {
     "model": "sessions.session",
+    "pk": "67367p2g46475lkkbqtma6667bp2wyok",
+    "fields": {
+        "session_data": "ODQxMDNjYjkyZjgyYThhYjUwOTdkYzliZmJkNDg5ZjI5ODNiMmIzZDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmMTEyZTI2YmQ4NDVhOWU2ZjIyNDlmMzA5NzI3NTA0YWU0OTY4YmM4In0=",
+        "expire_date": "2020-10-08T15:53:37.089"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "aje32n8l070yomf6ixnbhx4donj00fr7",
     "fields": {
         "session_data": "M2M2YWZmNjFlYjRkYzcwZWIzZDMwYzM3YmEyYzU0MjMzNjE4ZDE5Njp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjYTQ0MjM4ZDc3OGM0YjEzNDk3YWNlYzYzNGFiMzQzMWYwMzZkMzVhIn0=",
@@ -94,11 +102,19 @@
     }
 },
 {
+    "model": "logtable.building",
+    "pk": 4,
+    "fields": {
+        "building_name": "N/A",
+        "levels": 0
+    }
+},
+{
     "model": "logtable.level",
     "pk": 1,
     "fields": {
         "level_num": "1F",
-        "img_file_path": "static/img/map_img/level_1.png",
+        "img_file_path": "/static/img/map_img/level_1.png",
         "building_id": 1
     }
 },
@@ -107,7 +123,7 @@
     "pk": 4,
     "fields": {
         "level_num": "2F",
-        "img_file_path": "static/img/map_img/level_2.png",
+        "img_file_path": "/static/img/map_img/level_2.png",
         "building_id": 1
     }
 },
@@ -116,7 +132,7 @@
     "pk": 5,
     "fields": {
         "level_num": "3F",
-        "img_file_path": "static/img/map_img/level_3.png",
+        "img_file_path": "/static/img/map_img/level_3.png",
         "building_id": 1
     }
 },
@@ -125,7 +141,7 @@
     "pk": 6,
     "fields": {
         "level_num": "4F",
-        "img_file_path": "static/img/map_img/level_4.png",
+        "img_file_path": "/static/img/map_img/level_4.png",
         "building_id": 1
     }
 },
@@ -134,7 +150,7 @@
     "pk": 7,
     "fields": {
         "level_num": "5F",
-        "img_file_path": "static/img/map_img/level_5.png",
+        "img_file_path": "/static/img/map_img/level_5.png",
         "building_id": 1
     }
 },
@@ -143,7 +159,7 @@
     "pk": 8,
     "fields": {
         "level_num": "6F",
-        "img_file_path": "static/img/map_img/level_6.png",
+        "img_file_path": "/static/img/map_img/level_6.png",
         "building_id": 1
     }
 },
@@ -152,7 +168,7 @@
     "pk": 9,
     "fields": {
         "level_num": "7F",
-        "img_file_path": "static/img/map_img/level_7.png",
+        "img_file_path": "/static/img/map_img/level_7.png",
         "building_id": 1
     }
 },
@@ -161,7 +177,7 @@
     "pk": 10,
     "fields": {
         "level_num": "8F",
-        "img_file_path": "static/img/map_img/level_8.png",
+        "img_file_path": "/static/img/map_img/level_8.png",
         "building_id": 1
     }
 },
@@ -170,7 +186,7 @@
     "pk": 11,
     "fields": {
         "level_num": "9F",
-        "img_file_path": "static/img/map_img/level_9.png",
+        "img_file_path": "/static/img/map_img/level_9.png",
         "building_id": 1
     }
 },
@@ -179,8 +195,17 @@
     "pk": 12,
     "fields": {
         "level_num": "10F",
-        "img_file_path": "static/img/map_img/level_10.png",
+        "img_file_path": "/static/img/map_img/level_10.png",
         "building_id": 1
+    }
+},
+{
+    "model": "logtable.level",
+    "pk": 13,
+    "fields": {
+        "level_num": "Unknown",
+        "img_file_path": "N/A",
+        "building_id": 4
     }
 },
 {
@@ -231,7 +256,7 @@
         "sensor_type": "UK",
         "sensor_status": "ND",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:40.916",
+        "updated_time": "2020-09-24T16:34:03",
         "level": 1
     }
 },
@@ -283,7 +308,7 @@
         "sensor_type": "UK",
         "sensor_status": "ND",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.022",
+        "updated_time": "2020-09-24T16:31:06",
         "level": 1
     }
 },
@@ -296,7 +321,7 @@
         "sensor_type": "UK",
         "sensor_status": "ND",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.050",
+        "updated_time": "2020-09-24T16:33:08",
         "level": 1
     }
 },
@@ -335,7 +360,7 @@
         "sensor_type": "UK",
         "sensor_status": "ND",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.118",
+        "updated_time": "2020-09-24T16:32:24",
         "level": 1
     }
 },
@@ -348,7 +373,7 @@
         "sensor_type": "UK",
         "sensor_status": "ND",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.144",
+        "updated_time": "2020-09-24T16:30:50",
         "level": 1
     }
 },
@@ -1234,6 +1259,206 @@
     }
 },
 {
+    "model": "logtable.log",
+    "pk": 51,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-09-24T15:54:03"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 52,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-09-24T15:51:05"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 53,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-09-24T15:53:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 54,
+    "fields": {
+        "sensor": 12,
+        "updated_time": "2020-09-24T15:52:24"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 55,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-09-24T15:50:51"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 56,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-09-24T16:01:06"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 57,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-09-24T16:03:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 58,
+    "fields": {
+        "sensor": 12,
+        "updated_time": "2020-09-24T16:02:24"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 59,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-09-24T16:00:52"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 60,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-09-24T16:04:03"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 61,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-09-24T16:10:51"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 62,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-09-24T16:11:06"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 63,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-09-24T16:14:03"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 64,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-09-24T16:13:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 65,
+    "fields": {
+        "sensor": 12,
+        "updated_time": "2020-09-24T16:12:24"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 66,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-09-24T16:24:03"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 67,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-09-24T16:21:05"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 68,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-09-24T16:23:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 69,
+    "fields": {
+        "sensor": 12,
+        "updated_time": "2020-09-24T16:22:24"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 70,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-09-24T16:20:51"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 71,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-09-24T16:34:03"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 72,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-09-24T16:31:06"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 73,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-09-24T16:33:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 74,
+    "fields": {
+        "sensor": 12,
+        "updated_time": "2020-09-24T16:32:24"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 75,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-09-24T16:30:50"
+    }
+},
+{
     "model": "auth.permission",
     "fields": {
         "name": "Can add log entry",
@@ -1691,6 +1916,23 @@
     }
 },
 {
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$phOdSe8FMNOR$PPfoWSUZ9hxfHSS4mzJXDPa8RupqMfD0QNhlXRXTvb8=",
+        "last_login": "2020-09-24T15:53:37.070",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@what.ever",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-09-24T15:53:19.254",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
     "model": "admin.logentry",
     "pk": 1,
     "fields": {
@@ -1976,6 +2218,186 @@
         "object_repr": "10F",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2020-09-30T19:26:36.231",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "1",
+        "object_repr": "1F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2020-09-30T19:27:06.922",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "4",
+        "object_repr": "2F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2020-09-30T19:27:11.738",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "12",
+        "object_repr": "10F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2020-09-30T19:27:17.535",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "5",
+        "object_repr": "3F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2020-09-30T19:27:23.704",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "6",
+        "object_repr": "4F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2020-09-30T19:27:27.456",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "7",
+        "object_repr": "5F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2020-09-30T19:27:30.633",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "8",
+        "object_repr": "6F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2020-09-30T19:27:33.898",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "9",
+        "object_repr": "7F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2020-09-30T19:27:37.590",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "10",
+        "object_repr": "8F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2020-09-30T19:27:41.040",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "11",
+        "object_repr": "9F",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
     }
 }
 ]
