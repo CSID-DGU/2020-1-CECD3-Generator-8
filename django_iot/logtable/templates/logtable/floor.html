@@ -13,6 +13,7 @@
   https://tutorial.djangogirls.org/ko/dynamic_data_in_templates/
   check this out! 
 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1bd90974e42765b06b5318db688bc0f0"></script>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
   <h2>DIDMS</h2> 
   <h6>Dongguk university IoT Device Monitoring System</h6>
@@ -105,14 +106,45 @@
           </table>
       </div>
       <div class="tab-pane fade" id="Minimap">
-        {%for l in level_info%}
-        {%for b in bname%}
-        <img src= {{l.img_file_path}} class="img-fluid" alt={{b.building_name}}{{l.level_num}}>
-        {%endfor%}
-        {%endfor%}
+        <div id="map" style="width:790px;height:440px;"></div>
       </div>
     </div>
   </div>
+
+{% comment %} map script {% endcomment %}
+{% comment %} 
+{%for l in level_info%}
+{%for b in bname%}
+<img src= {{l.img_file_path}} class="img-fluid" alt={{b.building_name}}{{l.level_num}}>
+{%endfor%}
+{%endfor%} 
+{% endcomment %}
+<script>
+const levels= {{levels|safe}};
+console.log(levels);
+var path;
+path = levels['img_file_path'];
+console.log(path);
+
+var plan = function() {
+    return path;
+};
+
+kakao.maps.Tileset.add( 'PLAN',
+        new kakao.maps.Tileset(
+            800, 450, plan, '', false, 0, 5 ) );
+var node = document.getElementById( 'map' );
+var map = new kakao.maps.Map( node, {
+    projectionId: null,
+    mapTypeId: kakao.maps.MapTypeId.PLAN,
+    $scale: false,
+    center: new kakao.maps.Coords( 400, -220 ),
+    level: 5,
+    draggable: false,
+    disableDoubleClickZoom: false,
+    keyboardShortcuts : false,
+} );
+</script>
 </main>
 
 

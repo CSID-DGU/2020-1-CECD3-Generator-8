@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core import serializers
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.db.models import Max
 from .models import Log, Sensor,Building,Level
 from .tables import LogTableQuerySet, MonitoringTableQuerySet
@@ -8,6 +8,7 @@ from urllib.request import urlopen  # crawler
 from bs4 import BeautifulSoup  # crawler
 from django.db.models import Subquery
 from django.db.models import Value
+import json
 
 
 def dashboard(request):
@@ -22,7 +23,6 @@ def dashboard(request):
         'building':building,
         'level':level,
     })
-
 #method for crawling dashboard page
 def dashboard_export(request):
     print("Export it")
@@ -106,9 +106,10 @@ def floor(request,b_id,l_num):
     sensor1 =Sensor.objects.filter(level__in=Subquery(Level.objects.filter(building_id=b_id, level_num=l_num).values('id')))
     building = Building.objects.all()
     building_name= Building.objects.filter(id=b_id)
-    print(level_info)
+    levels = str(list(level_info.values())[0])#level_info JSON text
     return render(request, 'logtable/floor.html', {
         'level_info':level_info,
+        'levels':levels,#level_info JSON test
         'sensor':sensor1,
         'building':building,
         'bname':building_name,
