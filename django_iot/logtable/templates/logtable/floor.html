@@ -85,7 +85,7 @@
           <table>
               <thead>
                   <tr>
-                      <th>Sensor_name</th>
+                      <th>Sensor_model</th>
                       <th>Sensor_code</th>
                       <th>Sensor_type</th>
                       <th>Updated_time</th>
@@ -95,9 +95,9 @@
               <tbody>
                   {%for s in sensor%}
                   <tr>
-                      <td> {{s.sensor_name}}</td>
+                      <td> {{s.sensor_model}}</td>
                       <td> {{s.sensor_code}}</td>
-                      <td> {{s.sensor_type}}</td>
+                      <td> {{s.sensor_model.sensor_type}}</td>
                       <td> {{s.updated_time}}</td>
                       <td> {{s.sensor_status}}</td>
                   </tr>

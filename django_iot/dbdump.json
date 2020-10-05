@@ -1,2485 +1,2436 @@
 [
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "admin",
-        "model": "logentry"
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "auth",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "logtable",
+            "model": "building"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "logtable",
+            "model": "devicemodel"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "logtable",
+            "model": "level"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "logtable",
+            "model": "sensor"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "fields": {
+            "app_label": "logtable",
+            "model": "log"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "oizqsfpcpxd3x35o14g106b6s5pv6qga",
+        "fields": {
+            "session_data": "YTUxZDM4NmRmYTA1YTcxZTdmMjBmZGUwM2U2NDVhZGIzZTQzYzJjNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1ZDY5NDdmMDNlZDlmYTE5NWRiYWI5ZGVmMzYwODIwYzM3ZmQwNjMyIn0=",
+            "expire_date": "2020-10-20T00:09:25.011"
+        }
+    },
+    {
+        "model": "logtable.building",
+        "pk": 1,
+        "fields": {
+            "building_name": "\uc2e0\uacf5\ud559\uad00",
+            "levels": 10
+        }
+    },
+    {
+        "model": "logtable.building",
+        "pk": 2,
+        "fields": {
+            "building_name": "\uc6d0\ud765\uad00",
+            "levels": 7
+        }
+    },
+    {
+        "model": "logtable.building",
+        "pk": 3,
+        "fields": {
+            "building_name": "N/A",
+            "levels": 0
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 1,
+        "fields": {
+            "level_num": "1F",
+            "img_file_path": "/static/img/map_img/level_1.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 2,
+        "fields": {
+            "level_num": "2F",
+            "img_file_path": "/static/img/map_img/level_2.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 3,
+        "fields": {
+            "level_num": "3F",
+            "img_file_path": "/static/img/map_img/level_3.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 4,
+        "fields": {
+            "level_num": "4F",
+            "img_file_path": "/static/img/map_img/level_4.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 5,
+        "fields": {
+            "level_num": "5F",
+            "img_file_path": "/static/img/map_img/level_5.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 6,
+        "fields": {
+            "level_num": "6F",
+            "img_file_path": "/static/img/map_img/level_6.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 7,
+        "fields": {
+            "level_num": "7F",
+            "img_file_path": "/static/img/map_img/level_7.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 8,
+        "fields": {
+            "level_num": "8F",
+            "img_file_path": "/static/img/map_img/level_8.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 9,
+        "fields": {
+            "level_num": "9F",
+            "img_file_path": "/static/img/map_img/level_9.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 10,
+        "fields": {
+            "level_num": "10F",
+            "img_file_path": "/static/img/map_img/level_10.png",
+            "building_id": 1
+        }
+    },
+    {
+        "model": "logtable.level",
+        "pk": 11,
+        "fields": {
+            "level_num": "Unknown",
+            "img_file_path": "N/A",
+            "building_id": 3
+        }
+    },
+    {
+        "model": "logtable.devicemodel",
+        "pk": 1,
+        "fields": {
+            "name": "SME20U",
+            "period": 600,
+            "sensor_type": "IG"
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 1,
+        "fields": {
+            "sensor_code": "DGU0006",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-12-13T21:07:33",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 2,
+        "fields": {
+            "sensor_code": "DGU0001",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-12-12T04:50:20",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 3,
+        "fields": {
+            "sensor_code": "DGU0002",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2020-06-03T01:43:04",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 4,
+        "fields": {
+            "sensor_code": "DGU0004",
+            "sensor_model": 1,
+            "sensor_status": "OP",
+            "is_handled": false,
+            "updated_time": "2020-10-06T02:21:54",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 5,
+        "fields": {
+            "sensor_code": "DGU0005",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-12-24T13:07:35",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 6,
+        "fields": {
+            "sensor_code": "DGU0003",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-12-20T16:21:14",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 7,
+        "fields": {
+            "sensor_code": "DGU0020",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:20:12",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 8,
+        "fields": {
+            "sensor_code": "DGU0008",
+            "sensor_model": 1,
+            "sensor_status": "OP",
+            "is_handled": false,
+            "updated_time": "2020-10-06T02:22:34",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 9,
+        "fields": {
+            "sensor_code": "DGU0009",
+            "sensor_model": 1,
+            "sensor_status": "OP",
+            "is_handled": false,
+            "updated_time": "2020-10-06T02:15:20",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 10,
+        "fields": {
+            "sensor_code": "DGU0010",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2020-06-26T19:53:53",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 11,
+        "fields": {
+            "sensor_code": "DGU0011",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2020-01-09T14:44:27",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 12,
+        "fields": {
+            "sensor_code": "DGU0012",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2020-09-25T15:57:33",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 13,
+        "fields": {
+            "sensor_code": "DGU0007",
+            "sensor_model": 1,
+            "sensor_status": "OP",
+            "is_handled": false,
+            "updated_time": "2020-10-06T02:21:29",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 14,
+        "fields": {
+            "sensor_code": "DGU0013",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:06:23",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 15,
+        "fields": {
+            "sensor_code": "DGU0014",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-12-11T17:54:27",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 16,
+        "fields": {
+            "sensor_code": "DGU0015",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2020-06-03T22:10:21",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 17,
+        "fields": {
+            "sensor_code": "DGU0016",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-12-12T01:46:02",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 18,
+        "fields": {
+            "sensor_code": "DGU0017",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2020-06-12T14:17:26",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 19,
+        "fields": {
+            "sensor_code": "DGU0018",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2020-06-30T19:28:00",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 20,
+        "fields": {
+            "sensor_code": "DGU0021",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:20:19",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 21,
+        "fields": {
+            "sensor_code": "DGU0024",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:24:16",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 22,
+        "fields": {
+            "sensor_code": "DGU0025",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:24:17",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 23,
+        "fields": {
+            "sensor_code": "DGU0022",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:24:16",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 24,
+        "fields": {
+            "sensor_code": "DGU0026",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:24:17",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 25,
+        "fields": {
+            "sensor_code": "DGU0023",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:24:18",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 26,
+        "fields": {
+            "sensor_code": "DGU0019",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:24:34",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 27,
+        "fields": {
+            "sensor_code": "DGU0027",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:36:30",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 28,
+        "fields": {
+            "sensor_code": "DGU0028",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:36:44",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 29,
+        "fields": {
+            "sensor_code": "DGU0029",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:36:50",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 30,
+        "fields": {
+            "sensor_code": "DGU0030",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:36:52",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 31,
+        "fields": {
+            "sensor_code": "DGU0031",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:37:06",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 32,
+        "fields": {
+            "sensor_code": "DGU0032",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:37:15",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 33,
+        "fields": {
+            "sensor_code": "DGU0033",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:37:22",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 34,
+        "fields": {
+            "sensor_code": "DGU0034",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:37:28",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 35,
+        "fields": {
+            "sensor_code": "DGU0035",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:37:37",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 36,
+        "fields": {
+            "sensor_code": "DGU0036",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:37:41",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 37,
+        "fields": {
+            "sensor_code": "DGU0049",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:41:20",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 38,
+        "fields": {
+            "sensor_code": "DGU0050",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:41:29",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 39,
+        "fields": {
+            "sensor_code": "DGU0047",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:41:50",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 40,
+        "fields": {
+            "sensor_code": "DGU0048",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:42:12",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 41,
+        "fields": {
+            "sensor_code": "DGU0037",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:50:02",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 42,
+        "fields": {
+            "sensor_code": "DGU0038",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:50:09",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 43,
+        "fields": {
+            "sensor_code": "DGU0039",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:50:14",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 44,
+        "fields": {
+            "sensor_code": "DGU0041",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:50:35",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 45,
+        "fields": {
+            "sensor_code": "DGU0042",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:50:49",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 46,
+        "fields": {
+            "sensor_code": "DGU0044",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T15:04:18",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 47,
+        "fields": {
+            "sensor_code": "DGU0045",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T14:51:11",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 48,
+        "fields": {
+            "sensor_code": "DGU0043",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T15:00:29",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 49,
+        "fields": {
+            "sensor_code": "DGU0046",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T15:01:02",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.sensor",
+        "pk": 50,
+        "fields": {
+            "sensor_code": "DGU0040",
+            "sensor_model": 1,
+            "sensor_status": "BR",
+            "is_handled": false,
+            "updated_time": "2019-11-15T15:02:37",
+            "level": 1,
+            "position_x": -1,
+            "position_y": -1
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 1,
+        "fields": {
+            "sensor": 1,
+            "updated_time": "2019-12-13T21:07:33"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 2,
+        "fields": {
+            "sensor": 2,
+            "updated_time": "2019-12-12T04:50:20"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 3,
+        "fields": {
+            "sensor": 3,
+            "updated_time": "2020-06-03T01:43:04"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 4,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T00:21:55"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 5,
+        "fields": {
+            "sensor": 5,
+            "updated_time": "2019-12-24T13:07:35"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 6,
+        "fields": {
+            "sensor": 6,
+            "updated_time": "2019-12-20T16:21:14"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 7,
+        "fields": {
+            "sensor": 7,
+            "updated_time": "2019-11-15T14:20:12"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 8,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T00:22:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 9,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T00:25:19"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 10,
+        "fields": {
+            "sensor": 10,
+            "updated_time": "2020-06-26T19:53:53"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 11,
+        "fields": {
+            "sensor": 11,
+            "updated_time": "2020-01-09T14:44:27"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 12,
+        "fields": {
+            "sensor": 12,
+            "updated_time": "2020-09-25T15:57:33"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 13,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T00:31:30"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 14,
+        "fields": {
+            "sensor": 14,
+            "updated_time": "2019-11-15T14:06:23"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 15,
+        "fields": {
+            "sensor": 15,
+            "updated_time": "2019-12-11T17:54:27"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 16,
+        "fields": {
+            "sensor": 16,
+            "updated_time": "2020-06-03T22:10:21"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 17,
+        "fields": {
+            "sensor": 17,
+            "updated_time": "2019-12-12T01:46:02"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 18,
+        "fields": {
+            "sensor": 18,
+            "updated_time": "2020-06-12T14:17:26"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 19,
+        "fields": {
+            "sensor": 19,
+            "updated_time": "2020-06-30T19:28:00"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 20,
+        "fields": {
+            "sensor": 20,
+            "updated_time": "2019-11-15T14:20:19"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 21,
+        "fields": {
+            "sensor": 21,
+            "updated_time": "2019-11-15T14:24:16"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 22,
+        "fields": {
+            "sensor": 22,
+            "updated_time": "2019-11-15T14:24:17"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 23,
+        "fields": {
+            "sensor": 23,
+            "updated_time": "2019-11-15T14:24:16"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 24,
+        "fields": {
+            "sensor": 24,
+            "updated_time": "2019-11-15T14:24:17"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 25,
+        "fields": {
+            "sensor": 25,
+            "updated_time": "2019-11-15T14:24:18"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 26,
+        "fields": {
+            "sensor": 26,
+            "updated_time": "2019-11-15T14:24:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 27,
+        "fields": {
+            "sensor": 27,
+            "updated_time": "2019-11-15T14:36:30"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 28,
+        "fields": {
+            "sensor": 28,
+            "updated_time": "2019-11-15T14:36:44"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 29,
+        "fields": {
+            "sensor": 29,
+            "updated_time": "2019-11-15T14:36:50"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 30,
+        "fields": {
+            "sensor": 30,
+            "updated_time": "2019-11-15T14:36:52"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 31,
+        "fields": {
+            "sensor": 31,
+            "updated_time": "2019-11-15T14:37:06"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 32,
+        "fields": {
+            "sensor": 32,
+            "updated_time": "2019-11-15T14:37:15"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 33,
+        "fields": {
+            "sensor": 33,
+            "updated_time": "2019-11-15T14:37:22"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 34,
+        "fields": {
+            "sensor": 34,
+            "updated_time": "2019-11-15T14:37:28"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 35,
+        "fields": {
+            "sensor": 35,
+            "updated_time": "2019-11-15T14:37:37"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 36,
+        "fields": {
+            "sensor": 36,
+            "updated_time": "2019-11-15T14:37:41"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 37,
+        "fields": {
+            "sensor": 37,
+            "updated_time": "2019-11-15T14:41:20"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 38,
+        "fields": {
+            "sensor": 38,
+            "updated_time": "2019-11-15T14:41:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 39,
+        "fields": {
+            "sensor": 39,
+            "updated_time": "2019-11-15T14:41:50"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 40,
+        "fields": {
+            "sensor": 40,
+            "updated_time": "2019-11-15T14:42:12"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 41,
+        "fields": {
+            "sensor": 41,
+            "updated_time": "2019-11-15T14:50:02"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 42,
+        "fields": {
+            "sensor": 42,
+            "updated_time": "2019-11-15T14:50:09"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 43,
+        "fields": {
+            "sensor": 43,
+            "updated_time": "2019-11-15T14:50:14"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 44,
+        "fields": {
+            "sensor": 44,
+            "updated_time": "2019-11-15T14:50:35"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 45,
+        "fields": {
+            "sensor": 45,
+            "updated_time": "2019-11-15T14:50:49"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 46,
+        "fields": {
+            "sensor": 46,
+            "updated_time": "2019-11-15T15:04:18"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 47,
+        "fields": {
+            "sensor": 47,
+            "updated_time": "2019-11-15T14:51:11"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 48,
+        "fields": {
+            "sensor": 48,
+            "updated_time": "2019-11-15T15:00:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 49,
+        "fields": {
+            "sensor": 49,
+            "updated_time": "2019-11-15T15:01:02"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 50,
+        "fields": {
+            "sensor": 50,
+            "updated_time": "2019-11-15T15:02:37"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 51,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T00:31:55"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 52,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T00:32:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 53,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T00:35:19"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 54,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T00:41:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 55,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T00:41:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 56,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T00:42:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 57,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T00:45:19"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 58,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T00:51:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 59,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T00:51:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 60,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T00:52:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 61,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T00:55:19"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 62,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T01:01:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 63,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T01:01:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 64,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T01:02:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 65,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T01:05:19"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 66,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T01:11:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 67,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T01:11:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 68,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T01:12:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 69,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T01:15:19"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 70,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T01:21:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 71,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T01:21:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 72,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T01:22:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 73,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T01:25:19"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 74,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T01:31:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 75,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T01:31:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 76,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T01:32:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 77,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T01:35:19"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 78,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T01:41:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 79,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T01:41:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 80,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T02:01:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 81,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T02:02:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 82,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T02:05:20"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 83,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T02:01:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 84,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T02:11:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 85,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T02:12:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 86,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T02:11:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 87,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T02:15:20"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 88,
+        "fields": {
+            "sensor": 4,
+            "updated_time": "2020-10-06T02:21:54"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 89,
+        "fields": {
+            "sensor": 8,
+            "updated_time": "2020-10-06T02:22:34"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 90,
+        "fields": {
+            "sensor": 13,
+            "updated_time": "2020-10-06T02:21:29"
+        }
+    },
+    {
+        "model": "logtable.log",
+        "pk": 91,
+        "fields": {
+            "sensor": 9,
+            "updated_time": "2020-10-06T02:25:20"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": [
+                "admin",
+                "logentry"
+            ],
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": [
+                "admin",
+                "logentry"
+            ],
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": [
+                "admin",
+                "logentry"
+            ],
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": [
+                "admin",
+                "logentry"
+            ],
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add permission",
+            "content_type": [
+                "auth",
+                "permission"
+            ],
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change permission",
+            "content_type": [
+                "auth",
+                "permission"
+            ],
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": [
+                "auth",
+                "permission"
+            ],
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view permission",
+            "content_type": [
+                "auth",
+                "permission"
+            ],
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add group",
+            "content_type": [
+                "auth",
+                "group"
+            ],
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change group",
+            "content_type": [
+                "auth",
+                "group"
+            ],
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete group",
+            "content_type": [
+                "auth",
+                "group"
+            ],
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view group",
+            "content_type": [
+                "auth",
+                "group"
+            ],
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add user",
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change user",
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete user",
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view user",
+            "content_type": [
+                "auth",
+                "user"
+            ],
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add content type",
+            "content_type": [
+                "contenttypes",
+                "contenttype"
+            ],
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change content type",
+            "content_type": [
+                "contenttypes",
+                "contenttype"
+            ],
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": [
+                "contenttypes",
+                "contenttype"
+            ],
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view content type",
+            "content_type": [
+                "contenttypes",
+                "contenttype"
+            ],
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add session",
+            "content_type": [
+                "sessions",
+                "session"
+            ],
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change session",
+            "content_type": [
+                "sessions",
+                "session"
+            ],
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete session",
+            "content_type": [
+                "sessions",
+                "session"
+            ],
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view session",
+            "content_type": [
+                "sessions",
+                "session"
+            ],
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add building",
+            "content_type": [
+                "logtable",
+                "building"
+            ],
+            "codename": "add_building"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change building",
+            "content_type": [
+                "logtable",
+                "building"
+            ],
+            "codename": "change_building"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete building",
+            "content_type": [
+                "logtable",
+                "building"
+            ],
+            "codename": "delete_building"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view building",
+            "content_type": [
+                "logtable",
+                "building"
+            ],
+            "codename": "view_building"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add device model",
+            "content_type": [
+                "logtable",
+                "devicemodel"
+            ],
+            "codename": "add_devicemodel"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change device model",
+            "content_type": [
+                "logtable",
+                "devicemodel"
+            ],
+            "codename": "change_devicemodel"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete device model",
+            "content_type": [
+                "logtable",
+                "devicemodel"
+            ],
+            "codename": "delete_devicemodel"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view device model",
+            "content_type": [
+                "logtable",
+                "devicemodel"
+            ],
+            "codename": "view_devicemodel"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add level",
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "codename": "add_level"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change level",
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "codename": "change_level"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete level",
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "codename": "delete_level"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view level",
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "codename": "view_level"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add sensor",
+            "content_type": [
+                "logtable",
+                "sensor"
+            ],
+            "codename": "add_sensor"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change sensor",
+            "content_type": [
+                "logtable",
+                "sensor"
+            ],
+            "codename": "change_sensor"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete sensor",
+            "content_type": [
+                "logtable",
+                "sensor"
+            ],
+            "codename": "delete_sensor"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view sensor",
+            "content_type": [
+                "logtable",
+                "sensor"
+            ],
+            "codename": "view_sensor"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can add log",
+            "content_type": [
+                "logtable",
+                "log"
+            ],
+            "codename": "add_log"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can change log",
+            "content_type": [
+                "logtable",
+                "log"
+            ],
+            "codename": "change_log"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can delete log",
+            "content_type": [
+                "logtable",
+                "log"
+            ],
+            "codename": "delete_log"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "fields": {
+            "name": "Can view log",
+            "content_type": [
+                "logtable",
+                "log"
+            ],
+            "codename": "view_log"
+        }
+    },
+    {
+        "model": "auth.user",
+        "fields": {
+            "password": "pbkdf2_sha256$150000$lJHPHoefnEWg$h2dEx6dzUrzaaGomGs3W2Id7wYJ0ACmPwZ6edWzTjuo=",
+            "last_login": "2020-10-06T00:09:24.995",
+            "is_superuser": true,
+            "username": "admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "admin@what.ever",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-10-06T00:09:05.244",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2020-10-06T00:15:01.053",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "building"
+            ],
+            "object_id": "1",
+            "object_repr": "\uc2e0\uacf5\ud559\uad00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2020-10-06T00:15:08.383",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "building"
+            ],
+            "object_id": "2",
+            "object_repr": "\uc6d0\ud765\uad00",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2020-10-06T00:15:59.131",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "1",
+            "object_repr": "1F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2020-10-06T00:16:20.354",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "2",
+            "object_repr": "2F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2020-10-06T00:16:29.551",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "3",
+            "object_repr": "3F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2020-10-06T00:16:35.853",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "2",
+            "object_repr": "2F",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2020-10-06T00:16:45.517",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "4",
+            "object_repr": "4F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2020-10-06T00:16:55.707",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "5",
+            "object_repr": "5F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2020-10-06T00:17:03.944",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "6",
+            "object_repr": "6F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2020-10-06T00:17:10.040",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "7",
+            "object_repr": "7F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2020-10-06T00:17:20.682",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "8",
+            "object_repr": "8F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2020-10-06T00:17:28.833",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "9",
+            "object_repr": "9F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2020-10-06T00:17:43.059",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "10",
+            "object_repr": "10F",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2020-10-06T00:18:11.710",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "building"
+            ],
+            "object_id": "3",
+            "object_repr": "N/A",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2020-10-06T00:18:30.786",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "level"
+            ],
+            "object_id": "11",
+            "object_repr": "Unknown",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2020-10-06T00:32:11.354",
+            "user": [
+                "admin"
+            ],
+            "content_type": [
+                "logtable",
+                "devicemodel"
+            ],
+            "object_id": "1",
+            "object_repr": "DeviceModel object (1)",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"period\"]}}]"
+        }
     }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "auth",
-        "model": "permission"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "auth",
-        "model": "group"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "auth",
-        "model": "user"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "contenttypes",
-        "model": "contenttype"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "sessions",
-        "model": "session"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "logtable",
-        "model": "building"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "logtable",
-        "model": "devicemodel"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "logtable",
-        "model": "level"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "logtable",
-        "model": "sensor"
-    }
-},
-{
-    "model": "contenttypes.contenttype",
-    "fields": {
-        "app_label": "logtable",
-        "model": "log"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "oizqsfpcpxd3x35o14g106b6s5pv6qga",
-    "fields": {
-        "session_data": "YTUxZDM4NmRmYTA1YTcxZTdmMjBmZGUwM2U2NDVhZGIzZTQzYzJjNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1ZDY5NDdmMDNlZDlmYTE5NWRiYWI5ZGVmMzYwODIwYzM3ZmQwNjMyIn0=",
-        "expire_date": "2020-10-20T00:09:25.011"
-    }
-},
-{
-    "model": "logtable.building",
-    "pk": 1,
-    "fields": {
-        "building_name": "\uc2e0\uacf5\ud559\uad00",
-        "levels": 10
-    }
-},
-{
-    "model": "logtable.building",
-    "pk": 2,
-    "fields": {
-        "building_name": "\uc6d0\ud765\uad00",
-        "levels": 7
-    }
-},
-{
-    "model": "logtable.building",
-    "pk": 3,
-    "fields": {
-        "building_name": "N/A",
-        "levels": 0
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 1,
-    "fields": {
-        "level_num": "1F",
-        "img_file_path": "/static/img/map_img/level_1.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 2,
-    "fields": {
-        "level_num": "2F",
-        "img_file_path": "/static/img/map_img/level_2.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 3,
-    "fields": {
-        "level_num": "3F",
-        "img_file_path": "/static/img/map_img/level_3.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 4,
-    "fields": {
-        "level_num": "4F",
-        "img_file_path": "/static/img/map_img/level_4.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 5,
-    "fields": {
-        "level_num": "5F",
-        "img_file_path": "/static/img/map_img/level_5.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 6,
-    "fields": {
-        "level_num": "6F",
-        "img_file_path": "/static/img/map_img/level_6.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 7,
-    "fields": {
-        "level_num": "7F",
-        "img_file_path": "/static/img/map_img/level_7.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 8,
-    "fields": {
-        "level_num": "8F",
-        "img_file_path": "/static/img/map_img/level_8.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 9,
-    "fields": {
-        "level_num": "9F",
-        "img_file_path": "/static/img/map_img/level_9.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 10,
-    "fields": {
-        "level_num": "10F",
-        "img_file_path": "/static/img/map_img/level_10.png",
-        "building_id": 1
-    }
-},
-{
-    "model": "logtable.level",
-    "pk": 11,
-    "fields": {
-        "level_num": "Unknown",
-        "img_file_path": "N/A",
-        "building_id": 3
-    }
-},
-{
-    "model": "logtable.devicemodel",
-    "pk": 1,
-    "fields": {
-        "name": "SME20U",
-        "period": 600
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 1,
-    "fields": {
-        "sensor_code": "DGU0006",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-12-13T21:07:33",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 2,
-    "fields": {
-        "sensor_code": "DGU0001",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-12-12T04:50:20",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 3,
-    "fields": {
-        "sensor_code": "DGU0002",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2020-06-03T01:43:04",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 4,
-    "fields": {
-        "sensor_code": "DGU0004",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "OP",
-        "is_handled": false,
-        "updated_time": "2020-10-06T02:21:54",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 5,
-    "fields": {
-        "sensor_code": "DGU0005",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-12-24T13:07:35",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 6,
-    "fields": {
-        "sensor_code": "DGU0003",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-12-20T16:21:14",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 7,
-    "fields": {
-        "sensor_code": "DGU0020",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:20:12",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 8,
-    "fields": {
-        "sensor_code": "DGU0008",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "OP",
-        "is_handled": false,
-        "updated_time": "2020-10-06T02:22:34",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 9,
-    "fields": {
-        "sensor_code": "DGU0009",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "OP",
-        "is_handled": false,
-        "updated_time": "2020-10-06T02:15:20",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 10,
-    "fields": {
-        "sensor_code": "DGU0010",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2020-06-26T19:53:53",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 11,
-    "fields": {
-        "sensor_code": "DGU0011",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2020-01-09T14:44:27",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 12,
-    "fields": {
-        "sensor_code": "DGU0012",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2020-09-25T15:57:33",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 13,
-    "fields": {
-        "sensor_code": "DGU0007",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "OP",
-        "is_handled": false,
-        "updated_time": "2020-10-06T02:21:29",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 14,
-    "fields": {
-        "sensor_code": "DGU0013",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:06:23",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 15,
-    "fields": {
-        "sensor_code": "DGU0014",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-12-11T17:54:27",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 16,
-    "fields": {
-        "sensor_code": "DGU0015",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2020-06-03T22:10:21",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 17,
-    "fields": {
-        "sensor_code": "DGU0016",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-12-12T01:46:02",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 18,
-    "fields": {
-        "sensor_code": "DGU0017",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2020-06-12T14:17:26",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 19,
-    "fields": {
-        "sensor_code": "DGU0018",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2020-06-30T19:28:00",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 20,
-    "fields": {
-        "sensor_code": "DGU0021",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:20:19",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 21,
-    "fields": {
-        "sensor_code": "DGU0024",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:24:16",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 22,
-    "fields": {
-        "sensor_code": "DGU0025",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:24:17",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 23,
-    "fields": {
-        "sensor_code": "DGU0022",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:24:16",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 24,
-    "fields": {
-        "sensor_code": "DGU0026",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:24:17",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 25,
-    "fields": {
-        "sensor_code": "DGU0023",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:24:18",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 26,
-    "fields": {
-        "sensor_code": "DGU0019",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:24:34",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 27,
-    "fields": {
-        "sensor_code": "DGU0027",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:36:30",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 28,
-    "fields": {
-        "sensor_code": "DGU0028",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:36:44",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 29,
-    "fields": {
-        "sensor_code": "DGU0029",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:36:50",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 30,
-    "fields": {
-        "sensor_code": "DGU0030",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:36:52",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 31,
-    "fields": {
-        "sensor_code": "DGU0031",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:37:06",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 32,
-    "fields": {
-        "sensor_code": "DGU0032",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:37:15",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 33,
-    "fields": {
-        "sensor_code": "DGU0033",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:37:22",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 34,
-    "fields": {
-        "sensor_code": "DGU0034",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:37:28",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 35,
-    "fields": {
-        "sensor_code": "DGU0035",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:37:37",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 36,
-    "fields": {
-        "sensor_code": "DGU0036",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:37:41",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 37,
-    "fields": {
-        "sensor_code": "DGU0049",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:41:20",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 38,
-    "fields": {
-        "sensor_code": "DGU0050",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:41:29",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 39,
-    "fields": {
-        "sensor_code": "DGU0047",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:41:50",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 40,
-    "fields": {
-        "sensor_code": "DGU0048",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:42:12",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 41,
-    "fields": {
-        "sensor_code": "DGU0037",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:50:02",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 42,
-    "fields": {
-        "sensor_code": "DGU0038",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:50:09",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 43,
-    "fields": {
-        "sensor_code": "DGU0039",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:50:14",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 44,
-    "fields": {
-        "sensor_code": "DGU0041",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:50:35",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 45,
-    "fields": {
-        "sensor_code": "DGU0042",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:50:49",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 46,
-    "fields": {
-        "sensor_code": "DGU0044",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T15:04:18",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 47,
-    "fields": {
-        "sensor_code": "DGU0045",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T14:51:11",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 48,
-    "fields": {
-        "sensor_code": "DGU0043",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T15:00:29",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 49,
-    "fields": {
-        "sensor_code": "DGU0046",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T15:01:02",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.sensor",
-    "pk": 50,
-    "fields": {
-        "sensor_code": "DGU0040",
-        "sensor_model": 1,
-        "sensor_type": "UK",
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2019-11-15T15:02:37",
-        "level": 1,
-        "position_x": -1,
-        "position_y": -1
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 1,
-    "fields": {
-        "sensor": 1,
-        "updated_time": "2019-12-13T21:07:33"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 2,
-    "fields": {
-        "sensor": 2,
-        "updated_time": "2019-12-12T04:50:20"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 3,
-    "fields": {
-        "sensor": 3,
-        "updated_time": "2020-06-03T01:43:04"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 4,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T00:21:55"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 5,
-    "fields": {
-        "sensor": 5,
-        "updated_time": "2019-12-24T13:07:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 6,
-    "fields": {
-        "sensor": 6,
-        "updated_time": "2019-12-20T16:21:14"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 7,
-    "fields": {
-        "sensor": 7,
-        "updated_time": "2019-11-15T14:20:12"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 8,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T00:22:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 9,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T00:25:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 10,
-    "fields": {
-        "sensor": 10,
-        "updated_time": "2020-06-26T19:53:53"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 11,
-    "fields": {
-        "sensor": 11,
-        "updated_time": "2020-01-09T14:44:27"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 12,
-    "fields": {
-        "sensor": 12,
-        "updated_time": "2020-09-25T15:57:33"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 13,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T00:31:30"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 14,
-    "fields": {
-        "sensor": 14,
-        "updated_time": "2019-11-15T14:06:23"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 15,
-    "fields": {
-        "sensor": 15,
-        "updated_time": "2019-12-11T17:54:27"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 16,
-    "fields": {
-        "sensor": 16,
-        "updated_time": "2020-06-03T22:10:21"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 17,
-    "fields": {
-        "sensor": 17,
-        "updated_time": "2019-12-12T01:46:02"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 18,
-    "fields": {
-        "sensor": 18,
-        "updated_time": "2020-06-12T14:17:26"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 19,
-    "fields": {
-        "sensor": 19,
-        "updated_time": "2020-06-30T19:28:00"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 20,
-    "fields": {
-        "sensor": 20,
-        "updated_time": "2019-11-15T14:20:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 21,
-    "fields": {
-        "sensor": 21,
-        "updated_time": "2019-11-15T14:24:16"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 22,
-    "fields": {
-        "sensor": 22,
-        "updated_time": "2019-11-15T14:24:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 23,
-    "fields": {
-        "sensor": 23,
-        "updated_time": "2019-11-15T14:24:16"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 24,
-    "fields": {
-        "sensor": 24,
-        "updated_time": "2019-11-15T14:24:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 25,
-    "fields": {
-        "sensor": 25,
-        "updated_time": "2019-11-15T14:24:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 26,
-    "fields": {
-        "sensor": 26,
-        "updated_time": "2019-11-15T14:24:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 27,
-    "fields": {
-        "sensor": 27,
-        "updated_time": "2019-11-15T14:36:30"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 28,
-    "fields": {
-        "sensor": 28,
-        "updated_time": "2019-11-15T14:36:44"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 29,
-    "fields": {
-        "sensor": 29,
-        "updated_time": "2019-11-15T14:36:50"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 30,
-    "fields": {
-        "sensor": 30,
-        "updated_time": "2019-11-15T14:36:52"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 31,
-    "fields": {
-        "sensor": 31,
-        "updated_time": "2019-11-15T14:37:06"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 32,
-    "fields": {
-        "sensor": 32,
-        "updated_time": "2019-11-15T14:37:15"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 33,
-    "fields": {
-        "sensor": 33,
-        "updated_time": "2019-11-15T14:37:22"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 34,
-    "fields": {
-        "sensor": 34,
-        "updated_time": "2019-11-15T14:37:28"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 35,
-    "fields": {
-        "sensor": 35,
-        "updated_time": "2019-11-15T14:37:37"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 36,
-    "fields": {
-        "sensor": 36,
-        "updated_time": "2019-11-15T14:37:41"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 37,
-    "fields": {
-        "sensor": 37,
-        "updated_time": "2019-11-15T14:41:20"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 38,
-    "fields": {
-        "sensor": 38,
-        "updated_time": "2019-11-15T14:41:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 39,
-    "fields": {
-        "sensor": 39,
-        "updated_time": "2019-11-15T14:41:50"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 40,
-    "fields": {
-        "sensor": 40,
-        "updated_time": "2019-11-15T14:42:12"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 41,
-    "fields": {
-        "sensor": 41,
-        "updated_time": "2019-11-15T14:50:02"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 42,
-    "fields": {
-        "sensor": 42,
-        "updated_time": "2019-11-15T14:50:09"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 43,
-    "fields": {
-        "sensor": 43,
-        "updated_time": "2019-11-15T14:50:14"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 44,
-    "fields": {
-        "sensor": 44,
-        "updated_time": "2019-11-15T14:50:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 45,
-    "fields": {
-        "sensor": 45,
-        "updated_time": "2019-11-15T14:50:49"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 46,
-    "fields": {
-        "sensor": 46,
-        "updated_time": "2019-11-15T15:04:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 47,
-    "fields": {
-        "sensor": 47,
-        "updated_time": "2019-11-15T14:51:11"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 48,
-    "fields": {
-        "sensor": 48,
-        "updated_time": "2019-11-15T15:00:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 49,
-    "fields": {
-        "sensor": 49,
-        "updated_time": "2019-11-15T15:01:02"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 50,
-    "fields": {
-        "sensor": 50,
-        "updated_time": "2019-11-15T15:02:37"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 51,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T00:31:55"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 52,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T00:32:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 53,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T00:35:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 54,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T00:41:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 55,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T00:41:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 56,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T00:42:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 57,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T00:45:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 58,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T00:51:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 59,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T00:51:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 60,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T00:52:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 61,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T00:55:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 62,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T01:01:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 63,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T01:01:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 64,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T01:02:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 65,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T01:05:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 66,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T01:11:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 67,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T01:11:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 68,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T01:12:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 69,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T01:15:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 70,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T01:21:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 71,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T01:21:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 72,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T01:22:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 73,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T01:25:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 74,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T01:31:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 75,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T01:31:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 76,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T01:32:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 77,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T01:35:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 78,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T01:41:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 79,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T01:41:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 80,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T02:01:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 81,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T02:02:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 82,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T02:05:20"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 83,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T02:01:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 84,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T02:11:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 85,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T02:12:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 86,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T02:11:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 87,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T02:15:20"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 88,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-06T02:21:54"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 89,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-06T02:22:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 90,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-06T02:21:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 91,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-06T02:25:20"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add log entry",
-        "content_type": [
-            "admin",
-            "logentry"
-        ],
-        "codename": "add_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change log entry",
-        "content_type": [
-            "admin",
-            "logentry"
-        ],
-        "codename": "change_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete log entry",
-        "content_type": [
-            "admin",
-            "logentry"
-        ],
-        "codename": "delete_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view log entry",
-        "content_type": [
-            "admin",
-            "logentry"
-        ],
-        "codename": "view_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add permission",
-        "content_type": [
-            "auth",
-            "permission"
-        ],
-        "codename": "add_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change permission",
-        "content_type": [
-            "auth",
-            "permission"
-        ],
-        "codename": "change_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete permission",
-        "content_type": [
-            "auth",
-            "permission"
-        ],
-        "codename": "delete_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view permission",
-        "content_type": [
-            "auth",
-            "permission"
-        ],
-        "codename": "view_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add group",
-        "content_type": [
-            "auth",
-            "group"
-        ],
-        "codename": "add_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change group",
-        "content_type": [
-            "auth",
-            "group"
-        ],
-        "codename": "change_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete group",
-        "content_type": [
-            "auth",
-            "group"
-        ],
-        "codename": "delete_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view group",
-        "content_type": [
-            "auth",
-            "group"
-        ],
-        "codename": "view_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add user",
-        "content_type": [
-            "auth",
-            "user"
-        ],
-        "codename": "add_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change user",
-        "content_type": [
-            "auth",
-            "user"
-        ],
-        "codename": "change_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete user",
-        "content_type": [
-            "auth",
-            "user"
-        ],
-        "codename": "delete_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view user",
-        "content_type": [
-            "auth",
-            "user"
-        ],
-        "codename": "view_user"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add content type",
-        "content_type": [
-            "contenttypes",
-            "contenttype"
-        ],
-        "codename": "add_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change content type",
-        "content_type": [
-            "contenttypes",
-            "contenttype"
-        ],
-        "codename": "change_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete content type",
-        "content_type": [
-            "contenttypes",
-            "contenttype"
-        ],
-        "codename": "delete_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view content type",
-        "content_type": [
-            "contenttypes",
-            "contenttype"
-        ],
-        "codename": "view_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add session",
-        "content_type": [
-            "sessions",
-            "session"
-        ],
-        "codename": "add_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change session",
-        "content_type": [
-            "sessions",
-            "session"
-        ],
-        "codename": "change_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete session",
-        "content_type": [
-            "sessions",
-            "session"
-        ],
-        "codename": "delete_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view session",
-        "content_type": [
-            "sessions",
-            "session"
-        ],
-        "codename": "view_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add building",
-        "content_type": [
-            "logtable",
-            "building"
-        ],
-        "codename": "add_building"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change building",
-        "content_type": [
-            "logtable",
-            "building"
-        ],
-        "codename": "change_building"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete building",
-        "content_type": [
-            "logtable",
-            "building"
-        ],
-        "codename": "delete_building"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view building",
-        "content_type": [
-            "logtable",
-            "building"
-        ],
-        "codename": "view_building"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add device model",
-        "content_type": [
-            "logtable",
-            "devicemodel"
-        ],
-        "codename": "add_devicemodel"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change device model",
-        "content_type": [
-            "logtable",
-            "devicemodel"
-        ],
-        "codename": "change_devicemodel"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete device model",
-        "content_type": [
-            "logtable",
-            "devicemodel"
-        ],
-        "codename": "delete_devicemodel"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view device model",
-        "content_type": [
-            "logtable",
-            "devicemodel"
-        ],
-        "codename": "view_devicemodel"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add level",
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "codename": "add_level"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change level",
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "codename": "change_level"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete level",
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "codename": "delete_level"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view level",
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "codename": "view_level"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add sensor",
-        "content_type": [
-            "logtable",
-            "sensor"
-        ],
-        "codename": "add_sensor"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change sensor",
-        "content_type": [
-            "logtable",
-            "sensor"
-        ],
-        "codename": "change_sensor"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete sensor",
-        "content_type": [
-            "logtable",
-            "sensor"
-        ],
-        "codename": "delete_sensor"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view sensor",
-        "content_type": [
-            "logtable",
-            "sensor"
-        ],
-        "codename": "view_sensor"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can add log",
-        "content_type": [
-            "logtable",
-            "log"
-        ],
-        "codename": "add_log"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can change log",
-        "content_type": [
-            "logtable",
-            "log"
-        ],
-        "codename": "change_log"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can delete log",
-        "content_type": [
-            "logtable",
-            "log"
-        ],
-        "codename": "delete_log"
-    }
-},
-{
-    "model": "auth.permission",
-    "fields": {
-        "name": "Can view log",
-        "content_type": [
-            "logtable",
-            "log"
-        ],
-        "codename": "view_log"
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$150000$lJHPHoefnEWg$h2dEx6dzUrzaaGomGs3W2Id7wYJ0ACmPwZ6edWzTjuo=",
-        "last_login": "2020-10-06T00:09:24.995",
-        "is_superuser": true,
-        "username": "admin",
-        "first_name": "",
-        "last_name": "",
-        "email": "admin@what.ever",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2020-10-06T00:09:05.244",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 1,
-    "fields": {
-        "action_time": "2020-10-06T00:15:01.053",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "building"
-        ],
-        "object_id": "1",
-        "object_repr": "\uc2e0\uacf5\ud559\uad00",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 2,
-    "fields": {
-        "action_time": "2020-10-06T00:15:08.383",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "building"
-        ],
-        "object_id": "2",
-        "object_repr": "\uc6d0\ud765\uad00",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 3,
-    "fields": {
-        "action_time": "2020-10-06T00:15:59.131",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "1",
-        "object_repr": "1F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 4,
-    "fields": {
-        "action_time": "2020-10-06T00:16:20.354",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "2",
-        "object_repr": "2F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 5,
-    "fields": {
-        "action_time": "2020-10-06T00:16:29.551",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "3",
-        "object_repr": "3F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 6,
-    "fields": {
-        "action_time": "2020-10-06T00:16:35.853",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "2",
-        "object_repr": "2F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 7,
-    "fields": {
-        "action_time": "2020-10-06T00:16:45.517",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "4",
-        "object_repr": "4F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 8,
-    "fields": {
-        "action_time": "2020-10-06T00:16:55.707",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "5",
-        "object_repr": "5F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 9,
-    "fields": {
-        "action_time": "2020-10-06T00:17:03.944",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "6",
-        "object_repr": "6F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 10,
-    "fields": {
-        "action_time": "2020-10-06T00:17:10.040",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "7",
-        "object_repr": "7F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 11,
-    "fields": {
-        "action_time": "2020-10-06T00:17:20.682",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "8",
-        "object_repr": "8F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 12,
-    "fields": {
-        "action_time": "2020-10-06T00:17:28.833",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "9",
-        "object_repr": "9F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 13,
-    "fields": {
-        "action_time": "2020-10-06T00:17:43.059",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "10",
-        "object_repr": "10F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 14,
-    "fields": {
-        "action_time": "2020-10-06T00:18:11.710",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "building"
-        ],
-        "object_id": "3",
-        "object_repr": "N/A",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 15,
-    "fields": {
-        "action_time": "2020-10-06T00:18:30.786",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "11",
-        "object_repr": "Unknown",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 16,
-    "fields": {
-        "action_time": "2020-10-06T00:32:11.354",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "devicemodel"
-        ],
-        "object_id": "1",
-        "object_repr": "DeviceModel object (1)",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"period\"]}}]"
-    }
-}
 ]

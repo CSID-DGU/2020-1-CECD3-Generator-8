@@ -18,6 +18,7 @@ class SimpleAnalyzer(Analyzer):
         if diff <= operational_period + 3:
             # 정상 작동
             sensor.sensor_status = 'OP'
+            sensor.is_handled = True
         elif diff <= operational_period * 3:
             sensor.sensor_status = 'TE'
         else:
