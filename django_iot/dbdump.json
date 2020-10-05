@@ -52,6 +52,13 @@
     "model": "contenttypes.contenttype",
     "fields": {
         "app_label": "logtable",
+        "model": "devicemodel"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "logtable",
         "model": "level"
     }
 },
@@ -71,18 +78,10 @@
 },
 {
     "model": "sessions.session",
-    "pk": "67367p2g46475lkkbqtma6667bp2wyok",
+    "pk": "oizqsfpcpxd3x35o14g106b6s5pv6qga",
     "fields": {
-        "session_data": "ODQxMDNjYjkyZjgyYThhYjUwOTdkYzliZmJkNDg5ZjI5ODNiMmIzZDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmMTEyZTI2YmQ4NDVhOWU2ZjIyNDlmMzA5NzI3NTA0YWU0OTY4YmM4In0=",
-        "expire_date": "2020-10-08T15:53:37.089"
-    }
-},
-{
-    "model": "sessions.session",
-    "pk": "aje32n8l070yomf6ixnbhx4donj00fr7",
-    "fields": {
-        "session_data": "M2M2YWZmNjFlYjRkYzcwZWIzZDMwYzM3YmEyYzU0MjMzNjE4ZDE5Njp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjYTQ0MjM4ZDc3OGM0YjEzNDk3YWNlYzYzNGFiMzQzMWYwMzZkMzVhIn0=",
-        "expire_date": "2020-10-05T22:07:29.229"
+        "session_data": "YTUxZDM4NmRmYTA1YTcxZTdmMjBmZGUwM2U2NDVhZGIzZTQzYzJjNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1ZDY5NDdmMDNlZDlmYTE5NWRiYWI5ZGVmMzYwODIwYzM3ZmQwNjMyIn0=",
+        "expire_date": "2020-10-20T00:09:25.011"
     }
 },
 {
@@ -95,7 +94,7 @@
 },
 {
     "model": "logtable.building",
-    "pk": 3,
+    "pk": 2,
     "fields": {
         "building_name": "\uc6d0\ud765\uad00",
         "levels": 7
@@ -103,7 +102,7 @@
 },
 {
     "model": "logtable.building",
-    "pk": 4,
+    "pk": 3,
     "fields": {
         "building_name": "N/A",
         "levels": 0
@@ -120,7 +119,7 @@
 },
 {
     "model": "logtable.level",
-    "pk": 4,
+    "pk": 2,
     "fields": {
         "level_num": "2F",
         "img_file_path": "/static/img/map_img/level_2.png",
@@ -129,7 +128,7 @@
 },
 {
     "model": "logtable.level",
-    "pk": 5,
+    "pk": 3,
     "fields": {
         "level_num": "3F",
         "img_file_path": "/static/img/map_img/level_3.png",
@@ -138,7 +137,7 @@
 },
 {
     "model": "logtable.level",
-    "pk": 6,
+    "pk": 4,
     "fields": {
         "level_num": "4F",
         "img_file_path": "/static/img/map_img/level_4.png",
@@ -147,7 +146,7 @@
 },
 {
     "model": "logtable.level",
-    "pk": 7,
+    "pk": 5,
     "fields": {
         "level_num": "5F",
         "img_file_path": "/static/img/map_img/level_5.png",
@@ -156,7 +155,7 @@
 },
 {
     "model": "logtable.level",
-    "pk": 8,
+    "pk": 6,
     "fields": {
         "level_num": "6F",
         "img_file_path": "/static/img/map_img/level_6.png",
@@ -165,7 +164,7 @@
 },
 {
     "model": "logtable.level",
-    "pk": 9,
+    "pk": 7,
     "fields": {
         "level_num": "7F",
         "img_file_path": "/static/img/map_img/level_7.png",
@@ -174,7 +173,7 @@
 },
 {
     "model": "logtable.level",
-    "pk": 10,
+    "pk": 8,
     "fields": {
         "level_num": "8F",
         "img_file_path": "/static/img/map_img/level_8.png",
@@ -183,7 +182,7 @@
 },
 {
     "model": "logtable.level",
-    "pk": 11,
+    "pk": 9,
     "fields": {
         "level_num": "9F",
         "img_file_path": "/static/img/map_img/level_9.png",
@@ -192,7 +191,7 @@
 },
 {
     "model": "logtable.level",
-    "pk": 12,
+    "pk": 10,
     "fields": {
         "level_num": "10F",
         "img_file_path": "/static/img/map_img/level_10.png",
@@ -201,11 +200,19 @@
 },
 {
     "model": "logtable.level",
-    "pk": 13,
+    "pk": 11,
     "fields": {
         "level_num": "Unknown",
         "img_file_path": "N/A",
-        "building_id": 4
+        "building_id": 3
+    }
+},
+{
+    "model": "logtable.devicemodel",
+    "pk": 1,
+    "fields": {
+        "name": "SME20U",
+        "period": 600
     }
 },
 {
@@ -213,12 +220,14 @@
     "pk": 1,
     "fields": {
         "sensor_code": "DGU0006",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:40.847",
-        "level": 1
+        "updated_time": "2019-12-13T21:07:33",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -226,12 +235,14 @@
     "pk": 2,
     "fields": {
         "sensor_code": "DGU0001",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:40.872",
-        "level": 1
+        "updated_time": "2019-12-12T04:50:20",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -239,12 +250,14 @@
     "pk": 3,
     "fields": {
         "sensor_code": "DGU0002",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:40.891",
-        "level": 1
+        "updated_time": "2020-06-03T01:43:04",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -252,12 +265,14 @@
     "pk": 4,
     "fields": {
         "sensor_code": "DGU0004",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "OP",
         "is_handled": false,
-        "updated_time": "2020-09-24T16:34:03",
-        "level": 1
+        "updated_time": "2020-10-06T02:21:54",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -265,12 +280,14 @@
     "pk": 5,
     "fields": {
         "sensor_code": "DGU0005",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:40.942",
-        "level": 1
+        "updated_time": "2019-12-24T13:07:35",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -278,12 +295,14 @@
     "pk": 6,
     "fields": {
         "sensor_code": "DGU0003",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:40.970",
-        "level": 1
+        "updated_time": "2019-12-20T16:21:14",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -291,12 +310,14 @@
     "pk": 7,
     "fields": {
         "sensor_code": "DGU0020",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:40.994",
-        "level": 1
+        "updated_time": "2019-11-15T14:20:12",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -304,12 +325,14 @@
     "pk": 8,
     "fields": {
         "sensor_code": "DGU0008",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "OP",
         "is_handled": false,
-        "updated_time": "2020-09-24T16:31:06",
-        "level": 1
+        "updated_time": "2020-10-06T02:22:34",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -317,12 +340,14 @@
     "pk": 9,
     "fields": {
         "sensor_code": "DGU0009",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "OP",
         "is_handled": false,
-        "updated_time": "2020-09-24T16:33:08",
-        "level": 1
+        "updated_time": "2020-10-06T02:15:20",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -330,12 +355,14 @@
     "pk": 10,
     "fields": {
         "sensor_code": "DGU0010",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.076",
-        "level": 1
+        "updated_time": "2020-06-26T19:53:53",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -343,12 +370,14 @@
     "pk": 11,
     "fields": {
         "sensor_code": "DGU0011",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.099",
-        "level": 1
+        "updated_time": "2020-01-09T14:44:27",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -356,12 +385,14 @@
     "pk": 12,
     "fields": {
         "sensor_code": "DGU0012",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-24T16:32:24",
-        "level": 1
+        "updated_time": "2020-09-25T15:57:33",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -369,12 +400,14 @@
     "pk": 13,
     "fields": {
         "sensor_code": "DGU0007",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "OP",
         "is_handled": false,
-        "updated_time": "2020-09-24T16:30:50",
-        "level": 1
+        "updated_time": "2020-10-06T02:21:29",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -382,12 +415,14 @@
     "pk": 14,
     "fields": {
         "sensor_code": "DGU0013",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.165",
-        "level": 1
+        "updated_time": "2019-11-15T14:06:23",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -395,12 +430,14 @@
     "pk": 15,
     "fields": {
         "sensor_code": "DGU0014",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.183",
-        "level": 1
+        "updated_time": "2019-12-11T17:54:27",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -408,12 +445,14 @@
     "pk": 16,
     "fields": {
         "sensor_code": "DGU0015",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.203",
-        "level": 1
+        "updated_time": "2020-06-03T22:10:21",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -421,12 +460,14 @@
     "pk": 17,
     "fields": {
         "sensor_code": "DGU0016",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.221",
-        "level": 1
+        "updated_time": "2019-12-12T01:46:02",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -434,12 +475,14 @@
     "pk": 18,
     "fields": {
         "sensor_code": "DGU0017",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.242",
-        "level": 1
+        "updated_time": "2020-06-12T14:17:26",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -447,12 +490,14 @@
     "pk": 19,
     "fields": {
         "sensor_code": "DGU0018",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.265",
-        "level": 1
+        "updated_time": "2020-06-30T19:28:00",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -460,12 +505,14 @@
     "pk": 20,
     "fields": {
         "sensor_code": "DGU0021",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.282",
-        "level": 1
+        "updated_time": "2019-11-15T14:20:19",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -473,12 +520,14 @@
     "pk": 21,
     "fields": {
         "sensor_code": "DGU0024",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.807",
-        "level": 1
+        "updated_time": "2019-11-15T14:24:16",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -486,12 +535,14 @@
     "pk": 22,
     "fields": {
         "sensor_code": "DGU0025",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.831",
-        "level": 1
+        "updated_time": "2019-11-15T14:24:17",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -499,12 +550,14 @@
     "pk": 23,
     "fields": {
         "sensor_code": "DGU0022",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.859",
-        "level": 1
+        "updated_time": "2019-11-15T14:24:16",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -512,12 +565,14 @@
     "pk": 24,
     "fields": {
         "sensor_code": "DGU0026",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.886",
-        "level": 1
+        "updated_time": "2019-11-15T14:24:17",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -525,12 +580,14 @@
     "pk": 25,
     "fields": {
         "sensor_code": "DGU0023",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.908",
-        "level": 1
+        "updated_time": "2019-11-15T14:24:18",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -538,12 +595,14 @@
     "pk": 26,
     "fields": {
         "sensor_code": "DGU0019",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.932",
-        "level": 1
+        "updated_time": "2019-11-15T14:24:34",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -551,12 +610,14 @@
     "pk": 27,
     "fields": {
         "sensor_code": "DGU0027",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.953",
-        "level": 1
+        "updated_time": "2019-11-15T14:36:30",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -564,12 +625,14 @@
     "pk": 28,
     "fields": {
         "sensor_code": "DGU0028",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:41.980",
-        "level": 1
+        "updated_time": "2019-11-15T14:36:44",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -577,12 +640,14 @@
     "pk": 29,
     "fields": {
         "sensor_code": "DGU0029",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.009",
-        "level": 1
+        "updated_time": "2019-11-15T14:36:50",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -590,12 +655,14 @@
     "pk": 30,
     "fields": {
         "sensor_code": "DGU0030",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.037",
-        "level": 1
+        "updated_time": "2019-11-15T14:36:52",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -603,12 +670,14 @@
     "pk": 31,
     "fields": {
         "sensor_code": "DGU0031",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.063",
-        "level": 1
+        "updated_time": "2019-11-15T14:37:06",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -616,12 +685,14 @@
     "pk": 32,
     "fields": {
         "sensor_code": "DGU0032",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.091",
-        "level": 1
+        "updated_time": "2019-11-15T14:37:15",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -629,12 +700,14 @@
     "pk": 33,
     "fields": {
         "sensor_code": "DGU0033",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.116",
-        "level": 1
+        "updated_time": "2019-11-15T14:37:22",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -642,12 +715,14 @@
     "pk": 34,
     "fields": {
         "sensor_code": "DGU0034",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.142",
-        "level": 1
+        "updated_time": "2019-11-15T14:37:28",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -655,12 +730,14 @@
     "pk": 35,
     "fields": {
         "sensor_code": "DGU0035",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.169",
-        "level": 1
+        "updated_time": "2019-11-15T14:37:37",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -668,12 +745,14 @@
     "pk": 36,
     "fields": {
         "sensor_code": "DGU0036",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.192",
-        "level": 1
+        "updated_time": "2019-11-15T14:37:41",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -681,12 +760,14 @@
     "pk": 37,
     "fields": {
         "sensor_code": "DGU0049",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.221",
-        "level": 1
+        "updated_time": "2019-11-15T14:41:20",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -694,12 +775,14 @@
     "pk": 38,
     "fields": {
         "sensor_code": "DGU0050",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.247",
-        "level": 1
+        "updated_time": "2019-11-15T14:41:29",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -707,12 +790,14 @@
     "pk": 39,
     "fields": {
         "sensor_code": "DGU0047",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.266",
-        "level": 1
+        "updated_time": "2019-11-15T14:41:50",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -720,12 +805,14 @@
     "pk": 40,
     "fields": {
         "sensor_code": "DGU0048",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.291",
-        "level": 1
+        "updated_time": "2019-11-15T14:42:12",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -733,12 +820,14 @@
     "pk": 41,
     "fields": {
         "sensor_code": "DGU0037",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.311",
-        "level": 1
+        "updated_time": "2019-11-15T14:50:02",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -746,12 +835,14 @@
     "pk": 42,
     "fields": {
         "sensor_code": "DGU0038",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.342",
-        "level": 1
+        "updated_time": "2019-11-15T14:50:09",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -759,12 +850,14 @@
     "pk": 43,
     "fields": {
         "sensor_code": "DGU0039",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.366",
-        "level": 1
+        "updated_time": "2019-11-15T14:50:14",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -772,12 +865,14 @@
     "pk": 44,
     "fields": {
         "sensor_code": "DGU0041",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.389",
-        "level": 1
+        "updated_time": "2019-11-15T14:50:35",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -785,12 +880,14 @@
     "pk": 45,
     "fields": {
         "sensor_code": "DGU0042",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.405",
-        "level": 1
+        "updated_time": "2019-11-15T14:50:49",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -798,12 +895,14 @@
     "pk": 46,
     "fields": {
         "sensor_code": "DGU0044",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.430",
-        "level": 1
+        "updated_time": "2019-11-15T15:04:18",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -811,12 +910,14 @@
     "pk": 47,
     "fields": {
         "sensor_code": "DGU0045",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.456",
-        "level": 1
+        "updated_time": "2019-11-15T14:51:11",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -824,12 +925,14 @@
     "pk": 48,
     "fields": {
         "sensor_code": "DGU0043",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.476",
-        "level": 1
+        "updated_time": "2019-11-15T15:00:29",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -837,12 +940,14 @@
     "pk": 49,
     "fields": {
         "sensor_code": "DGU0046",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.499",
-        "level": 1
+        "updated_time": "2019-11-15T15:01:02",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -850,12 +955,14 @@
     "pk": 50,
     "fields": {
         "sensor_code": "DGU0040",
-        "sensor_name": "Unknown",
+        "sensor_model": 1,
         "sensor_type": "UK",
-        "sensor_status": "ND",
+        "sensor_status": "BR",
         "is_handled": false,
-        "updated_time": "2020-09-21T22:03:42.525",
-        "level": 1
+        "updated_time": "2019-11-15T15:02:37",
+        "level": 1,
+        "position_x": -1,
+        "position_y": -1
     }
 },
 {
@@ -887,7 +994,7 @@
     "pk": 4,
     "fields": {
         "sensor": 4,
-        "updated_time": "2020-09-21T21:53:59"
+        "updated_time": "2020-10-06T00:21:55"
     }
 },
 {
@@ -919,7 +1026,7 @@
     "pk": 8,
     "fields": {
         "sensor": 8,
-        "updated_time": "2020-09-21T22:01:06"
+        "updated_time": "2020-10-06T00:22:34"
     }
 },
 {
@@ -927,7 +1034,7 @@
     "pk": 9,
     "fields": {
         "sensor": 9,
-        "updated_time": "2020-09-21T22:03:01"
+        "updated_time": "2020-10-06T00:25:19"
     }
 },
 {
@@ -951,7 +1058,7 @@
     "pk": 12,
     "fields": {
         "sensor": 12,
-        "updated_time": "2020-09-21T22:02:23"
+        "updated_time": "2020-09-25T15:57:33"
     }
 },
 {
@@ -959,7 +1066,7 @@
     "pk": 13,
     "fields": {
         "sensor": 13,
-        "updated_time": "2020-09-21T22:00:51"
+        "updated_time": "2020-10-06T00:31:30"
     }
 },
 {
@@ -1263,7 +1370,7 @@
     "pk": 51,
     "fields": {
         "sensor": 4,
-        "updated_time": "2020-09-24T15:54:03"
+        "updated_time": "2020-10-06T00:31:55"
     }
 },
 {
@@ -1271,7 +1378,7 @@
     "pk": 52,
     "fields": {
         "sensor": 8,
-        "updated_time": "2020-09-24T15:51:05"
+        "updated_time": "2020-10-06T00:32:34"
     }
 },
 {
@@ -1279,23 +1386,23 @@
     "pk": 53,
     "fields": {
         "sensor": 9,
-        "updated_time": "2020-09-24T15:53:08"
+        "updated_time": "2020-10-06T00:35:19"
     }
 },
 {
     "model": "logtable.log",
     "pk": 54,
     "fields": {
-        "sensor": 12,
-        "updated_time": "2020-09-24T15:52:24"
+        "sensor": 13,
+        "updated_time": "2020-10-06T00:41:29"
     }
 },
 {
     "model": "logtable.log",
     "pk": 55,
     "fields": {
-        "sensor": 13,
-        "updated_time": "2020-09-24T15:50:51"
+        "sensor": 4,
+        "updated_time": "2020-10-06T00:41:54"
     }
 },
 {
@@ -1303,7 +1410,7 @@
     "pk": 56,
     "fields": {
         "sensor": 8,
-        "updated_time": "2020-09-24T16:01:06"
+        "updated_time": "2020-10-06T00:42:34"
     }
 },
 {
@@ -1311,47 +1418,47 @@
     "pk": 57,
     "fields": {
         "sensor": 9,
-        "updated_time": "2020-09-24T16:03:08"
+        "updated_time": "2020-10-06T00:45:19"
     }
 },
 {
     "model": "logtable.log",
     "pk": 58,
     "fields": {
-        "sensor": 12,
-        "updated_time": "2020-09-24T16:02:24"
+        "sensor": 13,
+        "updated_time": "2020-10-06T00:51:29"
     }
 },
 {
     "model": "logtable.log",
     "pk": 59,
     "fields": {
-        "sensor": 13,
-        "updated_time": "2020-09-24T16:00:52"
+        "sensor": 4,
+        "updated_time": "2020-10-06T00:51:54"
     }
 },
 {
     "model": "logtable.log",
     "pk": 60,
     "fields": {
-        "sensor": 4,
-        "updated_time": "2020-09-24T16:04:03"
+        "sensor": 8,
+        "updated_time": "2020-10-06T00:52:34"
     }
 },
 {
     "model": "logtable.log",
     "pk": 61,
     "fields": {
-        "sensor": 13,
-        "updated_time": "2020-09-24T16:10:51"
+        "sensor": 9,
+        "updated_time": "2020-10-06T00:55:19"
     }
 },
 {
     "model": "logtable.log",
     "pk": 62,
     "fields": {
-        "sensor": 8,
-        "updated_time": "2020-09-24T16:11:06"
+        "sensor": 13,
+        "updated_time": "2020-10-06T01:01:29"
     }
 },
 {
@@ -1359,55 +1466,55 @@
     "pk": 63,
     "fields": {
         "sensor": 4,
-        "updated_time": "2020-09-24T16:14:03"
+        "updated_time": "2020-10-06T01:01:54"
     }
 },
 {
     "model": "logtable.log",
     "pk": 64,
     "fields": {
-        "sensor": 9,
-        "updated_time": "2020-09-24T16:13:08"
+        "sensor": 8,
+        "updated_time": "2020-10-06T01:02:34"
     }
 },
 {
     "model": "logtable.log",
     "pk": 65,
     "fields": {
-        "sensor": 12,
-        "updated_time": "2020-09-24T16:12:24"
+        "sensor": 9,
+        "updated_time": "2020-10-06T01:05:19"
     }
 },
 {
     "model": "logtable.log",
     "pk": 66,
     "fields": {
-        "sensor": 4,
-        "updated_time": "2020-09-24T16:24:03"
+        "sensor": 13,
+        "updated_time": "2020-10-06T01:11:29"
     }
 },
 {
     "model": "logtable.log",
     "pk": 67,
     "fields": {
-        "sensor": 8,
-        "updated_time": "2020-09-24T16:21:05"
+        "sensor": 4,
+        "updated_time": "2020-10-06T01:11:54"
     }
 },
 {
     "model": "logtable.log",
     "pk": 68,
     "fields": {
-        "sensor": 9,
-        "updated_time": "2020-09-24T16:23:08"
+        "sensor": 8,
+        "updated_time": "2020-10-06T01:12:34"
     }
 },
 {
     "model": "logtable.log",
     "pk": 69,
     "fields": {
-        "sensor": 12,
-        "updated_time": "2020-09-24T16:22:24"
+        "sensor": 9,
+        "updated_time": "2020-10-06T01:15:19"
     }
 },
 {
@@ -1415,7 +1522,7 @@
     "pk": 70,
     "fields": {
         "sensor": 13,
-        "updated_time": "2020-09-24T16:20:51"
+        "updated_time": "2020-10-06T01:21:29"
     }
 },
 {
@@ -1423,7 +1530,7 @@
     "pk": 71,
     "fields": {
         "sensor": 4,
-        "updated_time": "2020-09-24T16:34:03"
+        "updated_time": "2020-10-06T01:21:54"
     }
 },
 {
@@ -1431,7 +1538,7 @@
     "pk": 72,
     "fields": {
         "sensor": 8,
-        "updated_time": "2020-09-24T16:31:06"
+        "updated_time": "2020-10-06T01:22:34"
     }
 },
 {
@@ -1439,15 +1546,15 @@
     "pk": 73,
     "fields": {
         "sensor": 9,
-        "updated_time": "2020-09-24T16:33:08"
+        "updated_time": "2020-10-06T01:25:19"
     }
 },
 {
     "model": "logtable.log",
     "pk": 74,
     "fields": {
-        "sensor": 12,
-        "updated_time": "2020-09-24T16:32:24"
+        "sensor": 4,
+        "updated_time": "2020-10-06T01:31:54"
     }
 },
 {
@@ -1455,7 +1562,135 @@
     "pk": 75,
     "fields": {
         "sensor": 13,
-        "updated_time": "2020-09-24T16:30:50"
+        "updated_time": "2020-10-06T01:31:29"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 76,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-06T01:32:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 77,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-06T01:35:19"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 78,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-06T01:41:54"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 79,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-06T01:41:29"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 80,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-06T02:01:54"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 81,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-06T02:02:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 82,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-06T02:05:20"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 83,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-06T02:01:29"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 84,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-06T02:11:54"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 85,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-06T02:12:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 86,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-06T02:11:29"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 87,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-06T02:15:20"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 88,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-06T02:21:54"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 89,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-06T02:22:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 90,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-06T02:21:29"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 91,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-06T02:25:20"
     }
 },
 {
@@ -1769,6 +2004,50 @@
 {
     "model": "auth.permission",
     "fields": {
+        "name": "Can add device model",
+        "content_type": [
+            "logtable",
+            "devicemodel"
+        ],
+        "codename": "add_devicemodel"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change device model",
+        "content_type": [
+            "logtable",
+            "devicemodel"
+        ],
+        "codename": "change_devicemodel"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete device model",
+        "content_type": [
+            "logtable",
+            "devicemodel"
+        ],
+        "codename": "delete_devicemodel"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view device model",
+        "content_type": [
+            "logtable",
+            "devicemodel"
+        ],
+        "codename": "view_devicemodel"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
         "name": "Can add level",
         "content_type": [
             "logtable",
@@ -1901,25 +2180,8 @@
 {
     "model": "auth.user",
     "fields": {
-        "password": "pbkdf2_sha256$150000$iVqoEeBI5U7G$xmVhWG8kta48+tpWXndNn3Hd1dX+vof/H0/yF1To9tA=",
-        "last_login": "2020-09-21T22:07:29.217",
-        "is_superuser": true,
-        "username": "su001",
-        "first_name": "",
-        "last_name": "",
-        "email": "2@2.com",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2020-09-21T22:07:12.596",
-        "groups": [],
-        "user_permissions": []
-    }
-},
-{
-    "model": "auth.user",
-    "fields": {
-        "password": "pbkdf2_sha256$150000$phOdSe8FMNOR$PPfoWSUZ9hxfHSS4mzJXDPa8RupqMfD0QNhlXRXTvb8=",
-        "last_login": "2020-09-24T15:53:37.070",
+        "password": "pbkdf2_sha256$150000$lJHPHoefnEWg$h2dEx6dzUrzaaGomGs3W2Id7wYJ0ACmPwZ6edWzTjuo=",
+        "last_login": "2020-10-06T00:09:24.995",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -1927,7 +2189,7 @@
         "email": "admin@what.ever",
         "is_staff": true,
         "is_active": true,
-        "date_joined": "2020-09-24T15:53:19.254",
+        "date_joined": "2020-10-06T00:09:05.244",
         "groups": [],
         "user_permissions": []
     }
@@ -1936,15 +2198,15 @@
     "model": "admin.logentry",
     "pk": 1,
     "fields": {
-        "action_time": "2020-09-21T22:07:50.645",
+        "action_time": "2020-10-06T00:15:01.053",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "building"
         ],
-        "object_id": "2",
+        "object_id": "1",
         "object_repr": "\uc2e0\uacf5\ud559\uad00",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
@@ -1954,15 +2216,15 @@
     "model": "admin.logentry",
     "pk": 2,
     "fields": {
-        "action_time": "2020-09-21T22:07:58.774",
+        "action_time": "2020-10-06T00:15:08.383",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "building"
         ],
-        "object_id": "3",
+        "object_id": "2",
         "object_repr": "\uc6d0\ud765\uad00",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
@@ -1972,16 +2234,16 @@
     "model": "admin.logentry",
     "pk": 3,
     "fields": {
-        "action_time": "2020-09-21T22:08:16.994",
+        "action_time": "2020-10-06T00:15:59.131",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "level"
         ],
-        "object_id": "2",
-        "object_repr": "1",
+        "object_id": "1",
+        "object_repr": "1F",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -1990,16 +2252,16 @@
     "model": "admin.logentry",
     "pk": 4,
     "fields": {
-        "action_time": "2020-09-21T22:08:22.194",
+        "action_time": "2020-10-06T00:16:20.354",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "level"
         ],
-        "object_id": "3",
-        "object_repr": "2",
+        "object_id": "2",
+        "object_repr": "2F",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -2008,70 +2270,70 @@
     "model": "admin.logentry",
     "pk": 5,
     "fields": {
-        "action_time": "2020-09-23T16:09:33.113",
+        "action_time": "2020-10-06T00:16:29.551",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
-            "building"
+            "level"
         ],
-        "object_id": "2",
-        "object_repr": "\uc2e0\uacf5\ud559\uad00",
-        "action_flag": 3,
-        "change_message": ""
+        "object_id": "3",
+        "object_repr": "3F",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
     }
 },
 {
     "model": "admin.logentry",
     "pk": 6,
     "fields": {
-        "action_time": "2020-09-23T16:09:42.903",
+        "action_time": "2020-10-06T00:16:35.853",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
-            "building"
+            "level"
         ],
-        "object_id": "1",
-        "object_repr": "\uc2e0\uacf5\ud559\uad00",
+        "object_id": "2",
+        "object_repr": "2F",
         "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"building_name\", \"levels\"]}}]"
+        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
     }
 },
 {
     "model": "admin.logentry",
     "pk": 7,
     "fields": {
-        "action_time": "2020-09-23T16:10:21.176",
+        "action_time": "2020-10-06T00:16:45.517",
         "user": [
-            "su001"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "1",
-        "object_repr": "1F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"level_num\", \"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 8,
-    "fields": {
-        "action_time": "2020-09-23T16:10:30.842",
-        "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "level"
         ],
         "object_id": "4",
-        "object_repr": "2F",
+        "object_repr": "4F",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2020-10-06T00:16:55.707",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "level"
+        ],
+        "object_id": "5",
+        "object_repr": "5F",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -2080,16 +2342,16 @@
     "model": "admin.logentry",
     "pk": 9,
     "fields": {
-        "action_time": "2020-09-23T16:10:35.711",
+        "action_time": "2020-10-06T00:17:03.944",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "level"
         ],
-        "object_id": "5",
-        "object_repr": "3F",
+        "object_id": "6",
+        "object_repr": "6F",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -2098,16 +2360,16 @@
     "model": "admin.logentry",
     "pk": 10,
     "fields": {
-        "action_time": "2020-09-23T16:10:42.781",
+        "action_time": "2020-10-06T00:17:10.040",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "level"
         ],
-        "object_id": "6",
-        "object_repr": "4F",
+        "object_id": "7",
+        "object_repr": "7F",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -2116,16 +2378,16 @@
     "model": "admin.logentry",
     "pk": 11,
     "fields": {
-        "action_time": "2020-09-23T16:10:47.734",
+        "action_time": "2020-10-06T00:17:20.682",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "level"
         ],
-        "object_id": "7",
-        "object_repr": "5F",
+        "object_id": "8",
+        "object_repr": "8F",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -2134,16 +2396,16 @@
     "model": "admin.logentry",
     "pk": 12,
     "fields": {
-        "action_time": "2020-09-23T16:11:32.836",
+        "action_time": "2020-10-06T00:17:28.833",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "level"
         ],
-        "object_id": "8",
-        "object_repr": "6F",
+        "object_id": "9",
+        "object_repr": "9F",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -2152,16 +2414,16 @@
     "model": "admin.logentry",
     "pk": 13,
     "fields": {
-        "action_time": "2020-09-23T16:11:39.353",
+        "action_time": "2020-10-06T00:17:43.059",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "level"
         ],
-        "object_id": "9",
-        "object_repr": "7F",
+        "object_id": "10",
+        "object_repr": "10F",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -2170,16 +2432,16 @@
     "model": "admin.logentry",
     "pk": 14,
     "fields": {
-        "action_time": "2020-09-23T16:11:49.426",
+        "action_time": "2020-10-06T00:18:11.710",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
-            "level"
+            "building"
         ],
-        "object_id": "10",
-        "object_repr": "8F",
+        "object_id": "3",
+        "object_repr": "N/A",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -2188,16 +2450,16 @@
     "model": "admin.logentry",
     "pk": 15,
     "fields": {
-        "action_time": "2020-09-23T16:11:54.045",
+        "action_time": "2020-10-06T00:18:30.786",
         "user": [
-            "su001"
+            "admin"
         ],
         "content_type": [
             "logtable",
             "level"
         ],
         "object_id": "11",
-        "object_repr": "9F",
+        "object_repr": "Unknown",
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
@@ -2206,198 +2468,18 @@
     "model": "admin.logentry",
     "pk": 16,
     "fields": {
-        "action_time": "2020-09-23T16:11:59.524",
-        "user": [
-            "su001"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "12",
-        "object_repr": "10F",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 17,
-    "fields": {
-        "action_time": "2020-09-30T19:26:36.231",
+        "action_time": "2020-10-06T00:32:11.354",
         "user": [
             "admin"
         ],
         "content_type": [
             "logtable",
-            "level"
+            "devicemodel"
         ],
         "object_id": "1",
-        "object_repr": "1F",
+        "object_repr": "DeviceModel object (1)",
         "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 18,
-    "fields": {
-        "action_time": "2020-09-30T19:27:06.922",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "4",
-        "object_repr": "2F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 19,
-    "fields": {
-        "action_time": "2020-09-30T19:27:11.738",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "12",
-        "object_repr": "10F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 20,
-    "fields": {
-        "action_time": "2020-09-30T19:27:17.535",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "5",
-        "object_repr": "3F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 21,
-    "fields": {
-        "action_time": "2020-09-30T19:27:23.704",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "6",
-        "object_repr": "4F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 22,
-    "fields": {
-        "action_time": "2020-09-30T19:27:27.456",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "7",
-        "object_repr": "5F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 23,
-    "fields": {
-        "action_time": "2020-09-30T19:27:30.633",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "8",
-        "object_repr": "6F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 24,
-    "fields": {
-        "action_time": "2020-09-30T19:27:33.898",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "9",
-        "object_repr": "7F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 25,
-    "fields": {
-        "action_time": "2020-09-30T19:27:37.590",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "10",
-        "object_repr": "8F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
-    }
-},
-{
-    "model": "admin.logentry",
-    "pk": 26,
-    "fields": {
-        "action_time": "2020-09-30T19:27:41.040",
-        "user": [
-            "admin"
-        ],
-        "content_type": [
-            "logtable",
-            "level"
-        ],
-        "object_id": "11",
-        "object_repr": "9F",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"img_file_path\"]}}]"
+        "change_message": "[{\"changed\": {\"fields\": [\"period\"]}}]"
     }
 }
 ]
