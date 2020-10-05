@@ -50,6 +50,13 @@ class Level(models.Model):
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])
 
+class DeviceModel(models.Model):
+    name = models.CharField(max_length=20)
+    period = models.IntegerField(null=True)
+
+    def __str__(self):
+        return self.name
+
 
 class Sensor(models.Model):  # Model for IoT devices.
     # Fields
@@ -67,8 +74,7 @@ class Sensor(models.Model):  # Model for IoT devices.
     )  # Has 4 sensor status choices
     sensor_code = models.CharField(max_length=10, unique=True, default="DGU")
 
-    sensor_name = models.CharField(
-        max_length=10, db_index=True, null=True)
+    sensor_model = models.ForeignKey('DeviceModel', on_delete=models.CASCADE)
 
     sensor_type = models.CharField(
         max_length=2, choices=TYPE_CHOICES)  # Type of IoT device
@@ -118,8 +124,8 @@ class Log(models.Model):  # Model for Logs.
     def get_sensor_code(self):
         return str(self.sensor.sensor_code)
 
-    def get_sensor_name(self):
-        return str(self.sensor.sensor_name)
+    def get_sensor_model(self):
+        return str(self.sensor.sensor_model)
 
     def get_sensor_type(self):
         return str(self.sensor.sensor_type)
