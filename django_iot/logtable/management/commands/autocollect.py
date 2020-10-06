@@ -3,8 +3,10 @@ import requests
 import os
 import time
 from django.core.management.base import BaseCommand
-from logtable.models import Sensor, Level, Log, Building
+from logtable.models import Sensor, Level, Log, Building, DeviceModel
 from datetime import datetime
+import logtable.analyzer
+from logtable.analyzer import SimpleAnalyzer
 
 
 def check_prerequisite():
@@ -25,8 +27,7 @@ def check_prerequisite():
                               img_file_path='N/A', building_id=na_building)
         unknown_level.save()
 
-
-def run():
+def run(call_time):
     #print('run() called')
     url = "http://115.68.37.90/api/logs/latest"
     payload = {}
@@ -57,27 +58,43 @@ def run():
         # send_time : 마지막으로 정보를 전송받은 시각
         # smodel : 장치 모델명(현재는 SME20u만 있슴)
         scode = i['DEVICE_SCODE']
+        smodel = i['DEVICE_MODEL']
+
         try:
             current_sensor = Sensor.objects.get(sensor_code=scode)
         except Sensor.DoesNotExist:
             # 찍힌 로그에 해당하는 센서가 존재하지 않으면, 새로 생성
-            new_sensor = Sensor(sensor_code=scode, sensor_name='Unknown', sensor_type='UK',
+            try:
+                model = DeviceModel.objects.get(name=smodel)
+            except DeviceModel.DoesNotExist:
+                # 모델이 없으면, 새 모델을 생성
+                new_model = DeviceModel(name=smodel, period=None)
+                new_model.save()
+                model = DeviceModel.objects.get(name=smodel)
+            finally:
+                new_sensor = Sensor(sensor_code=scode, sensor_model=model, sensor_type='UK',
                                 sensor_status='ND', level=Level.objects.get(level_num='Unknown'))
-            new_sensor.save()
-            current_sensor = Sensor.objects.get(sensor_code=scode)
+                new_sensor.save()
+                current_sensor = Sensor.objects.get(sensor_code=scode)
         finally:
             # 로그가 찍힌 시간을 체크
             send_time = datetime.strptime(
                 i['DEVICE_DATA_REG_DTM'], '%Y-%m-%d %H:%M:%S')
             # 이미 존재하는 로그인지 확인
-            existing_log = Log.objects.filter(sensor__exact=current_sensor).filter(updated_time=send_time)
-            if not existing_log:
+            try:
+                existing_log = Log.objects.filter(sensor__exact=current_sensor).get(updated_time=send_time)
+            except Log.DoesNotExist:
                 new_log = Log(sensor=current_sensor,
                                   updated_time=send_time)
                 new_log.save()
                 current_sensor.updated_time=send_time; # 센서의 updated_time에도 적용
                 current_sensor.save()
                 print('New log is generated: ' + str(new_log))
+                existing_log = new_log
+            finally:
+                analyzer = SimpleAnalyzer()
+                analyzer.update(existing_log, call_time)
+            
     os.remove('result.json')  # 가져왔던 reuslt.json 삭제
 
 
@@ -94,7 +111,7 @@ class Command(BaseCommand):
         while True:
             SLEEP_PERIOD = kwargs['period']
             self.stdout.write("Collecting Logs...")
-            run()
+            run(datetime.now())
             self.stdout.write(
                 "Complete, Next collecting starts in " + str(SLEEP_PERIOD))
             time.sleep(SLEEP_PERIOD)

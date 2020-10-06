@@ -1,7 +1,8 @@
 # 2020-1-CECD3-Generator-8
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스
 ## Recent Update
-대시보드 화면: *탭으로 표/약도 전환*
+간단한 분석 모듈 (analyzer.py)
+* 데이터베이스의 센서의 주기를 저장해 놓고, 로그를 생성한 시간과 현재 시간의 차이를 계산 후 주기와 비교하여 상태 판별
 
 ## 1. Installation
 ### 1.1. Django project
@@ -125,10 +126,12 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 [django_table2 Docs](https://django-tables2.readthedocs.io/en/latest/)   
 
 ## Demo
-### Dashboard의 표 출력 화면
-![dashboard_table](/res/dashboard_table.png)
-### Dashboard의 약도 출력 화면
-![dashboard_map](/res/dashboard_map.png)
+### Dashboard 화면
+![dashboard](/res/dashboard.png)
+### 층별 표 출력 화면
+![dashboard_map](/res/floorview_table.png)
+### 층별 약도 출력 화면
+![dashboard_map](/res/floorview_map.png)
 ### Monitoring 출력 화면
 ![monitoring](/res/monitoring.png)
 
@@ -136,9 +139,7 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 ### System
 * AWS 서버에 올리기
 ### Django
-* 메인 화면 사이드메뉴에 빌딩 리스트 출력
-* 레벨 클릭하면 해당 층의 센서만 출력되도록 출력
-* 약도 상에 센서 위치 표기 -> 센서 모델 수정 필요
+* 약도 상에 센서 위치 표기
 ### RPA
 * 문서 자동작성 스크립트 작성
 * 웹 페이지 자동 감시 스크립트 작성

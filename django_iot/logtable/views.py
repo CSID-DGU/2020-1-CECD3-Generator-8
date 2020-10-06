@@ -12,7 +12,7 @@ import json
 
 
 def dashboard(request):
-    building = Building.objects.all()
+    building = Building.objects.exclude(levels=0)
     level = Level.objects.all()
     logs = Log.objects.raw(
         'SELECT "logtable_log"."id", "logtable_log"."sensor_id", "logtable_log"."updated_time" FROM "logtable_log" GROUP BY "sensor_id"')
@@ -60,7 +60,7 @@ def json(request):
 
 
 def monitoring(request):
-    building = Building.objects.all()
+    building = Building.objects.exclude(levels=0)
     level = Level.objects.all()
     sensors_with_problems = Sensor.objects.filter(is_handled='False')
     table = MonitoringTableQuerySet(
@@ -104,8 +104,8 @@ def monitoring_export(request):
 def floor(request,b_id,l_num):
     level_info = Level.objects.filter(building_id=b_id, level_num=l_num)
     sensor1 =Sensor.objects.filter(level__in=Subquery(Level.objects.filter(building_id=b_id, level_num=l_num).values('id')))
-    building = Building.objects.all()
-    building_name= Building.objects.filter(id=b_id)
+    building = Building.objects.exclude(levels=0)
+    building_name= building.filter(id=b_id)
     levels = str(list(level_info.values())[0])#level_info JSON text
     return render(request, 'logtable/floor.html', {
         'level_info':level_info,
