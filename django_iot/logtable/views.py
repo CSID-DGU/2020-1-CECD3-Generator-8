@@ -14,9 +14,10 @@ import json
 def dashboard(request):
     building = Building.objects.exclude(levels=0)
     level = Level.objects.all()
-    logs = Log.objects.raw(
-        'SELECT "logtable_log"."id", "logtable_log"."sensor_id", "logtable_log"."updated_time" FROM "logtable_log" GROUP BY "sensor_id"')
-    table = LogTableQuerySet(logs)  # make a table by logs
+    #logs = Log.objects.raw(
+    #    'SELECT "logtable_log"."id", "logtable_log"."sensor_id", "logtable_log"."updated_time" FROM "logtable_log" GROUP BY "sensor_id"')
+    sensors = Sensor.objects.order_by('sensor_code')
+    table = LogTableQuerySet(sensors)  # make a table by logs
     # render table
     return render(request, 'logtable/dashboard.html',{
         'table': table,

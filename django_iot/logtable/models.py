@@ -99,6 +99,9 @@ class Sensor(models.Model):  # Model for IoT devices.
     def __str__(self):
         return self.sensor_code
 
+    def get_sensor_type(self):
+        return str(self.sensor_model.sensor_type)
+
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])
