@@ -106,6 +106,24 @@ class Sensor(models.Model):  # Model for IoT devices.
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])
 
+class SME20U_Value(models.Model):
+    sensor = models.ForeignKey(
+        'Sensor', on_delete=models.CASCADE)
+    updated_time = models.DateTimeField(default=timezone.now)
+
+    # sensor specification referenced in https://documenter.getpostman.com/view/527712/SW14WcyW?version=latest#9b1079ca-8760-457f-8e38-bb8f6b8ef6ad
+    temp = models.DecimalField(decimal_places=1, max_digits=3) # 온도 (-10.0 ~ +85.0 °C, ±1 °C)
+    humid = models.DecimalField(decimal_places=2, max_digits=5) # 습도 (0.00 ~ 100.00 %, ±5 %RH)
+    illum = models.DecimalField(decimal_places=2, max_digits=5) # 조도 (0.00 ~ 100.00 %, ±5 %CDS)
+    rador = models.IntegerField() # 10분당 움직임 수 (0.00 ~ )
+    last_movement_time = models.CharField(max_length=10) #	최종 움직임 감지 시간 (Unixtime +00:00) 연산 시 -9시간(9 * 60 *60)해야 한국 시간
+    co2 = models.IntegerField() # Co2(0 ~ 8192 ppm)
+    tvoc = models.IntegerField() #	tVOC(0 ~ 1187 ppb)
+
+    # Methods
+    def __str__(self):
+        return str(self.sensor) + ": " + str(self.updated_time)
+    
 
 class Log(models.Model):  # Model for Logs.
     sensor = models.ForeignKey(
