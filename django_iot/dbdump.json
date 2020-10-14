@@ -273,7 +273,7 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T01:32:17",
+        "updated_time": "2020-10-14T15:42:18",
         "level": 1,
         "position_x": -1,
         "position_y": -1
@@ -329,7 +329,7 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T01:32:34",
+        "updated_time": "2020-10-14T15:42:35",
         "level": 1,
         "position_x": -1,
         "position_y": -1
@@ -343,7 +343,7 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T01:29:08",
+        "updated_time": "2020-10-14T15:49:08",
         "level": 1,
         "position_x": -1,
         "position_y": -1
@@ -399,7 +399,7 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T01:31:34",
+        "updated_time": "2020-10-14T15:41:34",
         "level": 1,
         "position_x": -1,
         "position_y": -1
@@ -1674,6 +1674,2166 @@
     }
 },
 {
+    "model": "logtable.sme20u_value",
+    "pk": 51,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T01:42:17",
+        "temp": "21.6",
+        "humid": "44.09",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2172,
+        "tvoc": 634
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 52,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T01:42:34",
+        "temp": "22.2",
+        "humid": "41.24",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 6225,
+        "tvoc": 887
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 53,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T01:39:08",
+        "temp": "21.1",
+        "humid": "44.45",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2487,
+        "tvoc": 318
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 54,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T01:41:34",
+        "temp": "22.3",
+        "humid": "45.41",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 6294,
+        "tvoc": 897
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 55,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T01:52:18",
+        "temp": "21.5",
+        "humid": "44.47",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2180,
+        "tvoc": 642
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 56,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T01:52:34",
+        "temp": "22.1",
+        "humid": "41.42",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 6283,
+        "tvoc": 896
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 57,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T01:49:08",
+        "temp": "21.1",
+        "humid": "44.37",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2504,
+        "tvoc": 320
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 58,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T01:51:34",
+        "temp": "22.2",
+        "humid": "46.25",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 6395,
+        "tvoc": 913
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 59,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:02:18",
+        "temp": "21.5",
+        "humid": "43.68",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2183,
+        "tvoc": 645
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 60,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T01:59:08",
+        "temp": "21.1",
+        "humid": "44.75",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2562,
+        "tvoc": 329
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 61,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:01:34",
+        "temp": "22.2",
+        "humid": "46.31",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 6501,
+        "tvoc": 929
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 62,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:02:34",
+        "temp": "22.1",
+        "humid": "42.34",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 6397,
+        "tvoc": 913
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 63,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:12:18",
+        "temp": "21.5",
+        "humid": "44.95",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2193,
+        "tvoc": 655
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 64,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:09:08",
+        "temp": "21.0",
+        "humid": "44.11",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2583,
+        "tvoc": 332
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 65,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:11:34",
+        "temp": "22.2",
+        "humid": "45.81",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 6586,
+        "tvoc": 942
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 66,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:12:34",
+        "temp": "22.1",
+        "humid": "42.40",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 6498,
+        "tvoc": 929
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 67,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:22:18",
+        "temp": "21.5",
+        "humid": "43.62",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2201,
+        "tvoc": 663
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 68,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:19:08",
+        "temp": "21.0",
+        "humid": "45.14",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2655,
+        "tvoc": 343
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 69,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:21:34",
+        "temp": "22.2",
+        "humid": "45.96",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 6750,
+        "tvoc": 967
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 70,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:22:34",
+        "temp": "22.1",
+        "humid": "42.73",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 6637,
+        "tvoc": 949
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 71,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:32:18",
+        "temp": "21.4",
+        "humid": "44.72",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2206,
+        "tvoc": 668
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 72,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:32:34",
+        "temp": "22.1",
+        "humid": "42.78",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 6787,
+        "tvoc": 973
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 73,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:29:08",
+        "temp": "21.0",
+        "humid": "45.61",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2731,
+        "tvoc": 355
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 74,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:31:34",
+        "temp": "22.2",
+        "humid": "45.16",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 6816,
+        "tvoc": 977
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 75,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:42:18",
+        "temp": "21.4",
+        "humid": "43.50",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2217,
+        "tvoc": 681
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 76,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:42:34",
+        "temp": "22.1",
+        "humid": "41.13",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 6953,
+        "tvoc": 998
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 77,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:39:08",
+        "temp": "20.9",
+        "humid": "46.23",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2771,
+        "tvoc": 361
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 78,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:41:35",
+        "temp": "22.2",
+        "humid": "47.01",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 6987,
+        "tvoc": 1003
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 79,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:52:18",
+        "temp": "21.4",
+        "humid": "44.70",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2223,
+        "tvoc": 686
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 80,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:52:34",
+        "temp": "22.1",
+        "humid": "41.84",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 7067,
+        "tvoc": 1015
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 81,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:49:08",
+        "temp": "20.9",
+        "humid": "45.07",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2837,
+        "tvoc": 371
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 82,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:51:34",
+        "temp": "22.1",
+        "humid": "45.17",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 7085,
+        "tvoc": 1018
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 83,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T03:02:18",
+        "temp": "21.4",
+        "humid": "44.90",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2230,
+        "tvoc": 693
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 84,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T03:02:34",
+        "temp": "22.1",
+        "humid": "42.56",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 7144,
+        "tvoc": 1027
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 85,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:59:08",
+        "temp": "20.9",
+        "humid": "46.35",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2889,
+        "tvoc": 379
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 86,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T03:01:34",
+        "temp": "22.1",
+        "humid": "47.36",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 7236,
+        "tvoc": 1041
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 87,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T03:12:18",
+        "temp": "21.4",
+        "humid": "44.77",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2229,
+        "tvoc": 692
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 88,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T03:12:34",
+        "temp": "22.1",
+        "humid": "42.45",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 7185,
+        "tvoc": 1033
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 89,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T03:09:08",
+        "temp": "20.9",
+        "humid": "45.74",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2926,
+        "tvoc": 384
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 90,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T03:11:35",
+        "temp": "22.1",
+        "humid": "45.79",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 7275,
+        "tvoc": 1047
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 91,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T03:22:18",
+        "temp": "21.4",
+        "humid": "46.05",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602623100",
+        "co2": 2228,
+        "tvoc": 691
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 92,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T03:22:34",
+        "temp": "22.1",
+        "humid": "42.30",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602624596",
+        "co2": 7160,
+        "tvoc": 1030
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 93,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T03:19:07",
+        "temp": "20.9",
+        "humid": "46.61",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2971,
+        "tvoc": 391
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 94,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T03:21:34",
+        "temp": "22.1",
+        "humid": "48.00",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1602629809",
+        "co2": 7274,
+        "tvoc": 1046
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 95,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T11:42:18",
+        "temp": "19.9",
+        "humid": "40.15",
+        "illum": "93.00",
+        "rador": 8,
+        "last_movement_time": "1602675439",
+        "co2": 1330,
+        "tvoc": 141
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 96,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T11:42:34",
+        "temp": "22.1",
+        "humid": "43.70",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602675005",
+        "co2": 4774,
+        "tvoc": 666
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 97,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T11:49:09",
+        "temp": "22.1",
+        "humid": "44.77",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2700,
+        "tvoc": 350
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 98,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T11:41:34",
+        "temp": "22.2",
+        "humid": "48.36",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602674995",
+        "co2": 703,
+        "tvoc": 46
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 99,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T11:52:17",
+        "temp": "19.8",
+        "humid": "36.94",
+        "illum": "94.00",
+        "rador": 1,
+        "last_movement_time": "1602676024",
+        "co2": 935,
+        "tvoc": 81
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 100,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T11:52:35",
+        "temp": "22.1",
+        "humid": "43.58",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602675005",
+        "co2": 4993,
+        "tvoc": 699
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 101,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T11:51:34",
+        "temp": "22.3",
+        "humid": "48.12",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602674995",
+        "co2": 729,
+        "tvoc": 49
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 102,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T11:59:09",
+        "temp": "22.1",
+        "humid": "43.37",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2760,
+        "tvoc": 359
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 103,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:02:17",
+        "temp": "19.8",
+        "humid": "37.42",
+        "illum": "94.00",
+        "rador": 0,
+        "last_movement_time": "1602676024",
+        "co2": 717,
+        "tvoc": 48
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 104,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:02:34",
+        "temp": "22.1",
+        "humid": "41.70",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602675005",
+        "co2": 5238,
+        "tvoc": 736
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 105,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:01:34",
+        "temp": "22.2",
+        "humid": "47.38",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602674995",
+        "co2": 751,
+        "tvoc": 53
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 106,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:09:08",
+        "temp": "22.2",
+        "humid": "43.29",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2867,
+        "tvoc": 375
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 107,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:12:17",
+        "temp": "19.9",
+        "humid": "37.38",
+        "illum": "93.00",
+        "rador": 1,
+        "last_movement_time": "1602677384",
+        "co2": 610,
+        "tvoc": 32
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 108,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:12:34",
+        "temp": "22.1",
+        "humid": "42.61",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602675005",
+        "co2": 5333,
+        "tvoc": 751
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 109,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:11:35",
+        "temp": "22.2",
+        "humid": "46.41",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602674995",
+        "co2": 750,
+        "tvoc": 53
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 110,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:19:09",
+        "temp": "22.3",
+        "humid": "42.11",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2902,
+        "tvoc": 381
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 111,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:22:17",
+        "temp": "20.0",
+        "humid": "37.83",
+        "illum": "92.00",
+        "rador": 2,
+        "last_movement_time": "1602677963",
+        "co2": 509,
+        "tvoc": 16
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 112,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:22:35",
+        "temp": "22.2",
+        "humid": "42.50",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602675005",
+        "co2": 5198,
+        "tvoc": 730
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 113,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:21:35",
+        "temp": "22.2",
+        "humid": "45.08",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602674995",
+        "co2": 740,
+        "tvoc": 51
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 114,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:29:08",
+        "temp": "22.6",
+        "humid": "40.99",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2886,
+        "tvoc": 378
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 115,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:32:18",
+        "temp": "19.9",
+        "humid": "38.35",
+        "illum": "90.00",
+        "rador": 4,
+        "last_movement_time": "1602678588",
+        "co2": 424,
+        "tvoc": 3
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 116,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:32:35",
+        "temp": "22.1",
+        "humid": "40.67",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602675005",
+        "co2": 4992,
+        "tvoc": 699
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 117,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:31:35",
+        "temp": "22.2",
+        "humid": "46.23",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602674995",
+        "co2": 713,
+        "tvoc": 47
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 118,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:39:08",
+        "temp": "23.1",
+        "humid": "40.42",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2776,
+        "tvoc": 362
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 119,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:42:18",
+        "temp": "20.0",
+        "humid": "39.94",
+        "illum": "90.00",
+        "rador": 0,
+        "last_movement_time": "1602678588",
+        "co2": 402,
+        "tvoc": 0
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 120,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:42:35",
+        "temp": "22.2",
+        "humid": "40.63",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602675005",
+        "co2": 4599,
+        "tvoc": 639
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 121,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:41:35",
+        "temp": "22.2",
+        "humid": "45.43",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602674995",
+        "co2": 662,
+        "tvoc": 39
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 122,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:49:08",
+        "temp": "23.3",
+        "humid": "40.30",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602629806",
+        "co2": 2733,
+        "tvoc": 355
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 123,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:52:18",
+        "temp": "20.2",
+        "humid": "36.19",
+        "illum": "93.00",
+        "rador": 16,
+        "last_movement_time": "1602679847",
+        "co2": 415,
+        "tvoc": 2
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 124,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:52:34",
+        "temp": "22.2",
+        "humid": "40.40",
+        "illum": "99.00",
+        "rador": 9,
+        "last_movement_time": "1602679825",
+        "co2": 4321,
+        "tvoc": 597
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 125,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:51:35",
+        "temp": "22.3",
+        "humid": "45.61",
+        "illum": "86.00",
+        "rador": 3,
+        "last_movement_time": "1602679832",
+        "co2": 625,
+        "tvoc": 34
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 126,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:59:08",
+        "temp": "23.6",
+        "humid": "38.58",
+        "illum": "99.00",
+        "rador": 3,
+        "last_movement_time": "1602679830",
+        "co2": 2635,
+        "tvoc": 340
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 127,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:02:18",
+        "temp": "20.5",
+        "humid": "37.50",
+        "illum": "89.00",
+        "rador": 3,
+        "last_movement_time": "1602680287",
+        "co2": 444,
+        "tvoc": 6
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 128,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:02:34",
+        "temp": "22.2",
+        "humid": "40.37",
+        "illum": "99.00",
+        "rador": 2,
+        "last_movement_time": "1602680269",
+        "co2": 4262,
+        "tvoc": 588
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 129,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:01:35",
+        "temp": "22.3",
+        "humid": "45.11",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 597,
+        "tvoc": 30
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 130,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:09:08",
+        "temp": "23.9",
+        "humid": "38.85",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602679830",
+        "co2": 2624,
+        "tvoc": 338
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 131,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:12:18",
+        "temp": "20.7",
+        "humid": "33.37",
+        "illum": "88.00",
+        "rador": 0,
+        "last_movement_time": "1602680287",
+        "co2": 569,
+        "tvoc": 25
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 132,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:12:34",
+        "temp": "22.2",
+        "humid": "39.64",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 4302,
+        "tvoc": 594
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 133,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:11:35",
+        "temp": "22.3",
+        "humid": "43.83",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 566,
+        "tvoc": 25
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 134,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:19:08",
+        "temp": "24.7",
+        "humid": "36.77",
+        "illum": "99.00",
+        "rador": 13,
+        "last_movement_time": "1602681533",
+        "co2": 2679,
+        "tvoc": 347
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 135,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:22:18",
+        "temp": "20.7",
+        "humid": "33.88",
+        "illum": "89.00",
+        "rador": 3,
+        "last_movement_time": "1602681546",
+        "co2": 592,
+        "tvoc": 29
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 136,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:22:34",
+        "temp": "22.3",
+        "humid": "39.90",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 4397,
+        "tvoc": 608
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 137,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:21:35",
+        "temp": "22.4",
+        "humid": "42.75",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 573,
+        "tvoc": 26
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 138,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:29:08",
+        "temp": "25.2",
+        "humid": "35.42",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602681533",
+        "co2": 3168,
+        "tvoc": 421
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 139,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:32:18",
+        "temp": "20.8",
+        "humid": "27.83",
+        "illum": "89.00",
+        "rador": 0,
+        "last_movement_time": "1602681546",
+        "co2": 711,
+        "tvoc": 47
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 140,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:32:34",
+        "temp": "22.3",
+        "humid": "37.52",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 4985,
+        "tvoc": 698
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 141,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:31:35",
+        "temp": "22.4",
+        "humid": "43.75",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 662,
+        "tvoc": 39
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 142,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:39:08",
+        "temp": "25.4",
+        "humid": "34.52",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602681533",
+        "co2": 4022,
+        "tvoc": 551
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 143,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:42:17",
+        "temp": "20.9",
+        "humid": "32.37",
+        "illum": "86.00",
+        "rador": 3,
+        "last_movement_time": "1602682920",
+        "co2": 618,
+        "tvoc": 33
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 144,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:42:34",
+        "temp": "22.3",
+        "humid": "37.68",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 5650,
+        "tvoc": 799
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 145,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:41:35",
+        "temp": "22.4",
+        "humid": "43.89",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 746,
+        "tvoc": 52
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 146,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:49:08",
+        "temp": "24.6",
+        "humid": "35.31",
+        "illum": "99.00",
+        "rador": 3,
+        "last_movement_time": "1602683028",
+        "co2": 4646,
+        "tvoc": 646
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 147,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:52:17",
+        "temp": "20.8",
+        "humid": "29.41",
+        "illum": "89.00",
+        "rador": 4,
+        "last_movement_time": "1602683503",
+        "co2": 674,
+        "tvoc": 41
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 148,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:52:34",
+        "temp": "22.3",
+        "humid": "39.08",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 6018,
+        "tvoc": 855
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 149,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:51:35",
+        "temp": "22.4",
+        "humid": "43.59",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 794,
+        "tvoc": 60
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 150,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:59:08",
+        "temp": "23.8",
+        "humid": "35.68",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602683028",
+        "co2": 5052,
+        "tvoc": 708
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 151,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:02:18",
+        "temp": "20.7",
+        "humid": "27.91",
+        "illum": "87.00",
+        "rador": 4,
+        "last_movement_time": "1602684068",
+        "co2": 615,
+        "tvoc": 32
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 152,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:02:34",
+        "temp": "22.3",
+        "humid": "37.18",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 6695,
+        "tvoc": 958
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 153,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:01:34",
+        "temp": "22.5",
+        "humid": "41.96",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 840,
+        "tvoc": 66
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 154,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:09:08",
+        "temp": "23.5",
+        "humid": "34.93",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602683028",
+        "co2": 5139,
+        "tvoc": 722
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 155,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:12:18",
+        "temp": "20.7",
+        "humid": "27.28",
+        "illum": "90.00",
+        "rador": 6,
+        "last_movement_time": "1602684438",
+        "co2": 589,
+        "tvoc": 28
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 156,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:12:34",
+        "temp": "22.4",
+        "humid": "35.85",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7060,
+        "tvoc": 1014
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 157,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:11:34",
+        "temp": "22.6",
+        "humid": "41.72",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 877,
+        "tvoc": 72
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 158,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:19:08",
+        "temp": "23.4",
+        "humid": "35.87",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602683028",
+        "co2": 5114,
+        "tvoc": 717
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 159,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:22:18",
+        "temp": "20.6",
+        "humid": "25.08",
+        "illum": "90.00",
+        "rador": 0,
+        "last_movement_time": "1602684438",
+        "co2": 609,
+        "tvoc": 31
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 160,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:22:34",
+        "temp": "22.4",
+        "humid": "35.86",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7503,
+        "tvoc": 1082
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 161,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:21:34",
+        "temp": "22.7",
+        "humid": "40.28",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 893,
+        "tvoc": 75
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 162,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:29:08",
+        "temp": "23.3",
+        "humid": "35.39",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602683028",
+        "co2": 5163,
+        "tvoc": 725
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 163,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:32:18",
+        "temp": "20.6",
+        "humid": "25.74",
+        "illum": "92.00",
+        "rador": 0,
+        "last_movement_time": "1602684438",
+        "co2": 572,
+        "tvoc": 26
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 164,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:32:34",
+        "temp": "22.4",
+        "humid": "35.33",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7769,
+        "tvoc": 1122
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 165,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:31:34",
+        "temp": "22.7",
+        "humid": "40.98",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 900,
+        "tvoc": 76
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 166,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:39:08",
+        "temp": "23.2",
+        "humid": "34.01",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602683028",
+        "co2": 5309,
+        "tvoc": 747
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 167,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:42:18",
+        "temp": "20.8",
+        "humid": "30.61",
+        "illum": "92.00",
+        "rador": 0,
+        "last_movement_time": "1602684438",
+        "co2": 493,
+        "tvoc": 14
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 168,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:42:34",
+        "temp": "22.5",
+        "humid": "34.77",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7905,
+        "tvoc": 1143
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 169,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:41:34",
+        "temp": "22.7",
+        "humid": "39.92",
+        "illum": "86.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 946,
+        "tvoc": 83
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 170,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:49:08",
+        "temp": "23.2",
+        "humid": "35.76",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602683028",
+        "co2": 5241,
+        "tvoc": 737
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 171,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:52:18",
+        "temp": "20.8",
+        "humid": "31.84",
+        "illum": "87.00",
+        "rador": 14,
+        "last_movement_time": "1602687134",
+        "co2": 474,
+        "tvoc": 11
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 172,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:52:34",
+        "temp": "22.5",
+        "humid": "36.00",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7970,
+        "tvoc": 1153
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 173,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:51:34",
+        "temp": "22.7",
+        "humid": "39.17",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602679832",
+        "co2": 974,
+        "tvoc": 87
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 174,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:59:08",
+        "temp": "23.1",
+        "humid": "34.32",
+        "illum": "99.00",
+        "rador": 1,
+        "last_movement_time": "1602687536",
+        "co2": 5205,
+        "tvoc": 731
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 175,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:02:18",
+        "temp": "20.6",
+        "humid": "28.83",
+        "illum": "87.00",
+        "rador": 27,
+        "last_movement_time": "1602687578",
+        "co2": 502,
+        "tvoc": 15
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 176,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:02:35",
+        "temp": "22.5",
+        "humid": "34.30",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7848,
+        "tvoc": 1134
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 177,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:01:34",
+        "temp": "22.7",
+        "humid": "38.12",
+        "illum": "85.00",
+        "rador": 3,
+        "last_movement_time": "1602687524",
+        "co2": 996,
+        "tvoc": 90
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 178,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:09:08",
+        "temp": "23.0",
+        "humid": "35.21",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602687536",
+        "co2": 5065,
+        "tvoc": 710
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 179,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:12:18",
+        "temp": "20.4",
+        "humid": "28.69",
+        "illum": "82.00",
+        "rador": 1,
+        "last_movement_time": "1602688012",
+        "co2": 454,
+        "tvoc": 8
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 180,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:12:35",
+        "temp": "22.5",
+        "humid": "34.01",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7848,
+        "tvoc": 1134
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 181,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:11:34",
+        "temp": "22.7",
+        "humid": "40.15",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602687524",
+        "co2": 987,
+        "tvoc": 89
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 182,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:19:08",
+        "temp": "22.9",
+        "humid": "34.32",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602687536",
+        "co2": 4896,
+        "tvoc": 685
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 183,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:22:18",
+        "temp": "20.2",
+        "humid": "31.10",
+        "illum": "81.00",
+        "rador": 12,
+        "last_movement_time": "1602688796",
+        "co2": 403,
+        "tvoc": 0
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 184,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:22:35",
+        "temp": "22.4",
+        "humid": "33.80",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7687,
+        "tvoc": 1109
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 185,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:21:34",
+        "temp": "22.7",
+        "humid": "40.16",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602687524",
+        "co2": 978,
+        "tvoc": 87
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 186,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:29:08",
+        "temp": "22.9",
+        "humid": "34.71",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602687536",
+        "co2": 4669,
+        "tvoc": 649
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 187,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:32:18",
+        "temp": "20.2",
+        "humid": "33.42",
+        "illum": "80.00",
+        "rador": 6,
+        "last_movement_time": "1602689285",
+        "co2": 405,
+        "tvoc": 0
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 188,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:32:35",
+        "temp": "22.4",
+        "humid": "35.43",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7492,
+        "tvoc": 1080
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 189,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:31:34",
+        "temp": "22.6",
+        "humid": "39.67",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602687524",
+        "co2": 949,
+        "tvoc": 83
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 190,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:39:08",
+        "temp": "22.8",
+        "humid": "35.18",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602687536",
+        "co2": 4465,
+        "tvoc": 619
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 191,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:42:18",
+        "temp": "20.0",
+        "humid": "34.28",
+        "illum": "80.00",
+        "rador": 9,
+        "last_movement_time": "1602689884",
+        "co2": 403,
+        "tvoc": 0
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 192,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:42:35",
+        "temp": "22.5",
+        "humid": "35.06",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602680269",
+        "co2": 7206,
+        "tvoc": 1037
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 193,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:41:34",
+        "temp": "22.6",
+        "humid": "38.85",
+        "illum": "85.00",
+        "rador": 0,
+        "last_movement_time": "1602687524",
+        "co2": 919,
+        "tvoc": 78
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 194,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:49:08",
+        "temp": "22.7",
+        "humid": "35.58",
+        "illum": "99.00",
+        "rador": 0,
+        "last_movement_time": "1602687536",
+        "co2": 4273,
+        "tvoc": 589
+    }
+},
+{
     "model": "logtable.log",
     "pk": 92,
     "fields": {
@@ -2071,6 +4231,1158 @@
     "fields": {
         "sensor": 50,
         "updated_time": "2019-11-15T15:02:37"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 142,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T01:42:17"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 143,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T01:42:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 144,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T01:39:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 145,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T01:41:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 146,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T01:52:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 147,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T01:52:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 148,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T01:49:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 149,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T01:51:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 150,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:02:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 151,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T01:59:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 152,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:01:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 153,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:02:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 154,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:12:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 155,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:09:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 156,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:11:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 157,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:12:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 158,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:22:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 159,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:19:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 160,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:21:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 161,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:22:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 162,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:32:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 163,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:32:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 164,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:29:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 165,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:31:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 166,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:42:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 167,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:42:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 168,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:39:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 169,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:41:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 170,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T02:52:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 171,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T02:52:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 172,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:49:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 173,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T02:51:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 174,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T03:02:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 175,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T03:02:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 176,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T02:59:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 177,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T03:01:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 178,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T03:12:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 179,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T03:12:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 180,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T03:09:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 181,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T03:11:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 182,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T03:22:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 183,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T03:22:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 184,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T03:19:07"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 185,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T03:21:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 186,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T11:42:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 187,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T11:42:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 188,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T11:49:09"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 189,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T11:41:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 190,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T11:52:17"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 191,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T11:52:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 192,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T11:51:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 193,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T11:59:09"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 194,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:02:17"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 195,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:02:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 196,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:01:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 197,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:09:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 198,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:12:17"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 199,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:12:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 200,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:11:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 201,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:19:09"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 202,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:22:17"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 203,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:22:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 204,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:21:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 205,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:29:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 206,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:32:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 207,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:32:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 208,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:31:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 209,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:39:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 210,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:42:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 211,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:42:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 212,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:41:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 213,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:49:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 214,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T12:52:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 215,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T12:52:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 216,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T12:51:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 217,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T12:59:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 218,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:02:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 219,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:02:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 220,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:01:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 221,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:09:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 222,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:12:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 223,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:12:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 224,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:11:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 225,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:19:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 226,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:22:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 227,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:22:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 228,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:21:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 229,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:29:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 230,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:32:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 231,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:32:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 232,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:31:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 233,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:39:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 234,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:42:17"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 235,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:42:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 236,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:41:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 237,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:49:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 238,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T13:52:17"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 239,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T13:52:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 240,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T13:51:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 241,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T13:59:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 242,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:02:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 243,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:02:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 244,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:01:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 245,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:09:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 246,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:12:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 247,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:12:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 248,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:11:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 249,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:19:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 250,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:22:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 251,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:22:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 252,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:21:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 253,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:29:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 254,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:32:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 255,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:32:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 256,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:31:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 257,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:39:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 258,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:42:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 259,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:42:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 260,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:41:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 261,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:49:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 262,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T14:52:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 263,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T14:52:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 264,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T14:51:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 265,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T14:59:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 266,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:02:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 267,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:02:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 268,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:01:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 269,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:09:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 270,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:12:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 271,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:12:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 272,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:11:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 273,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:19:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 274,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:22:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 275,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:22:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 276,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:21:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 277,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:29:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 278,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:32:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 279,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:32:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 280,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:31:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 281,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:39:08"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 282,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-14T15:42:18"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 283,
+    "fields": {
+        "sensor": 8,
+        "updated_time": "2020-10-14T15:42:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 284,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-14T15:41:34"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 285,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-14T15:49:08"
     }
 },
 {
