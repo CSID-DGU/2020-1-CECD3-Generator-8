@@ -1,8 +1,8 @@
 # 2020-1-CECD3-Generator-8
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스
 ## Recent Update
-간단한 분석 모듈 (analyzer.py)
-* 데이터베이스의 센서의 주기를 저장해 놓고, 로그를 생성한 시간과 현재 시간의 차이를 계산 후 주기와 비교하여 상태 판별
+웹 서버로 호스팅 하였음 (상시 autocollect 돌아가는 중)  
+[링크](http://teamgenerator.pythonanywhere.com/dashboard)
 
 ## 1. Installation
 ### 1.1. Django project
@@ -61,9 +61,25 @@ venv\Scripts\activate.bat
    > (venv) deactivate
    > ```
 ***
+Collecting logs and saving them into db: API 이용해서 json으로 긁어와 DB에 저장
+```
+(venv) python manage.py autocollect
+```
+***
+Dump database into dbdump.json: 현재 데이터베이스를 dbdump.json파일로 저장
+```
+(venv) python manage.py dumpdata --natural-foreign --natural-primary --indent=4 -o dbdump.json
+```
+***
+Load database from dumped file: 데이터베이스를 덤프한 파일에서 데이터베이스를 불러옴
+```
+(venv) python manage.py flush
+(venv) python manage.py loaddata dbdump.json
+```
+***
  Running web server (default: http://127.0.0.1:8000)
  ```
- (venv) python manage.py runserver
+ (venv) python manage.py runserver [PORT_NUMBER]
  ```
  ***
  Collecting static files: CSS, 이미지 파일 등 장고에 쓰이는 정적 파일들을 불러오는 명령어
@@ -97,22 +113,6 @@ Creating admin account: 어드민 페이지에 사용할 계정 새로 생성
 (venv) python manage.py createsuperuser
 ```
 ***
-Collecting logs and saving them into db: API 이용해서 json으로 긁어와 DB에 저장
-```
-(venv) python manage.py autocollect
-```
-***
-Dump database into dbdump.json: 현재 데이터베이스를 dbdump.json파일로 저장
-```
-(venv) python manage.py dumpdata --natural-foreign --natural-primary --indent=4 -o dbdump.json
-```
-***
-Load database from dumped file: 데이터베이스를 덤프한 파일에서 데이터베이스를 불러옴
-```
-(venv) python manage.py flush
-(venv) python manage.py loaddata dbdump.json
-```
-***
 
 ## Sensor API
 command getting each sensor's values by curl
@@ -134,14 +134,3 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 ![dashboard_map](/res/floorview_map.png)
 ### Monitoring 출력 화면
 ![monitoring](/res/monitoring.png)
-
-## To-Do List
-### System
-* AWS 서버에 올리기
-### Django
-* 약도 상에 센서 위치 표기
-### RPA
-* 문서 자동작성 스크립트 작성
-* 웹 페이지 자동 감시 스크립트 작성
-### Misc
-* SMS API 알아보고 개발 -> 일단은 이메일로 대체
