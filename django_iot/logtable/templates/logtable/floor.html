@@ -11,19 +11,19 @@
   https://velog.io/@hwang-eunji/backend-django-%EC%A0%95%EC%B0%B8%EC%A1%B0-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0
   https://newbiecs.tistory.com/150
   https://tutorial.djangogirls.org/ko/dynamic_data_in_templates/
-  check this out! 
+  check this out!
 -->
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=1bd90974e42765b06b5318db688bc0f0"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cef0c647cfe8c88cf78563dab9b303bd"></script>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-  <h2>DIMS</h2> 
+  <h2>DIMS</h2>
   <h6>Dongguk university IoT Device Monitoring System</h6>
   {%for b in bname %}
   {%for lev in level_info %}
-    <h3> {{b.building_name}} - {{lev.level_num}} </h3> 
+    <h3> {{b.building_name}} - {{lev.level_num}} </h3>
   {%endfor%}
   {%endfor%}
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h5> </h5> 
+    <h5> </h5>
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
         <button type="button" class="btn btn-sm btn-outline-secondary">
@@ -112,12 +112,12 @@
   </div>
 
 {% comment %} map script {% endcomment %}
-{% comment %} 
+{% comment %}
 {%for l in level_info%}
 {%for b in bname%}
 <img src= {{l.img_file_path}} class="img-fluid" alt={{b.building_name}}{{l.level_num}}>
 {%endfor%}
-{%endfor%} 
+{%endfor%}
 {% endcomment %}
 <script>
 const levels= {{levels|safe}};
