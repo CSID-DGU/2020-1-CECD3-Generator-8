@@ -13,10 +13,11 @@ class LogTableQuerySet(tables.Table):
 
 
 class MonitoringTableQuerySet(tables.Table):
-    checkbox_column = tables.columns.CheckBoxColumn(accessor='pk')
+    sensor_type_column = tables.Column(
+        accessor='get_sensor_type', verbose_name='Sensor Type')
 
     class Meta:
-        fields = ['checkbox_column', 'id', 'sensor_code', 'sensor_model',
-                  'sensor_type', 'updated_time', 'sensor_status']
+        fields = ['id', 'sensor_code', 'sensor_model',
+                  'sensor_type_column', 'updated_time', 'sensor_status']
         model = Sensor
         template_name = "django_tables2/bootstrap.html"
