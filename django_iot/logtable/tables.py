@@ -15,9 +15,10 @@ class LogTableQuerySet(tables.Table):
 class MonitoringTableQuerySet(tables.Table):
     sensor_type_column = tables.Column(
         accessor='get_sensor_type', verbose_name='Sensor Type')
+    action = tables.TemplateColumn(template_name='tables/action_column.html')
 
     class Meta:
         fields = ['id', 'sensor_code', 'sensor_model',
-                  'sensor_type_column', 'updated_time', 'sensor_status']
+                  'sensor_type_column', 'updated_time', 'sensor_status', 'action']
         model = Sensor
         template_name = "django_tables2/bootstrap.html"
