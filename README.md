@@ -1,8 +1,9 @@
 # 2020-1-CECD3-Generator-8
-RPA를 활용한 IoT 디바이스 제어 및 관리 서비스
+RPA를 활용한 IoT 디바이스 제어 및 관리 서비스  
+[웹 사이트](http://teamgenerator.pythonanywhere.com/dashboard)  
+[웹 호스팅 설정 링크](https://www.pythonanywhere.com/user/teamGenerator/)
 ## Recent Update
-웹 서버로 호스팅 하였음 (상시 autocollect 돌아가는 중)  
-[링크](http://teamgenerator.pythonanywhere.com/dashboard)
+* Monitoring 페이지에서, 체크박스를 없애고 각 행마다 'Process', 'Delete' 버튼 추가 (데모 이미지 참조)
 
 ## 1. Installation
 ### 1.1. Django project
