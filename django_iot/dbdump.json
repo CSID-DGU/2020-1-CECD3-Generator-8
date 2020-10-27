@@ -92,6 +92,14 @@
     }
 },
 {
+    "model": "sessions.session",
+    "pk": "qeygxtzm4qu81citvpwdai1whopkfcxd",
+    "fields": {
+        "session_data": "MzFlYTU0MTNlNjk1YjEzYTNkNmRkYjFhOTBjNzA0OTA4MmNiZGJiMTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmYjNmNDA2YmVlYjc5MGVhYmUzMTFjMzEzZThjZDhjYjBlYzE2YWUxIn0=",
+        "expire_date": "2020-11-10T16:30:25.388"
+    }
+},
+{
     "model": "logtable.building",
     "pk": 1,
     "fields": {
@@ -233,8 +241,8 @@
         "is_handled": false,
         "updated_time": "2019-12-13T21:07:33",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.469108700891034,
+        "position_y": 124.90714006831782
     }
 },
 {
@@ -247,8 +255,8 @@
         "is_handled": false,
         "updated_time": "2019-12-12T04:50:20",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.46182709996894,
+        "position_y": 124.87923413332385
     }
 },
 {
@@ -261,8 +269,8 @@
         "is_handled": false,
         "updated_time": "2020-06-03T01:43:04",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.46266476825056,
+        "position_y": 124.88774820969131
     }
 },
 {
@@ -273,10 +281,10 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T20:52:18",
+        "updated_time": "2020-10-14T19:32:18",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.467966923645506,
+        "position_y": 124.89422730008626
     }
 },
 {
@@ -289,8 +297,8 @@
         "is_handled": false,
         "updated_time": "2019-12-24T13:07:35",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.46786232505503,
+        "position_y": 124.90166356198964
     }
 },
 {
@@ -303,8 +311,8 @@
         "is_handled": false,
         "updated_time": "2019-12-20T16:21:14",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.467779028466616,
+        "position_y": 124.88996434404704
     }
 },
 {
@@ -317,8 +325,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:20:12",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.45593812967827,
+        "position_y": 124.87222018691206
     }
 },
 {
@@ -331,8 +339,8 @@
         "is_handled": true,
         "updated_time": "2020-10-14T17:12:34",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.46060456282381,
+        "position_y": 124.90913397852688
     }
 },
 {
@@ -343,10 +351,10 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T20:49:08",
+        "updated_time": "2020-10-14T19:29:08",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.45733103570495,
+        "position_y": 124.89297046457136
     }
 },
 {
@@ -359,8 +367,8 @@
         "is_handled": false,
         "updated_time": "2020-06-26T19:53:53",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.457265786732776,
+        "position_y": 124.8823734130533
     }
 },
 {
@@ -373,8 +381,8 @@
         "is_handled": false,
         "updated_time": "2020-01-09T14:44:27",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.45365536798479,
+        "position_y": 124.88039663320188
     }
 },
 {
@@ -387,8 +395,8 @@
         "is_handled": false,
         "updated_time": "2020-09-25T15:57:33",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.44926352823769,
+        "position_y": 124.87995299201631
     }
 },
 {
@@ -399,10 +407,10 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T20:51:35",
+        "updated_time": "2020-10-14T19:31:35",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.46712794288123,
+        "position_y": 124.9128317953306
     }
 },
 {
@@ -415,8 +423,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:06:23",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.439599242921766,
+        "position_y": 124.88830754546002
     }
 },
 {
@@ -429,8 +437,8 @@
         "is_handled": false,
         "updated_time": "2019-12-11T17:54:27",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.434449602443344,
+        "position_y": 124.8705432749655
     }
 },
 {
@@ -443,8 +451,8 @@
         "is_handled": false,
         "updated_time": "2020-06-03T22:10:21",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.43365420682068,
+        "position_y": 124.88473621496397
     }
 },
 {
@@ -457,8 +465,8 @@
         "is_handled": false,
         "updated_time": "2019-12-12T01:46:02",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.4443251139622,
+        "position_y": 124.86782468345956
     }
 },
 {
@@ -471,8 +479,8 @@
         "is_handled": false,
         "updated_time": "2020-06-12T14:17:26",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.44904165203117,
+        "position_y": 124.86702107525493
     }
 },
 {
@@ -485,8 +493,8 @@
         "is_handled": false,
         "updated_time": "2020-06-30T19:28:00",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.45283793903953,
+        "position_y": 124.86637755074189
     }
 },
 {
@@ -499,8 +507,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:20:19",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.45413304044886,
+        "position_y": 124.87460415867716
     }
 },
 {
@@ -513,8 +521,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:24:16",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.437410693243294,
+        "position_y": 124.88175515825064
     }
 },
 {
@@ -527,8 +535,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:24:17",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.46018866133834,
+        "position_y": 124.87115276966036
     }
 },
 {
@@ -541,8 +549,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:24:16",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.45050361524735,
+        "position_y": 124.87152716706896
     }
 },
 {
@@ -555,8 +563,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:24:17",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.46047354739474,
+        "position_y": 124.88780137397471
     }
 },
 {
@@ -569,8 +577,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:24:18",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.44871033010445,
+        "position_y": 124.87459886201346
     }
 },
 {
@@ -583,8 +591,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:24:34",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.45792885857648,
+        "position_y": 124.86721632014896
     }
 },
 {
@@ -597,8 +605,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:36:30",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.46609043307555,
+        "position_y": 124.89922841628692
     }
 },
 {
@@ -611,8 +619,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:36:44",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.463932846726024,
+        "position_y": 124.90809044917495
     }
 },
 {
@@ -625,8 +633,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:36:50",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": 33.444904322090025,
+        "position_y": 124.88817895463075
     }
 },
 {
@@ -639,8 +647,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:36:52",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -653,8 +661,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:37:06",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -667,8 +675,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:37:15",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -681,8 +689,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:37:22",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -695,8 +703,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:37:28",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -709,8 +717,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:37:37",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -723,8 +731,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:37:41",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -737,8 +745,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:41:20",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -751,8 +759,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:41:29",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -765,8 +773,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:41:50",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -779,8 +787,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:42:12",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -793,8 +801,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:50:02",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -807,8 +815,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:50:09",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -821,8 +829,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:50:14",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -835,8 +843,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:50:35",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -849,8 +857,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:50:49",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -863,8 +871,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T15:04:18",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -877,8 +885,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T14:51:11",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -891,8 +899,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T15:00:29",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -905,8 +913,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T15:01:02",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -919,8 +927,8 @@
         "is_handled": false,
         "updated_time": "2019-11-15T15:02:37",
         "level": 1,
-        "position_x": -1,
-        "position_y": -1
+        "position_x": -1.0,
+        "position_y": -1.0
     }
 },
 {
@@ -1678,2179 +1686,19 @@
     "pk": 51,
     "fields": {
         "sensor": 4,
-        "updated_time": "2020-10-14T01:42:17",
-        "temp": "21.6",
-        "humid": "44.09",
+        "updated_time": "2020-10-14T19:32:18",
+        "temp": "19.3",
+        "humid": "32.05",
         "illum": "0.00",
         "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2172,
-        "tvoc": 634
+        "last_movement_time": "1602702827",
+        "co2": 1229,
+        "tvoc": 126
     }
 },
 {
     "model": "logtable.sme20u_value",
     "pk": 52,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T01:42:34",
-        "temp": "22.2",
-        "humid": "41.24",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 6225,
-        "tvoc": 887
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 53,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T01:39:08",
-        "temp": "21.1",
-        "humid": "44.45",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2487,
-        "tvoc": 318
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 54,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T01:41:34",
-        "temp": "22.3",
-        "humid": "45.41",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 6294,
-        "tvoc": 897
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 55,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T01:52:18",
-        "temp": "21.5",
-        "humid": "44.47",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2180,
-        "tvoc": 642
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 56,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T01:52:34",
-        "temp": "22.1",
-        "humid": "41.42",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 6283,
-        "tvoc": 896
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 57,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T01:49:08",
-        "temp": "21.1",
-        "humid": "44.37",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2504,
-        "tvoc": 320
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 58,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T01:51:34",
-        "temp": "22.2",
-        "humid": "46.25",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 6395,
-        "tvoc": 913
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 59,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:02:18",
-        "temp": "21.5",
-        "humid": "43.68",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2183,
-        "tvoc": 645
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 60,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T01:59:08",
-        "temp": "21.1",
-        "humid": "44.75",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2562,
-        "tvoc": 329
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 61,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:01:34",
-        "temp": "22.2",
-        "humid": "46.31",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 6501,
-        "tvoc": 929
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 62,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:02:34",
-        "temp": "22.1",
-        "humid": "42.34",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 6397,
-        "tvoc": 913
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 63,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:12:18",
-        "temp": "21.5",
-        "humid": "44.95",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2193,
-        "tvoc": 655
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 64,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:09:08",
-        "temp": "21.0",
-        "humid": "44.11",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2583,
-        "tvoc": 332
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 65,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:11:34",
-        "temp": "22.2",
-        "humid": "45.81",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 6586,
-        "tvoc": 942
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 66,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:12:34",
-        "temp": "22.1",
-        "humid": "42.40",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 6498,
-        "tvoc": 929
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 67,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:22:18",
-        "temp": "21.5",
-        "humid": "43.62",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2201,
-        "tvoc": 663
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 68,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:19:08",
-        "temp": "21.0",
-        "humid": "45.14",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2655,
-        "tvoc": 343
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 69,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:21:34",
-        "temp": "22.2",
-        "humid": "45.96",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 6750,
-        "tvoc": 967
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 70,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:22:34",
-        "temp": "22.1",
-        "humid": "42.73",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 6637,
-        "tvoc": 949
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 71,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:32:18",
-        "temp": "21.4",
-        "humid": "44.72",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2206,
-        "tvoc": 668
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 72,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:32:34",
-        "temp": "22.1",
-        "humid": "42.78",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 6787,
-        "tvoc": 973
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 73,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:29:08",
-        "temp": "21.0",
-        "humid": "45.61",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2731,
-        "tvoc": 355
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 74,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:31:34",
-        "temp": "22.2",
-        "humid": "45.16",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 6816,
-        "tvoc": 977
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 75,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:42:18",
-        "temp": "21.4",
-        "humid": "43.50",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2217,
-        "tvoc": 681
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 76,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:42:34",
-        "temp": "22.1",
-        "humid": "41.13",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 6953,
-        "tvoc": 998
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 77,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:39:08",
-        "temp": "20.9",
-        "humid": "46.23",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2771,
-        "tvoc": 361
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 78,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:41:35",
-        "temp": "22.2",
-        "humid": "47.01",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 6987,
-        "tvoc": 1003
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 79,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:52:18",
-        "temp": "21.4",
-        "humid": "44.70",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2223,
-        "tvoc": 686
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 80,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:52:34",
-        "temp": "22.1",
-        "humid": "41.84",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 7067,
-        "tvoc": 1015
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 81,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:49:08",
-        "temp": "20.9",
-        "humid": "45.07",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2837,
-        "tvoc": 371
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 82,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:51:34",
-        "temp": "22.1",
-        "humid": "45.17",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 7085,
-        "tvoc": 1018
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 83,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T03:02:18",
-        "temp": "21.4",
-        "humid": "44.90",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2230,
-        "tvoc": 693
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 84,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T03:02:34",
-        "temp": "22.1",
-        "humid": "42.56",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 7144,
-        "tvoc": 1027
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 85,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:59:08",
-        "temp": "20.9",
-        "humid": "46.35",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2889,
-        "tvoc": 379
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 86,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T03:01:34",
-        "temp": "22.1",
-        "humid": "47.36",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 7236,
-        "tvoc": 1041
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 87,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T03:12:18",
-        "temp": "21.4",
-        "humid": "44.77",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2229,
-        "tvoc": 692
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 88,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T03:12:34",
-        "temp": "22.1",
-        "humid": "42.45",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 7185,
-        "tvoc": 1033
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 89,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T03:09:08",
-        "temp": "20.9",
-        "humid": "45.74",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2926,
-        "tvoc": 384
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 90,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T03:11:35",
-        "temp": "22.1",
-        "humid": "45.79",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 7275,
-        "tvoc": 1047
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 91,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T03:22:18",
-        "temp": "21.4",
-        "humid": "46.05",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2228,
-        "tvoc": 691
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 92,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T03:22:34",
-        "temp": "22.1",
-        "humid": "42.30",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 7160,
-        "tvoc": 1030
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 93,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T03:19:07",
-        "temp": "20.9",
-        "humid": "46.61",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2971,
-        "tvoc": 391
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 94,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T03:21:34",
-        "temp": "22.1",
-        "humid": "48.00",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 7274,
-        "tvoc": 1046
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 95,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T11:42:18",
-        "temp": "19.9",
-        "humid": "40.15",
-        "illum": "93.00",
-        "rador": 8,
-        "last_movement_time": "1602675439",
-        "co2": 1330,
-        "tvoc": 141
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 96,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T11:42:34",
-        "temp": "22.1",
-        "humid": "43.70",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602675005",
-        "co2": 4774,
-        "tvoc": 666
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 97,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T11:49:09",
-        "temp": "22.1",
-        "humid": "44.77",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2700,
-        "tvoc": 350
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 98,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T11:41:34",
-        "temp": "22.2",
-        "humid": "48.36",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602674995",
-        "co2": 703,
-        "tvoc": 46
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 99,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T11:52:17",
-        "temp": "19.8",
-        "humid": "36.94",
-        "illum": "94.00",
-        "rador": 1,
-        "last_movement_time": "1602676024",
-        "co2": 935,
-        "tvoc": 81
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 100,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T11:52:35",
-        "temp": "22.1",
-        "humid": "43.58",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602675005",
-        "co2": 4993,
-        "tvoc": 699
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 101,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T11:51:34",
-        "temp": "22.3",
-        "humid": "48.12",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602674995",
-        "co2": 729,
-        "tvoc": 49
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 102,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T11:59:09",
-        "temp": "22.1",
-        "humid": "43.37",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2760,
-        "tvoc": 359
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 103,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:02:17",
-        "temp": "19.8",
-        "humid": "37.42",
-        "illum": "94.00",
-        "rador": 0,
-        "last_movement_time": "1602676024",
-        "co2": 717,
-        "tvoc": 48
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 104,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:02:34",
-        "temp": "22.1",
-        "humid": "41.70",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602675005",
-        "co2": 5238,
-        "tvoc": 736
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 105,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:01:34",
-        "temp": "22.2",
-        "humid": "47.38",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602674995",
-        "co2": 751,
-        "tvoc": 53
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 106,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:09:08",
-        "temp": "22.2",
-        "humid": "43.29",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2867,
-        "tvoc": 375
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 107,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:12:17",
-        "temp": "19.9",
-        "humid": "37.38",
-        "illum": "93.00",
-        "rador": 1,
-        "last_movement_time": "1602677384",
-        "co2": 610,
-        "tvoc": 32
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 108,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:12:34",
-        "temp": "22.1",
-        "humid": "42.61",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602675005",
-        "co2": 5333,
-        "tvoc": 751
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 109,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:11:35",
-        "temp": "22.2",
-        "humid": "46.41",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602674995",
-        "co2": 750,
-        "tvoc": 53
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 110,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:19:09",
-        "temp": "22.3",
-        "humid": "42.11",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2902,
-        "tvoc": 381
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 111,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:22:17",
-        "temp": "20.0",
-        "humid": "37.83",
-        "illum": "92.00",
-        "rador": 2,
-        "last_movement_time": "1602677963",
-        "co2": 509,
-        "tvoc": 16
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 112,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:22:35",
-        "temp": "22.2",
-        "humid": "42.50",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602675005",
-        "co2": 5198,
-        "tvoc": 730
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 113,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:21:35",
-        "temp": "22.2",
-        "humid": "45.08",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602674995",
-        "co2": 740,
-        "tvoc": 51
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 114,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:29:08",
-        "temp": "22.6",
-        "humid": "40.99",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2886,
-        "tvoc": 378
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 115,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:32:18",
-        "temp": "19.9",
-        "humid": "38.35",
-        "illum": "90.00",
-        "rador": 4,
-        "last_movement_time": "1602678588",
-        "co2": 424,
-        "tvoc": 3
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 116,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:32:35",
-        "temp": "22.1",
-        "humid": "40.67",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602675005",
-        "co2": 4992,
-        "tvoc": 699
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 117,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:31:35",
-        "temp": "22.2",
-        "humid": "46.23",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602674995",
-        "co2": 713,
-        "tvoc": 47
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 118,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:39:08",
-        "temp": "23.1",
-        "humid": "40.42",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2776,
-        "tvoc": 362
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 119,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:42:18",
-        "temp": "20.0",
-        "humid": "39.94",
-        "illum": "90.00",
-        "rador": 0,
-        "last_movement_time": "1602678588",
-        "co2": 402,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 120,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:42:35",
-        "temp": "22.2",
-        "humid": "40.63",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602675005",
-        "co2": 4599,
-        "tvoc": 639
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 121,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:41:35",
-        "temp": "22.2",
-        "humid": "45.43",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602674995",
-        "co2": 662,
-        "tvoc": 39
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 122,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:49:08",
-        "temp": "23.3",
-        "humid": "40.30",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2733,
-        "tvoc": 355
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 123,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:52:18",
-        "temp": "20.2",
-        "humid": "36.19",
-        "illum": "93.00",
-        "rador": 16,
-        "last_movement_time": "1602679847",
-        "co2": 415,
-        "tvoc": 2
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 124,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:52:34",
-        "temp": "22.2",
-        "humid": "40.40",
-        "illum": "99.00",
-        "rador": 9,
-        "last_movement_time": "1602679825",
-        "co2": 4321,
-        "tvoc": 597
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 125,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:51:35",
-        "temp": "22.3",
-        "humid": "45.61",
-        "illum": "86.00",
-        "rador": 3,
-        "last_movement_time": "1602679832",
-        "co2": 625,
-        "tvoc": 34
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 126,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:59:08",
-        "temp": "23.6",
-        "humid": "38.58",
-        "illum": "99.00",
-        "rador": 3,
-        "last_movement_time": "1602679830",
-        "co2": 2635,
-        "tvoc": 340
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 127,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:02:18",
-        "temp": "20.5",
-        "humid": "37.50",
-        "illum": "89.00",
-        "rador": 3,
-        "last_movement_time": "1602680287",
-        "co2": 444,
-        "tvoc": 6
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 128,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:02:34",
-        "temp": "22.2",
-        "humid": "40.37",
-        "illum": "99.00",
-        "rador": 2,
-        "last_movement_time": "1602680269",
-        "co2": 4262,
-        "tvoc": 588
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 129,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:01:35",
-        "temp": "22.3",
-        "humid": "45.11",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 597,
-        "tvoc": 30
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 130,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:09:08",
-        "temp": "23.9",
-        "humid": "38.85",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602679830",
-        "co2": 2624,
-        "tvoc": 338
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 131,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:12:18",
-        "temp": "20.7",
-        "humid": "33.37",
-        "illum": "88.00",
-        "rador": 0,
-        "last_movement_time": "1602680287",
-        "co2": 569,
-        "tvoc": 25
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 132,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:12:34",
-        "temp": "22.2",
-        "humid": "39.64",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 4302,
-        "tvoc": 594
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 133,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:11:35",
-        "temp": "22.3",
-        "humid": "43.83",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 566,
-        "tvoc": 25
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 134,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:19:08",
-        "temp": "24.7",
-        "humid": "36.77",
-        "illum": "99.00",
-        "rador": 13,
-        "last_movement_time": "1602681533",
-        "co2": 2679,
-        "tvoc": 347
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 135,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:22:18",
-        "temp": "20.7",
-        "humid": "33.88",
-        "illum": "89.00",
-        "rador": 3,
-        "last_movement_time": "1602681546",
-        "co2": 592,
-        "tvoc": 29
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 136,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:22:34",
-        "temp": "22.3",
-        "humid": "39.90",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 4397,
-        "tvoc": 608
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 137,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:21:35",
-        "temp": "22.4",
-        "humid": "42.75",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 573,
-        "tvoc": 26
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 138,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:29:08",
-        "temp": "25.2",
-        "humid": "35.42",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602681533",
-        "co2": 3168,
-        "tvoc": 421
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 139,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:32:18",
-        "temp": "20.8",
-        "humid": "27.83",
-        "illum": "89.00",
-        "rador": 0,
-        "last_movement_time": "1602681546",
-        "co2": 711,
-        "tvoc": 47
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 140,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:32:34",
-        "temp": "22.3",
-        "humid": "37.52",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 4985,
-        "tvoc": 698
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 141,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:31:35",
-        "temp": "22.4",
-        "humid": "43.75",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 662,
-        "tvoc": 39
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 142,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:39:08",
-        "temp": "25.4",
-        "humid": "34.52",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602681533",
-        "co2": 4022,
-        "tvoc": 551
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 143,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:42:17",
-        "temp": "20.9",
-        "humid": "32.37",
-        "illum": "86.00",
-        "rador": 3,
-        "last_movement_time": "1602682920",
-        "co2": 618,
-        "tvoc": 33
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 144,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:42:34",
-        "temp": "22.3",
-        "humid": "37.68",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 5650,
-        "tvoc": 799
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 145,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:41:35",
-        "temp": "22.4",
-        "humid": "43.89",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 746,
-        "tvoc": 52
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 146,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:49:08",
-        "temp": "24.6",
-        "humid": "35.31",
-        "illum": "99.00",
-        "rador": 3,
-        "last_movement_time": "1602683028",
-        "co2": 4646,
-        "tvoc": 646
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 147,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:52:17",
-        "temp": "20.8",
-        "humid": "29.41",
-        "illum": "89.00",
-        "rador": 4,
-        "last_movement_time": "1602683503",
-        "co2": 674,
-        "tvoc": 41
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 148,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:52:34",
-        "temp": "22.3",
-        "humid": "39.08",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 6018,
-        "tvoc": 855
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 149,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:51:35",
-        "temp": "22.4",
-        "humid": "43.59",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 794,
-        "tvoc": 60
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 150,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:59:08",
-        "temp": "23.8",
-        "humid": "35.68",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602683028",
-        "co2": 5052,
-        "tvoc": 708
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 151,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:02:18",
-        "temp": "20.7",
-        "humid": "27.91",
-        "illum": "87.00",
-        "rador": 4,
-        "last_movement_time": "1602684068",
-        "co2": 615,
-        "tvoc": 32
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 152,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:02:34",
-        "temp": "22.3",
-        "humid": "37.18",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 6695,
-        "tvoc": 958
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 153,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:01:34",
-        "temp": "22.5",
-        "humid": "41.96",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 840,
-        "tvoc": 66
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 154,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:09:08",
-        "temp": "23.5",
-        "humid": "34.93",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602683028",
-        "co2": 5139,
-        "tvoc": 722
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 155,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:12:18",
-        "temp": "20.7",
-        "humid": "27.28",
-        "illum": "90.00",
-        "rador": 6,
-        "last_movement_time": "1602684438",
-        "co2": 589,
-        "tvoc": 28
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 156,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:12:34",
-        "temp": "22.4",
-        "humid": "35.85",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7060,
-        "tvoc": 1014
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 157,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:11:34",
-        "temp": "22.6",
-        "humid": "41.72",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 877,
-        "tvoc": 72
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 158,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:19:08",
-        "temp": "23.4",
-        "humid": "35.87",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602683028",
-        "co2": 5114,
-        "tvoc": 717
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 159,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:22:18",
-        "temp": "20.6",
-        "humid": "25.08",
-        "illum": "90.00",
-        "rador": 0,
-        "last_movement_time": "1602684438",
-        "co2": 609,
-        "tvoc": 31
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 160,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:22:34",
-        "temp": "22.4",
-        "humid": "35.86",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7503,
-        "tvoc": 1082
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 161,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:21:34",
-        "temp": "22.7",
-        "humid": "40.28",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 893,
-        "tvoc": 75
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 162,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:29:08",
-        "temp": "23.3",
-        "humid": "35.39",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602683028",
-        "co2": 5163,
-        "tvoc": 725
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 163,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:32:18",
-        "temp": "20.6",
-        "humid": "25.74",
-        "illum": "92.00",
-        "rador": 0,
-        "last_movement_time": "1602684438",
-        "co2": 572,
-        "tvoc": 26
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 164,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:32:34",
-        "temp": "22.4",
-        "humid": "35.33",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7769,
-        "tvoc": 1122
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 165,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:31:34",
-        "temp": "22.7",
-        "humid": "40.98",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 900,
-        "tvoc": 76
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 166,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:39:08",
-        "temp": "23.2",
-        "humid": "34.01",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602683028",
-        "co2": 5309,
-        "tvoc": 747
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 167,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:42:18",
-        "temp": "20.8",
-        "humid": "30.61",
-        "illum": "92.00",
-        "rador": 0,
-        "last_movement_time": "1602684438",
-        "co2": 493,
-        "tvoc": 14
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 168,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:42:34",
-        "temp": "22.5",
-        "humid": "34.77",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7905,
-        "tvoc": 1143
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 169,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:41:34",
-        "temp": "22.7",
-        "humid": "39.92",
-        "illum": "86.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 946,
-        "tvoc": 83
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 170,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:49:08",
-        "temp": "23.2",
-        "humid": "35.76",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602683028",
-        "co2": 5241,
-        "tvoc": 737
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 171,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:52:18",
-        "temp": "20.8",
-        "humid": "31.84",
-        "illum": "87.00",
-        "rador": 14,
-        "last_movement_time": "1602687134",
-        "co2": 474,
-        "tvoc": 11
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 172,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:52:34",
-        "temp": "22.5",
-        "humid": "36.00",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7970,
-        "tvoc": 1153
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 173,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:51:34",
-        "temp": "22.7",
-        "humid": "39.17",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602679832",
-        "co2": 974,
-        "tvoc": 87
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 174,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:59:08",
-        "temp": "23.1",
-        "humid": "34.32",
-        "illum": "99.00",
-        "rador": 1,
-        "last_movement_time": "1602687536",
-        "co2": 5205,
-        "tvoc": 731
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 175,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:02:18",
-        "temp": "20.6",
-        "humid": "28.83",
-        "illum": "87.00",
-        "rador": 27,
-        "last_movement_time": "1602687578",
-        "co2": 502,
-        "tvoc": 15
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 176,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:02:35",
-        "temp": "22.5",
-        "humid": "34.30",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7848,
-        "tvoc": 1134
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 177,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:01:34",
-        "temp": "22.7",
-        "humid": "38.12",
-        "illum": "85.00",
-        "rador": 3,
-        "last_movement_time": "1602687524",
-        "co2": 996,
-        "tvoc": 90
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 178,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:09:08",
-        "temp": "23.0",
-        "humid": "35.21",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602687536",
-        "co2": 5065,
-        "tvoc": 710
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 179,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:12:18",
-        "temp": "20.4",
-        "humid": "28.69",
-        "illum": "82.00",
-        "rador": 1,
-        "last_movement_time": "1602688012",
-        "co2": 454,
-        "tvoc": 8
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 180,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:12:35",
-        "temp": "22.5",
-        "humid": "34.01",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7848,
-        "tvoc": 1134
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 181,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:11:34",
-        "temp": "22.7",
-        "humid": "40.15",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602687524",
-        "co2": 987,
-        "tvoc": 89
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 182,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:19:08",
-        "temp": "22.9",
-        "humid": "34.32",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602687536",
-        "co2": 4896,
-        "tvoc": 685
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 183,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:22:18",
-        "temp": "20.2",
-        "humid": "31.10",
-        "illum": "81.00",
-        "rador": 12,
-        "last_movement_time": "1602688796",
-        "co2": 403,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 184,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:22:35",
-        "temp": "22.4",
-        "humid": "33.80",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7687,
-        "tvoc": 1109
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 185,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:21:34",
-        "temp": "22.7",
-        "humid": "40.16",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602687524",
-        "co2": 978,
-        "tvoc": 87
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 186,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:29:08",
-        "temp": "22.9",
-        "humid": "34.71",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602687536",
-        "co2": 4669,
-        "tvoc": 649
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 187,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:32:18",
-        "temp": "20.2",
-        "humid": "33.42",
-        "illum": "80.00",
-        "rador": 6,
-        "last_movement_time": "1602689285",
-        "co2": 405,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 188,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:32:35",
-        "temp": "22.4",
-        "humid": "35.43",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7492,
-        "tvoc": 1080
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 189,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:31:34",
-        "temp": "22.6",
-        "humid": "39.67",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602687524",
-        "co2": 949,
-        "tvoc": 83
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 190,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:39:08",
-        "temp": "22.8",
-        "humid": "35.18",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602687536",
-        "co2": 4465,
-        "tvoc": 619
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 191,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:42:18",
-        "temp": "20.0",
-        "humid": "34.28",
-        "illum": "80.00",
-        "rador": 9,
-        "last_movement_time": "1602689884",
-        "co2": 403,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 192,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:42:35",
-        "temp": "22.5",
-        "humid": "35.06",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602680269",
-        "co2": 7206,
-        "tvoc": 1037
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 193,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:41:34",
-        "temp": "22.6",
-        "humid": "38.85",
-        "illum": "85.00",
-        "rador": 0,
-        "last_movement_time": "1602687524",
-        "co2": 919,
-        "tvoc": 78
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 194,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:49:08",
-        "temp": "22.7",
-        "humid": "35.58",
-        "illum": "99.00",
-        "rador": 0,
-        "last_movement_time": "1602687536",
-        "co2": 4273,
-        "tvoc": 589
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 195,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:12:18",
-        "temp": "17.7",
-        "humid": "23.13",
-        "illum": "65.00",
-        "rador": 82,
-        "last_movement_time": "1602699136",
-        "co2": 778,
-        "tvoc": 57
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 196,
     "fields": {
         "sensor": 8,
         "updated_time": "2020-10-14T17:12:34",
@@ -3865,367 +1713,7 @@
 },
 {
     "model": "logtable.sme20u_value",
-    "pk": 197,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:09:08",
-        "temp": "22.1",
-        "humid": "32.96",
-        "illum": "68.00",
-        "rador": 58,
-        "last_movement_time": "1602698925",
-        "co2": 6149,
-        "tvoc": 875
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 198,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:11:34",
-        "temp": "22.5",
-        "humid": "34.65",
-        "illum": "84.00",
-        "rador": 3,
-        "last_movement_time": "1602698930",
-        "co2": 2043,
-        "tvoc": 250
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 199,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:22:18",
-        "temp": "17.5",
-        "humid": "24.30",
-        "illum": "65.00",
-        "rador": 75,
-        "last_movement_time": "1602699733",
-        "co2": 782,
-        "tvoc": 58
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 200,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:19:08",
-        "temp": "22.0",
-        "humid": "32.15",
-        "illum": "68.00",
-        "rador": 0,
-        "last_movement_time": "1602698925",
-        "co2": 6796,
-        "tvoc": 974
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 201,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:21:34",
-        "temp": "22.5",
-        "humid": "34.80",
-        "illum": "84.00",
-        "rador": 0,
-        "last_movement_time": "1602698930",
-        "co2": 2357,
-        "tvoc": 297
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 202,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:32:18",
-        "temp": "17.6",
-        "humid": "25.50",
-        "illum": "66.00",
-        "rador": 63,
-        "last_movement_time": "1602700334",
-        "co2": 829,
-        "tvoc": 65
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 203,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:29:08",
-        "temp": "21.9",
-        "humid": "31.82",
-        "illum": "68.00",
-        "rador": 0,
-        "last_movement_time": "1602698925",
-        "co2": 7589,
-        "tvoc": 1095
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 204,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:31:34",
-        "temp": "22.5",
-        "humid": "34.07",
-        "illum": "84.00",
-        "rador": 0,
-        "last_movement_time": "1602698930",
-        "co2": 2711,
-        "tvoc": 352
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 205,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:42:18",
-        "temp": "17.6",
-        "humid": "27.21",
-        "illum": "67.00",
-        "rador": 85,
-        "last_movement_time": "1602700860",
-        "co2": 814,
-        "tvoc": 62
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 206,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:39:08",
-        "temp": "21.8",
-        "humid": "30.98",
-        "illum": "68.00",
-        "rador": 0,
-        "last_movement_time": "1602698925",
-        "co2": 7953,
-        "tvoc": 1150
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 207,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:41:34",
-        "temp": "22.5",
-        "humid": "34.50",
-        "illum": "84.00",
-        "rador": 11,
-        "last_movement_time": "1602700837",
-        "co2": 3046,
-        "tvoc": 403
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 208,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:52:18",
-        "temp": "17.4",
-        "humid": "27.17",
-        "illum": "67.00",
-        "rador": 3,
-        "last_movement_time": "1602701391",
-        "co2": 912,
-        "tvoc": 78
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 209,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:49:09",
-        "temp": "21.7",
-        "humid": "31.36",
-        "illum": "68.00",
-        "rador": 0,
-        "last_movement_time": "1602698925",
-        "co2": 7974,
-        "tvoc": 1154
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 210,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:51:34",
-        "temp": "22.4",
-        "humid": "32.69",
-        "illum": "84.00",
-        "rador": 0,
-        "last_movement_time": "1602700837",
-        "co2": 3233,
-        "tvoc": 431
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 211,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:02:18",
-        "temp": "17.3",
-        "humid": "29.04",
-        "illum": "67.00",
-        "rador": 7,
-        "last_movement_time": "1602702077",
-        "co2": 984,
-        "tvoc": 88
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 212,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:59:08",
-        "temp": "21.6",
-        "humid": "31.65",
-        "illum": "68.00",
-        "rador": 0,
-        "last_movement_time": "1602698925",
-        "co2": 7937,
-        "tvoc": 1148
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 213,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:01:34",
-        "temp": "22.3",
-        "humid": "33.66",
-        "illum": "84.00",
-        "rador": 0,
-        "last_movement_time": "1602700837",
-        "co2": 3286,
-        "tvoc": 439
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 214,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:12:18",
-        "temp": "17.1",
-        "humid": "29.26",
-        "illum": "67.00",
-        "rador": 36,
-        "last_movement_time": "1602702664",
-        "co2": 953,
-        "tvoc": 84
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 215,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:09:08",
-        "temp": "21.5",
-        "humid": "31.13",
-        "illum": "68.00",
-        "rador": 0,
-        "last_movement_time": "1602698925",
-        "co2": 7802,
-        "tvoc": 1127
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 216,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:11:35",
-        "temp": "22.3",
-        "humid": "31.99",
-        "illum": "84.00",
-        "rador": 0,
-        "last_movement_time": "1602700837",
-        "co2": 3332,
-        "tvoc": 446
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 217,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:22:18",
-        "temp": "18.5",
-        "humid": "31.70",
-        "illum": "0.00",
-        "rador": 6,
-        "last_movement_time": "1602702827",
-        "co2": 1050,
-        "tvoc": 98
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 218,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:19:08",
-        "temp": "21.4",
-        "humid": "31.46",
-        "illum": "0.00",
-        "rador": 3,
-        "last_movement_time": "1602702825",
-        "co2": 7722,
-        "tvoc": 1115
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 219,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:21:34",
-        "temp": "22.2",
-        "humid": "32.32",
-        "illum": "0.00",
-        "rador": 3,
-        "last_movement_time": "1602702810",
-        "co2": 3242,
-        "tvoc": 433
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 220,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:32:18",
-        "temp": "19.3",
-        "humid": "32.05",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1229,
-        "tvoc": 126
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 221,
+    "pk": 53,
     "fields": {
         "sensor": 9,
         "updated_time": "2020-10-14T19:29:08",
@@ -4240,7 +1728,7 @@
 },
 {
     "model": "logtable.sme20u_value",
-    "pk": 222,
+    "pk": 54,
     "fields": {
         "sensor": 13,
         "updated_time": "2020-10-14T19:31:35",
@@ -4251,366 +1739,6 @@
         "last_movement_time": "1602702810",
         "co2": 3171,
         "tvoc": 421
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 223,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:42:18",
-        "temp": "19.6",
-        "humid": "31.17",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1517,
-        "tvoc": 176
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 224,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:39:08",
-        "temp": "21.1",
-        "humid": "32.31",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702825",
-        "co2": 7090,
-        "tvoc": 1019
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 225,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:41:35",
-        "temp": "22.1",
-        "humid": "34.54",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702810",
-        "co2": 3132,
-        "tvoc": 416
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 226,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:52:18",
-        "temp": "19.6",
-        "humid": "31.55",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1583,
-        "tvoc": 208
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 227,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:49:08",
-        "temp": "21.0",
-        "humid": "31.61",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702825",
-        "co2": 6641,
-        "tvoc": 950
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 228,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:51:35",
-        "temp": "22.1",
-        "humid": "34.99",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702810",
-        "co2": 3091,
-        "tvoc": 410
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 229,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:02:18",
-        "temp": "19.6",
-        "humid": "32.44",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1692,
-        "tvoc": 269
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 230,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:59:08",
-        "temp": "21.0",
-        "humid": "32.53",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702825",
-        "co2": 6332,
-        "tvoc": 903
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 231,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:01:35",
-        "temp": "22.0",
-        "humid": "33.83",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702810",
-        "co2": 2996,
-        "tvoc": 395
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 232,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:12:18",
-        "temp": "19.6",
-        "humid": "32.67",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1726,
-        "tvoc": 288
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 233,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:09:08",
-        "temp": "20.9",
-        "humid": "31.99",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702825",
-        "co2": 6089,
-        "tvoc": 866
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 234,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:11:35",
-        "temp": "22.0",
-        "humid": "34.12",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702810",
-        "co2": 2914,
-        "tvoc": 382
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 235,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:22:18",
-        "temp": "19.5",
-        "humid": "31.78",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1746,
-        "tvoc": 301
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 236,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:19:08",
-        "temp": "20.9",
-        "humid": "32.59",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702825",
-        "co2": 5745,
-        "tvoc": 814
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 237,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:21:35",
-        "temp": "21.9",
-        "humid": "34.10",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702810",
-        "co2": 2805,
-        "tvoc": 366
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 238,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:32:18",
-        "temp": "19.4",
-        "humid": "33.17",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1777,
-        "tvoc": 322
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 239,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:29:08",
-        "temp": "20.8",
-        "humid": "33.49",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702825",
-        "co2": 5532,
-        "tvoc": 781
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 240,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:31:35",
-        "temp": "21.9",
-        "humid": "35.88",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702810",
-        "co2": 2661,
-        "tvoc": 344
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 241,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:42:18",
-        "temp": "19.4",
-        "humid": "32.90",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1773,
-        "tvoc": 319
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 242,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:39:08",
-        "temp": "20.8",
-        "humid": "33.86",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702825",
-        "co2": 5487,
-        "tvoc": 775
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 243,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:41:35",
-        "temp": "21.9",
-        "humid": "35.22",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702810",
-        "co2": 2575,
-        "tvoc": 331
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 244,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:52:18",
-        "temp": "19.3",
-        "humid": "31.99",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1793,
-        "tvoc": 332
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 245,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:49:08",
-        "temp": "20.7",
-        "humid": "33.31",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702825",
-        "co2": 5352,
-        "tvoc": 754
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 246,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:51:35",
-        "temp": "21.9",
-        "humid": "35.94",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702810",
-        "co2": 2456,
-        "tvoc": 313
     }
 },
 {
@@ -5018,7 +2146,7 @@
     "pk": 142,
     "fields": {
         "sensor": 4,
-        "updated_time": "2020-10-14T01:42:17"
+        "updated_time": "2020-10-14T19:32:18"
     }
 },
 {
@@ -5026,7 +2154,7 @@
     "pk": 143,
     "fields": {
         "sensor": 8,
-        "updated_time": "2020-10-14T01:42:34"
+        "updated_time": "2020-10-14T17:12:34"
     }
 },
 {
@@ -5034,7 +2162,7 @@
     "pk": 144,
     "fields": {
         "sensor": 9,
-        "updated_time": "2020-10-14T01:39:08"
+        "updated_time": "2020-10-14T19:29:08"
     }
 },
 {
@@ -5042,1543 +2170,7 @@
     "pk": 145,
     "fields": {
         "sensor": 13,
-        "updated_time": "2020-10-14T01:41:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 146,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T01:52:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 147,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T01:52:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 148,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T01:49:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 149,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T01:51:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 150,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:02:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 151,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T01:59:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 152,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:01:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 153,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:02:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 154,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:12:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 155,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:09:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 156,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:11:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 157,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:12:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 158,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:22:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 159,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:19:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 160,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:21:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 161,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:22:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 162,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:32:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 163,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:32:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 164,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 165,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:31:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 166,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:42:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 167,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:42:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 168,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:39:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 169,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:41:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 170,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T02:52:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 171,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T02:52:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 172,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:49:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 173,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T02:51:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 174,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T03:02:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 175,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T03:02:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 176,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T02:59:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 177,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T03:01:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 178,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T03:12:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 179,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T03:12:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 180,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T03:09:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 181,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T03:11:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 182,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T03:22:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 183,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T03:22:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 184,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T03:19:07"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 185,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T03:21:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 186,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T11:42:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 187,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T11:42:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 188,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T11:49:09"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 189,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T11:41:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 190,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T11:52:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 191,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T11:52:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 192,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T11:51:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 193,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T11:59:09"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 194,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:02:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 195,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:02:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 196,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:01:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 197,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:09:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 198,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:12:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 199,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:12:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 200,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:11:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 201,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:19:09"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 202,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:22:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 203,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:22:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 204,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:21:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 205,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 206,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:32:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 207,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:32:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 208,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:31:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 209,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:39:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 210,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:42:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 211,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:42:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 212,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:41:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 213,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:49:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 214,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T12:52:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 215,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T12:52:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 216,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T12:51:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 217,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T12:59:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 218,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:02:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 219,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:02:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 220,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:01:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 221,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:09:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 222,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:12:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 223,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:12:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 224,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:11:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 225,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:19:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 226,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:22:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 227,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:22:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 228,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:21:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 229,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 230,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:32:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 231,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:32:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 232,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:31:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 233,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:39:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 234,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:42:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 235,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:42:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 236,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:41:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 237,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:49:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 238,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T13:52:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 239,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T13:52:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 240,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T13:51:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 241,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T13:59:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 242,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:02:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 243,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:02:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 244,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:01:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 245,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:09:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 246,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:12:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 247,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:12:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 248,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:11:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 249,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:19:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 250,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:22:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 251,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:22:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 252,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:21:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 253,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 254,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:32:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 255,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:32:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 256,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:31:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 257,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:39:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 258,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:42:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 259,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:42:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 260,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:41:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 261,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:49:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 262,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T14:52:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 263,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T14:52:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 264,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T14:51:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 265,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T14:59:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 266,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:02:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 267,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:02:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 268,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:01:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 269,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:09:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 270,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:12:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 271,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:12:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 272,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:11:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 273,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:19:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 274,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:22:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 275,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:22:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 276,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:21:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 277,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 278,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:32:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 279,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:32:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 280,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:31:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 281,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:39:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 282,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T15:42:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 283,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T15:42:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 284,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T15:41:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 285,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T15:49:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 286,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:12:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 287,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T17:12:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 288,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:09:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 289,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:11:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 290,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:22:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 291,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:19:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 292,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:21:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 293,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:32:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 294,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 295,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:31:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 296,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:42:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 297,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:39:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 298,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:41:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 299,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T18:52:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 300,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:49:09"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 301,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T18:51:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 302,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:02:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 303,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T18:59:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 304,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:01:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 305,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:12:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 306,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:09:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 307,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:11:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 308,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:22:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 309,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:19:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 310,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:21:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 311,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:32:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 312,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 313,
-    "fields": {
-        "sensor": 13,
         "updated_time": "2020-10-14T19:31:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 314,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:42:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 315,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:39:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 316,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:41:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 317,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:52:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 318,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:49:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 319,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:51:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 320,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:02:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 321,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:59:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 322,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:01:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 323,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:12:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 324,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:09:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 325,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:11:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 326,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:22:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 327,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:19:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 328,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:21:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 329,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:32:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 330,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 331,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:31:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 332,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:42:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 333,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:39:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 334,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:41:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 335,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T20:52:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 336,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T20:49:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 337,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T20:51:35"
     }
 },
 {
@@ -7122,6 +2714,23 @@
         "is_staff": true,
         "is_active": true,
         "date_joined": "2020-10-06T00:09:05.244",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$ME5gzqybYnH7$Y3aI8mkttyKezvwu6eoOl3dGonUFpmEbeaFVjDK962M=",
+        "last_login": "2020-10-27T16:30:25.382",
+        "is_superuser": true,
+        "username": "su001",
+        "first_name": "",
+        "last_name": "",
+        "email": "s@s.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-10-27T16:30:20.253",
         "groups": [],
         "user_permissions": []
     }
@@ -9050,6 +4659,654 @@
         "object_repr": "DGU0006: 2019-12-13 21:07:33",
         "action_flag": 3,
         "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2020-10-27T16:30:50.955",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0001",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2020-10-27T20:00:55.545",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0001",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2020-10-27T20:00:59.070",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0001",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2020-10-27T20:01:02.395",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0001",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2020-10-27T22:18:06.850",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "3",
+        "object_repr": "DGU0002",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2020-10-27T22:18:23.612",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "6",
+        "object_repr": "DGU0003",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2020-10-27T22:22:00.567",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "6",
+        "object_repr": "DGU0003",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2020-10-27T22:22:09.501",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "4",
+        "object_repr": "DGU0004",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2020-10-27T22:22:44.311",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "5",
+        "object_repr": "DGU0005",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2020-10-27T22:23:01.480",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "1",
+        "object_repr": "DGU0006",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2020-10-27T22:23:35.284",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "13",
+        "object_repr": "DGU0007",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2020-10-27T22:23:37.327",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "13",
+        "object_repr": "DGU0007",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2020-10-27T22:24:02.220",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "8",
+        "object_repr": "DGU0008",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2020-10-27T22:24:11.936",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "9",
+        "object_repr": "DGU0009",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2020-10-27T22:24:24.462",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "9",
+        "object_repr": "DGU0009",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2020-10-27T22:24:33.833",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "10",
+        "object_repr": "DGU0010",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2020-10-27T22:24:48.690",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "11",
+        "object_repr": "DGU0011",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2020-10-27T22:24:59.453",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "12",
+        "object_repr": "DGU0012",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2020-10-27T22:25:02.556",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "12",
+        "object_repr": "DGU0012",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2020-10-27T22:25:15.297",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "14",
+        "object_repr": "DGU0013",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2020-10-27T22:25:32.819",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "15",
+        "object_repr": "DGU0014",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+        "action_time": "2020-10-27T22:25:44.675",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "16",
+        "object_repr": "DGU0015",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+        "action_time": "2020-10-27T22:26:00.190",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "17",
+        "object_repr": "DGU0016",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+        "action_time": "2020-10-27T22:26:17.032",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "18",
+        "object_repr": "DGU0017",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+        "action_time": "2020-10-27T22:26:32.306",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "19",
+        "object_repr": "DGU0018",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+        "action_time": "2020-10-27T22:26:55.629",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "26",
+        "object_repr": "DGU0019",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+        "action_time": "2020-10-27T22:27:17.588",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "7",
+        "object_repr": "DGU0020",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+        "action_time": "2020-10-27T22:27:29.650",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "20",
+        "object_repr": "DGU0021",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+        "action_time": "2020-10-27T22:27:47.128",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "23",
+        "object_repr": "DGU0022",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+        "action_time": "2020-10-27T22:28:13.851",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "25",
+        "object_repr": "DGU0023",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+        "action_time": "2020-10-27T22:28:21.763",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "21",
+        "object_repr": "DGU0024",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+        "action_time": "2020-10-27T22:28:45.568",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "22",
+        "object_repr": "DGU0025",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+        "action_time": "2020-10-27T22:29:42.438",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "24",
+        "object_repr": "DGU0026",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+        "action_time": "2020-10-27T22:30:19.643",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "27",
+        "object_repr": "DGU0027",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+        "action_time": "2020-10-27T22:30:42.898",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "28",
+        "object_repr": "DGU0028",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+        "action_time": "2020-10-27T22:31:23.305",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "29",
+        "object_repr": "DGU0029",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
     }
 }
 ]

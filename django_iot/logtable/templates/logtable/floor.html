@@ -6,13 +6,6 @@
 {% endblock %}
 
 {% block content %}
-<!--
-  https://ssungkang.tistory.com/entry/Django-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%A1%B0%ED%9A%8C-queryset
-  https://velog.io/@hwang-eunji/backend-django-%EC%A0%95%EC%B0%B8%EC%A1%B0-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0
-  https://newbiecs.tistory.com/150
-  https://tutorial.djangogirls.org/ko/dynamic_data_in_templates/
-  check this out!
--->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cef0c647cfe8c88cf78563dab9b303bd"></script>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
   <h2>DIMS</h2>
@@ -70,6 +63,7 @@
     <div class="tab-content ">
       <div class="tab-pane fade show active" id="Logtable">
           <style>
+          
               table {
                   width: 100%;
                   border-top: 1px solid #444444;
@@ -80,6 +74,13 @@
               td {
                   border-bottom: 1px solid #444444;
                   padding: 10px;
+              }
+              .info {
+                font-size: 12px;
+                padding: 5px;
+              }
+              .info .title {
+                font-weight: bold;
               }
           </style>
           <table>
@@ -108,42 +109,109 @@
       <div class="tab-pane fade" id="Minimap">
         <div id="map" style="width:790px;height:440px;"></div>
       </div>
+      <p id="MyResult"></p>
     </div>
   </div>
 
-{% comment %} map script {% endcomment %}
-{% comment %}
-{%for l in level_info%}
-{%for b in bname%}
-<img src= {{l.img_file_path}} class="img-fluid" alt={{b.building_name}}{{l.level_num}}>
-{%endfor%}
-{%endfor%}
-{% endcomment %}
 <script>
+//층 정보
 const levels= {{levels|safe}};
-console.log(levels);
-var path;
+var path;//층 약도 이미지 path
 path = levels['img_file_path'];
-console.log(path);
+//센서 정보
+const sensor_info = {{sensor_info|safe}};
+var customOverlay = new kakao.maps.CustomOverlay({});
+var infowindow = new kakao.maps.InfoWindow({removable: true});
 
 var plan = function() {
     return path;
 };
-
+//커스텀 타일셋 지정 후 지도 생성
 kakao.maps.Tileset.add( 'PLAN',
         new kakao.maps.Tileset(
-            800, 450, plan, '', false, 0, 5 ) );
-var node = document.getElementById( 'map' );
-var map = new kakao.maps.Map( node, {
+            800, 450, plan, '', true, 0, 5 ) );
+
+var mapContainer = document.getElementById('map'),
+mapOption = {
     projectionId: null,
     mapTypeId: kakao.maps.MapTypeId.PLAN,
     $scale: false,
-    center: new kakao.maps.Coords( 400, -220 ),
+    center: new kakao.maps.Coords( 0, 0 ),
     level: 5,
     draggable: false,
-    disableDoubleClickZoom: false,
+    disableDoubleClickZoom: true,
     keyboardShortcuts : false,
-} );
+}
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+// 지도 클릭하면 좌표 표시하는 리스너
+kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+    // 클릭한 위도, 경도 정보를 가져옵니다 
+    var latlng = mouseEvent.latLng;
+    
+    var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+    message += '경도는 ' + latlng.getLng() + ' 입니다';
+    message += '\n '+latlng.toCoords().toString();
+    
+    var resultDiv = document.getElementById('MyResult'); 
+    resultDiv.innerHTML = message;
+    
+});
+
+//센서를 나타내는 원 오브젝트
+
+for (var i = 0, len = sensor_info.length; i < len; i++) {
+    displaySensors(sensor_info[i]);
+}
+function displaySensors(sensor){
+  var circle;
+  if(sensor['sensor_status']=='BR'){
+      circle = new kakao.maps.Circle({
+      center : new kakao.maps.LatLng(sensor['position_x'], sensor['position_y']),  // 원의 중심좌표 입니다 
+      radius: 100, // 미터 단위의 원의 반지름입니다 
+      strokeWeight: 5, // 선의 두께입니다 
+      strokeColor: '#75B8FA', // 선의 색깔입니다
+      strokeOpacity: 0, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+      strokeStyle: 'dashed', // 선의 스타일 입니다
+      fillColor: '#FF0000', // 채우기 색깔입니다
+      fillOpacity: 1  // 채우기 불투명도 입니다   
+    });
+  }
+  else if(sensor['sensor_status']=='OP'){
+      circle = new kakao.maps.Circle({
+      center : new kakao.maps.LatLng(sensor['position_x'], sensor['position_y']),  // 원의 중심좌표 입니다 
+      radius: 100, // 미터 단위의 원의 반지름입니다 
+      strokeWeight: 5, // 선의 두께입니다 
+      strokeColor: '#75B8FA', // 선의 색깔입니다
+      strokeOpacity: 0, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+      strokeStyle: 'dashed', // 선의 스타일 입니다
+      fillColor: '#00FF00', // 채우기 색깔입니다
+      fillOpacity: 1  // 채우기 불투명도 입니다   
+    });
+  }
+  circle.setMap(map); 
+
+  kakao.maps.event.addListener(circle, 'mouseover', function(mouseEvent) {
+    var content = '<div class="info">' + 
+                    '  <div class="title">' + sensor['sensor_code'] + '</div>' +
+                    '  <div>Sensor status : '+ sensor['sensor_status']+ '</div>';
+
+    infowindow.setContent(content); 
+    infowindow.setPosition(mouseEvent.latLng); 
+    infowindow.setMap(map);
+  });
+
+  // 원에 mousemove이벤트를 등록하고 이벤트 발생하면 인포윈도우 위치 변경
+  kakao.maps.event.addListener(circle, 'mousemove', function(mouseEvent) { 
+      infowindow.setPosition(mouseEvent.latLng); 
+  });
+
+  //원에 mouseout이벤트를 등록하고 이벤트가 발생하면 인포윈도우 삭제
+  kakao.maps.event.addListener(circle, 'mouseout', function() {
+      infowindow.setMap(null);
+  }); 
+}
+
 </script>
 </main>
 

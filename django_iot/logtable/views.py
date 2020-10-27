@@ -102,16 +102,23 @@ def monitoring_export(request):
                 i[0], i[1], i[2], i[3], i[4], i[5]))
 
     return redirect('monitoring')
+
 def floor(request,b_id,l_num):
     level_info = Level.objects.filter(building_id=b_id, level_num=l_num)
     sensor1 =Sensor.objects.filter(level__in=Subquery(Level.objects.filter(building_id=b_id, level_num=l_num).values('id')))
     building = Building.objects.exclude(levels=0)
     building_name= building.filter(id=b_id)
     levels = str(list(level_info.values())[0])#level_info JSON text
+    sensor_infos = list(sensor1.values())
+    for i in range(0,len(sensor_infos)):
+        del sensor_infos[i]['is_handled']
+        del sensor_infos[i]['updated_time']
+        
     return render(request, 'logtable/floor.html', {
         'level_info':level_info,
         'levels':levels,#level_info JSON test
         'sensor':sensor1,
         'building':building,
         'bname':building_name,
+        'sensor_info':sensor_infos,
     })
