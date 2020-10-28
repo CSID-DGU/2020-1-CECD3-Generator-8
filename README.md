@@ -3,7 +3,9 @@ RPA를 활용한 IoT 디바이스 제어 및 관리 서비스
 [웹 사이트](http://teamgenerator.pythonanywhere.com/dashboard)  
 [웹 호스팅 설정 링크](https://www.pythonanywhere.com/user/teamGenerator/)
 ## Recent Update
-* Monitoring 페이지에서, 체크박스를 없애고 각 행마다 'Process', 'Delete' 버튼 추가 (데모 이미지 참조)
+* 센서값 꺾은선그래프로 시각화 기능 구현
+  * Dashboard 페이지의 테이블 우측에 센서 데이터 보여주는 버튼 추가
+![visualizer](https://i.imgur.com/SM2Vn4A.png)
 
 ## 1. Installation
 ### 1.1. Django project
