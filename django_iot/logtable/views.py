@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.core import serializers
 from django.http import HttpResponse, JsonResponse
 from django.db.models import Max
-from .models import Log, Sensor,Building,Level
+from .models import Log, Sensor,Building,Level, SME20U_Value
 from .tables import LogTableQuerySet, MonitoringTableQuerySet
 from urllib.request import urlopen  # crawler
 from bs4 import BeautifulSoup  # crawler
@@ -24,6 +24,7 @@ def dashboard(request):
         'building':building,
         'level':level,
     })
+
 #method for crawling dashboard page
 def dashboard_export(request):
     print("Export it")
@@ -54,10 +55,10 @@ def dashboard_export(request):
 
     return redirect('dashboard')
 
-def json(request):
-    logs = Log.objects.all()  # get all logs
-    log_list = serializers.serialize('json', logs)
-    return HttpResponse(log_list, content_type="text/json-comment-filtered")
+def get_sme20u_data_in_json(request, sensor_code):
+    data = SME20U_Value.objects.filter(sensor__sensor_code=sensor_code)
+    json_data = serializers.serialize('json', data)
+    return HttpResponse(json_data, content_type="text/json-comment-filtered")
 
 
 def monitoring(request):
