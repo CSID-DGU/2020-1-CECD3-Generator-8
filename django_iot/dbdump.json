@@ -281,7 +281,7 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T19:32:18",
+        "updated_time": "2020-10-29T22:38:52",
         "level": 1,
         "position_x": 33.467966923645506,
         "position_y": 124.89422730008626
@@ -351,7 +351,7 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T19:29:08",
+        "updated_time": "2020-10-29T22:43:45",
         "level": 1,
         "position_x": 33.45733103570495,
         "position_y": 124.89297046457136
@@ -407,7 +407,7 @@
         "sensor_model": 1,
         "sensor_status": "OP",
         "is_handled": true,
-        "updated_time": "2020-10-14T19:31:35",
+        "updated_time": "2020-10-29T22:43:23",
         "level": 1,
         "position_x": 33.46712794288123,
         "position_y": 124.9128317953306
@@ -1742,6 +1742,51 @@
     }
 },
 {
+    "model": "logtable.sme20u_value",
+    "pk": 55,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-29T22:38:52",
+        "temp": "18.1",
+        "humid": "33.86",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1604008403",
+        "co2": 1804,
+        "tvoc": 338
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 56,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-29T22:43:45",
+        "temp": "19.5",
+        "humid": "34.31",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1604008393",
+        "co2": 1355,
+        "tvoc": 145
+    }
+},
+{
+    "model": "logtable.sme20u_value",
+    "pk": 57,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-29T22:43:23",
+        "temp": "20.2",
+        "humid": "34.98",
+        "illum": "0.00",
+        "rador": 0,
+        "last_movement_time": "1604008397",
+        "co2": 1416,
+        "tvoc": 154
+    }
+},
+{
     "model": "logtable.log",
     "pk": 92,
     "fields": {
@@ -2171,6 +2216,30 @@
     "fields": {
         "sensor": 13,
         "updated_time": "2020-10-14T19:31:35"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 146,
+    "fields": {
+        "sensor": 4,
+        "updated_time": "2020-10-29T22:38:52"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 147,
+    "fields": {
+        "sensor": 9,
+        "updated_time": "2020-10-29T22:43:45"
+    }
+},
+{
+    "model": "logtable.log",
+    "pk": 148,
+    "fields": {
+        "sensor": 13,
+        "updated_time": "2020-10-29T22:43:23"
     }
 },
 {
