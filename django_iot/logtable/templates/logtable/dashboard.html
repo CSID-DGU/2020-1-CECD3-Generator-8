@@ -7,11 +7,121 @@
 
 {% block content %}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
+<script src="https://cdnjs.com/libraries/Chart.js"></script>
+<script>
+  function ChartDataSets(label, backgroundColor, borderColor) {
+        this.label = label;
+        // this.backgroundColor = backgroundColor; // use default value
+        this.borderColor = borderColor;
+        this.pointRadius = 2;
+        this.data = [];
+    }
+
+    function ChartData(label, backgroundColor, borderColor) {
+        this.labels = []; // x-axis (date)
+        this.datasets = [];
+        this.datasets.push(new ChartDataSets(label, backgroundColor, borderColor));
+    }
+
+    function ChartConfig(label, backgroundColor, borderColor) {
+        this.type = 'line';
+        this.data = new ChartData(label, backgroundColor, borderColor);
+        this.options = {
+            responsive: true,
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true,
+            },
+            scales: {
+                xAxis: [{
+                    fontSize: 5
+                }]
+            }
+        };
+    }
+
+    function getDataArray(json_arr) {
+        const CHART_NUM = 6;
+        const borderColor = '#FF0000';
+        const backgroundColor = "#e0e0e0";
+        var charts = [
+            new ChartConfig('Temperature', backgroundColor, borderColor),
+            new ChartConfig('Humidity', backgroundColor, borderColor),
+            new ChartConfig('Illumination', backgroundColor, borderColor),
+            new ChartConfig('Rador', backgroundColor, borderColor),
+            new ChartConfig('CO2', backgroundColor, borderColor),
+            new ChartConfig('tVOC', backgroundColor, borderColor),
+        ];
+        var i, j;
+        var date = "";
+        for (i = 0; i < json_arr.length; i++) {
+            var data_arr = [
+                json_arr[i].fields.temp,
+                json_arr[i].fields.humid,
+                json_arr[i].fields.illum,
+                json_arr[i].fields.radar,
+                json_arr[i].fields.co2,
+                json_arr[i].fields.tvoc,
+            ];
+            var updated_time = json_arr[i].fields.updated_time;
+            var updated_date = updated_time.substring(0, 10);
+            if (date != updated_date) {
+                date = updated_date;
+            } else {
+                updated_time = updated_time.substr(11);
+            }
+            for (j = 0; j < CHART_NUM; j++) {
+                charts[j].data.labels.push(updated_time);
+                charts[j].data.datasets[0].data.push(data_arr[j]);
+            }
+        }
+        return charts;
+    }
+
+    function chartButtonHandler(item) {
+        var pid = item.parentNode.id;
+        var sensor_code = pid.substring(5);
+        document.getElementById("chartModalLabel").innerHTML = sensor_code;
+
+        var xmlhttp = new XMLHttpRequest();
+        var url = "dashboard/sme20u/" + sensor_code;
+
+        xmlhttp.onreadystatechange = function () { // http response 받고 수행할 동작
+            if (this.readyState == 4 && this.status == 200) {
+                const sensor_values_arr = JSON.parse(this.responseText); // json파일을 object로 파싱
+                var chart_data = getDataArray(sensor_values_arr); // chart.js에 적용할 수 있도록 변환
+
+                // 각 값의 차트를 하나씩 생성
+                var ctx = document.getElementById("temp_chart").getContext('2d');
+                var tempChart = new Chart(ctx, chart_data[0]);
+                ctx = document.getElementById("humid_chart").getContext('2d');
+                var humidChart = new Chart(ctx, chart_data[1]);
+                ctx = document.getElementById("illum_chart").getContext('2d');
+                var illumChart = new Chart(ctx, chart_data[2]);
+                ctx = document.getElementById("rador_chart").getContext('2d');
+                var radorChart = new Chart(ctx, chart_data[3]);
+                ctx = document.getElementById("co2_chart").getContext('2d');
+                var co2Chart = new Chart(ctx, chart_data[4]);
+                ctx = document.getElementById("tvoc_chart").getContext('2d');
+                var tvocChart = new Chart(ctx, chart_data[5]);
+            }
+        };
+        xmlhttp.open("GET", url, true);
+        xmlhttp.send();
+    }
+</script>
+
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-  <h2>DIMS</h2> 
+  <h2>DIMS</h2>
   <h6>Dongguk university IoT Device Monitoring System</h6>
   <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h5> </h5> 
+    <h5> </h5>
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
         <button type="button" class="btn btn-sm btn-outline-secondary">
@@ -22,7 +132,8 @@
           <span data-feather="file-text"></span>
           Export to file
         </button>
-        <div class = "modal fade" id = "exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
           <div class="modal-dialog" role="document" style="max-width:100%;width=auto;display:table;">
             <div class="modal-content">
               <div class="modal=header">
@@ -39,7 +150,8 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick=" location.href='{% url 'export_file_dashboard' %}';" >Export</button>
+                <button type="button" class="btn btn-primary"
+                  onclick=" location.href='{% url 'export_file_dashboard' %}';">Export</button>
               </div>
             </div>
           </div>
@@ -51,8 +163,33 @@
     <div class="table-responsive">
       {% load django_tables2 %}
       {% render_table table %}
+      <div class="modal fade" id="chartModal" tabindex="-1" role="dialog" aria-labelledby="chartModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="chartModalLabel">센서 이름</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <canvas id="temp_chart"></canvas>
+              <canvas id="humid_chart"></canvas>
+              <canvas id="illum_chart"></canvas>
+              <canvas id="rador_chart"></canvas>
+              <canvas id="co2_chart"></canvas>
+              <canvas id="tvoc_chart"></canvas>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
   </div>
 </main>
 
