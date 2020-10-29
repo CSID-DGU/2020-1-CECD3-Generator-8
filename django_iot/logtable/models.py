@@ -86,8 +86,8 @@ class Sensor(models.Model):  # Model for IoT devices.
 
     # Foreign key. Level ID that IoT Sensor is placed at(?)
     level = models.ForeignKey('Level', on_delete=models.CASCADE)
-    position_x = models.IntegerField(default='-1') # Absolute position of IoT device icon in minimap.
-    position_y = models.IntegerField(default='-1')
+    position_x = models.FloatField(default='-1') # Absolute position of IoT device icon in minimap.
+    position_y = models.FloatField(default='-1')
 
     # Metadata
     class Meta:
