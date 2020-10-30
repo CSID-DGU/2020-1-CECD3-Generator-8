@@ -1,11 +1,10 @@
 # 2020-1-CECD3-Generator-8
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스  
-[웹 사이트](http://teamgenerator.pythonanywhere.com/dashboard)  
-[웹 호스팅 설정 링크](https://www.pythonanywhere.com/user/teamGenerator/)
+[웹 사이트](ec2-54-158-177-31.compute-1.amazonaws.com)
 ## Recent Update
-* 센서값 꺾은선그래프로 시각화 기능 구현
-  * Dashboard 페이지의 테이블 우측에 센서 데이터 보여주는 버튼 추가
-![visualizer](https://i.imgur.com/SM2Vn4A.png)
+* AWS EC2 인스턴스에 웹 호스팅 하였음 (Ubuntu 20.04)
+* 이제 상시 autocollect & runserver 가능! 야호!
+* 호스팅 관련 파일들과 서버 연결 등과 관련된 문서는 aws_files 디렉토리 안에 있으니 읽어보길 바람
 
 ## 1. Installation
 ### 1.1. Django project
