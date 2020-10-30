@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="utf-8">
@@ -42,6 +42,13 @@
 <body>
   <script type="text/javascript" src="/static/js/bootstrap.js"></script>
   <script type="text/javascript" src="/static/jquery.bootstrap.modal.forms.js"></script>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('cef0c647cfe8c88cf78563dab9b303bd');
+        // SDK 초기화 여부를 판단합니다.
+        console.log(Kakao.isInitialized());
+  </script>
   <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -108,9 +115,9 @@
             </li>
             {%block Menu%}
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                Menu3
+              <a class="nav-link" id="kakao-link-btn" href="javascript:sendLink()">
+                <span data-feather="users"></span>
+                KakaoMessage
               </a>
             </li>
             <li class="nav-item">
@@ -176,6 +183,80 @@
     var object_name = url.substring(url.lastIndexOf('/') + 1)
     $("#" + object_name).addClass('active');
   </script>
+
+<script type="text/javascript" >
+  Kakao.Link.createDefaultButton({
+    container: '#create-kakao-link-btn',
+    objectType: 'feed',
+    content: {
+      title: '딸기 치즈 케익',
+      description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+      imageUrl:
+        'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+      link: {
+        mobileWebUrl: 'https://developers.kakao.com',
+        webUrl: 'https://developers.kakao.com',
+      },
+    },
+      social: {
+        likeCount: 286,
+        commentCount: 45,
+        sharedCount: 845,
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+        {
+          title: '앱으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+      ],
+    });
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '딸기 치즈 케익',
+        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        imageUrl:
+          'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+        link: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com',
+        },
+      },
+      social: {
+        likeCount: 286,
+        commentCount: 45,
+        sharedCount: 845,
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+        {
+          title: '앱으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+      ],
+    })
+  };
+</script>
 </body>
 
 </html>
