@@ -117,6 +117,28 @@ Creating admin account: 어드민 페이지에 사용할 계정 새로 생성
 ```
 ***
 
+## TroubleShooting
+### 1. pip 에서 django-bootstrap-modal-forms 가 UnicodeDecodeError로 인하여 설치되지 않는 경우
+예시
+```
+Collecting django-bootstrap-modal-forms==2.0.0
+  Using cached django-bootstrap-modal-forms-2.0.0.tar.gz (30 kB)
+    ERROR: Command errored out with exit status 1:
+     command: 'C:\Users\Jongyeon Yoon\Documents\GitHub\2020-1-CECD3-Generator-8\django_iot\venv\Scripts\python.exe' -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\Jongyeon Yoon\\AppData\\Local\\Tehizd4fbo\\django-bootstrap-modal-forms\\setup.py'"'"'; __file__='"'"'C:\\Users\\Jongyeon Yoon\\AppData\\Local\\Temp\\pip-install-hizd4fbo\\django-bootstrap-modal-forms\\setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"');code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base 'C:\Users\Jongyeon Yoon\AppData\Local\Temp\pip-pip-egg-info-vz8gad2i'
+         cwd: C:\Users\Jongyeon Yoon\AppData\Local\Temp\pip-install-hizd4fbo\django-bootstrap-modal-forms\
+    Complete output (5 lines):
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "C:\Users\Jongyeon Yoon\AppData\Local\Temp\pip-install-hizd4fbo\django-bootstrap-modal-forms\setup.py", line 5, in <module>
+        README = readme.read()
+    UnicodeDecodeError: 'cp949' codec can't decode byte 0xe2 in position 24855: illegal multibyte sequence
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+```
+해결법
+1. 2020-1-CECD3-Generator-8/res/django-bootstrap-modal-forms-2.0.0 으로 이동 (인코딩 문제를 해결한 버전의 설치파일)
+2. pip install . 실행
+
 ## Sensor API
 command getting each sensor's values by curl
 ```
