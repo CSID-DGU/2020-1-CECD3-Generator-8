@@ -27,12 +27,21 @@ server {
     listen [::]:80 default_server;
     charset uft-8;
     server_name *.amazonaws.com;
-    client_max_body_size 100M;
+    client_max_body_size 128M;
 
     location / {
         include /etc/nginx/uwsgi_params;
         uwsgi_pass django;
     }
+
+    location /static/ {
+	alias /srv/www/django/2020-1-CECD3-Generator-8/django_iot/static/;
+    }
+
+    location /media/ {
+        alias /srv/www/django/2020-1-CECD3-Generator-8/django_iot/media/;
+    }
+
     access_log /srv/www/django/logs/dev-nginx-access.log;
     error_log /srv/www/django/logs/dev-nginx-error.log;
 }
