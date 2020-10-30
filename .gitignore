@@ -17,5 +17,5 @@ MYdatabase.sqlite3
 .csv
 
 # secret key files
-.pem
+*.pem
 secret.json
