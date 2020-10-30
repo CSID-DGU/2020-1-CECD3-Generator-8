@@ -15,3 +15,7 @@ MYdatabase.sqlite3
 
 # exporting result files
 .csv
+
+# secret key files
+.pem
+secret.json
