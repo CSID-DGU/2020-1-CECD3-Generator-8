@@ -32,17 +32,46 @@
         font-size: 3.5rem;
       }
     }
+
+    .depth3 {
+
+
+      display: none;
+
+
+    }
   </style>
   <!-- Custom styles for this template -->
   <link href="{% static 'css/base.css' %}" rel="stylesheet">
   <title>DIMS</title>
   <link rel="Shortcut icon" type="image/x-icon" href="/static/img/favicons/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+
+
+
+    $(document).ready(function () {
+
+      //  $('.depth3').children('a').hide();
+      $(function tree_menu() {
+
+
+        $(".depth1 a").click(function () {
+          // var origin = $(this).parent().parent().parent().children('ul').children();
+          // var a = $('.depth3');
+          // if ($('.depth3').is(':hidden'))
+          var origin = $(this).parent().next();
+          origin.slideToggle("fast", "swing");
+          // a.slideToggle("fast");
+        });
+      });
+    });
+  </script>
+
 </head>
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
   <script type="text/javascript" src="/static/js/bootstrap.js"></script>
   <script type="text/javascript" src="/static/js/jquery.bootstrap.modal.forms.js"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
@@ -144,22 +173,25 @@
               <span data-feather="plus-circle"></span>
             </a>
           </h6>
+
           {%for b in building%}
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="menu"></span>
-                {{b.building_name}}
-                {%for l in b.level_set.all%}
-            <li class="nav-item">
-              <a class="nav-link" href="{%url 'floor' b.id l.level_num%}">
-                &nbsp;&nbsp; <span data-feather="square"></span>
-                {{l.level_num}}</a>
-              {%endfor%}
-              {%endfor%}
-              </a>
-            </li>
-          </ul>
+
+          <span class="depth1">
+            <a class="nav-link" href="#">
+              {{b.building_name}}
+            </a>
+          </span>
+
+          <span class="depth3">
+            {%for l in b.level_set.all%}
+            <a class="nav-link" href="{%url 'floor' b.id l.level_num%}">
+              &nbsp;&nbsp; {{l.level_num}}
+            </a>
+            {%endfor%}
+          </span>
+
+          {%endfor%}
+
         </div>
       </nav>
       {% endblock %}
@@ -171,6 +203,7 @@
   <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
   <script src="{% static 'js/base.js' %}"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script>
     var url = window.location.pathname;
     var object_name = url.substring(url.lastIndexOf('/') + 1)
