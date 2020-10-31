@@ -1,6 +1,6 @@
 # 2020-1-CECD3-Generator-8
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스  
-[웹 사이트](ec2-54-158-177-31.compute-1.amazonaws.com)
+[웹 사이트](http://ec2-54-158-177-31.compute-1.amazonaws.com)
 ## Recent Update
 * AWS EC2 인스턴스에 웹 호스팅 하였음 (Ubuntu 20.04)
 * 이제 상시 autocollect & runserver 가능! 야호!
