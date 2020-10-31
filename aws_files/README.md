@@ -16,9 +16,9 @@
 │   │   ├── dev-nginx-access.log  
 │   │   ├── dev-nginx-errors.log  
 │   │   └── uwsgi.log  
-│   ├── venv  
+│   ├── venv/  
 │   └── 2020-1-CECD3-Generator/  
-│       └── our_github_repository_files  
+│
 └── /etc/  
     ├── systemd/  
     │   └── system/  
