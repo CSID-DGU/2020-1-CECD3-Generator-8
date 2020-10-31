@@ -52,8 +52,8 @@
   </script>
 
   <!-- EmailJS-->
-  <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <scripttype="text/javascript">
+  <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript">
     (function() {
     emailjs.init("user_JSZzj8Ox3PwAOIhCx7qOU");
   })();
@@ -131,9 +131,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="users"></span>
-                Menu4
+              <a class="nav-link" href="#" id="Email-lik-btn">
+                <span data-feather="mail"></span>
+                Send Email
               </a>
             </li>
             <li class="nav-item">
@@ -215,6 +215,25 @@
     })
   };
 </script>
+<script type="text/javascript">
+  var emailC = {
+            from_name : 'Team Generator',
+            to_name: 'to You',
+            message: 'It\'s test message from WooJooKim',
+            to_email : 'woojoo1602@gmail.com'
+  }
+  document.getElementById('Email-lik-btn')
+  .addEventListener('click', function(event) {
+    event.preventDefault();
+    emailjs.send("TeamGenerator","MyTemplate_001",emailC)
+     .then(function(response) {
+          console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+       }, function(err) {
+          console.log("FAILED. error=", err);
+       });
+  });
+</script>
+
 </body>
 
 </html>
