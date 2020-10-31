@@ -34,11 +34,7 @@
     }
 
     .depth3 {
-
-
       display: none;
-
-
     }
   </style>
   <!-- Custom styles for this template -->
@@ -48,22 +44,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script>
-
-
-
     $(document).ready(function () {
-
-      //  $('.depth3').children('a').hide();
       $(function tree_menu() {
-
-
         $(".depth1 a").click(function () {
-          // var origin = $(this).parent().parent().parent().children('ul').children();
-          // var a = $('.depth3');
-          // if ($('.depth3').is(':hidden'))
           var origin = $(this).parent().next();
           origin.slideToggle("fast", "swing");
-          // a.slideToggle("fast");
         });
       });
     });
@@ -82,7 +67,6 @@
       </div>
     </div>
   </div>
-  <!--img src="/static/img/favicons/android-icon-192x192.png" alt="Team Generator"-->
   <nav class="navbar navbar-dark sticky-top bg-danger flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="https://github.com/CSID-DGU/2020-1-CECD3-Generator-8/">
       <img src="/static/img/favicons/android-icon-48x48.png" alt="Team Generator">
@@ -91,9 +75,6 @@
       data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!--
-      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-    -->
     <div class="navbar-nav">
       <ul class="navbar-nav mx-auto flex-row">
         <li class="nav-item px-3">
@@ -126,6 +107,9 @@
     <div class="row">
       <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
         <div class="sidebar-sticky pt-3">
+          <h2 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span><b>Menu</b></span>
+          </h2>
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link" href="/" id="dashboard">
@@ -167,12 +151,9 @@
           </ul>
           {%endblock%}
           {%block building%}
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Building List</span>
-            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
+          <h3 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span><b>Building List</b></span>
+          </h3>
 
           {%for b in building%}
 
