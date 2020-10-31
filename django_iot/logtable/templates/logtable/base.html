@@ -42,6 +42,7 @@
 <body>
   <script type="text/javascript" src="/static/js/bootstrap.js"></script>
   <script type="text/javascript" src="/static/jquery.bootstrap.modal.forms.js"></script>
+  <!-- 카카오초기화-->
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   <script>
     // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
@@ -49,6 +50,15 @@
         // SDK 초기화 여부를 판단합니다.
         console.log(Kakao.isInitialized());
   </script>
+
+  <!-- EmailJS-->
+  <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <scripttype="text/javascript">
+    (function() {
+    emailjs.init("user_JSZzj8Ox3PwAOIhCx7qOU");
+  })();
+  </script>
+
   <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
