@@ -111,6 +111,12 @@ def monitoring_delete_one_row(request, d_sensor_code):
     deleting_sensor.save()
     return redirect('monitoring')
 
+def monitoring_delete_all_rows(request):
+    # check is_handled of all sensors
+    sensors_with_problems = Sensor.objects.filter(is_handled='False')
+    sensors_with_problems.update(is_handled='True')
+    return redirect('monitoring')
+
 def floor(request,b_id,l_num):
     level_info = Level.objects.filter(building_id=b_id, level_num=l_num)
     sensor1 =Sensor.objects.filter(level__in=Subquery(Level.objects.filter(building_id=b_id, level_num=l_num).values('id')))
