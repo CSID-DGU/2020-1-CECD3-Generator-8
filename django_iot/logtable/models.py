@@ -73,8 +73,9 @@ class Sensor(models.Model):  # Model for IoT devices.
         ('OP', 'Operational'),
         ('TE', 'Temporary Error'),
         ('BR', 'Broken'),
-        ('ND', 'Not Defined')
-    )  # Has 4 sensor status choices
+        ('ND', 'Not Defined'),
+        ('WN', 'Warning')
+    )  # Has 5 sensor status choices
     sensor_code = models.CharField(max_length=10, unique=True, default="DGU")
     sensor_model = models.ForeignKey('DeviceModel', on_delete=models.CASCADE)
     # status that analyzed by data analyzing module.

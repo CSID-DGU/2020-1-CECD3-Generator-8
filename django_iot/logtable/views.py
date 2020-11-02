@@ -65,6 +65,11 @@ def monitoring(request):
     building = Building.objects.exclude(levels=0)
     level = Level.objects.all()
     sensors_with_problems = Sensor.objects.filter(is_handled='False')
+    sensor_list = list(sensors_with_problems.values())
+    for i in range(0,len(sensor_list)):
+        del sensor_list[i]['is_handled']
+        del sensor_list[i]['updated_time']
+    print(sensor_list)
     table = MonitoringTableQuerySet(
         sensors_with_problems)  # make a table by sensor queryset
     # render table
@@ -72,6 +77,7 @@ def monitoring(request):
         'table': table,
         'building':building,
         'level':level,
+        'sensor_list':sensor_list
     })
 
 #method for crawling monitoring page

@@ -193,8 +193,33 @@
     var object_name = url.substring(url.lastIndexOf('/') + 1)
     $("#" + object_name).addClass('active');
   </script>
-
 <script type="text/javascript" >
+  
+</script>
+<script type="text/javascript" >
+  var link = document.location.href;
+  var sensors_list;
+  var warning_list = new Array();
+
+  let today = new Date();   
+
+  let year = today.getFullYear(); // 년도
+  let month = today.getMonth() + 1;  // 월
+  let date = today.getDate();  // 날짜
+  let day = today.getDay();  // 요일
+  let hours = today.getHours(); // 시
+  let minutes = today.getMinutes();  // 분
+  let seconds = today.getSeconds();  // 초
+
+  console.log(link);
+  if(link=="http://127.0.0.1:8000/monitoring") {
+    sensors_list = {{sensor_list|safe}};
+  }
+  for(var i = 0, len = sensors_list.length; i < len; i++){
+    if(sensors_list[i]['sensor_status']=='WN'){
+      warning_list.push(sensors_list[i]);
+    }
+  }
   Kakao.Link.createDefaultButton({
     container: '#create-kakao-link-btn',
     objectType: 'text',
@@ -205,14 +230,21 @@
     },
   });
   function sendLink() {
-    Kakao.Link.sendDefault({
+    for(var i = 0, len = warning_list.length; i <len; i++){
+      if(warning_list[i]['sensor_status']=='WN')
+      var status ='Warning'
+      Kakao.Link.sendDefault({
       objectType: 'text',
-      text : 'Emergency! It\'s not working properly!',
+      text : 'Emergency! '+ warning_list[i]['sensor_code']+'\'s not working properly!\n'
+      +'Sensor status : '+ status +'\n'
+      +'Report time : ' + year + '/' + month + '/' + date+' '
+      +hours + ':' + minutes + ':' + seconds,
       link : {
         webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
         androidExecParams: 'test',
       },
-    })
+    });
+    }
   };
 </script>
 <script type="text/javascript">
