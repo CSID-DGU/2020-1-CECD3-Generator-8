@@ -32,17 +32,31 @@
         font-size: 3.5rem;
       }
     }
+
+    .depth3 {
+      display: none;
+    }
   </style>
   <!-- Custom styles for this template -->
   <link href="{% static 'css/base.css' %}" rel="stylesheet">
   <title>DIMS</title>
   <link rel="Shortcut icon" type="image/x-icon" href="/static/img/favicons/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(function tree_menu() {
+        $(".depth1 a").click(function () {
+          var origin = $(this).parent().next();
+          origin.slideToggle("fast", "swing");
+        });
+      });
+    });
+  </script>
+
 </head>
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
   <script type="text/javascript" src="/static/js/bootstrap.js"></script>
   <script type="text/javascript" src="/static/js/jquery.bootstrap.modal.forms.js"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
@@ -54,7 +68,6 @@
       </div>
     </div>
   </div>
-  <!--img src="/static/img/favicons/android-icon-192x192.png" alt="Team Generator"-->
   <nav class="navbar navbar-dark sticky-top bg-danger flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="https://github.com/CSID-DGU/2020-1-CECD3-Generator-8/">
       <img src="/static/img/favicons/android-icon-48x48.png" alt="Team Generator">
@@ -63,9 +76,6 @@
       data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!--
-      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-    -->
     <div class="navbar-nav">
       <ul class="navbar-nav mx-auto flex-row">
         <li class="nav-item px-3">
@@ -98,6 +108,9 @@
     <div class="row">
       <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
         <div class="sidebar-sticky pt-3">
+          <h2 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span><b>Menu</b></span>
+          </h2>
           <ul class="nav flex-column">
             <li class="nav-item">
               <a class="nav-link" href="/" id="dashboard">
@@ -139,28 +152,28 @@
           </ul>
           {%endblock%}
           {%block building%}
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Building List</span>
-            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
-              <span data-feather="plus-circle"></span>
-            </a>
-          </h6>
+          <h3 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span><b>Building List</b></span>
+          </h3>
+
           {%for b in building%}
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="menu"></span>
-                {{b.building_name}}
-                {%for l in b.level_set.all%}
-            <li class="nav-item">
-              <a class="nav-link" href="{%url 'floor' b.id l.level_num%}">
-                &nbsp;&nbsp; <span data-feather="square"></span>
-                {{l.level_num}}</a>
-              {%endfor%}
-              {%endfor%}
-              </a>
-            </li>
-          </ul>
+
+          <span class="depth1">
+            <a class="nav-link" href="#">
+              {{b.building_name}}
+            </a>
+          </span>
+
+          <span class="depth3">
+            {%for l in b.level_set.all%}
+            <a class="nav-link" href="{%url 'floor' b.id l.level_num%}">
+              &nbsp;&nbsp; {{l.level_num}}
+            </a>
+            {%endfor%}
+          </span>
+
+          {%endfor%}
+
         </div>
       </nav>
       {% endblock %}
@@ -173,6 +186,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
   <script src="{% static 'js/base.js' %}"></script>
   <script>feather.replace()</script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script>
     var url = window.location.pathname;
     var object_name = url.substring(url.lastIndexOf('/') + 1)
