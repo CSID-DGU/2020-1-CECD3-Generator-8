@@ -50,7 +50,7 @@ def dashboard_export(request):
             data.append([ID, SCode, SName, SType, UpdatedTime, SStatus])
     with open('datas_dashboard.csv', 'w') as file:
         file.write(
-            'ID,SensorCode,SensorName,SensorType,UpdatedTime0,SensorStatus\n')
+            'ID,SensorCode,SensorName,SensorType,UpdatedTime,SensorStatus\n')
         print("make file")
         for i in data:
             file.write('{0},{1},{2},{3},{4},{5}\n'.format(
@@ -99,7 +99,7 @@ def monitoring_export(request):
             data.append([ID, SCode, SName, SType, UpdatedTime, SStatus])
     with open('datas_monitoring.csv', 'w') as file:
         file.write(
-            'ID,SensorCode,SensorName,SensorType,UpdatedTime0,SensorStatus\n')
+            'ID,SensorCode,SensorName,SensorType,UpdatedTime,SensorStatus\n')
         print("make file")
         for i in data:
             file.write('{0},{1},{2},{3},{4},{5}\n'.format(
