@@ -25,7 +25,7 @@
     this.datasets.push(new ChartDataSets(label, backgroundColor, borderColor));
   }
 
-  function ChartConfig(label, backgroundColor, borderColor) {
+  function ChartConfig(label, sign, backgroundColor, borderColor, minValue, maxValue, step) {
     this.type = 'line';
     this.data = new ChartData(label, backgroundColor, borderColor);
     this.options = {
@@ -39,8 +39,22 @@
         intersect: true,
       },
       scales: {
-        xAxis: [{
-          fontSize: 5
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              suggestedMin: minValue,
+              suggestedMax: maxValue,
+              callback: function (value, index, values) {
+                return value + sign;
+              }
+            }
+          }
+        ],
+        xAxes: [{
+          ticks: {
+            fontSize: 10
+          }
         }]
       }
     };
@@ -51,12 +65,12 @@
     const borderColor = '#FF0000';
     const backgroundColor = "#e0e0e0";
     var charts = [
-      new ChartConfig('Temperature', backgroundColor, borderColor),
-      new ChartConfig('Humidity', backgroundColor, borderColor),
-      new ChartConfig('Illumination', backgroundColor, borderColor),
-      new ChartConfig('Rador', backgroundColor, borderColor),
-      new ChartConfig('CO2', backgroundColor, borderColor),
-      new ChartConfig('tVOC', backgroundColor, borderColor),
+      new ChartConfig('Temperature', '°C', backgroundColor, borderColor, -10, 85, 5),
+      new ChartConfig('Humidity', '%', backgroundColor, borderColor, 0, 100, 5),
+      new ChartConfig('Illumination', '%', backgroundColor, borderColor, 0, 100, 5),
+      new ChartConfig('Rador', '', backgroundColor, borderColor, 0, 100, 50),
+      new ChartConfig('CO2', 'ppm', backgroundColor, borderColor, 0, 8192, 400),
+      new ChartConfig('tVOC', 'ppb', backgroundColor, borderColor, 0, 1187, 50),
     ];
     var i, j;
     var date = "";
@@ -143,7 +157,9 @@
                 <h1 class="modal-title" id="exportModallabel"> Export to File!</h1>
               </div>
               <div class="modal-body">
-                <p><h3>Export complete, download into CSV File</h3></p>
+                <p>
+                <h3>Export complete, download into CSV File</h3>
+                </p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
