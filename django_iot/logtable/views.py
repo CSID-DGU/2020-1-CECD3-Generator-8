@@ -69,7 +69,6 @@ def monitoring(request):
     for i in range(0,len(sensor_list)):
         del sensor_list[i]['is_handled']
         del sensor_list[i]['updated_time']
-    print(sensor_list)
     table = MonitoringTableQuerySet(
         sensors_with_problems)  # make a table by sensor queryset
     # render table

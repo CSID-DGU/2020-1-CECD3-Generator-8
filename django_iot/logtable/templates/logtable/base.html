@@ -1,7 +1,6 @@
 {% load static %}
 <!doctype html>
 <html lang="ko">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -197,26 +196,26 @@
   
 </script>
 <script type="text/javascript" >
-  var link = document.location.href;
+  var link = location.pathname;
   var sensors_list;
   var warning_list = new Array();
 
-  let today = new Date();   
+  var today = new Date();   
 
-  let year = today.getFullYear(); // 년도
-  let month = today.getMonth() + 1;  // 월
-  let date = today.getDate();  // 날짜
-  let day = today.getDay();  // 요일
-  let hours = today.getHours(); // 시
-  let minutes = today.getMinutes();  // 분
-  let seconds = today.getSeconds();  // 초
+  var year = today.getFullYear(), // 년도
+   month = today.getMonth() + 1,  // 월
+   date = today.getDate(),  // 날짜
+   day = today.getDay(),  // 요일
+   hours = today.getHours(), // 시
+   minutes = today.getMinutes(),  // 분
+   seconds = today.getSeconds();  // 초
 
-  console.log(link);
-  if(link=="http://127.0.0.1:8000/monitoring") {
-    sensors_list = {{sensor_list|safe}};
+  if(link=="/monitoring") {
+    sensors_list = {{ sensor_list|safe }};
   }
   for(var i = 0, len = sensors_list.length; i < len; i++){
     if(sensors_list[i]['sensor_status']=='WN'){
+      sensors_list[i]['sensor_status']='warning'
       warning_list.push(sensors_list[i]);
     }
   }
@@ -248,10 +247,43 @@
   };
 </script>
 <script type="text/javascript">
+  var link = location.pathname;
+  var sensors_list;
+  var warning_list = new Array();
+
+  var today = new Date();   
+
+  var year = today.getFullYear(), // 년도
+   month = today.getMonth() + 1,  // 월
+   date = today.getDate(),  // 날짜
+   day = today.getDay(),  // 요일
+   hours = today.getHours(), // 시
+   minutes = today.getMinutes(),  // 분
+   seconds = today.getSeconds();  // 초
+
+  if(link=="/monitoring") {
+    sensors_list = {{sensor_list|safe}};
+  }
+
+  for(var i = 0, len = sensors_list.length; i < len; i++){
+    if(sensors_list[i]['sensor_status']=='WN'){
+      sensors_list[i]['sensor_status']='warning'
+      warning_list.push(sensors_list[i]);
+    }
+  }
+  var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
+  var mail_messages = '<i>';
+
+  for(var i = 0, len = warning_list.length; i <len; i++){
+    var message = "Sensor code : "+warning_list[i]['sensor_code'] +'<br>'
+      +'Sensor status : '+warning_list[i]['sensor_status'] +'<br>'
+      +'Reported time : ' + time +'<br>'+'--------<br>';
+    mail_messages += message;
+  }
+  mail_messages +='<i>';
   var emailC = {
             from_name : 'Team Generator',
-            to_name: 'to You',
-            message: 'It\'s test message from WooJooKim',
+            message: mail_messages,
             to_email : 'woojoo1602@gmail.com'
   }
   document.getElementById('Email-lik-btn')
@@ -260,6 +292,7 @@
     emailjs.send("TeamGenerator","MyTemplate_001",emailC)
      .then(function(response) {
           console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+          alert('Email sent successfully!');
        }, function(err) {
           console.log("FAILED. error=", err);
        });
