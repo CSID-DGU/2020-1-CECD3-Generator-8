@@ -6,7 +6,8 @@
 * Public IPv4 address: 54.158.177.31
 
 ## 파일 구조
-.  
+```
+.
 ├── /srv/www/django/  
 │   ├── run/  
 │   │   └── uwsgi.sock  
@@ -16,17 +17,17 @@
 │   │   ├── dev-nginx-access.log  
 │   │   ├── dev-nginx-errors.log  
 │   │   └── uwsgi.log  
-│   ├── venv/  
+│   ├── venv  
 │   └── 2020-1-CECD3-Generator/  
-│
+│       └── our_github_repository_files  
 └── /etc/  
     ├── systemd/  
     │   └── system/  
     │       └── uwsgi.service  
     └── nginx/  
         └── sites-available/  
-            └── default  
-
+            └── default   
+```
 ## 명령어
 Connect with SSH
 ```
