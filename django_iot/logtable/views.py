@@ -8,6 +8,8 @@ from urllib.request import urlopen  # crawler
 from bs4 import BeautifulSoup  # crawler
 from django.db.models import Subquery
 from django.db.models import Value
+import mimetypes
+
 import json
 
 
@@ -29,6 +31,7 @@ def dashboard(request):
 def dashboard_export(request):
     print("Export it")
     html = urlopen("http://127.0.0.1:8000/dashboard")
+    #html = urlopen("http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring") ec2용
     Datas = BeautifulSoup(html, 'html.parser')
     tb = Datas.find('div', {'class': 'table-responsive'})
     data = []
@@ -52,8 +55,8 @@ def dashboard_export(request):
         for i in data:
             file.write('{0},{1},{2},{3},{4},{5}\n'.format(
                 i[0], i[1], i[2], i[3], i[4], i[5]))
-
-    return redirect('dashboard')
+    redirect('datas_dashboard/download')
+    return redirect('datas_dashboard/download')
 
 def get_sme20u_data_in_json(request, sensor_code):
     data = SME20U_Value.objects.filter(sensor__sensor_code=sensor_code)
@@ -78,6 +81,7 @@ def monitoring(request):
 def monitoring_export(request):
     print("Export it")
     html = urlopen("http://127.0.0.1:8000/monitoring")
+    #html = urlopen("http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring") ec2용
     Datas = BeautifulSoup(html, 'html.parser')
     tb = Datas.find('div', {'class': 'table-responsive'})
     data = []
@@ -101,8 +105,31 @@ def monitoring_export(request):
         for i in data:
             file.write('{0},{1},{2},{3},{4},{5}\n'.format(
                 i[0], i[1], i[2], i[3], i[4], i[5]))
+    redirect('datas_monitoring/download')
+    return redirect('datas_monitoring/download')
 
-    return redirect('monitoring')
+
+def monitoring_download_file(request,filepath):
+    # fill these variables with real values
+    fl_path = filepath + '.csv'
+    filename = 'monitoring.csv'
+
+    fl = open(fl_path, 'r')
+    mime_type, _ = mimetypes.guess_type(fl_path)
+    response = HttpResponse(fl, content_type=mime_type)
+    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    return response
+
+def dashboard_download_file(request,filepath):
+    # fill these variables with real values
+    fl_path = filepath + '.csv'
+    filename = 'dashboard.csv'
+
+    fl = open(fl_path, 'r')
+    mime_type, _ = mimetypes.guess_type(fl_path)
+    response = HttpResponse(fl, content_type=mime_type)
+    response['Content-Disposition'] = "attachment; filename=%s" % filename
+    return response
 
 def monitoring_delete_one_row(request, d_sensor_code):
     # check is_handled of requested sensor

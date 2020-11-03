@@ -128,11 +128,11 @@
           <span data-feather="printer"></span>
           Print
         </button>
-        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exportModal">
           <span data-feather="file-text"></span>
           Export to file
         </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModal"
           aria-hidden="true">
           <div class="modal-dialog" role="document" style="max-width:100%;width=auto;display:table;">
             <div class="modal-content">
@@ -140,18 +140,15 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
-                <h3 class="modal-title" id="exampleModalLabel"> Export to File!</h3>
+                <h1 class="modal-title" id="exportModal"> Export to File!</h1>
               </div>
               <div class="modal-body">
-                <div class="table-responsive" name="modalTable">
-                  {% load django_tables2 %}
-                  {% render_table table %}
-                </div>
+                <p><h3>Export complete, download into CSV File</h3></p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary"
-                  onclick=" location.href='{% url 'export_file_dashboard' %}';">Export</button>
+                  onclick=" location.href='{% url 'export_file_dashboard' %}';">Download</button>
               </div>
             </div>
           </div>
