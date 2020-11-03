@@ -31,7 +31,7 @@ def dashboard(request):
 def dashboard_export(request):
     print("Export it")
     html = urlopen("http://127.0.0.1:8000/dashboard")
-    #html = urlopen("http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring") ec2용
+    #html = urlopen("http://ec2-54-158-177-31.compute-1.amazonaws.com/dashboard") ec2용
     Datas = BeautifulSoup(html, 'html.parser')
     tb = Datas.find('div', {'class': 'table-responsive'})
     data = []
