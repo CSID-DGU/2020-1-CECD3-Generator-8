@@ -16,7 +16,7 @@ import os
 import time
 from django.core.management.base import BaseCommand
 from logtable.models import Sensor, Level, Log, Building, DeviceModel
-from datetime import datetime
+from datetime import datetime, timedelta
 from logtable.analyzer import SimpleAnalyzer
 from logtable.valuesaver import *
 
@@ -37,6 +37,18 @@ def check_prerequisite():
         unknown_level = Level(level_num='Unknown',
                               img_file_path='N/A', building_id=na_building)
         unknown_level.save()
+
+def delete_operational_oldvalues_sme20u(present_time):
+    op_sensors = Sensor.objects.filter(sensor_status='OP')
+    for each in op_sensors:
+        THRESHOLD_DAYS = 3
+        threshold_time = present_time - timedelta(days=THRESHOLD_DAYS)
+
+        # log와 value 들을 불러옴
+        print('Deleting logs of ' + str(each) + ' older than ' + str(threshold_time) + '..')
+        deleting_logs = Log.objects.filter(sensor=each).filter(updated_time__lt=threshold_time).delete()
+        deleting_values = SME20U_Value.objects.filter(sensor=each).filter(updated_time__lt=threshold_time).delete()
+        
 
 def is_log_generated(device, call_time):
     # DGU 0004, 07, 08, 12만 데이터를 가져올 수 있슴
@@ -83,6 +95,7 @@ def is_log_generated(device, call_time):
         finally:
             analyzer = SimpleAnalyzer()
             analyzer.update(existing_log, call_time)
+
     return generated_flag
 
 def save_into_db(device):
@@ -117,6 +130,7 @@ def run(call_time):
         if is_log_generated(i, call_time):
             # 센서 값은 로그가 생성됐을 때만 저장함
             save_into_db(i)
+    delete_operational_oldvalues_sme20u(call_time)
                    
     os.remove('result.json')  # 가져왔던 reuslt.json 삭제
 
