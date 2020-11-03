@@ -55,7 +55,6 @@ def dashboard_export(request):
         for i in data:
             file.write('{0},{1},{2},{3},{4},{5}\n'.format(
                 i[0], i[1], i[2], i[3], i[4], i[5]))
-    redirect('datas_dashboard/download')
     return redirect('datas_dashboard/download')
 
 def get_sme20u_data_in_json(request, sensor_code):
@@ -105,7 +104,6 @@ def monitoring_export(request):
         for i in data:
             file.write('{0},{1},{2},{3},{4},{5}\n'.format(
                 i[0], i[1], i[2], i[3], i[4], i[5]))
-    redirect('datas_monitoring/download')
     return redirect('datas_monitoring/download')
 
 
