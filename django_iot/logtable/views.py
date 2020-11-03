@@ -30,8 +30,8 @@ def dashboard(request):
 #method for crawling dashboard page
 def dashboard_export(request):
     print("Export it")
-    html = urlopen("http://127.0.0.1:8000/dashboard")
-    #html = urlopen("http://ec2-54-158-177-31.compute-1.amazonaws.com/dashboard") ec2용
+    url = 'http://'+request.get_host() + '/dashboard'
+    html = urlopen(url)
     Datas = BeautifulSoup(html, 'html.parser')
     tb = Datas.find('div', {'class': 'table-responsive'})
     data = []
@@ -80,8 +80,8 @@ def monitoring(request):
 #method for crawling monitoring page
 def monitoring_export(request):
     print("Export it")
-    html = urlopen("http://127.0.0.1:8000/monitoring")
-    #html = urlopen("http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring") ec2용
+    url = 'http://'+request.get_host() + '/monitoring'
+    html = urlopen(url)
     Datas = BeautifulSoup(html, 'html.parser')
     tb = Datas.find('div', {'class': 'table-responsive'})
     data = []
