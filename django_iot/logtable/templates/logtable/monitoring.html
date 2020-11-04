@@ -131,12 +131,6 @@
   if(link=="/monitoring") {
     sensors_list = {{ sensor_list|safe }};
   }
-  for(var i = 0, len = sensors_list.length; i < len; i++){
-    if(sensors_list[i]['sensor_status']=='WN'){
-      sensors_list[i]['sensor_status']='warning'
-      warning_list.push(sensors_list[i]);
-    }
-  }
   // Kakao.Link.createDefaultButton({
   //   container: '#create-kakao-link-btn',
   //   objectType: 'text',
@@ -147,11 +141,11 @@
   //   }
   // });
   function sendLink() {
-    for(var i = 0, len = warning_list.length; i <len; i++){
-      if(warning_list[i]['sensor_status']=='WN')
+    for(var i = 0, len = sensors_list.length; i <len; i++){
+      if(sensors_list[i]['sensor_status']=='WN')
       Kakao.Link.sendDefault({
       objectType: 'text',
-      text : 'Emergency! '+ warning_list[i]['sensor_code']+'\'s not working properly!\n'
+      text : 'Emergency! '+ sensors_list[i]['sensor_code']+'\'s not working properly!\n'
       +'Sensor status : Warning.\n'
       +'Report time : ' + year + '/' + month + '/' + date+' '
       +hours + ':' + minutes + ':' + seconds,
