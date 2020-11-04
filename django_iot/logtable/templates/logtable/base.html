@@ -62,12 +62,7 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <!-- 카카오초기화-->
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-  <script>
-    // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
-        Kakao.init('cef0c647cfe8c88cf78563dab9b303bd');
-        // SDK 초기화 여부를 판단합니다.
-        console.log(Kakao.isInitialized());
-  </script>
+  
   <!-- EmailJS-->
   <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -141,15 +136,15 @@
             </li>
             {%block Menu%}
             <li class="nav-item">
-              <a class="nav-link" id="kakao-link-btn" href="javascript:sendLink()">
+              <a class="nav-link" href="#">
                 <span data-feather="users"></span>
-                KakaoMessage
+                menu3
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="Email-lik-btn">
+              <a class="nav-link" href="#">
                 <span data-feather="mail"></span>
-                Send Email
+                menu4
               </a>
             </li>
             <li class="nav-item">
@@ -207,112 +202,7 @@
     var object_name = url.substring(url.lastIndexOf('/') + 1)
     $("#" + object_name).addClass('active');
   </script>
-<script type="text/javascript" >
-  
-</script>
-<script type="text/javascript" >
-  var link = location.pathname;
-  var sensors_list;
-  var warning_list = new Array();
 
-  var today = new Date();   
-
-  var year = today.getFullYear(), // 년도
-   month = today.getMonth() + 1,  // 월
-   date = today.getDate(),  // 날짜
-   day = today.getDay(),  // 요일
-   hours = today.getHours(), // 시
-   minutes = today.getMinutes(),  // 분
-   seconds = today.getSeconds();  // 초
-
-  if(link=="/monitoring") {
-    sensors_list = {{ sensor_list|safe }};
-  }
-  for(var i = 0, len = sensors_list.length; i < len; i++){
-    if(sensors_list[i]['sensor_status']=='WN'){
-      sensors_list[i]['sensor_status']='warning'
-      warning_list.push(sensors_list[i]);
-    }
-  }
-  Kakao.Link.createDefaultButton({
-    container: '#create-kakao-link-btn',
-    objectType: 'text',
-    text : 'Emergency! It\'s not working properly!',
-    link : {
-      webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
-      androidExecParams: 'test',
-    },
-  });
-  function sendLink() {
-    for(var i = 0, len = warning_list.length; i <len; i++){
-      if(warning_list[i]['sensor_status']=='WN')
-      var status ='Warning'
-      Kakao.Link.sendDefault({
-      objectType: 'text',
-      text : 'Emergency! '+ warning_list[i]['sensor_code']+'\'s not working properly!\n'
-      +'Sensor status : '+ status +'\n'
-      +'Report time : ' + year + '/' + month + '/' + date+' '
-      +hours + ':' + minutes + ':' + seconds,
-      link : {
-        webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
-        androidExecParams: 'test',
-      },
-    });
-    }
-  };
-</script>
-<script type="text/javascript">
-  var link = location.pathname;
-  var sensors_list;
-  var warning_list = new Array();
-
-  var today = new Date();   
-
-  var year = today.getFullYear(), // 년도
-   month = today.getMonth() + 1,  // 월
-   date = today.getDate(),  // 날짜
-   day = today.getDay(),  // 요일
-   hours = today.getHours(), // 시
-   minutes = today.getMinutes(),  // 분
-   seconds = today.getSeconds();  // 초
-
-  if(link=="/monitoring") {
-    sensors_list = {{sensor_list|safe}};
-  }
-
-  for(var i = 0, len = sensors_list.length; i < len; i++){
-    if(sensors_list[i]['sensor_status']=='WN'){
-      sensors_list[i]['sensor_status']='warning'
-      warning_list.push(sensors_list[i]);
-    }
-  }
-  var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
-  var mail_messages = '<i>';
-
-  for(var i = 0, len = warning_list.length; i <len; i++){
-    var message = "Sensor code : "+warning_list[i]['sensor_code'] +'<br>'
-      +'Sensor status : '+warning_list[i]['sensor_status'] +'<br>'
-      +'Reported time : ' + time +'<br>'+'--------<br>';
-    mail_messages += message;
-  }
-  mail_messages +='<i>';
-  var emailC = {
-            from_name : 'Team Generator',
-            message: mail_messages,
-            to_email : 'woojoo1602@gmail.com'
-  }
-  document.getElementById('Email-lik-btn')
-  .addEventListener('click', function(event) {
-    event.preventDefault();
-    emailjs.send("TeamGenerator","MyTemplate_001",emailC)
-     .then(function(response) {
-          console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-          alert('Email sent successfully!');
-       }, function(err) {
-          console.log("FAILED. error=", err);
-       });
-  });
-</script>
 
 </body>
 
