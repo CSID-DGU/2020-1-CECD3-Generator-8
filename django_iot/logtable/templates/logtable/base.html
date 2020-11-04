@@ -1,6 +1,7 @@
 {% load static %}
 <!doctype html>
 <html lang="ko">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,8 +33,22 @@
       }
     }
 
-    .depth3 {
-      display: none;
+    /* Closed submenu icon */
+    #sidebarMenu .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+      content: "∨";
+      font-family: FontAwesome;
+      display: inline;
+      text-align: right;
+      padding-left: 10px;
+    }
+
+    /* Opened submenu icon */
+    #sidebarMenu .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+      content: "＞";
+      font-family: FontAwesome;
+      display: inline;
+      text-align: right;
+      padding-left: 10px;
     }
   </style>
   <!-- Custom styles for this template -->
@@ -61,13 +76,13 @@
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="https://unpkg.com/feather-icons"></script>
   <!-- 카카오초기화-->
-  
+
   <!-- EmailJS-->
-  <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script type="text/javascript">
-    (function() {
-    emailjs.init("user_JSZzj8Ox3PwAOIhCx7qOU");
-  })();
+      (function () {
+        emailjs.init("user_JSZzj8Ox3PwAOIhCx7qOU");
+      })();
   </script>
 
   <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
@@ -115,77 +130,54 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div class="sidebar-sticky pt-3">
-          <h2 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span><b>Menu</b></span>
-          </h2>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="/" id="dashboard">
-                <span data-feather="home"></span>
-                Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/monitoring" id="monitoring">
-                <span data-feather="monitor"></span>
-                Monitoring
-              </a>
-            </li>
-            {%block Menu%}
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="users"></span>
-                menu3
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="mail"></span>
-                menu4
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                Menu5
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="layers"></span>
-                Menu6
-              </a>
-            </li>
-          </ul>
-          {%endblock%}
+      <div id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+        <!-- Bootstrap List Group -->
+        <ul class="list-group">
+          <!-- Separator with title -->
+          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+            <h2 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span><b>Menu</b></span>
+            </h2>
+          </li>
+          <!-- /END Separator -->
+          <a class="nav-link" href="/" id="dashboard">
+            <span data-feather="home"></span>
+            Dashboard
+          </a>
+          <a class="nav-link" href="/monitoring" id="monitoring">
+            <span data-feather="monitor"></span>
+            Monitoring
+          </a>
           {%block building%}
-          <h3 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span><b>Building List</b></span>
-          </h3>
-
-          {%for b in building%}
-
-          <span class="depth1">
-            <a class="nav-link" href="#">
+          <!-- Separator with title -->
+          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+            <h2 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span><b>Building List</b></span>
+            </h2>
+          </li>
+          <!-- /END Separator -->
+          {% for b in building %}
+          <!-- Menu with submenu -->
+          <a href="#submenu{{ b.id }}" data-toggle="collapse" aria-expanded="false"
+            class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-start align-items-center">
               {{b.building_name}}
-            </a>
-          </span>
-
-          <span class="depth3">
+              <span id="collapse-icon" class="submenu-icon ml-auto"></span>
+            </div>
+          </a>
+          <!-- Submenu content -->
+          <div id='submenu{{ b.id }}' class="collapse sidebar-submenu">
             {%for l in b.level_set.all%}
-            <a class="nav-link" href="{%url 'floor' b.id l.level_num%}">
-              &nbsp;&nbsp; {{l.level_num}}
+            <a class="list-group-item list-group-item-action" href="{%url 'floor' b.id l.level_num%}">
+              <span class="menu-collapsed">{{l.level_num}}</span>
             </a>
             {%endfor%}
-          </span>
-
+          </div>
           {%endfor%}
-
-        </div>
-      </nav>
-      {% endblock %}
+          {% endblock %}
+        </ul><!-- List Group END-->
+      </div><!-- sidebar-container END -->
       {% block content %}
 
       {% endblock %}
@@ -199,9 +191,39 @@
   <script>
     var url = window.location.pathname;
     var object_name = url.substring(url.lastIndexOf('/') + 1)
-    $("#" + object_name).addClass('active');
-  </script>
+    if(object_name == 'monitoring' || object_name == 'dashboard') {
+      $("#" + object_name).addClass('active');
+    }
 
+    // Hide submenus
+    $('#body-row .collapse').collapse('hide');
+
+    // Collapse/Expand icon
+    $('#collapse-icon').addClass('fa-angle-double-left');
+
+    // Collapse click
+    $('[data-toggle=sidebar-colapse]').click(function () {
+      SidebarCollapse();
+    });
+
+    function SidebarCollapse() {
+      $('.menu-collapsed').toggleClass('d-none');
+      $('.sidebar-submenu').toggleClass('d-none');
+      $('.submenu-icon').toggleClass('d-none');
+      $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+
+      // Treating d-flex/d-none on separators with title
+      var SeparatorTitle = $('.sidebar-separator-title');
+      if (SeparatorTitle.hasClass('d-flex')) {
+        SeparatorTitle.removeClass('d-flex');
+      } else {
+        SeparatorTitle.addClass('d-flex');
+      }
+
+      // Collapse/Expand icon
+      $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+    }
+  </script>
 
 </body>
 
