@@ -1,0 +1,319 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  {% block titlename %}
+
+  {% endblock %}
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .depth3 {
+      display: none;
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/base.css' %}" rel="stylesheet">
+  <title>DIMS</title>
+  <link rel="Shortcut icon" type="image/x-icon" href="/static/img/favicons/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(function tree_menu() {
+        $(".depth1 a").click(function () {
+          var origin = $(this).parent().next();
+          origin.slideToggle("fast", "swing");
+        });
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+  <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.bootstrap.modal.forms.js"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- 카카오초기화-->
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+    // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('cef0c647cfe8c88cf78563dab9b303bd');
+        // SDK 초기화 여부를 판단합니다.
+        console.log(Kakao.isInitialized());
+  </script>
+  <!-- EmailJS-->
+  <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+    emailjs.init("user_JSZzj8Ox3PwAOIhCx7qOU");
+  })();
+  </script>
+
+  <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark sticky-top bg-danger flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="https://github.com/CSID-DGU/2020-1-CECD3-Generator-8/">
+      <img src="/static/img/favicons/android-icon-48x48.png" alt="Team Generator">
+      Team generator</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse"
+      data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-nav">
+      <ul class="navbar-nav mx-auto flex-row">
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="#">Reload</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="#">Help</a>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+      <li>
+        <span class="navbar-text" id="timer">
+          Current time:
+          <span id="currenttime"></span>
+        </span>
+      </li>
+    </ul>
+
+
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="https://github.com/CSID-DGU/2020-1-CECD3-Generator-8/">About us</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="sidebar-sticky pt-3">
+          <h2 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span><b>Menu</b></span>
+          </h2>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="/" id="dashboard">
+                <span data-feather="home"></span>
+                Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/monitoring" id="monitoring">
+                <span data-feather="monitor"></span>
+                Monitoring
+              </a>
+            </li>
+            {%block Menu%}
+            <li class="nav-item">
+              <a class="nav-link" id="kakao-link-btn" href="javascript:sendLink()">
+                <span data-feather="users"></span>
+                KakaoMessage
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="Email-lik-btn">
+                <span data-feather="mail"></span>
+                Send Email
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+                Menu5
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="layers"></span>
+                Menu6
+              </a>
+            </li>
+          </ul>
+          {%endblock%}
+          {%block building%}
+          <h3 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span><b>Building List</b></span>
+          </h3>
+
+          {%for b in building%}
+
+          <span class="depth1">
+            <a class="nav-link" href="#">
+              {{b.building_name}}
+            </a>
+          </span>
+
+          <span class="depth3">
+            {%for l in b.level_set.all%}
+            <a class="nav-link" href="{%url 'floor' b.id l.level_num%}">
+              &nbsp;&nbsp; {{l.level_num}}
+            </a>
+            {%endfor%}
+          </span>
+
+          {%endfor%}
+
+        </div>
+      </nav>
+      {% endblock %}
+      {% block content %}
+
+      {% endblock %}
+    </div>
+  </div>
+  <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+  <script src="{% static 'js/base.js' %}"></script>
+  <script>feather.replace()</script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script>
+    var url = window.location.pathname;
+    var object_name = url.substring(url.lastIndexOf('/') + 1)
+    $("#" + object_name).addClass('active');
+  </script>
+<script type="text/javascript" >
+  
+</script>
+<script type="text/javascript" >
+  var link = location.pathname;
+  var sensors_list;
+  var warning_list = new Array();
+
+  var today = new Date();   
+
+  var year = today.getFullYear(), // 년도
+   month = today.getMonth() + 1,  // 월
+   date = today.getDate(),  // 날짜
+   day = today.getDay(),  // 요일
+   hours = today.getHours(), // 시
+   minutes = today.getMinutes(),  // 분
+   seconds = today.getSeconds();  // 초
+
+  if(link=="/monitoring") {
+    sensors_list = {{ sensor_list|safe }};
+  }
+  for(var i = 0, len = sensors_list.length; i < len; i++){
+    if(sensors_list[i]['sensor_status']=='WN'){
+      sensors_list[i]['sensor_status']='warning'
+      warning_list.push(sensors_list[i]);
+    }
+  }
+  Kakao.Link.createDefaultButton({
+    container: '#create-kakao-link-btn',
+    objectType: 'text',
+    text : 'Emergency! It\'s not working properly!',
+    link : {
+      webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
+      androidExecParams: 'test',
+    },
+  });
+  function sendLink() {
+    for(var i = 0, len = warning_list.length; i <len; i++){
+      if(warning_list[i]['sensor_status']=='WN')
+      var status ='Warning'
+      Kakao.Link.sendDefault({
+      objectType: 'text',
+      text : 'Emergency! '+ warning_list[i]['sensor_code']+'\'s not working properly!\n'
+      +'Sensor status : '+ status +'\n'
+      +'Report time : ' + year + '/' + month + '/' + date+' '
+      +hours + ':' + minutes + ':' + seconds,
+      link : {
+        webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
+        androidExecParams: 'test',
+      },
+    });
+    }
+  };
+</script>
+<script type="text/javascript">
+  var link = location.pathname;
+  var sensors_list;
+  var warning_list = new Array();
+
+  var today = new Date();   
+
+  var year = today.getFullYear(), // 년도
+   month = today.getMonth() + 1,  // 월
+   date = today.getDate(),  // 날짜
+   day = today.getDay(),  // 요일
+   hours = today.getHours(), // 시
+   minutes = today.getMinutes(),  // 분
+   seconds = today.getSeconds();  // 초
+
+  if(link=="/monitoring") {
+    sensors_list = {{sensor_list|safe}};
+  }
+
+  for(var i = 0, len = sensors_list.length; i < len; i++){
+    if(sensors_list[i]['sensor_status']=='WN'){
+      sensors_list[i]['sensor_status']='warning'
+      warning_list.push(sensors_list[i]);
+    }
+  }
+  var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
+  var mail_messages = '<i>';
+
+  for(var i = 0, len = warning_list.length; i <len; i++){
+    var message = "Sensor code : "+warning_list[i]['sensor_code'] +'<br>'
+      +'Sensor status : '+warning_list[i]['sensor_status'] +'<br>'
+      +'Reported time : ' + time +'<br>'+'--------<br>';
+    mail_messages += message;
+  }
+  mail_messages +='<i>';
+  var emailC = {
+            from_name : 'Team Generator',
+            message: mail_messages,
+            to_email : 'woojoo1602@gmail.com'
+  }
+  document.getElementById('Email-lik-btn')
+  .addEventListener('click', function(event) {
+    event.preventDefault();
+    emailjs.send("TeamGenerator","MyTemplate_001",emailC)
+     .then(function(response) {
+          console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+          alert('Email sent successfully!');
+       }, function(err) {
+          console.log("FAILED. error=", err);
+       });
+  });
+</script>
+
+</body>
+
+</html>

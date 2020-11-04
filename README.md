@@ -1,11 +1,10 @@
 # 2020-1-CECD3-Generator-8
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스  
-[웹 사이트](http://teamgenerator.pythonanywhere.com/dashboard)  
-[웹 호스팅 설정 링크](https://www.pythonanywhere.com/user/teamGenerator/)
+[웹 사이트](http://ec2-54-158-177-31.compute-1.amazonaws.com)
 ## Recent Update
-* 센서값 꺾은선그래프로 시각화 기능 구현
-  * Dashboard 페이지의 테이블 우측에 센서 데이터 보여주는 버튼 추가
-![visualizer](https://i.imgur.com/SM2Vn4A.png)
+* AWS EC2 인스턴스에 웹 호스팅 하였음 (Ubuntu 20.04)
+* 이제 상시 autocollect & runserver 가능! 야호!
+* 호스팅 관련 파일들과 서버 연결 등과 관련된 문서는 aws_files 디렉토리 안에 있으니 읽어보길 바람
 
 ## 1. Installation
 ### 1.1. Django project
@@ -116,6 +115,28 @@ Creating admin account: 어드민 페이지에 사용할 계정 새로 생성
 (venv) python manage.py createsuperuser
 ```
 ***
+
+## TroubleShooting
+### 1. pip 에서 django-bootstrap-modal-forms 가 UnicodeDecodeError로 인하여 설치되지 않는 경우
+예시
+```
+Collecting django-bootstrap-modal-forms==2.0.0
+  Using cached django-bootstrap-modal-forms-2.0.0.tar.gz (30 kB)
+    ERROR: Command errored out with exit status 1:
+     command: 'C:\Users\Jongyeon Yoon\Documents\GitHub\2020-1-CECD3-Generator-8\django_iot\venv\Scripts\python.exe' -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'C:\\Users\\Jongyeon Yoon\\AppData\\Local\\Tehizd4fbo\\django-bootstrap-modal-forms\\setup.py'"'"'; __file__='"'"'C:\\Users\\Jongyeon Yoon\\AppData\\Local\\Temp\\pip-install-hizd4fbo\\django-bootstrap-modal-forms\\setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"');code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base 'C:\Users\Jongyeon Yoon\AppData\Local\Temp\pip-pip-egg-info-vz8gad2i'
+         cwd: C:\Users\Jongyeon Yoon\AppData\Local\Temp\pip-install-hizd4fbo\django-bootstrap-modal-forms\
+    Complete output (5 lines):
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "C:\Users\Jongyeon Yoon\AppData\Local\Temp\pip-install-hizd4fbo\django-bootstrap-modal-forms\setup.py", line 5, in <module>
+        README = readme.read()
+    UnicodeDecodeError: 'cp949' codec can't decode byte 0xe2 in position 24855: illegal multibyte sequence
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
+```
+해결법
+1. 2020-1-CECD3-Generator-8/res/django-bootstrap-modal-forms-2.0.0 으로 이동 (인코딩 문제를 해결한 버전의 설치파일)
+2. pip install . 실행
 
 ## Sensor API
 command getting each sensor's values by curl

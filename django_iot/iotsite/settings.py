@@ -10,7 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-import os
+import os, json
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,12 +21,25 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@6*t$$*sl2+r%dgu4b=7th17d%e3&rqdaxws%sja1hhg+or1(7'
+secret_file = os.path.join(BASE_DIR, 'secret.json')
+
+with open(secret_file) as f:
+        secrets = json.loads(f.read())
+
+def get_secret(setting, secrets=secrets):
+    """비밀 변수를 가져오거나 명시적 예외를 반환한다."""
+    try:
+        return secrets[setting]
+    except KeyError:
+        error_msg = "Set the {} environment variable".format(setting)
+        raise ImproperlyConfigured(error_msg)
+
+SECRET_KEY = get_secret("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','[::1]','.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost','127.0.0.1','[::1]','.amazonaws.com']
 
 
 # Application definition
@@ -40,6 +54,7 @@ INSTALLED_APPS = [
     "django_tables2",
     'import_export',
     'logtable',
+    'bootstrap_modal_forms',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +137,8 @@ USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+
+ROOT_DIR = os.path.dirname(BASE_DIR)
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
