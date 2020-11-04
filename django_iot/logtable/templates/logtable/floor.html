@@ -217,6 +217,17 @@ function displaySensors(sensor){
 }
 
 </script>
+<script>
+  var url = window.location.pathname;
+  var suburl = url.substring(url.indexOf('/') + 1);
+  var bid = suburl.substring(0, suburl.indexOf('/'));
+  var lid = suburl.substring(suburl.indexOf('/') + 1);
+
+  $("a[href$='" + suburl + "']").addClass('active'); // level highlighting
+
+  // open selected building
+  $("#submenu" + bid).addClass('show');
+</script>
 </main>
 
 
