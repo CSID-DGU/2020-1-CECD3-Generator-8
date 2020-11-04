@@ -149,11 +149,10 @@
   function sendLink() {
     for(var i = 0, len = warning_list.length; i <len; i++){
       if(warning_list[i]['sensor_status']=='WN')
-      var status ='Warning'
       Kakao.Link.sendDefault({
       objectType: 'text',
       text : 'Emergency! '+ warning_list[i]['sensor_code']+'\'s not working properly!\n'
-      +'Sensor status : '+ status +'\n'
+      +'Sensor status : Warning.\n'
       +'Report time : ' + year + '/' + month + '/' + date+' '
       +hours + ':' + minutes + ':' + seconds,
       link : {
