@@ -147,7 +147,7 @@
   //   }
   // });
   var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
-  var text_message = 'Emergency! some devices are not working properly!\n'
+  var text_message = 'Emergency! Some sensors showed an abnormal value!\n'
   for(var i = 0, len = warning_list.length; i <len; i++){
     var message = "Sensor code : "+warning_list[i]['sensor_code'] +'\n'
       +'Sensor status : '+warning_list[i]['sensor_status'] +'\n--------\n'
