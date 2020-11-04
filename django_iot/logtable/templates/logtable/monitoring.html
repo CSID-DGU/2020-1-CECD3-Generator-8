@@ -131,6 +131,12 @@
   if(link=="/monitoring") {
     sensors_list = {{ sensor_list|safe }};
   }
+  for(var i = 0, len = sensors_list.length; i < len; i++){
+    if(sensors_list[i]['sensor_status']=='WN'){
+      sensors_list[i]['sensor_status']='warning'
+      warning_list.push(sensors_list[i]);
+    }
+  }
   // Kakao.Link.createDefaultButton({
   //   container: '#create-kakao-link-btn',
   //   objectType: 'text',
@@ -140,21 +146,24 @@
   //     androidExecParams: 'test',
   //   }
   // });
+  var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
+  var text_message = 'Emergency! some devices are not working properly!\n'
+  for(var i = 0, len = warning_list.length; i <len; i++){
+    var message = "Sensor code : "+warning_list[i]['sensor_code'] +'\n'
+      +'Sensor status : '+warning_list[i]['sensor_status'] +'\n--------\n'
+    text_message+=message;
+  }
+  text_message+='Reported time : ' + time +'\n'+'';
+  console.log(text_message);
   function sendLink() {
-    for(var i = 0, len = sensors_list.length; i <len; i++){
-      if(sensors_list[i]['sensor_status']=='WN')
-      Kakao.Link.sendDefault({
-      objectType: 'text',
-      text : 'Emergency! '+ sensors_list[i]['sensor_code']+'\'s not working properly!\n'
-      +'Sensor status : Warning.\n'
-      +'Report time : ' + year + '/' + month + '/' + date+' '
-      +hours + ':' + minutes + ':' + seconds,
-      link : {
-        webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
-        androidExecParams: 'test',
-      },
+    Kakao.Link.sendDefault({
+        objectType: 'text',
+        text : text_message,
+        link : {
+          webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
+          androidExecParams: 'test',
+      }
     });
-    }
   };
 </script>
 <script type="text/javascript">
