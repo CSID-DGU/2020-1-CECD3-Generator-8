@@ -1,7 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
-
+<html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,6 +60,16 @@
   <script type="text/javascript" src="/static/js/jquery.bootstrap.modal.forms.js"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="https://unpkg.com/feather-icons"></script>
+  <!-- 카카오초기화-->
+  
+  <!-- EmailJS-->
+  <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+    emailjs.init("user_JSZzj8Ox3PwAOIhCx7qOU");
+  })();
+  </script>
+
   <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -127,14 +136,14 @@
             {%block Menu%}
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                Menu3
+                <span data-feather="users"></span>
+                menu3
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
-                <span data-feather="users"></span>
-                Menu4
+                <span data-feather="mail"></span>
+                menu4
               </a>
             </li>
             <li class="nav-item">
@@ -192,6 +201,8 @@
     var object_name = url.substring(url.lastIndexOf('/') + 1)
     $("#" + object_name).addClass('active');
   </script>
+
+
 </body>
 
 </html>
