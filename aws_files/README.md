@@ -28,6 +28,7 @@
         └── sites-available/  
             └── default   
 ```
+*generated with [tree.nathanfriend.io](https://tree.nathanfriend.io/)*
 ## 명령어
 Connect with SSH
 ```
