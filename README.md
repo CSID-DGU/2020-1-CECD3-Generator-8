@@ -2,9 +2,7 @@
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스  
 [웹 사이트](http://ec2-18-206-198-8.compute-1.amazonaws.com)
 ## Recent Update
-* AWS EC2 인스턴스에 웹 호스팅 하였음 (Ubuntu 20.04)
-* 이제 상시 autocollect & runserver 가능! 야호!
-* 호스팅 관련 파일들과 서버 연결 등과 관련된 문서는 aws_files 디렉토리 안에 있으니 읽어보길 바람
+* 사이드메뉴 트리구조 완성 - bootstrap의 collapse 클래스 이용
 
 ## 1. Installation
 ### 1.1. Django project
@@ -145,16 +143,27 @@ curl --location --request GET 'http://115.68.37.90/api/logs/latest?fi' --header 
 ```
 
 ## Reference
-[Django Tutorial](https://tutorial.djangogirls.org/ko/installation/)   
-[Sensor API Docs](https://documenter.getpostman.com/view/527712/SW14WcyW?version=latest#9b1079ca-8760-457f-8e38-bb8f6b8ef6ad)   
-[django_table2 Docs](https://django-tables2.readthedocs.io/en/latest/)   
+### Installation & Settings
+* [Django Tutorial](https://tutorial.djangogirls.org/ko/installation/)   
+* [장고 - EC2에 장고 배포하기](https://chohyeonkeun.github.io/2019/06/06/190606-django-EC2-django-deploy/)
+* [EC2 인스턴스 세팅과 Nginx + uWSGI로 Django 앱 배포하기 (2/2)](https://rainsound-k.github.io/deploy/2018/05/02/instance-setting-and-django-deploy-part2.html)
+### Module Guide
+* [Sensor API Docs](https://documenter.getpostman.com/view/527712/SW14WcyW?version=latest#9b1079ca-8760-457f-8e38-bb8f6b8ef6ad)   
+* [django_tables2 Docs](https://django-tables2.readthedocs.io/en/latest/)   
+* [bootstrap Docs](https://getbootstrap.com/docs/4.5/getting-started/introduction/)  
+* [Kakao Map API Docs](https://apis.map.kakao.com/web/guide/)  
+* [Kakao Developer Docs](https://developers.kakao.com/docs/latest/ko/)  
+* [EmailJS Docs](https://www.emailjs.com/docs/)  
+* [Chart.js Docs](https://www.chartjs.org/docs/latest/)  
 
 ## Demo
 ### Dashboard 화면
 ![dashboard](/res/dashboard.png)
-### 층별 표 출력 화면
-![dashboard_map](/res/floorview_table.png)
-### 층별 약도 출력 화면
-![dashboard_map](/res/floorview_map.png)
+### 데이터 시각화 화면
+![dashboard_chart](/res/dashboard_chart.png)
 ### Monitoring 출력 화면
 ![monitoring](/res/monitoring.png)
+### 층별 표 출력 화면
+![floor_map](/res/floorview_table.png)
+### 층별 약도 출력 화면
+![floor_map](/res/floorview_map.png)

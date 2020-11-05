@@ -50,8 +50,3 @@ screen commands
 | Ctrl + a, a            | Go to previous window                                                                 |
 | Ctrl + a, d            | Exit from this screen                                                                 |
 | exit                   | Terminate this window (if all windows are terminated, the screen will be deleted too) |
-
-
-## Reference
-[장고 - EC2에 장고 배포하기](https://chohyeonkeun.github.io/2019/06/06/190606-django-EC2-django-deploy/)
-[EC2 인스턴스 세팅과 Nginx + uWSGI로 Django 앱 배포하기 (2/2)](https://rainsound-k.github.io/deploy/2018/05/02/instance-setting-and-django-deploy-part2.html)
