@@ -2,8 +2,8 @@
 
 ## 인스턴스 정보
 * Type: EC2 t2.2xlarge  
-* Public IPv4 DNS: ec2-54-158-177-31.compute-1.amazonaws.com
-* Public IPv4 address: 54.158.177.31
+* Public IPv4 DNS: ec2-18-206-198-8.compute-1.amazonaws.com
+* Public IPv4 address: 18.206.198.8
 
 ## 파일 구조
 ```
@@ -32,7 +32,7 @@
 Connect with SSH
 ```
 chmod 400 generator_django_aws.pem # 읽기가 안 될 때만
-ssh -i "generator_django_aws.pem" ubuntu@ec2-54-158-177-31.compute-1.amazonaws.com
+ssh -i "generator_django_aws.pem" ubuntu@ec2-18-206-198-8.compute-1.amazonaws.com
 ```
 ***
 Update web setting files
