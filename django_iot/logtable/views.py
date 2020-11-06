@@ -9,9 +9,40 @@ from bs4 import BeautifulSoup  # crawler
 from django.db.models import Subquery
 from django.db.models import Value
 import mimetypes
-
 import json
+from django.contrib.auth.models import User
+from django.contrib.auth import login,logout,authenticate
+from .forms import UserForm,LoginForm
 
+def signout(request):
+    logout(request)
+    return redirect('dashboard')
+
+def signin(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username = username, password = password)
+        if user is not None:
+            login(request, user)
+            return redirect('dashboard')
+        else:
+            return HttpResponse('Login failed. Try again.')
+    else:
+        form = LoginForm()
+        return render(request, 'logtable/user_login.html')
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            new_user = User.objects.create_user(**form.cleaned_data)
+            login(request, new_user)
+            return redirect('dashboard')
+    else:
+        form = UserForm()
+        return render(request, 'user_new.html')
 
 def dashboard(request):
     building = Building.objects.exclude(levels=0)

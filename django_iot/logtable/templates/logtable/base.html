@@ -9,7 +9,6 @@
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v4.0.1">
   {% block titlename %}
-
   {% endblock %}
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
@@ -75,8 +74,6 @@
   <script type="text/javascript" src="/static/js/jquery.bootstrap.modal.forms.js"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="https://unpkg.com/feather-icons"></script>
-  <!-- 카카오초기화-->
-
   <!-- EmailJS-->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -84,14 +81,14 @@
         emailjs.init("user_JSZzj8Ox3PwAOIhCx7qOU");
       })();
   </script>
-
-  <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
+{% if user.is_authenticated %}
+  <!-- <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
 
       </div>
     </div>
-  </div>
+  </div> -->
   <nav class="navbar navbar-dark sticky-top bg-danger flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="https://github.com/CSID-DGU/2020-1-CECD3-Generator-8/">
       <img src="/static/img/favicons/android-icon-48x48.png" alt="Team Generator">
@@ -107,6 +104,9 @@
         </li>
         <li class="nav-item px-3">
           <a class="nav-link active" href="#">Help</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="logout">Lougout</a>
         </li>
       </ul>
     </div>
@@ -183,6 +183,12 @@
       {% endblock %}
     </div>
   </div>
+  {% else %}
+    <div style="float: mid;">
+          <a class="btn btn-default" href="signup">Sign up</a>
+          <a class="btn btn-default" href="login">Login</a>
+    </div>
+  {% endif %}
   <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
   <script src="{% static 'js/base.js' %}"></script>
