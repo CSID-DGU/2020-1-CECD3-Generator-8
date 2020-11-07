@@ -6,6 +6,9 @@ from . import views
 
 urlpatterns = [
     path('', lambda request: redirect('dashboard', permanent=True)),
+    path('signup', views.signup, name='user_signup'),
+    path('login', views.signin, name='user_login'),
+    path('logout', views.signout, name='user_logout'),
     path('dashboard', views.dashboard, name='dashboard'),
     path('dashboard/export', views.dashboard_export, name='export_file_dashboard'),
     path('monitoring', views.monitoring, name='monitoring'),
