@@ -2,7 +2,8 @@
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스  
 [웹 사이트](http://ec2-18-206-198-8.compute-1.amazonaws.com)
 ## Recent Update
-* 사이드메뉴 트리구조 완성 - bootstrap의 collapse 클래스 이용
+* 로그인 / 로그아웃 / 가입 기능 구현
+* Monitoring 페이지의 이메일은 현재 로그인한 사용자로 설정
 
 ## 1. Installation
 ### 1.1. Django project
