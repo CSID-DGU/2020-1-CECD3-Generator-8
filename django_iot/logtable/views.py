@@ -28,7 +28,8 @@ def signin(request):
             login(request, user)
             return redirect('dashboard')
         else:
-            return HttpResponse('Login failed. Try again.')
+            return render(request,'logtable/login_failed.html')
+            #return HttpResponse('Login failed. Try again.')
     else:
         form = LoginForm()
         return render(request, 'logtable/user_login.html')
