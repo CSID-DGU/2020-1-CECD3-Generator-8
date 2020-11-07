@@ -104,12 +104,14 @@ def monitoring(request):
         del sensor_list[i]['updated_time']
     table = MonitoringTableQuerySet(
         sensors_with_problems)  # make a table by sensor queryset
+    user_email = request.user.email
     # render table
     return render(request, 'logtable/monitoring.html', {
         'table': table,
         'building':building,
         'level':level,
-        'sensor_list':sensor_list
+        'sensor_list': sensor_list,
+        'to_email': user_email
     })
 
 #method for crawling monitoring page

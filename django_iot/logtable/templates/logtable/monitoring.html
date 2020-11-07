@@ -204,7 +204,7 @@
   var emailC = {
             from_name : 'Team Generator',
             message: mail_messages,
-            to_email : 'woojoo1602@gmail.com'
+            to_email : '{{ to_email | safe }}'
   }
   document.getElementById('sendEmail')
   .addEventListener('click', function(event) {
