@@ -17,7 +17,7 @@ import time
 from django.core.management.base import BaseCommand
 from logtable.models import Sensor, Level, Log, Building, DeviceModel
 from datetime import datetime, timedelta
-from logtable.analyzer import SimpleAnalyzer, DataAnalyzer
+from logtable.analyzer import Two_Sigma_Analyzer
 from logtable.valuesaver import *
 
 def check_prerequisite():
@@ -93,7 +93,7 @@ def is_log_generated(device, call_time):
             existing_log = new_log
             generated_flag = True
         finally:
-            analyzer = DataAnalyzer()
+            analyzer = Two_Sigma_Analyzer()
             analyzer.update(existing_log, call_time,device)
 
     return generated_flag

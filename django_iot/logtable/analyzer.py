@@ -42,7 +42,7 @@ class SimpleAnalyzer(Analyzer):
             sensor.sensor_status = 'BR'
         sensor.save()
 
-class DataAnalyzer(Analyzer):
+class Two_Sigma_Analyzer(Analyzer):
     def update(self, log, time, device):
         logtime = log.updated_time
         sensor = log.sensor
