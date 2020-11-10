@@ -1,18 +1,17 @@
 from django.shortcuts import render, redirect
 from django.core import serializers
 from django.http import HttpResponse, JsonResponse
-from django.db.models import Max
+from django.db.models import Max, Subquery, Value
 from .models import Log, Sensor,Building,Level, SME20U_Value
 from .tables import LogTableQuerySet, MonitoringTableQuerySet
 from urllib.request import urlopen  # crawler
 from bs4 import BeautifulSoup  # crawler
-from django.db.models import Subquery
-from django.db.models import Value
 import mimetypes
 import json
 from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate
-from .forms import UserForm,LoginForm
+from .forms import UserForm, LoginForm
+from datetime import datetime, timedelta
 
 def signout(request):
     logout(request)
@@ -89,11 +88,19 @@ def dashboard_export(request):
                 i[0], i[1], i[2], i[3], i[4], i[5]))
     return redirect('datas_dashboard/download')
 
+def get_sme20u_data_in_json_days(request, sensor_code, days):
+    present_time = datetime.now()
+    THRESHOLD_DAYS = days
+    threshold_time = present_time - timedelta(days=THRESHOLD_DAYS)
+
+    data = SME20U_Value.objects.filter(sensor__sensor_code=sensor_code).filter(updated_time__gte=threshold_time)
+    json_data = serializers.serialize('json', data)
+    return HttpResponse(json_data, content_type="text/json-comment-filtered")
+
 def get_sme20u_data_in_json(request, sensor_code):
     data = SME20U_Value.objects.filter(sensor__sensor_code=sensor_code)
     json_data = serializers.serialize('json', data)
     return HttpResponse(json_data, content_type="text/json-comment-filtered")
-
 
 def monitoring(request):
     building = Building.objects.exclude(levels=0)
