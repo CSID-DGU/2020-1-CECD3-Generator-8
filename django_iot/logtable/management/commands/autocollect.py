@@ -41,7 +41,7 @@ def check_prerequisite():
 def delete_operational_oldvalues_sme20u(present_time):
     op_sensors = Sensor.objects.filter(sensor_status='OP')
     for each in op_sensors:
-        THRESHOLD_DAYS = 3
+        THRESHOLD_DAYS = 10
         threshold_time = present_time - timedelta(days=THRESHOLD_DAYS)
 
         # log와 value 들을 불러옴
