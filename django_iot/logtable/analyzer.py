@@ -42,7 +42,12 @@ class SimpleAnalyzer(Analyzer):
             sensor.sensor_status = 'BR'
         sensor.save()
 
-class Two_Sigma_Analyzer(Analyzer):
+class N_Sigma_Analyzer(Analyzer):
+    sigma_value = 2  # default value is 2 (95%)
+    
+    def __init__(self, v):
+        self.sigma_value = v
+
     def update(self, log, time, device):
         logtime = log.updated_time
         sensor = log.sensor
@@ -124,7 +129,7 @@ class Two_Sigma_Analyzer(Analyzer):
         
         # 3-sigma 사용. 여기서 2-sigma
         #정규화 된 값이 2-sigma 밖이면 False(이상치), 아니면 True(정상)  
-        if (normed_value < mean_normed - 2*std_normed) or ( normed_value > mean_normed + 2*std_normed):
+        if (normed_value < mean_normed - self.sigma_value*std_normed) or ( normed_value > mean_normed + self.sigma_value*std_normed):
             return False
         else:
             return True
