@@ -127,8 +127,8 @@ class N_Sigma_Analyzer(Analyzer):
     def is_normal_state(self,value,data,mean_normed,std_normed):
         normed_value = (value-mean(data))/std(data) # 측정한 값을 정규화 한다.
         
-        # 3-sigma 사용. 여기서 2-sigma
-        #정규화 된 값이 2-sigma 밖이면 False(이상치), 아니면 True(정상)  
+        #3-sigma 방법 사용. 입력한 n 값으로 sigma 계수 지정
+        #정규화 된 값이 n-sigma 범위 밖이면 False, 아니면 True
         if (normed_value < mean_normed - self.sigma_value*std_normed) or ( normed_value > mean_normed + self.sigma_value*std_normed):
             return False
         else:
