@@ -112,7 +112,7 @@ def monitoring(request):
     # for i in range(0,len(sensor_list)):
     #     del sensor_list[i]['is_handled']
     #     del sensor_list[i]['updated_time']
-    logs_with_problems = FaultLog.objects.all()
+    logs_with_problems = FaultLog.objects.filter(is_handled=False)
     table = MonitoringTableQuerySet(
         logs_with_problems)  # make a table by sensor queryset
     user_email = request.user.email
@@ -178,17 +178,17 @@ def dashboard_download_file(request,filepath):
     response['Content-Disposition'] = "attachment; filename=%s" % filename
     return response
 
-def monitoring_delete_one_row(request, d_sensor_code):
+def monitoring_delete_one_row(request, log_id):
     # check is_handled of requested sensor
-    deleting_sensor = Sensor.objects.get(sensor_code=d_sensor_code)
-    deleting_sensor.is_handled = 'True'
-    deleting_sensor.save()
+    deleting_log = FaultLog.objects.get(pk=log_id)
+    deleting_log.is_handled = 'True'
+    deleting_log.save()
     return redirect('monitoring')
 
 def monitoring_delete_all_rows(request):
     # check is_handled of all sensors
-    sensors_with_problems = Sensor.objects.filter(is_handled='False')
-    sensors_with_problems.update(is_handled='True')
+    logs = FaultLog.objects.filter(is_handled='False')
+    logs.update(is_handled='True')
     return redirect('monitoring')
 
 def floor(request,b_id,l_num):
