@@ -73,7 +73,7 @@ def is_log_generated(device, call_time):
             new_model.save()
             model = DeviceModel.objects.get(name=smodel)
         finally:
-            new_sensor = Sensor(sensor_code=scode, sensor_model=model, sensor_type='UK',
+            new_sensor = Sensor(sensor_code=scode, sensor_model=model,
                             sensor_status='ND', level=Level.objects.get(level_num='Unknown'))
             new_sensor.save()
             current_sensor = Sensor.objects.get(sensor_code=scode)
