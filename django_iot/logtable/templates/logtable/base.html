@@ -103,7 +103,7 @@
           <a class="nav-link active" href="#">Reload</a>
         </li>
         <li class="nav-item px-3">
-          <a class="nav-link active" href="javascript:Kakaologin()">Kakao Login</a>
+          <a class="nav-link active" href="#">Help</a>
         </li>
         <li class="nav-item px-3">
           <a class="nav-link active" href="logout">Logout</a>
@@ -208,40 +208,6 @@
   <script src="{% static 'js/base.js' %}"></script>
   <script>feather.replace()</script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-  <script type='text/javascript'>
-    //<![CDATA[
-    // 사용할 앱의 JavaScript 키를 설정해 주세요.
-    Kakao.init('cef0c647cfe8c88cf78563dab9b303bd');
-    var token;
-    var userID;
-    function Kakaologin(){
-      Kakao.Auth.login({
-        persistAccessToken: true,
-        success: function(auth){
-          token = auth.access_token;
-          Kakao.API.request({
-					  url: '/v2/user/me',
-					  success: function(res) {
-              console.log(res);
-              userID = res.id;						//유저의 카카오톡 고유 id
-              var userEmail = res.kaccount_email;			//유저의 이메일
-              var userNickName = res.properties.nickname;	//유저가 등록한 별명
-            },
-            fail: function(error) {
-              alert(JSON.stringify(error));
-            }
-				  });
-        }, 
-        fail: function(err){ 
-          console.error(err) 
-        } 
-      });
-    };
-    // 카카오 로그인 버튼을 생성합니다.
-    
-    //
-  </script>
   <script>
     var url = window.location.pathname;
     var object_name = url.substring(url.lastIndexOf('/') + 1)

@@ -109,8 +109,11 @@
 </main>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script type="text/javascript" >
+  // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
   Kakao.init('cef0c647cfe8c88cf78563dab9b303bd');
-
+  // SDK 초기화 여부를 판단합니다.
+  console.log(Kakao.isInitialized());
+  
   var link = location.pathname;
   var sensors_list;
   var warning_list = new Array();
@@ -134,7 +137,15 @@
       warning_list.push(sensors_list[i]);
     }
   }
-
+  // Kakao.Link.createDefaultButton({
+  //   container: '#create-kakao-link-btn',
+  //   objectType: 'text',
+  //   text : 'Emergency! It\'s not working properly!',
+  //   link : {
+  //     webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
+  //     androidExecParams: 'test',
+  //   }
+  // });
   var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
   var text_message = 'Emergency! Some sensors showed an abnormal value!\n'
   for(var i = 0, len = warning_list.length; i <len; i++){
@@ -143,31 +154,17 @@
     text_message+=message;
   }
   text_message+='Reported time : ' + time +'\n'+'';
-  function sendText(){
-    Kakao.API.request({
-      url: '/v2/api/talk/memo/default/send',
-      data: {
-        template_object:{
-          object_type: "text",
-          text: text_message,
-          link: {
-              "web_url": "http://ec2-18-206-198-8.compute-1.amazonaws.com/monitoring",
-              "mobile_web_url": "http://ec2-18-206-198-8.compute-1.amazonaws.com/monitoring"
-          },
-          button_title: "바로 확인"
-        },
-      },
-      success: function(response) {
-        console.log(response);
-      },
-      fail: function(error) {
-        console.log(error);
-      },
+  console.log(text_message);
+  function sendLink() {
+    Kakao.Link.sendDefault({
+        objectType: 'text',
+        text : text_message,
+        link : {
+          webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
+          androidExecParams: 'test',
+      }
     });
   };
-  if(!(Array.isArray(warning_list)&&warning_list.length===0)){
-    sendText();
-  }
 </script>
 <script type="text/javascript">
   var link = location.pathname;
@@ -209,7 +206,9 @@
             message: mail_messages,
             to_email : '{{ to_email | safe }}'
   }
-  if(!(Array.isArray(warning_list)&&warning_list.length===0)){
+  document.getElementById('sendEmail')
+  .addEventListener('click', function(event) {
+    event.preventDefault();
     emailjs.send("TeamGenerator","MyTemplate_001",emailC)
      .then(function(response) {
           console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
@@ -217,7 +216,7 @@
        }, function(err) {
           console.log("FAILED. error=", err);
        });
-  }
+  });
 </script>
 
 {% endblock %}
