@@ -199,7 +199,6 @@ def floor(request,b_id,l_num):
     levels = str(list(level_info.values())[0])#level_info JSON text
     sensor_infos = list(sensor1.values())
     for i in range(0,len(sensor_infos)):
-        del sensor_infos[i]['is_handled']
         del sensor_infos[i]['updated_time']
         
     return render(request, 'logtable/floor.html', {
