@@ -74,7 +74,7 @@
     ];
     var i, j;
     var date = "";
-    for (i = 0; i < json_arr.length; i++) {
+    for (i = 0; i < json_arr.length / 2; i++) {
       var data_arr = [
         json_arr[i].fields.temp,
         json_arr[i].fields.humid,
@@ -83,7 +83,7 @@
         json_arr[i].fields.co2,
         json_arr[i].fields.tvoc,
       ];
-      var updated_time = json_arr[i].fields.updated_time;
+      var updated_time = json_arr[i + json_arr.length / 2].fields.updated_time;
       var updated_date = updated_time.substring(0, 10);
       if (date != updated_date) {
         date = updated_date;

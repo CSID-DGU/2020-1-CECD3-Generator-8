@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.core import serializers
 from django.http import HttpResponse, JsonResponse
 from django.db.models import Max, Subquery, Value
-from .models import Log, Sensor,Building,Level, SME20U_Value
+from .models import *
 from .tables import LogTableQuerySet, MonitoringTableQuerySet
 from urllib.request import urlopen  # crawler
 from bs4 import BeautifulSoup  # crawler
@@ -93,32 +93,35 @@ def get_sme20u_data_in_json_days(request, sensor_code, days):
     THRESHOLD_DAYS = days
     threshold_time = present_time - timedelta(days=THRESHOLD_DAYS)
 
-    data = SME20U_Value.objects.filter(sensor__sensor_code=sensor_code).filter(updated_time__gte=threshold_time)
-    json_data = serializers.serialize('json', data)
+    data = SME20U_Value.objects.filter(log_ptr__sensor__sensor_code=sensor_code).filter(log_ptr__updated_time__gte=threshold_time)
+    all_objects = [*data, *Log.objects.filter(sensor__sensor_code=sensor_code).filter(updated_time__gte=threshold_time)]
+    json_data = serializers.serialize('json', all_objects)
     return HttpResponse(json_data, content_type="text/json-comment-filtered")
 
 def get_sme20u_data_in_json(request, sensor_code):
-    data = SME20U_Value.objects.filter(sensor__sensor_code=sensor_code)
+    data = SME20U_Value.objects.filter(log_ptr__sensor__sensor_code=sensor_code)
+    all_objects = [*data, *Log.objects.filter(sensor__sensor_code=sensor_code)]
     json_data = serializers.serialize('json', data)
     return HttpResponse(json_data, content_type="text/json-comment-filtered")
 
 def monitoring(request):
     building = Building.objects.exclude(levels=0)
     level = Level.objects.all()
-    sensors_with_problems = Sensor.objects.filter(is_handled='False')
-    sensor_list = list(sensors_with_problems.values())
-    for i in range(0,len(sensor_list)):
-        del sensor_list[i]['is_handled']
-        del sensor_list[i]['updated_time']
+    # sensors_with_problems = Sensor.objects.all() # 수정 필요
+    # sensor_list = list(sensors_with_problems.values())
+    # for i in range(0,len(sensor_list)):
+    #     del sensor_list[i]['is_handled']
+    #     del sensor_list[i]['updated_time']
+    logs_with_problems = FaultLog.objects.filter(is_handled=False)
     table = MonitoringTableQuerySet(
-        sensors_with_problems)  # make a table by sensor queryset
+        logs_with_problems)  # make a table by sensor queryset
     user_email = request.user.email
     # render table
     return render(request, 'logtable/monitoring.html', {
         'table': table,
         'building':building,
         'level':level,
-        'sensor_list': sensor_list,
+        #'sensor_list': sensor_list,
         'to_email': user_email
     })
 
@@ -175,17 +178,17 @@ def dashboard_download_file(request,filepath):
     response['Content-Disposition'] = "attachment; filename=%s" % filename
     return response
 
-def monitoring_delete_one_row(request, d_sensor_code):
+def monitoring_delete_one_row(request, log_id):
     # check is_handled of requested sensor
-    deleting_sensor = Sensor.objects.get(sensor_code=d_sensor_code)
-    deleting_sensor.is_handled = 'True'
-    deleting_sensor.save()
+    deleting_log = FaultLog.objects.get(pk=log_id)
+    deleting_log.is_handled = 'True'
+    deleting_log.save()
     return redirect('monitoring')
 
 def monitoring_delete_all_rows(request):
     # check is_handled of all sensors
-    sensors_with_problems = Sensor.objects.filter(is_handled='False')
-    sensors_with_problems.update(is_handled='True')
+    logs = FaultLog.objects.filter(is_handled='False')
+    logs.update(is_handled='True')
     return redirect('monitoring')
 
 def floor(request,b_id,l_num):
@@ -196,7 +199,6 @@ def floor(request,b_id,l_num):
     levels = str(list(level_info.values())[0])#level_info JSON text
     sensor_infos = list(sensor1.values())
     for i in range(0,len(sensor_infos)):
-        del sensor_infos[i]['is_handled']
         del sensor_infos[i]['updated_time']
         
     return render(request, 'logtable/floor.html', {

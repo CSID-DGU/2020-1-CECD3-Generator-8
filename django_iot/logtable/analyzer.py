@@ -11,7 +11,7 @@ Copyright 2020 Jongyeon Yoon
 '''
 
 from abc import ABC, abstractmethod
-from logtable.models import Log, Sensor, SME20U_Value
+from logtable.models import Log, Sensor, SME20U_Value, FaultLog
 from decimal import Decimal
 from numpy import *
 from django.db.models import Value
@@ -35,7 +35,6 @@ class SimpleAnalyzer(Analyzer):
         if diff <= operational_period + 3:
             # 정상 작동
             sensor.sensor_status = 'OP'
-            sensor.is_handled = True
         elif diff <= operational_period * 3:
             sensor.sensor_status = 'TE'
         else:
@@ -50,27 +49,50 @@ class N_Sigma_Analyzer(Analyzer):
 
     def update(self, log, time, device):
         logtime = log.updated_time
-        sensor = log.sensor
-        operational_period = sensor.sensor_model.period
-
+        current_sensor = log.sensor
+        operational_period = current_sensor.sensor_model.period
+        faulty_flag = False
         
         elapsed_time = time - logtime
         diff = elapsed_time.total_seconds()
         if diff <= operational_period + 3:
-            if self.StateAnalysis(sensor,device):
-                sensor.sensor_status = 'OP'
-                sensor.is_handled = True
-                print(sensor.sensor_code,':',sensor.sensor_status)
+            if self.StateAnalysis(current_sensor,device):
+                current_sensor.sensor_status = 'OP'
+                print(current_sensor.sensor_code,':',current_sensor.sensor_status)
             else:
-                sensor.sensor_status = 'WN'
-                print(sensor.sensor_code,':',sensor.sensor_status)
+                current_sensor.sensor_status = 'WN'
+                print(current_sensor.sensor_code, ':', current_sensor.sensor_status)
+                faulty_flag = True
             
         elif diff <= operational_period * 3:
-            sensor.sensor_status = 'TE'
+            current_sensor.sensor_status = 'TE'
+            faulty_flag = True
         else:
-            sensor.sensor_status = 'BR'
-        sensor.save()
-    
+            current_sensor.sensor_status = 'BR'
+            faulty_flag = True
+        current_sensor.save()
+        if faulty_flag: 
+            try:
+                # 있는지 탐색
+                existing_log = FaultLog.objects.filter(log_ptr__updated_time=logtime).get(log_ptr__sensor=current_sensor)
+                # 있으면, TE에서 BR로 바뀌었을 때 값만 수정해줌
+                if existing_log.fault_status == 'TE':
+                    if current_sensor.sensor_status == 'BR':
+                        existing_log.fault_status = 'BR'
+                        # 보고서 재작성 필요
+                        existing_log.is_daily_reported = False
+                        existing_log.is_reported = False
+                        existing_log.is_handled = False
+                    
+            except FaultLog.DoesNotExist:
+                # 없으면 고장 로그 생성
+                new_faultlog = FaultLog(
+                    sensor=current_sensor,
+                    updated_time=logtime,
+                    fault_status=current_sensor.sensor_status,
+                )
+                new_faultlog.save()
+                
     def StateAnalysis(self, sensor, device):
         sensor_values = SME20U_Value.objects.filter(sensor_id=sensor.id)
         sensor_values = list(sensor_values.values())

@@ -9,12 +9,11 @@
 
 <script>
   function monitoringDeleteHandler(item) {
-    var pid = item.parentNode.id;
-    var sensor_code = pid.substring(7);
-    document.getElementById("deleteModalLabel").innerHTML = "Delete " + sensor_code;
+    var pid = item.parentNode.parentNode.getAttribute("log_id");
+    document.getElementById("deleteModalLabel").innerHTML = "Delete Log " + pid;
     document.getElementById("deleteModalBodyLabel").innerHTML = "<p>Are you sure you want to delete this row?</p>";
 
-    var url = "sme20u/" + sensor_code + "/delete";
+    var url = "monitoring/delete/" + pid;
     var new_attribute = "location.href=\"" + url + "\"";
     document.getElementById('delete-confirm').setAttribute("onclick", new_attribute);
   }
