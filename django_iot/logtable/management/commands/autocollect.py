@@ -19,6 +19,7 @@ from logtable.models import Sensor, Level, Log, Building, DeviceModel
 from datetime import datetime, timedelta
 from logtable.analyzer import N_Sigma_Analyzer
 from logtable.valuesaver import *
+from django.db.models import Q
 
 def check_prerequisite():
     try:
@@ -39,7 +40,7 @@ def check_prerequisite():
         unknown_level.save()
 
 def delete_operational_oldvalues_sme20u(present_time):
-    op_sensors = Sensor.objects.filter(sensor_status='OP')
+    op_sensors = Sensor.objects.filter(Q(sensor_status='OP') | Q(sensor_status='WN'))
     for each in op_sensors:
         THRESHOLD_DAYS = 10
         threshold_time = present_time - timedelta(days=THRESHOLD_DAYS)
@@ -81,26 +82,18 @@ def is_log_generated(device, call_time):
         send_time = datetime.strptime(
             device['DEVICE_DATA_REG_DTM'], '%Y-%m-%d %H:%M:%S')
         # 이미 존재하는 로그인지 확인
-        try:
-            existing_log = Log.objects.filter(sensor__exact=current_sensor).get(updated_time=send_time)
-        except Log.DoesNotExist:
-            new_log = Log(sensor=current_sensor,
-                                updated_time=send_time)
-            new_log.save()
+        existing_log = Log.objects.filter(sensor__exact=current_sensor).filter(updated_time=send_time)
+        if (existing_log.count() == 0):
             current_sensor.updated_time=send_time; # 센서의 updated_time에도 적용
             current_sensor.save()
-            print('New log is generated: ' + str(new_log))
-            existing_log = new_log
             generated_flag = True
-        finally:
-            analyzer = N_Sigma_Analyzer(2) # Make 2_Sigma_Analyzer
-            analyzer.update(existing_log, call_time,device)
-
     return generated_flag
 
 def save_into_db(device):
     if(device['DEVICE_MODEL'] == 'SME20U'):
-        IntegratedSensorSaver.store_to_db(device)
+        new_log = IntegratedSensorSaver.store_to_db(device)
+        print('New log is generated: ' + str(new_log))
+        return new_log
 
 def run(call_time):
     #print('run() called')
@@ -126,10 +119,12 @@ def run(call_time):
     # json파일 내에 result에 있는 IoT 센서 정보를 IoTDevices 배열에 저장
     IoTDevices = json_data['result']
 
+    analyzer = N_Sigma_Analyzer(2) # Make 2_Sigma_Analyzer
     for i in IoTDevices:
         if is_log_generated(i, call_time):
             # 센서 값은 로그가 생성됐을 때만 저장함
-            save_into_db(i)
+            log = save_into_db(i)
+            analyzer.update(log, call_time, i) # 새로 만든 로그에 대하여 분석
     delete_operational_oldvalues_sme20u(call_time)
                    
     os.remove('result.json')  # 가져왔던 reuslt.json 삭제
@@ -150,5 +145,5 @@ class Command(BaseCommand):
             self.stdout.write("Collecting Logs...")
             run(datetime.now())
             self.stdout.write(
-                "Complete, Next collecting starts in " + str(SLEEP_PERIOD))
+                "Complete, Next collecting starts after " + str(SLEEP_PERIOD))
             time.sleep(SLEEP_PERIOD)

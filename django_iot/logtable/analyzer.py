@@ -35,7 +35,6 @@ class SimpleAnalyzer(Analyzer):
         if diff <= operational_period + 3:
             # 정상 작동
             sensor.sensor_status = 'OP'
-            sensor.is_handled = True
         elif diff <= operational_period * 3:
             sensor.sensor_status = 'TE'
         else:
@@ -52,23 +51,25 @@ class N_Sigma_Analyzer(Analyzer):
         logtime = log.updated_time
         sensor = log.sensor
         operational_period = sensor.sensor_model.period
-
+        faulty_flag = False
         
         elapsed_time = time - logtime
         diff = elapsed_time.total_seconds()
         if diff <= operational_period + 3:
             if self.StateAnalysis(sensor,device):
                 sensor.sensor_status = 'OP'
-                sensor.is_handled = True
                 print(sensor.sensor_code,':',sensor.sensor_status)
             else:
                 sensor.sensor_status = 'WN'
-                print(sensor.sensor_code,':',sensor.sensor_status)
+                print(sensor.sensor_code, ':', sensor.sensor_status)
+                faulty_flag = True
             
         elif diff <= operational_period * 3:
             sensor.sensor_status = 'TE'
+            faulty_flag = True
         else:
             sensor.sensor_status = 'BR'
+            faulty_flag = True
         sensor.save()
     
     def StateAnalysis(self, sensor, device):
