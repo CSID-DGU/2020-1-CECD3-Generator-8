@@ -30,5 +30,6 @@ class MonitoringTableQuerySet(tables.Table):
         model = Sensor
         template_name = "django_tables2/bootstrap.html"
         row_attrs = {
-            "log_id": lambda record: record.pk
+            "log_id": lambda record: record.pk,
+            "reported": lambda record: record.is_reported
         }
