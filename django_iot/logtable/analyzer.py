@@ -58,7 +58,11 @@ class N_Sigma_Analyzer(Analyzer):
         if diff <= operational_period + 3:
             if self.StateAnalysis(current_sensor,device):
                 current_sensor.sensor_status = 'OP'
-                print(current_sensor.sensor_code,':',current_sensor.sensor_status)
+                print(current_sensor.sensor_code, ':', current_sensor.sensor_status)
+                # is_handled가 False로 되어 있는 오류들은 전부 True로 다시 바꾼다
+                handled_logs = FaultLog.objects.filter(log_ptr__sensor=current_sensor).filter(is_handled='False')
+                handled_logs.update(is_handled='True')
+                
             else:
                 current_sensor.sensor_status = 'WN'
                 print(current_sensor.sensor_code, ':', current_sensor.sensor_status)
