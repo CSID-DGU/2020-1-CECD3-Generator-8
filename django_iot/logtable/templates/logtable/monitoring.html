@@ -12,10 +12,14 @@
     var pid = item.parentNode.parentNode.getAttribute("log_id");
     document.getElementById("processModalLabel").innerHTML = "Configure Row " + pid;
 
+    var url = "monitoring/process/download/" + pid;
+    var new_attribute = "location.href=\"" + url + "\"";
+    document.getElementById('processCSVdownload').setAttribute("onclick", new_attribute);
   }
 
   function monitoringAllProcessHandler(item) {
     document.getElementById("processModalLabel").innerHTML = "Configure All Rows";
+    document.getElementById('processCSVdownload').setAttribute("onclick", "location.href='{% url 'monitoring_process_download_all' %}'");
   }
 
   function monitoringDeleteHandler(item) {
@@ -116,7 +120,7 @@
           <div class="modal-body" id="processModalBodyLabel">
             <div class="text-center">
               <h6>Download as a csv file</h6>
-              <button type="button" class="btn btn-primary">Download</button>
+              <button type="button" class="btn btn-primary" id="processCSVdownload">Download</button>
             </div>
             <hr>
             <form role="form" method="POST" action="">
