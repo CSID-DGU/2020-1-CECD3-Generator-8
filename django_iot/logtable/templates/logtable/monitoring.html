@@ -8,6 +8,16 @@
 {% block content %}
 
 <script>
+  function monitoringProcessHandler(item) {
+    var pid = item.parentNode.parentNode.getAttribute("log_id");
+    document.getElementById("processModalLabel").innerHTML = "Configure Row " + pid;
+
+  }
+
+  function monitoringAllProcessHandler(item) {
+    document.getElementById("processModalLabel").innerHTML = "Configure All Rows";
+  }
+
   function monitoringDeleteHandler(item) {
     var pid = item.parentNode.parentNode.getAttribute("log_id");
     document.getElementById("deleteModalLabel").innerHTML = "Delete Row " + pid;
@@ -37,16 +47,16 @@
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
-          <button type="button" class="btn btn-sm btn-outline-secondary" id="kakao-link-btn" onclick= "location.href = 'javascript:sendLink()'">
+          <button type="button" class="btn btn-sm btn-outline-secondary" id="kakao-link-btn"
+            onclick="location.href = 'javascript:sendLink()'">
             <span data-feather="message"></span>
             Send Kakaotalk Message
           </button>
-          <button type="button" class="btn btn-sm btn-outline-secondary" id = "sendEmail">
+          <button type="button" class="btn btn-sm btn-outline-secondary" id="sendEmail">
             <span data-feather="mail"></span>
             Send Email
           </button>
-          <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-            data-target="#exportModal">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exportModal">
             <span data-feather="file-text"></span>
             Export to File
           </button>
@@ -61,7 +71,9 @@
                   <h1 class="modal-title" id="exportModallabel"> Export to File!</h1>
                 </div>
                 <div class="modal-body">
-                  <p><h3>Export complete, download into CSV File</h3></p>
+                  <p>
+                  <h3>Export complete, download into CSV File</h3>
+                  </p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -76,7 +88,8 @@
 
       <div class="btn-group mr-2">
         <!-- need onclick function -->
-        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" href="#processModal">
+        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="monitoringAllProcessHandler(this)"
+          data-toggle="modal" href="#processModal">
           <span data-feather="skip-forward"></span>
           Process All
         </button>
@@ -89,76 +102,97 @@
     </div>
   </div>
   <div class=" table-responsive">
-          {% load django_tables2 %}
-          {% render_table table %}
-          <div class="modal fade" id="processModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="processModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+    {% load django_tables2 %}
+    {% render_table table %}
+    <div class="modal fade" id="processModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="processModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="processModalBodyLabel">
+            <div class="text-center">
+              <h6>Download as a csv file</h6>
+              <button type="button" class="btn btn-primary">Download</button>
+            </div>
+            <hr>
+            <form role="form" method="POST" action="">
+              <div class="form-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="remember"> Reported
+                  </label>
                 </div>
-                <div class="modal-body" id="processModalBodyLabel">
-                  Modal body
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="remember"> Handled
+                  </label>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" id="process-confirm">Save</button>
+              </div>
+              <div class="form-group">
+                <div>
+                  <button type="submit" class="btn btn-primary">Save</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
-
-          <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="deleteModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body" id="deleteModalBodyLabel">
-                  Modal body
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" id="delete-confirm">Confirm</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="deleteModalBodyLabel">
+            Modal body
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="delete-confirm">Confirm</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-<script type="text/javascript" >
+<script type="text/javascript">
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
   Kakao.init('cef0c647cfe8c88cf78563dab9b303bd');
   // SDK 초기화 여부를 판단합니다.
   console.log(Kakao.isInitialized());
-  
+
   var link = location.pathname;
   var sensors_list;
   var warning_list = new Array();
 
-  var today = new Date();   
+  var today = new Date();
 
   var year = today.getFullYear(), // 년도
-   month = today.getMonth() + 1,  // 월
-   date = today.getDate(),  // 날짜
-   day = today.getDay(),  // 요일
-   hours = today.getHours(), // 시
-   minutes = today.getMinutes(),  // 분
-   seconds = today.getSeconds();  // 초
+    month = today.getMonth() + 1,  // 월
+    date = today.getDate(),  // 날짜
+    day = today.getDay(),  // 요일
+    hours = today.getHours(), // 시
+    minutes = today.getMinutes(),  // 분
+    seconds = today.getSeconds();  // 초
 
-  if(link=="/monitoring") {
-    sensors_list = {{ sensor_list|safe }};
+  if (link == "/monitoring") {
+    sensors_list = {{ sensor_list | safe }
+  };
   }
-  for(var i = 0, len = sensors_list.length; i < len; i++){
-    if(sensors_list[i]['sensor_status']=='WN'){
-      sensors_list[i]['sensor_status']='warning'
+  for (var i = 0, len = sensors_list.length; i < len; i++) {
+    if (sensors_list[i]['sensor_status'] == 'WN') {
+      sensors_list[i]['sensor_status'] = 'warning'
       warning_list.push(sensors_list[i]);
     }
   }
@@ -171,22 +205,22 @@
   //     androidExecParams: 'test',
   //   }
   // });
-  var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
+  var time = year + '/' + month + '/' + date + ' ' + hours + ':' + minutes + ':' + seconds
   var text_message = 'Emergency! Some sensors showed an abnormal value!\n'
-  for(var i = 0, len = warning_list.length; i <len; i++){
-    var message = "Sensor code : "+warning_list[i]['sensor_code'] +'\n'
-      +'Sensor status : '+warning_list[i]['sensor_status'] +'\n--------\n'
-    text_message+=message;
+  for (var i = 0, len = warning_list.length; i < len; i++) {
+    var message = "Sensor code : " + warning_list[i]['sensor_code'] + '\n'
+      + 'Sensor status : ' + warning_list[i]['sensor_status'] + '\n--------\n'
+    text_message += message;
   }
-  text_message+='Reported time : ' + time +'\n'+'';
+  text_message += 'Reported time : ' + time + '\n' + '';
   console.log(text_message);
   function sendLink() {
     Kakao.Link.sendDefault({
-        objectType: 'text',
-        text : text_message,
-        link : {
-          webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
-          androidExecParams: 'test',
+      objectType: 'text',
+      text: text_message,
+      link: {
+        webUrl: 'http://ec2-54-158-177-31.compute-1.amazonaws.com/monitoring',
+        androidExecParams: 'test',
       }
     });
   };
@@ -196,52 +230,53 @@
   var sensors_list;
   var warning_list = new Array();
 
-  var today = new Date();   
+  var today = new Date();
 
   var year = today.getFullYear(), // 년도
-   month = today.getMonth() + 1,  // 월
-   date = today.getDate(),  // 날짜
-   day = today.getDay(),  // 요일
-   hours = today.getHours(), // 시
-   minutes = today.getMinutes(),  // 분
-   seconds = today.getSeconds();  // 초
+    month = today.getMonth() + 1,  // 월
+    date = today.getDate(),  // 날짜
+    day = today.getDay(),  // 요일
+    hours = today.getHours(), // 시
+    minutes = today.getMinutes(),  // 분
+    seconds = today.getSeconds();  // 초
 
-  if(link=="/monitoring") {
-    sensors_list = {{sensor_list|safe}};
+  if (link == "/monitoring") {
+    sensors_list = {{ sensor_list | safe }
+  };
   }
 
-  for(var i = 0, len = sensors_list.length; i < len; i++){
-    if(sensors_list[i]['sensor_status']=='WN'){
-      sensors_list[i]['sensor_status']='warning'
+  for (var i = 0, len = sensors_list.length; i < len; i++) {
+    if (sensors_list[i]['sensor_status'] == 'WN') {
+      sensors_list[i]['sensor_status'] = 'warning'
       warning_list.push(sensors_list[i]);
     }
   }
-  var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
+  var time = year + '/' + month + '/' + date + ' ' + hours + ':' + minutes + ':' + seconds
   var mail_messages = '<i>';
 
-  for(var i = 0, len = warning_list.length; i <len; i++){
-    var message = "Sensor code : "+warning_list[i]['sensor_code'] +'<br>'
-      +'Sensor status : '+warning_list[i]['sensor_status'] +'<br>'
-      +'Reported time : ' + time +'<br>'+'--------<br>';
+  for (var i = 0, len = warning_list.length; i < len; i++) {
+    var message = "Sensor code : " + warning_list[i]['sensor_code'] + '<br>'
+      + 'Sensor status : ' + warning_list[i]['sensor_status'] + '<br>'
+      + 'Reported time : ' + time + '<br>' + '--------<br>';
     mail_messages += message;
   }
-  mail_messages +='<i>';
+  mail_messages += '<i>';
   var emailC = {
-            from_name : 'Team Generator',
-            message: mail_messages,
-            to_email : '{{ to_email | safe }}'
+    from_name: 'Team Generator',
+    message: mail_messages,
+    to_email: '{{ to_email | safe }}'
   }
   document.getElementById('sendEmail')
-  .addEventListener('click', function(event) {
-    event.preventDefault();
-    emailjs.send("TeamGenerator","MyTemplate_001",emailC)
-     .then(function(response) {
+    .addEventListener('click', function (event) {
+      event.preventDefault();
+      emailjs.send("TeamGenerator", "MyTemplate_001", emailC)
+        .then(function (response) {
           console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
           alert('Email sent successfully!');
-       }, function(err) {
+        }, function (err) {
           console.log("FAILED. error=", err);
-       });
-  });
+        });
+    });
 </script>
 
 {% endblock %}
