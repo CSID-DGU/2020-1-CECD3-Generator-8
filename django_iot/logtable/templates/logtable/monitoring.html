@@ -75,7 +75,8 @@
       </div>
 
       <div class="btn-group mr-2">
-        <button type="button" class="btn btn-sm btn-outline-secondary">
+        <!-- need onclick function -->
+        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" href="#processModal">
           <span data-feather="skip-forward"></span>
           Process All
         </button>
@@ -90,6 +91,26 @@
   <div class=" table-responsive">
           {% load django_tables2 %}
           {% render_table table %}
+          <div class="modal fade" id="processModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="processModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="processModalBodyLabel">
+                  Modal body
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="process-confirm">Save</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
