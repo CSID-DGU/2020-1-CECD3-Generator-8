@@ -22,3 +22,6 @@ MYdatabase.sqlite3
 # secret key files
 *.pem
 secret.json
+
+# RPA log files
+*.log
