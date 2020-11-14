@@ -1,0 +1,24 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
+using SymationModules.ExcelControl;
+
+public partial class CustomScript
+{
+	public void Excel_Script(ExcelControlClass xl)
+	{
+		xl.SetExcelID = "monitoringCopyCSV";
+		xl.ExcelAppExecute(xl.SetExcelID, true);
+		
+		xl.SetWorkbookID = xl.ExcelFileOpen(xl.SetExcelID, @"C:/RPA_Generator/Report/Monitoring CSV File/monitoring_" + dateTime + ".csv");
+		
+		xl.ActiveSheet(1);
+		
+		string address = "B" + sensorIndex.ToString();
+		sensorCode = xl.GetOneCellValue(address);
+		sensorIndex++;
+	}
+}

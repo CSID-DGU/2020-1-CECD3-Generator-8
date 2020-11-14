@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" EVENT_GAP_TIME="0">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="51628bd9-46f1-42b0-8cdb-d4a0033f1bdc" NAME="Start">
+      <EVENT KEY="bcc02090-2720-4d77-a1a2-abc8bd8b4a87" EVENT_NAME="파일 복사" EVENT_TYPE="11" STOPIFERR="1" SCRIPT_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Execute_Code()&#xD;&#xA;	{	&#xD;&#xA;		string srcFilePath=@&quot;C:/RPA_Generator/Report/Monitoring CSV File/monitoring.csv&quot;;&#xD;&#xA;		string dstFilePath=@&quot;C:/RPA_Generator/Report/Monitoring CSV File/monitoring_recent.csv&quot;;&#xD;&#xA;		&#xD;&#xA;		// 기존 파일 존재하는 경우, 삭제한다&#xD;&#xA;		FileInfo fileDel = new FileInfo(@dstFilePath);&#xD;&#xA;		if(fileDel.Exists==true) {&#xD;&#xA;  			fileDel.Delete();&#xD;&#xA;		}&#xD;&#xA;		&#xD;&#xA;		// 파일명 변경&#xD;&#xA;		System.IO.FileInfo fi = new System.IO.FileInfo(@srcFilePath);&#xD;&#xA;		fi.CopyTo(@dstFilePath,false);&#xD;&#xA;&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+      <EVENT KEY="cddc511b-2420-4468-93da-1f53b103f4b2" EVENT_NAME="파일명 변경" EVENT_TYPE="11" STOPIFERR="1" SCRIPT_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Execute_Code()&#xD;&#xA;	{&#xD;&#xA;		string dateTime = System.DateTime.Now.ToString(&quot;yyyyMMddHHmmss&quot;);&#xD;&#xA;		string filename = &quot;monitoring_&quot;+dateTime+&quot;.csv&quot;;&#xD;&#xA;		string filepath=&quot;C:/RPA_Generator/Report/Monitoring CSV File/&quot;+filename;&#xD;&#xA;		&#xD;&#xA;		&#xD;&#xA;		string oldFilePath=@&quot;C:/RPA_Generator/Report/Monitoring CSV File/monitoring.csv&quot;;&#xD;&#xA;		string newFilePath=@filepath;&#xD;&#xA;		&#xD;&#xA;		&#xD;&#xA;		// 파일명 변경&#xD;&#xA;		System.IO.FileInfo fi = new System.IO.FileInfo(oldFilePath);&#xD;&#xA;		fi.MoveTo(@newFilePath);&#xD;&#xA;&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <TASKGROUP TYPE="EXCEPTION" />
+  <TASKGROUP TYPE="FINALLY" />
+  <VARIABLES />
+</TASKSCRIPT>

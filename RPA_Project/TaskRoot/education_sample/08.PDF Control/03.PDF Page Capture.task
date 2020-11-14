@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" TASKMEMO="﻿&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xD;&#xA;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xD;&#xA;	&lt;head&gt;&#xD;&#xA;		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&lt;title&gt;&#xD;&#xA;		&lt;/title&gt;&#xD;&#xA;		&lt;style type=&quot;text/css&quot;&gt;&#xD;&#xA;			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}&#xD;&#xA;			.cs125E9EFE{color:#000000;background-color:transparent;font-family:'맑은 고딕 Semilight';font-size:11pt;font-weight:normal;font-style:normal;}&#xD;&#xA;		&lt;/style&gt;&#xD;&#xA;	&lt;/head&gt;&#xD;&#xA;	&lt;body&gt;&#xD;&#xA;		&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;시나리오&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 00.PDF Download를 실행하여 PDF파일을 다운로드 받는다.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 7페이지의 내용을 캡쳐한다.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 그림판에 캡쳐한 파일을 띄운다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="f5d458cc-54b5-4ad5-86b3-6bce44094713" NAME="Start">
+      <EVENT KEY="ac19d936-c4ce-43b6-87a0-818f6a6c0246" EVENT_NAME="Pdf Page Capture" EVENT_TYPE="163" STOPIFERR="1" PAGENUMBER="7" CAPTURESIZE="1024" FILEPATH="C:\test1\checkMate\test.pdf" PARAM_NAME="pdfCaptureFile" />
+      <EVENT KEY="e033b313-fc43-4677-96df-ed3831d25893" EVENT_NAME="Execute File - Pre Run Script 참조" EVENT_TYPE="23" STOPIFERR="1" LEVEL="0" PRE_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PreRun(EvPPEntry_ExecuteFile EntryData)&#xD;&#xA;	{&#xD;&#xA;		EntryData.ExecuteFile = &quot;mspaint&quot;;&#xD;&#xA;		EntryData.ExecuteParameters = pdfCaptureFile;&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES>
+    <VARIABLE NAME="pdfCaptureFile" TYPE="string" DEFAULT="" DESCRIPTION="" />
+  </VARIABLES>
+</TASKSCRIPT>

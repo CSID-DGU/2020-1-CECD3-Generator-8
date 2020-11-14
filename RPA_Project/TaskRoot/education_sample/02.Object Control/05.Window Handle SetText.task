@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" TASKMEMO="﻿&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xD;&#xA;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xD;&#xA;	&lt;head&gt;&#xD;&#xA;		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&lt;title&gt;&#xD;&#xA;		&lt;/title&gt;&#xD;&#xA;		&lt;style type=&quot;text/css&quot;&gt;&#xD;&#xA;			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}&#xD;&#xA;			.cs125E9EFE{color:#000000;background-color:transparent;font-family:'맑은 고딕 Semilight';font-size:11pt;font-weight:normal;font-style:normal;}&#xD;&#xA;		&lt;/style&gt;&#xD;&#xA;	&lt;/head&gt;&#xD;&#xA;	&lt;body&gt;&#xD;&#xA;		&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;시나리오&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 파일 탐색기 실행(WIN + E)&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 파일 탐색기 Window handle을 선택하여 텍스트를 변경한다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="479002a0-34a2-4bf9-809e-582a2dbe5297" NAME="Start">
+      <EVENT KEY="19514f49-3ac4-43a4-b6b3-8e8d3af14a4d" EVENT_NAME="WIN + E" EVENT_TYPE="20" ISENCRYPTED="0" TYPEING_MODE="0" TYPEING_DELAY="0" USE_HW="0" TYPEING_TEXT="&lt;WIN+E&gt;" />
+      <EVENT KEY="acca0e97-6e50-488c-bfcd-4e3646f9f582" EVENT_NAME="Wait Time" EVENT_TYPE="10" WAIT_TIME="500" />
+      <EVENT KEY="36c8e9d5-8163-48cd-80d1-8bc3842f7bf7" EVENT_NAME="Window Handle SetText" EVENT_TYPE="181" STOPIFERR="1" MAXIMUM_RUNTIME="10000" WINDOW_MAP="[TARGET]&#xD;&#xA;COUNT=1&#xD;&#xA;PROCESS=explorer&#xD;&#xA;[1]&#xD;&#xA;CLASS=CabinetWClass&#xD;&#xA;TITLE=파일 탐색기&#xD;&#xA;" SET_DATA="CheckMATE 파일 탐색기" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES />
+</TASKSCRIPT>

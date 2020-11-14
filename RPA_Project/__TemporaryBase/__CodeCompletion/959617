@@ -1,0 +1,21 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
+
+public partial class CustomScript
+{
+	public void Execute_Code()
+	{
+		string folderPath="C:/RPA_Generator/Report/Sensor Code";
+		DirectoryInfo di = new DirectoryInfo(folderPath);
+		
+		// 폴더가 존재하지 않는 경우
+		if(di.Exists==false)
+		{	
+			di.Create();
+		}
+	}
+}

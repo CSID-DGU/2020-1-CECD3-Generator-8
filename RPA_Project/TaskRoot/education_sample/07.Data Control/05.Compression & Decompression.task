@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" TASKMEMO="﻿&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xD;&#xA;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xD;&#xA;	&lt;head&gt;&#xD;&#xA;		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&lt;title&gt;&#xD;&#xA;		&lt;/title&gt;&#xD;&#xA;		&lt;style type=&quot;text/css&quot;&gt;&#xD;&#xA;			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}&#xD;&#xA;			.cs125E9EFE{color:#000000;background-color:transparent;font-family:'맑은 고딕 Semilight';font-size:11pt;font-weight:normal;font-style:normal;}&#xD;&#xA;		&lt;/style&gt;&#xD;&#xA;	&lt;/head&gt;&#xD;&#xA;	&lt;body&gt;&#xD;&#xA;		&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;시나리오&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 특정 디렉토리 하위의 파일들을 압축한다.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 득정 디렉토리에 압축 파일을 해제 한다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="740b4e69-3545-49e3-8803-2547423b5014" NAME="Start">
+      <EVENT KEY="ec563221-e5e7-4649-940b-6c89e83e3533" EVENT_NAME="Compression" EVENT_TYPE="150" STOPIFERR="1" TYPE="0" LEVEL="3" INPUTFILELIST="paths" PRE_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PreRun(EvPPEntry_Compression EntryData)&#xD;&#xA;	{&#xD;&#xA;		paths.Add(@&quot;C:\test1\checkMate\test.png&quot;);&#xD;&#xA;		paths.Add(@&quot;C:\test1\checkMate\CheckMATE_Mobile_Device_log.JPG&quot;);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" OUTPUTFILE="C:\test1\compression.zip" />
+      <EVENT KEY="095c018e-c296-4647-a90b-aba073d35421" EVENT_NAME="Directory &amp; File Exist" EVENT_TYPE="171" STOPIFERR="0" CHECKPATH="C:\test1\output" />
+      <EVENT KEY="5b422e0c-206e-4c53-8932-a292c20f305f" EVENT_NAME="IF" EVENT_TYPE="12" SCRIPT_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public bool IF_Code()&#xD;&#xA;	{&#xD;&#xA;		if ( _RESULT )&#xD;&#xA;		{ &#xD;&#xA;			return true;&#xD;&#xA;		}&#xD;&#xA;		return false;&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;">
+        <EVENT KEY="f0e738d9-c10e-422b-9c96-87444fcc2729" EVENT_NAME="Directory &amp; File Delete" EVENT_TYPE="174" STOPIFERR="1" DELETEPATH="C:\test1\output" />
+      </EVENT>
+      <EVENT KEY="40ef05de-c807-41d1-933b-e85f3ff958e7" EVENT_NAME="Decompression" EVENT_TYPE="151" STOPIFERR="1" INPUTFILE="C:\test1\compression.zip" OUTPUTDIR="C:\test1\output" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES>
+    <VARIABLE NAME="paths" TYPE="List&lt;string&gt;" DEFAULT="" DESCRIPTION="" />
+  </VARIABLES>
+</TASKSCRIPT>

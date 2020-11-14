@@ -1,0 +1,14 @@
+using System;
+using System.IO;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
+
+public partial class CustomScript
+{
+	public void Execute_Code()
+	{
+		title = sensorCode + " 일일 보고서";ㄴ
+	}
+}

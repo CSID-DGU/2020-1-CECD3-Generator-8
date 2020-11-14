@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="68f71798-6012-4650-8d23-4c57534293e1" NAME="Start">
+      <EVENT KEY="ce2e7ae0-6a34-4f6a-83bd-21c31107fce9" EVENT_NAME="Excel Open" EVENT_TYPE="50" EXCEL_ID="1" IS_VISIBLE="1" EXCEL_FILE="C:\test1\checkMate\test.xlsx" />
+      <EVENT KEY="254f8309-b671-4d25-bbc9-cc3029389fdc" EVENT_NAME="Excel Find" EVENT_TYPE="55" EXCEL_ID="1" FULL_MATCH="0" MATCH_CASE="0" PARAM_NAME="excelAddressList" FIND_TEXT="엑셀" />
+      <EVENT KEY="9c0efbb5-cffd-474f-b89b-2afcf66e69cc" EVENT_NAME="Loop" EVENT_TYPE="14" LOOP_COUNT="0" PRE_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PreRun(EvPPEntry_Loop EntryData)&#xD;&#xA;	{&#xD;&#xA;		EntryData.LoopCount = excelAddressList.Count;&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;">
+        <EVENT KEY="dd9fb525-f9d3-4e2b-a08b-e66452fcbce9" EVENT_NAME="Excel Get OneCell Data" EVENT_TYPE="56" EXCEL_ID="1" PARAM_NAME="excelValue" PRE_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PreRun(EvPPEntry_ExcelGetOneCell EntryData)&#xD;&#xA;	{&#xD;&#xA;		EntryData.OneCellAddress = excelAddressList [_LOOP_COUNT];&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+        <EVENT KEY="e82c9ae2-3e1b-4f3d-9db8-59777c776bf3" EVENT_NAME="Script Code" EVENT_TYPE="11" SCRIPT_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Execute_Code()&#xD;&#xA;	{&#xD;&#xA;		excelValue = excelValue.Replace(&quot;엑셀&quot;, &quot;워드&quot;);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+        <EVENT KEY="4ee988f5-8365-4e60-9320-3e6b44276ec5" EVENT_NAME="Excel Set OneCell Data" EVENT_TYPE="57" EXCEL_ID="1" PRE_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PreRun(EvPPEntry_ExcelSetOneCell EntryData)&#xD;&#xA;	{&#xD;&#xA;		EntryData.OneCellAddress = excelAddressList [_LOOP_COUNT];&#xD;&#xA;		EntryData.CellData = excelValue;&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+      </EVENT>
+      <EVENT KEY="92f06cad-ad82-4b9b-9be3-ca12fb9044f2" EVENT_NAME="Excel Save" EVENT_TYPE="51" EXCEL_ID="1" EXCEL_FILE="C:\test1\checkMate\test_chg.xlsx" />
+      <EVENT KEY="994d6d8d-93aa-4b7f-9c75-27c138a9fe11" EVENT_NAME="Excel Close" EVENT_TYPE="52" EXCEL_ID="1" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES>
+    <VARIABLE NAME="excelAddressList" TYPE="List&lt;string&gt;" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="excelValue" TYPE="string" DEFAULT="" DESCRIPTION="" />
+  </VARIABLES>
+</TASKSCRIPT>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="ace51a12-e968-4fce-9589-1213f63a2461" NAME="Start">
+      <EVENT KEY="999bf80f-1e9a-4c4c-9446-8ea773c1bff5" EVENT_NAME="Excel Script" EVENT_TYPE="80" EXCEL_SCRIPT="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;using SymationModules.ExcelControl;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Excel_Script(ExcelControlClass xl)&#xD;&#xA;	{&#xD;&#xA;		xl.SetExcelID = &quot;excel01&quot;;&#xD;&#xA;		xl.ExcelAppExecute(xl.SetExcelID, true);&#xD;&#xA;		xl.SetWorkbookID = xl.ExcelFileOpen(xl.SetExcelID, @&quot;C:\Users\KSY\Desktop\YOUTUBE_download.xlsx&quot;);&#xD;&#xA;		&#xD;&#xA;		xl.ActiveSheet(1);&#xD;&#xA;		xl.SelectCell(&quot;A1&quot;);&#xD;&#xA;		xl.SelectAll(true);&#xD;&#xA;		&#xD;&#xA;		List&lt;string&gt; excelAddressList = xl.FindSelectedRange(&quot;엑셀&quot;, false, false);&#xD;&#xA;		foreach (string address in excelAddressList)&#xD;&#xA;		{&#xD;&#xA;			string excelValue = xl.GetOneCellValue(address);&#xD;&#xA;			excelValue = excelValue.Replace(&quot;엑셀&quot;, &quot;워드&quot;);&#xD;&#xA;			&#xD;&#xA;			xl.SetOneCellValue(address, excelValue);&#xD;&#xA;		}&#xD;&#xA;		&#xD;&#xA;		xl.ExcelFileSave(xl.SetExcelID, xl.SetWorkbookID, @&quot;C:\Users\KSY\Desktop\best_chosen.xlsx&quot;);&#xD;&#xA;		xl.ExcelAppTerminate(xl.SetExcelID);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES />
+</TASKSCRIPT>
