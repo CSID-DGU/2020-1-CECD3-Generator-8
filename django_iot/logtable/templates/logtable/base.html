@@ -82,13 +82,6 @@
       })();
   </script>
 {% if user.is_authenticated %}
-  <!-- <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-
-      </div>
-    </div>
-  </div> -->
   <nav class="navbar navbar-dark sticky-top bg-danger flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="https://github.com/CSID-DGU/2020-1-CECD3-Generator-8/">
       <img src="/static/img/favicons/android-icon-48x48.png" alt="Team Generator">
@@ -103,7 +96,7 @@
           <a class="nav-link active" href="#">Reload</a>
         </li>
         <li class="nav-item px-3">
-          <a class="nav-link active" href="#">Help</a>
+          <a class="nav-link active" href="javascript:Kakaologin()">Kakao Login</a>
         </li>
         <li class="nav-item px-3">
           <a class="nav-link active" href="logout">Logout</a>
@@ -194,8 +187,7 @@
       <div>
         <button type="button" class="btn btn-light mr-4 mb-5" onclick="location.href='login'" >Login</button>
         <button type="button" class="btn btn-warning text-light ml-4 mb-5" onclick="location.href='signup'">Sign up</button>
-        <!-- <a class="btn btn-default" href="signup">Sign up</a>
-        <a class="btn btn-default" href="login">Login</a> -->
+        
       </div>
       <p></p>
       <p></p>
@@ -208,6 +200,40 @@
   <script src="{% static 'js/base.js' %}"></script>
   <script>feather.replace()</script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script type='text/javascript'>
+    //<![CDATA[
+    // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('cef0c647cfe8c88cf78563dab9b303bd');
+    var token;
+    var userID;
+    function Kakaologin(){
+      Kakao.Auth.login({
+        persistAccessToken: true,
+        success: function(auth){
+          token = auth.access_token;
+          Kakao.API.request({
+					  url: '/v2/user/me',
+					  success: function(res) {
+              console.log(res);
+              userID = res.id;						//유저의 카카오톡 고유 id
+              var userEmail = res.kaccount_email;			//유저의 이메일
+              var userNickName = res.properties.nickname;	//유저가 등록한 별명
+            },
+            fail: function(error) {
+              alert(JSON.stringify(error));
+            }
+				  });
+        }, 
+        fail: function(err){ 
+          console.error(err) 
+        } 
+      });
+    };
+    // 카카오 로그인 버튼을 생성합니다.
+    
+    //
+  </script>
   <script>
     var url = window.location.pathname;
     var object_name = url.substring(url.lastIndexOf('/') + 1)
