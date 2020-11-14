@@ -4,8 +4,6 @@ from django.http import HttpResponse, JsonResponse
 from django.db.models import Max, Subquery, Value
 from .models import *
 from .tables import LogTableQuerySet, MonitoringTableQuerySet
-from urllib.request import urlopen  # crawler
-from bs4 import BeautifulSoup  # crawler
 import mimetypes
 import json
 from django.contrib.auth.models import User
