@@ -23,5 +23,6 @@ MYdatabase.sqlite3
 *.pem
 secret.json
 
-# RPA log files
+# RPA cache & log files
 *.log
+__TemporaryBase/
