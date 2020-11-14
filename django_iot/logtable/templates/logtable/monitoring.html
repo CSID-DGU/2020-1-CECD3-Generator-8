@@ -10,7 +10,7 @@
 <script>
   function monitoringDeleteHandler(item) {
     var pid = item.parentNode.parentNode.getAttribute("log_id");
-    document.getElementById("deleteModalLabel").innerHTML = "Delete Log " + pid;
+    document.getElementById("deleteModalLabel").innerHTML = "Delete Row " + pid;
     document.getElementById("deleteModalBodyLabel").innerHTML = "<p>Are you sure you want to delete this row?</p>";
 
     var url = "monitoring/delete/" + pid;
@@ -19,7 +19,7 @@
   }
 
   function monitoringAllDeleteHandler(item) {
-    document.getElementById("deleteModalLabel").innerHTML = "Delete All Sensors";
+    document.getElementById("deleteModalLabel").innerHTML = "Delete All Rows";
     document.getElementById("deleteModalBodyLabel").innerHTML = "<p>Are you REALLY sure you want to delete all rows?</p>";
     document.getElementById('delete-confirm').setAttribute("onclick", "location.href='{% url 'monitoring_delete_allrows' %}'");
   }
