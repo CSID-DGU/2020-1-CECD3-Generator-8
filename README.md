@@ -2,8 +2,16 @@
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스  
 [웹 사이트](http://ec2-18-206-198-8.compute-1.amazonaws.com)
 ## Recent Update
-* 로그인 / 로그아웃 / 가입 기능 구현
-* Monitoring 페이지의 이메일은 현재 로그인한 사용자로 설정
+* 데이터베이스 재설계
+  * 따로 존재하던 SME20U_Value와 분석에만 쓰이는 Log 테이블을 상속 관계로 만들었음
+  * 모니터링 테이블의 행은 고장 현상당 한개씩 하기 위하여, 마찬가지로 Log 테이블을 상속받는 FaultLog 테이블을 생성하고 이것을 출력
+* 테이블 스타일링
+  * Dashboard: 센서 상태에 따라 색깔을 달리함 (BR: 빩산색, TE: 보라색, OP: 초록색, WN: 오렌지색)
+  * Monitoring: is_reported가 True일 경우, 행 색깔을 회색으로 색칠하였음
+* 카카오톡 로그인 및 메세지 보내기 기능 수정
+  * 웹 페이지 상단 메뉴에서 카카오 로그인 가능
+  * Monitoring: 센서의 상태 중 Warning인 것이 있으면 자동으로 사용자의 이메일과 카카오 계정으로 메세지 전송
+
 
 ## 1. Installation
 ### 1.1. Django project
