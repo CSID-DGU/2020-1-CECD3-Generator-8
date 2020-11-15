@@ -76,7 +76,9 @@ def dashboard_export(request):
         'sensor_model__name',
         'sensor_model__sensor_type',
         'updated_time',
-        'sensor_status'
+        'sensor_status',
+        'level__building_id__building_name',
+        'level__level_num',
     )
     return render_to_csv_response(qs)
 
