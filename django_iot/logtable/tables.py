@@ -1,5 +1,5 @@
 import django_tables2 as tables
-from .models import Log, Sensor
+from .models import FaultLog, Sensor
 
 # td tag에 chartDGU000n 형식으로 id를 달아줌
 def chart_id(**kwargs):
@@ -27,7 +27,7 @@ class MonitoringTableQuerySet(tables.Table):
     class Meta:
         fields = ['id', 'sensor_code_column', 'sensor_model_column',
                   'sensor_type_column', 'updated_time', 'fault_status', 'action']
-        model = Sensor
+        model = FaultLog
         template_name = "django_tables2/bootstrap.html"
         row_attrs = {
             "log_id": lambda record: record.pk,
