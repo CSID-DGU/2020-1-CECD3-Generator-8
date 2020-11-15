@@ -1,17 +1,26 @@
 from django.shortcuts import render, redirect
 from django.core import serializers
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse
 from django.db.models import Max, Subquery, Value
 from .models import *
 from .tables import LogTableQuerySet, MonitoringTableQuerySet
-from urllib.request import urlopen  # crawler
-from bs4 import BeautifulSoup  # crawler
 import mimetypes
 import json
 from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate
-from .forms import UserForm, LoginForm
+from .forms import UserForm, LoginForm, MonitoringProcessForm
 from datetime import datetime, timedelta
+import djqscsv.djqscsv as djqscsv  # NOQA
+from djqscsv._csql import SELECT, EXCLUDE, AS, CONSTANT  # NOQA
+from djqscsv import render_to_csv_response
+
+def download_file(request, filepath, client_filename):
+    # fill these variables with real values
+    fl = open(filepath, 'r')
+    mime_type, _ = mimetypes.guess_type(filepath)
+    response = HttpResponse(fl, content_type=mime_type)
+    response['Content-Disposition'] = "attachment; filename=%s" % client_filename
+    return response
 
 def signout(request):
     logout(request)
@@ -60,33 +69,16 @@ def dashboard(request):
 
 #method for crawling dashboard page
 def dashboard_export(request):
-    print("Export it")
-    url = 'http://'+request.get_host() + '/dashboard'
-    html = urlopen(url)
-    Datas = BeautifulSoup(html, 'html.parser')
-    tb = Datas.find('div', {'class': 'table-responsive'})
-    data = []
-    for tr in tb.find_all('tr'):
-        tds = list(tr.find_all('td'))
-        if not tds:
-            pass
-        else:
-            ID = tds[0].text
-            SCode = tds[1].text
-            SName = tds[2].text
-            SType = tds[3].text
-            UpdatedTime = tds[4].text
-            SStatus = tds[5].text
-
-            data.append([ID, SCode, SName, SType, UpdatedTime, SStatus])
-    with open('datas_dashboard.csv', 'w') as file:
-        file.write(
-            'ID,SensorCode,SensorName,SensorType,UpdatedTime,SensorStatus\n')
-        #print("make file")
-        for i in data:
-            file.write('{0},{1},{2},{3},{4},{5}\n'.format(
-                i[0], i[1], i[2], i[3], i[4], i[5]))
-    return redirect('datas_dashboard/download')
+    # Export all Sensor datas to csv
+    qs = Sensor.objects.all().values(
+        'pk',
+        'sensor_code',
+        'sensor_model__name',
+        'sensor_model__sensor_type',
+        'updated_time',
+        'sensor_status'
+    )
+    return render_to_csv_response(qs)
 
 def get_sme20u_data_in_json_days(request, sensor_code, days):
     present_time = datetime.now()
@@ -107,7 +99,7 @@ def get_sme20u_data_in_json(request, sensor_code):
 def monitoring(request):
     building = Building.objects.exclude(levels=0)
     level = Level.objects.all()
-    # sensors_with_problems = Sensor.objects.all() # 수정 필요
+    # 수정 필요
     # sensor_list = list(sensors_with_problems.values())
     # for i in range(0,len(sensor_list)):
     #     del sensor_list[i]['is_handled']
@@ -127,56 +119,84 @@ def monitoring(request):
 
 #method for crawling monitoring page
 def monitoring_export(request):
-    print("Export it")
-    url = 'http://'+request.get_host() + '/monitoring'
-    html = urlopen(url)
-    Datas = BeautifulSoup(html, 'html.parser')
-    tb = Datas.find('div', {'class': 'table-responsive'})
-    data = []
-    for tr in tb.find_all('tr'):
-        tds = list(tr.find_all('td'))
-        if not tds:
-            pass
-        else:
-            ID = tds[0].text
-            SCode = tds[1].text
-            SName = tds[2].text
-            SType = tds[3].text
-            UpdatedTime = tds[4].text
-            SStatus = tds[5].text
+    # Export all FaultLog datas to csv
+    qs = FaultLog.objects.all().values(
+        'log_ptr__sensor__level__building_id__building_name',
+        'log_ptr__sensor__level__level_num',
+        'log_ptr__sensor__sensor_code',
+        'log_ptr__sensor__sensor_model__name',
+        'log_ptr__sensor__sensor_model__sensor_type',
+        'log_ptr__updated_time',
+        'fault_status'
+        )
+    return render_to_csv_response(qs, filename="monitoring")
 
-            data.append([ID, SCode, SName, SType, UpdatedTime, SStatus])
-    with open('datas_monitoring.csv', 'w') as file:
-        file.write(
-            'ID,SensorCode,SensorName,SensorType,UpdatedTime,SensorStatus\n')
-        #print("make file")
-        for i in data:
-            file.write('{0},{1},{2},{3},{4},{5}\n'.format(
-                i[0], i[1], i[2], i[3], i[4], i[5]))
-    return redirect('datas_monitoring/download')
+def monitoring_process_download_onerow(request, log_id):
+    # Exported unreported FaultLog datas to csv
+    qs = FaultLog.objects.filter(pk=log_id).values(
+        'log_ptr__sensor__level__building_id__building_name',
+        'log_ptr__sensor__level__level_num',
+        'log_ptr__sensor__sensor_code',
+        'log_ptr__sensor__sensor_model__name',
+        'log_ptr__sensor__sensor_model__sensor_type',
+        'log_ptr__updated_time',
+        'fault_status'
+        )
+    return render_to_csv_response(qs, filename="faultlog_" + str(log_id))
 
+def monitoring_process_download_all(request):
+    # Exported unreported FaultLog datas to csv
+    qs = FaultLog.objects.filter(is_handled='False').values(
+        'log_ptr__sensor__level__building_id__building_name',
+        'log_ptr__sensor__level__level_num',
+        'log_ptr__sensor__sensor_code',
+        'log_ptr__sensor__sensor_model__name',
+        'log_ptr__sensor__sensor_model__sensor_type',
+        'log_ptr__updated_time',
+        'fault_status'
+        )
+    return render_to_csv_response(qs, filename="faultlogs_unreported")
 
-def monitoring_download_file(request,filepath):
-    # fill these variables with real values
-    fl_path = filepath + '.csv'
-    filename = 'monitoring.csv'
+def monitoring_process_get_check(request, log_id):
+    json_data = serializers.serialize('json', FaultLog.objects.filter(pk=log_id), fields=('is_reported', 'is_handled'))
+    return HttpResponse(json_data, content_type="text/json-comment-filtered")
 
-    fl = open(fl_path, 'r')
-    mime_type, _ = mimetypes.guess_type(fl_path)
-    response = HttpResponse(fl, content_type=mime_type)
-    response['Content-Disposition'] = "attachment; filename=%s" % filename
-    return response
+def str_on_to_bool(result):
+    if result == 'on':
+        return 'True'
+    else:
+        return 'False'
 
-def dashboard_download_file(request,filepath):
-    # fill these variables with real values
-    fl_path = filepath + '.csv'
-    filename = 'dashboard.csv'
+def monitoring_process_update_all(request):
+    if request.method == 'POST':
+        form = MonitoringProcessForm(request.POST)
+        if form.is_valid():
+            reported = request.POST.get('reported', 'False')
+            handled = request.POST.get('handled', 'False')
+            updated_logs = FaultLog.objects.filter(is_handled='False')
 
-    fl = open(fl_path, 'r')
-    mime_type, _ = mimetypes.guess_type(fl_path)
-    response = HttpResponse(fl, content_type=mime_type)
-    response['Content-Disposition'] = "attachment; filename=%s" % filename
-    return response
+            updated_logs.update(is_reported=str_on_to_bool(reported))
+            updated_logs.update(is_handled=str_on_to_bool(handled))
+            return redirect('monitoring')
+    else:
+        form = MonitoringProcessForm()
+    return redirect('monitoring')
+
+def monitoring_process_update_onerow(request, log_id):
+    if request.method == 'POST':
+        form = MonitoringProcessForm(request.POST)
+        if form.is_valid():
+            reported = request.POST.get('reported', 'False')
+            handled = request.POST.get('handled', 'False')
+            log = FaultLog.objects.get(pk=log_id)
+
+            log.is_reported=str_on_to_bool(reported)
+            log.is_handled = str_on_to_bool(handled)
+            log.save()
+            return redirect('monitoring')
+    else:
+        form = MonitoringProcessForm()
+    return redirect('monitoring')
 
 def monitoring_delete_one_row(request, log_id):
     # check is_handled of requested sensor
