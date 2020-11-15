@@ -18,12 +18,16 @@
     this.borderColor = borderColor;
     this.pointRadius = 2;
     this.data = [];
+
+
   }
 
   function ChartData(label, backgroundColor, borderColor) {
     this.labels = []; // x-axis (date)
     this.datasets = [];
     this.datasets.push(new ChartDataSets(label, backgroundColor, borderColor));
+    this.datasets.push(new ChartDataSets('broken', backgroundColor, borderColor));
+
   }
 
   function ChartConfig(label, backgroundColor, borderColor) {
@@ -31,6 +35,15 @@
     this.data = new ChartData(label, backgroundColor, borderColor);
     this.options = {
       responsive: true,
+      title: {
+        text: label,
+        position: 'top',
+        display: true,
+        fontSize: 25
+      },
+      legend: {
+        display: false,
+      },
       tooltips: {
         mode: 'index',
         intersect: false,
@@ -83,10 +96,15 @@
 
       }
 
-
       for (j = 0; j < CHART_NUM; j++) {
         charts[j].data.labels.push(input_time);
         charts[j].data.datasets[0].data.push(data_arr[j]);
+
+        if (i === json_arr.length - 1) {
+          charts[j].data.datasets[1].data.push(data_arr[j]);
+        } else {
+          charts[j].data.datasets[1].data.push(null);
+        }
 
       }
 
@@ -108,35 +126,58 @@
     var mm = updated_time.substr(14, 2);
     var ss = updated_time.substr(17, 2);
 
+    var last_updated_time = new Date(y, m - 1, d, hh, mm, ss); //updated_time을 date형식으로 변환
+    last_updated_time.setMinutes(last_updated_time.getMinutes() + 12) //12분더하기
 
-    var transform_to_updated_time = new Date(y, m - 1, d, hh, mm, ss); //updated_time을 date형식으로 변환
-    transform_to_updated_time.setMinutes(transform_to_updated_time.getMinutes() + 12) //12분더하기
-
-    var i = transform_to_updated_time;
+    var i = last_updated_time;
+    var today_minus_3 = today;
+    today_minus_3.setDate(today_minus_3.getDate() - 3);
     date2 = updated_date;
+    today = new Date();
 
-    if (transform_to_updated_time < today) {//업뎃시간이 현재시간보다 12분이상 차이나면10분간격으로 현재시간까지 그리기
+    if (last_updated_time < today) {//업뎃시간이 현재시간보다 12분이상 차이나면 10분 간격으로 그리기
+      if (last_updated_time < today_minus_3) { //마지막 업데이트가 3일이상 차이나면
+        var j = today_minus_3;
 
-      for (i; i < today; i.setMinutes(i.getMinutes() + 10)) {
-        var input_date = String(i.getFullYear()) + '-' + String(i.getMonth() + 1) + '-' + String(i.getDate()) + 'T' + String(i.getHours()) + ':' + String(i.getMinutes()) + ':' + String(i.getSeconds());
-        var input_time2 = input_date;
-        var updated_date2 = input_date.substr(0, 10);
+        for (j; j < today; j.setMinutes(j.getMinutes() + 10)) {
+          var input_date = String(j.getFullYear()) + '-' + ("00" + String(j.getMonth() + 1)).slice(-2) + '-' + ("00" + String(j.getDate())).slice(-2) + 'T' + ("00" + String(j.getHours())).slice(-2) + ':' + ("00" + String(j.getMinutes())).slice(-2) + ':' + ("00" + String(j.getSeconds())).slice(-2);
+          var input_time2 = input_date;
+          var updated_date2 = input_date.substr(0, 10);
 
-        if (date2 != updated_date2) {
-          date2 = updated_date2;
-        } else {
-          input_time2 = input_date.substr(11);
+          if (date2 != updated_date2) {
+            date2 = updated_date2;
+          } else {
+            input_time2 = input_date.substr(11);
+          }
+
+          for (var k = 0; k < CHART_NUM; k++) {
+            charts[k].data.labels.push(input_time2);
+            charts[k].data.datasets[1].data.push(data_arr[k]);
+            charts[k].data.datasets[1].borderColor = '#adadad';
+          }
         }
+      }
+      else {
+        for (i; i < today; i.setMinutes(i.getMinutes() + 10)) {
+          var input_date = String(i.getFullYear()) + '-' + ("00" + String(i.getMonth() + 1)).slice(-2) + '-' + ("00" + String(i.getDate())).slice(-2) + 'T' + ("00" + String(i.getHours())).slice(-2) + ':' + ("00" + String(i.getMinutes())).slice(-2) + ':' + ("00" + String(i.getSeconds())).slice(-2);
+          var input_time2 = input_date;
+          var updated_date2 = input_date.substr(0, 10);
 
-        for (j = 0; j < CHART_NUM; j++) {
+          if (date2 != updated_date2) {
+            date2 = updated_date2;
+          } else {
+            input_time2 = input_date.substr(11);
+          }
 
-          charts[j].data.labels.push(input_time2);
-          charts[j].data.datasets[0].data.push(data_arr[j]);
+          for (var k = 0; k < CHART_NUM; k++) {
+            charts[k].data.labels.push(input_time2);
+            charts[k].data.datasets[1].data.push(data_arr[k]);
+            charts[k].data.datasets[1].borderColor = '#adadad';
 
+          }
         }
       }
     }
-
 
     return charts;
   }
