@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core import serializers
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse
 from django.db.models import Max, Subquery, Value
 from .models import *
 from .tables import LogTableQuerySet, MonitoringTableQuerySet
@@ -8,11 +8,19 @@ import mimetypes
 import json
 from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate
-from .forms import UserForm, LoginForm
+from .forms import UserForm, LoginForm, MonitoringProcessForm
 from datetime import datetime, timedelta
 import djqscsv.djqscsv as djqscsv  # NOQA
 from djqscsv._csql import SELECT, EXCLUDE, AS, CONSTANT  # NOQA
 from djqscsv import render_to_csv_response
+
+def download_file(request, filepath, client_filename):
+    # fill these variables with real values
+    fl = open(filepath, 'r')
+    mime_type, _ = mimetypes.guess_type(filepath)
+    response = HttpResponse(fl, content_type=mime_type)
+    response['Content-Disposition'] = "attachment; filename=%s" % client_filename
+    return response
 
 def signout(request):
     logout(request)
@@ -123,14 +131,6 @@ def monitoring_export(request):
         )
     return render_to_csv_response(qs, filename="monitoring")
 
-def download_file(request, filepath, client_filename):
-    # fill these variables with real values
-    fl = open(filepath, 'r')
-    mime_type, _ = mimetypes.guess_type(filepath)
-    response = HttpResponse(fl, content_type=mime_type)
-    response['Content-Disposition'] = "attachment; filename=%s" % client_filename
-    return response
-
 def monitoring_process_download_onerow(request, log_id):
     # Exported unreported FaultLog datas to csv
     qs = FaultLog.objects.filter(pk=log_id).values(
@@ -156,6 +156,47 @@ def monitoring_process_download_all(request):
         'fault_status'
         )
     return render_to_csv_response(qs, filename="faultlogs_unreported")
+
+def monitoring_process_get_check(request, log_id):
+    json_data = serializers.serialize('json', FaultLog.objects.filter(pk=log_id), fields=('is_reported', 'is_handled'))
+    return HttpResponse(json_data, content_type="text/json-comment-filtered")
+
+def str_on_to_bool(result):
+    if result == 'on':
+        return 'True'
+    else:
+        return 'False'
+
+def monitoring_process_update_all(request):
+    if request.method == 'POST':
+        form = MonitoringProcessForm(request.POST)
+        if form.is_valid():
+            reported = request.POST.get('reported', 'False')
+            handled = request.POST.get('handled', 'False')
+            updated_logs = FaultLog.objects.filter(is_handled='False')
+
+            updated_logs.update(is_reported=str_on_to_bool(reported))
+            updated_logs.update(is_handled=str_on_to_bool(handled))
+            return redirect('monitoring')
+    else:
+        form = MonitoringProcessForm()
+    return redirect('monitoring')
+
+def monitoring_process_update_onerow(request, log_id):
+    if request.method == 'POST':
+        form = MonitoringProcessForm(request.POST)
+        if form.is_valid():
+            reported = request.POST.get('reported', 'False')
+            handled = request.POST.get('handled', 'False')
+            log = FaultLog.objects.get(pk=log_id)
+
+            log.is_reported=str_on_to_bool(reported)
+            log.is_handled = str_on_to_bool(handled)
+            log.save()
+            return redirect('monitoring')
+    else:
+        form = MonitoringProcessForm()
+    return redirect('monitoring')
 
 def monitoring_delete_one_row(request, log_id):
     # check is_handled of requested sensor

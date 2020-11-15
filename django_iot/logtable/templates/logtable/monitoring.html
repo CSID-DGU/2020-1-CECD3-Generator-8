@@ -15,11 +15,28 @@
     var url = "monitoring/process/download/" + pid;
     var new_attribute = "location.href=\"" + url + "\"";
     document.getElementById('processCSVdownload').setAttribute("onclick", new_attribute);
+    new_attribute = "monitoring/process/update/" + pid;
+    document.getElementById("process-form").setAttribute("action", new_attribute)
+
+    // get default checkbox value
+    var xmlhttp = new XMLHttpRequest();
+    url = 'monitoring/process/getcheckinfo/' + pid
+
+    xmlhttp.onreadystatechange = function () { // http response 받고 수행할 동작
+      const values_arr = JSON.parse(this.responseText); // json파일을 object로 파싱
+      var reported = values_arr[0].fields.is_reported;
+      var handled = values_arr[0].fields.is_handled;
+      document.getElementById('checkbox-reported').checked = reported;
+      document.getElementById('checkbox-handled').checked = handled;
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
   }
 
   function monitoringAllProcessHandler(item) {
     document.getElementById("processModalLabel").innerHTML = "Configure All Rows";
     document.getElementById('processCSVdownload').setAttribute("onclick", "location.href='{% url 'monitoring_process_download_all' %}'");
+    document.getElementById("process-form").setAttribute("action", "{% url 'monitoring_process_update_all' %}")
   }
 
   function monitoringDeleteHandler(item) {
@@ -123,16 +140,17 @@
               <button type="button" class="btn btn-primary" id="processCSVdownload">Download</button>
             </div>
             <hr>
-            <form role="form" method="POST" action="">
+            <form role="form" method="POST" id="process-form">
+              {% csrf_token %}
               <div class="form-group">
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="remember"> Reported
+                    <input type="checkbox" name="reported" id="checkbox-reported"> Reported
                   </label>
                 </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox" name="remember"> Handled
+                    <input type="checkbox" name="handled" id='checkbox-handled'> Handled
                   </label>
                 </div>
               </div>
