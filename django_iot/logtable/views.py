@@ -142,7 +142,7 @@ def monitoring_process_download_onerow(request, log_id):
         'log_ptr__updated_time',
         'fault_status'
         )
-    return render_to_csv_response(qs, filename="faultlog_" + log_id)
+    return render_to_csv_response(qs, filename="faultlog_" + str(log_id))
 
 def monitoring_process_download_all(request):
     # Exported unreported FaultLog datas to csv
