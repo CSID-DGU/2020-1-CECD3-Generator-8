@@ -23,8 +23,6 @@ urlpatterns = [
     path('<int:b_id>/<slug:l_num>/', views.floor, name='floor'),
     path('sme20u/<slug:sensor_code>/json', views.get_sme20u_data_in_json, name='json'),  # http response url (센서의 전체 데이터 제공)
     path('sme20u/<slug:sensor_code>/json/days/<int:days>', views.get_sme20u_data_in_json_days, name='json'),  # http response url (센서의 특정 일까지의 데이터 제공)
-
     path('download/<str:filepath>/as/<str:client_filename>', views.download_file),
-    path('sendemail/',views.sendemail)
 ]
 static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

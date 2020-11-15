@@ -13,7 +13,6 @@ from datetime import datetime, timedelta
 import djqscsv.djqscsv as djqscsv  # NOQA
 from djqscsv._csql import SELECT, EXCLUDE, AS, CONSTANT  # NOQA
 from djqscsv import render_to_csv_response
-import os
 
 def download_file(request, filepath, client_filename):
     # fill these variables with real values
@@ -53,25 +52,6 @@ def signup(request):
     else:
         form = UserForm()
         return render(request, 'user_new.html')
-
-def sendemail(request):
-    with open('not_good_sensors.json', 'r') as file: #센서 목록 json 읽음
-        json_data = json.load(file)
-    sensor_list = json_data['sensor_list'] #리스트 가져옴
-    user_emails = User.objects.filter(is_active=True).exclude(email='').values_list('email', flat=True) # 모든 django 사용자 이메일 받아옴
-    user_emails = list(user_emails) #쿼리셋을 리스트로 변경
-    
-   
-    if len(sensor_list) == 0: #빈 리스트면 
-        os.remove('not_good_sensors.json') #json파일 삭제
-        return HttpResponse(400) #http response를 400을 준다.
-    else: #비지않았으면
-        os.remove('not_good_sensors.json') #json 파일 삭제
-        return render(request, 'logtable/email.html',{ #email 전송하는 html에 값 전달
-            'sensor_list':sensor_list,
-            'to_emails': user_emails
-        })
-
 
 def dashboard(request):
     building = Building.objects.exclude(levels=0)

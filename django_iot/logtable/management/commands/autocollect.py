@@ -21,6 +21,7 @@ from datetime import datetime, timedelta
 from logtable.analyzer import N_Sigma_Analyzer
 from logtable.valuesaver import *
 from django.db.models import Q
+from django.contrib.auth.models import User
 
 def check_prerequisite():
     try:
@@ -129,21 +130,23 @@ def run(call_time):
             this_sensor = analyzer.update(log, call_time, i) # 새로 만든 로그에 대하여 분석
             if this_sensor!= None: # update메서드로부터 반환된 this_sensor이 None이 아니면 
                 not_good_sensors.append(this_sensor) #센서 목록에 추가
-    sensors_list=[] #dict들을 담을 리스트
+    nowTime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    mailMessage = '<i>'
     for sensor in not_good_sensors:
-        # 각 센서들 별로 dict를 만들어 sensors_list에 넣어줌
-        temp_dict = {"sensor_code":sensor.sensor_code,'sensor_status':sensor.sensor_status}
-        sensors_list.append(temp_dict)
+        mailMessage+= 'Sensor Code : '+sensor.sensor_code + '<br>'+'Sensor Status : '+sensor.sensor_status + '<br>'+'Reported time : ' + nowTime+'<br>'+'--------<br>'
+    mailMessage += '<i>'
+    user_emails = User.objects.filter(is_active=True).exclude(email='').values_list('email', flat=True) # 모든 django 사용자 이메일 받아옴
+    user_emails = list(user_emails) #쿼리셋을 리스트로 변경
+    print(user_emails)
+    if len(not_good_sensors) != 0:  
+        for email in user_emails:
+            headers = {
+                'Content-Type': 'application/json',
+            }
+            data = '{"service_id": "TeamGenerator", "template_id": "MyTemplate_001", "user_id": "user_JSZzj8Ox3PwAOIhCx7qOU", "template_params" : { "from_name" : "teamGenerator", "message" : "' +mailMessage+'", "to_email" : "'+ email+'"}}'
+            response = requests.post('https://api.emailjs.com/api/v1.0/email/send', headers=headers, data=data)
+            print(response.text)
 
-    #sensors_list를 기반으로 json 파일 생성 
-    file_data = OrderedDict()
-    file_data["sensor_list"] = sensors_list
-    with open('not_good_sensors.json', 'w', encoding="utf-8") as make_file:
-        json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
-
-    # email전송 url request
-    send_url = "http://127.0.0.1:8000/sendemail/"
-    res = requests.request('get',url=send_url)
 
     delete_operational_oldvalues_sme20u(call_time)
                    
