@@ -14,6 +14,7 @@ import json
 import requests
 import os
 import time
+from collections import OrderedDict
 from django.core.management.base import BaseCommand
 from logtable.models import Sensor, Level, Log, Building, DeviceModel
 from datetime import datetime, timedelta
@@ -97,6 +98,7 @@ def save_into_db(device):
 
 def run(call_time):
     #print('run() called')
+    not_good_sensors = [] # sensor_status가 OP가 아닌 센서들 담을 리스트
     url = "http://115.68.37.90/api/logs/latest"
     payload = {}
     headers = {
@@ -124,7 +126,25 @@ def run(call_time):
         if is_log_generated(i, call_time):
             # 센서 값은 로그가 생성됐을 때만 저장함
             log = save_into_db(i)
-            analyzer.update(log, call_time, i) # 새로 만든 로그에 대하여 분석
+            this_sensor = analyzer.update(log, call_time, i) # 새로 만든 로그에 대하여 분석
+            if this_sensor!= None: # update메서드로부터 반환된 this_sensor이 None이 아니면 
+                not_good_sensors.append(this_sensor) #센서 목록에 추가
+    sensors_list=[] #dict들을 담을 리스트
+    for sensor in not_good_sensors:
+        # 각 센서들 별로 dict를 만들어 sensors_list에 넣어줌
+        temp_dict = {"sensor_code":sensor.sensor_code,'sensor_status':sensor.sensor_status}
+        sensors_list.append(temp_dict)
+
+    #sensors_list를 기반으로 json 파일 생성 
+    file_data = OrderedDict()
+    file_data["sensor_list"] = sensors_list
+    with open('not_good_sensors.json', 'w', encoding="utf-8") as make_file:
+        json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
+
+    # email전송 url request
+    send_url = "http://127.0.0.1:8000/sendemail/"
+    res = requests.request('get',url=send_url)
+
     delete_operational_oldvalues_sme20u(call_time)
                    
     os.remove('result.json')  # 가져왔던 reuslt.json 삭제

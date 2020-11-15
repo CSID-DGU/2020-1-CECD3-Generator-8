@@ -74,13 +74,6 @@
   <script type="text/javascript" src="/static/js/jquery.bootstrap.modal.forms.js"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="https://unpkg.com/feather-icons"></script>
-  <!-- EmailJS-->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script type="text/javascript">
-      (function () {
-        emailjs.init("user_JSZzj8Ox3PwAOIhCx7qOU");
-      })();
-  </script>
 {% if user.is_authenticated %}
   <nav class="navbar navbar-dark sticky-top bg-danger flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="https://github.com/CSID-DGU/2020-1-CECD3-Generator-8/">
@@ -230,9 +223,6 @@
         } 
       });
     };
-    // 카카오 로그인 버튼을 생성합니다.
-    
-    //
   </script>
   <script>
     var url = window.location.pathname;

@@ -32,6 +32,10 @@
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
+          <button type="button" class="btn btn-sm btn-outline-secondary" onclick = "location.href='javascript:sendText()'" >
+            <span data-feather="message"></span>
+            send Kakaotalk
+          </button>
           <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
             data-target="#exportModal">
             <span data-feather="file-text"></span>
@@ -103,8 +107,7 @@
   Kakao.init('cef0c647cfe8c88cf78563dab9b303bd');
 
   var link = location.pathname;
-  var sensors_list;
-  var warning_list = new Array();
+  
 
   var today = new Date();   
 
@@ -116,24 +119,9 @@
    minutes = today.getMinutes(),  // 분
    seconds = today.getSeconds();  // 초
 
-  if(link=="/monitoring") {
-    sensors_list = {{ sensor_list|safe }};
-  }
-  for(var i = 0, len = sensors_list.length; i < len; i++){
-    if(sensors_list[i]['sensor_status']=='WN'){
-      sensors_list[i]['sensor_status']='warning'
-      warning_list.push(sensors_list[i]);
-    }
-  }
-
   var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
-  var text_message = 'Emergency! Some sensors showed an abnormal value!\n'
-  for(var i = 0, len = warning_list.length; i <len; i++){
-    var message = "Sensor code : "+warning_list[i]['sensor_code'] +'\n'
-      +'Sensor status : '+warning_list[i]['sensor_status'] +'\n--------\n'
-    text_message+=message;
-  }
-  text_message+='Reported time : ' + time +'\n'+'';
+  var text_message = 'Report status has been changed, Check it out\n Reported time : ' + time +'\n'+'';
+
   function sendText(){
     Kakao.API.request({
       url: '/v2/api/talk/memo/default/send',
@@ -145,7 +133,7 @@
               "web_url": "http://ec2-18-206-198-8.compute-1.amazonaws.com/monitoring",
               "mobile_web_url": "http://ec2-18-206-198-8.compute-1.amazonaws.com/monitoring"
           },
-          button_title: "바로 확인"
+          button_title: "Check it out"
         },
       },
       success: function(response) {
@@ -156,59 +144,5 @@
       },
     });
   };
-  if(!(Array.isArray(warning_list)&&warning_list.length===0)){
-    sendText();
-  }
 </script>
-<script type="text/javascript">
-  var link = location.pathname;
-  var sensors_list;
-  var warning_list = new Array();
-
-  var today = new Date();   
-
-  var year = today.getFullYear(), // 년도
-   month = today.getMonth() + 1,  // 월
-   date = today.getDate(),  // 날짜
-   day = today.getDay(),  // 요일
-   hours = today.getHours(), // 시
-   minutes = today.getMinutes(),  // 분
-   seconds = today.getSeconds();  // 초
-
-  if(link=="/monitoring") {
-    sensors_list = {{sensor_list|safe}};
-  }
-
-  for(var i = 0, len = sensors_list.length; i < len; i++){
-    if(sensors_list[i]['sensor_status']=='WN'){
-      sensors_list[i]['sensor_status']='warning'
-      warning_list.push(sensors_list[i]);
-    }
-  }
-  var time = year + '/' + month + '/' + date+' '+hours + ':' + minutes + ':' + seconds
-  var mail_messages = '<i>';
-
-  for(var i = 0, len = warning_list.length; i <len; i++){
-    var message = "Sensor code : "+warning_list[i]['sensor_code'] +'<br>'
-      +'Sensor status : '+warning_list[i]['sensor_status'] +'<br>'
-      +'Reported time : ' + time +'<br>'+'--------<br>';
-    mail_messages += message;
-  }
-  mail_messages +='<i>';
-  var emailC = {
-            from_name : 'Team Generator',
-            message: mail_messages,
-            to_email : '{{ to_email | safe }}'
-  }
-  if(!(Array.isArray(warning_list)&&warning_list.length===0)){
-    emailjs.send("TeamGenerator","MyTemplate_001",emailC)
-     .then(function(response) {
-          console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-          alert('Email sent successfully!');
-       }, function(err) {
-          console.log("FAILED. error=", err);
-       });
-  }
-</script>
-
 {% endblock %}

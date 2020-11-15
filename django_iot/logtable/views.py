@@ -12,6 +12,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login,logout,authenticate
 from .forms import UserForm, LoginForm
 from datetime import datetime, timedelta
+import os
 
 def signout(request):
     logout(request)
@@ -43,6 +44,25 @@ def signup(request):
     else:
         form = UserForm()
         return render(request, 'user_new.html')
+
+def sendemail(request):
+    with open('not_good_sensors.json', 'r') as file: #센서 목록 json 읽음
+        json_data = json.load(file)
+    sensor_list = json_data['sensor_list'] #리스트 가져옴
+    user_emails = User.objects.filter(is_active=True).exclude(email='').values_list('email', flat=True) # 모든 django 사용자 이메일 받아옴
+    user_emails = list(user_emails) #쿼리셋을 리스트로 변경
+    
+   
+    if len(sensor_list) == 0: #빈 리스트면 
+        os.remove('not_good_sensors.json') #json파일 삭제
+        return HttpResponse(400) #http response를 400을 준다.
+    else: #비지않았으면
+        os.remove('not_good_sensors.json') #json 파일 삭제
+        return render(request, 'logtable/email.html',{ #email 전송하는 html에 값 전달
+            'sensor_list':sensor_list,
+            'to_emails': user_emails
+        })
+
 
 def dashboard(request):
     building = Building.objects.exclude(levels=0)
@@ -107,21 +127,14 @@ def get_sme20u_data_in_json(request, sensor_code):
 def monitoring(request):
     building = Building.objects.exclude(levels=0)
     level = Level.objects.all()
-    sensors_with_problems = Sensor.objects.all() # 수정 필요
-    sensor_list = list(sensors_with_problems.values())
-    for i in range(0,len(sensor_list)):
-        del sensor_list[i]['updated_time']
     logs_with_problems = FaultLog.objects.filter(is_handled=False)
     table = MonitoringTableQuerySet(
         logs_with_problems)  # make a table by sensor queryset
-    user_email = request.user.email
     # render table
     return render(request, 'logtable/monitoring.html', {
         'table': table,
         'building':building,
         'level':level,
-        'sensor_list': sensor_list,
-        'to_email': user_email
     })
 
 #method for crawling monitoring page
