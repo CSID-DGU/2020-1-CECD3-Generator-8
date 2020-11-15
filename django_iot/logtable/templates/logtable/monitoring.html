@@ -8,9 +8,40 @@
 {% block content %}
 
 <script>
+  function monitoringProcessHandler(item) {
+    var pid = item.parentNode.parentNode.getAttribute("log_id");
+    document.getElementById("processModalLabel").innerHTML = "Configure Row " + pid;
+
+    var url = "monitoring/process/download/" + pid;
+    var new_attribute = "location.href=\"" + url + "\"";
+    document.getElementById('processCSVdownload').setAttribute("onclick", new_attribute);
+    new_attribute = "monitoring/process/update/" + pid;
+    document.getElementById("process-form").setAttribute("action", new_attribute)
+
+    // get default checkbox value
+    var xmlhttp = new XMLHttpRequest();
+    url = 'monitoring/process/getcheckinfo/' + pid
+
+    xmlhttp.onreadystatechange = function () { // http response 받고 수행할 동작
+      const values_arr = JSON.parse(this.responseText); // json파일을 object로 파싱
+      var reported = values_arr[0].fields.is_reported;
+      var handled = values_arr[0].fields.is_handled;
+      document.getElementById('checkbox-reported').checked = reported;
+      document.getElementById('checkbox-handled').checked = handled;
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  }
+
+  function monitoringAllProcessHandler(item) {
+    document.getElementById("processModalLabel").innerHTML = "Configure All Rows";
+    document.getElementById('processCSVdownload').setAttribute("onclick", "location.href='{% url 'monitoring_process_download_all' %}'");
+    document.getElementById("process-form").setAttribute("action", "{% url 'monitoring_process_update_all' %}")
+  }
+
   function monitoringDeleteHandler(item) {
     var pid = item.parentNode.parentNode.getAttribute("log_id");
-    document.getElementById("deleteModalLabel").innerHTML = "Delete Log " + pid;
+    document.getElementById("deleteModalLabel").innerHTML = "Delete Row " + pid;
     document.getElementById("deleteModalBodyLabel").innerHTML = "<p>Are you sure you want to delete this row?</p>";
 
     var url = "monitoring/delete/" + pid;
@@ -19,11 +50,16 @@
   }
 
   function monitoringAllDeleteHandler(item) {
-    document.getElementById("deleteModalLabel").innerHTML = "Delete All Sensors";
+    document.getElementById("deleteModalLabel").innerHTML = "Delete All Rows";
     document.getElementById("deleteModalBodyLabel").innerHTML = "<p>Are you REALLY sure you want to delete all rows?</p>";
     document.getElementById('delete-confirm').setAttribute("onclick", "location.href='{% url 'monitoring_delete_allrows' %}'");
   }
 </script>
+<style>
+  tr[reported="True"] {
+    background-color: #adadad;
+  }
+</style>
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
 
@@ -36,10 +72,9 @@
             <span data-feather="message"></span>
             send Kakaotalk
           </button>
-          <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
-            data-target="#exportModal">
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exportModal">
             <span data-feather="file-text"></span>
-            Export to File
+            Download Daily Fault Logs
           </button>
           <div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModal"
             aria-hidden="true">
@@ -52,7 +87,9 @@
                   <h1 class="modal-title" id="exportModallabel"> Export to File!</h1>
                 </div>
                 <div class="modal-body">
-                  <p><h3>Export complete, download into CSV File</h3></p>
+                  <p>
+                  <h3>Export complete, download into CSV File</h3>
+                  </p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -66,7 +103,9 @@
       </div>
 
       <div class="btn-group mr-2">
-        <button type="button" class="btn btn-sm btn-outline-secondary">
+        <!-- need onclick function -->
+        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="monitoringAllProcessHandler(this)"
+          data-toggle="modal" href="#processModal">
           <span data-feather="skip-forward"></span>
           Process All
         </button>
@@ -79,28 +118,69 @@
     </div>
   </div>
   <div class=" table-responsive">
-          {% load django_tables2 %}
-          {% render_table table %}
-          <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="deleteModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+    {% load django_tables2 %}
+    {% render_table table %}
+    <div class="modal fade" id="processModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="processModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="processModalBodyLabel">
+            <div class="text-center">
+              <h6>Download as a csv file</h6>
+              <button type="button" class="btn btn-primary" id="processCSVdownload">Download</button>
+            </div>
+            <hr>
+            <form role="form" method="POST" id="process-form">
+              {% csrf_token %}
+              <div class="form-group">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="reported" id="checkbox-reported"> Reported
+                  </label>
                 </div>
-                <div class="modal-body" id="deleteModalBodyLabel">
-                  Modal body
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" name="handled" id='checkbox-handled'> Handled
+                  </label>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" id="delete-confirm">Confirm</button>
+              </div>
+              <div class="form-group">
+                <div>
+                  <button type="submit" class="btn btn-primary">Save</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
+        </div>
       </div>
+    </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="deleteModalBodyLabel">
+            Modal body
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="delete-confirm">Confirm</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script type="text/javascript" >
@@ -108,8 +188,7 @@
 
   var link = location.pathname;
   
-
-  var today = new Date();   
+  var today = new Date();
 
   var year = today.getFullYear(), // 년도
    month = today.getMonth() + 1,  // 월

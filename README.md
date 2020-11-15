@@ -2,8 +2,11 @@
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스  
 [웹 사이트](http://ec2-18-206-198-8.compute-1.amazonaws.com)
 ## Recent Update
-* 로그인 / 로그아웃 / 가입 기능 구현
-* Monitoring 페이지의 이메일은 현재 로그인한 사용자로 설정
+* Export 기능 재구현
+  * 기존 방법은 html에서 테이블의 내용을 긁어서 csv로 로컬에 저장 후 클라이언트에게 가져다 줬음
+  * 새 패키지 *django-queryset-csv*로, 쿼리셋을 바로 csv로 response 가능하므로 모든 export 기능들을 이것으로 대체하였음
+  * 사용하지 않게 된 beautifulsoup4는 requirements에서 삭제. 각자 로컬에서 삭제해도 좋음
+
 
 ## 1. Installation
 ### 1.1. Django project

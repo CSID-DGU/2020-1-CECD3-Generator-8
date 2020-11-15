@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" TASKMEMO="﻿&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xD;&#xA;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xD;&#xA;	&lt;head&gt;&#xD;&#xA;		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&lt;title&gt;&#xD;&#xA;		&lt;/title&gt;&#xD;&#xA;		&lt;style type=&quot;text/css&quot;&gt;&#xD;&#xA;			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}&#xD;&#xA;			.cs125E9EFE{color:#000000;background-color:transparent;font-family:'맑은 고딕 Semilight';font-size:11pt;font-weight:normal;font-style:normal;}&#xD;&#xA;		&lt;/style&gt;&#xD;&#xA;	&lt;/head&gt;&#xD;&#xA;	&lt;body&gt;&#xD;&#xA;		&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;시나리오&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- Custom Module에 &amp;quot;IE 실행&amp;quot; 항목을 추가하고 종료 후 실행 로직을 삽입한다.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- Transaction에서 Custom Module Item를 생성하고 &amp;quot;IE 실행&amp;quot; 항목을 선택한다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="0bd9f074-0cc5-42c2-864c-aadaa42398d6" NAME="Start">
+      <EVENT KEY="10e3d93a-9185-4233-a3fe-182bf42a22fb" EVENT_NAME="Custom Module Item" EVENT_TYPE="16" CUSTOM_KEY="b176ddaf-a099-41c6-9594-ba17548c3cc2" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM">
+    <EVENTLISTS KEY="b176ddaf-a099-41c6-9594-ba17548c3cc2" NAME="IE 실행">
+      <EVENT KEY="82a3f3ed-95c0-4811-98ee-a9fc232f93c7" EVENT_NAME="Process Kill" EVENT_TYPE="24" STOPIFERR="0" KILL_PROCESS="iexplore.exe" />
+      <EVENT KEY="8624ba3b-1bac-4f5f-ad08-9dcafd5aaaec" EVENT_NAME="Internet Browser" EVENT_TYPE="33" STOPIFERR="1" BROWSER="0" URL="http://www.daum.net" MAXIMIZED_WINDOW="1" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <VARIABLES />
+</TASKSCRIPT>

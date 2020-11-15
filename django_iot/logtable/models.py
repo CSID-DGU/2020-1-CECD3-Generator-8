@@ -53,7 +53,7 @@ class Level(models.Model):
 class DeviceModel(models.Model):
     # Fields
     TYPE_CHOICES = (
-        ('IG', 'Intergration'),
+        ('IG', 'Intergrated'),
         ('RD', 'Radar'),
         ('RF', 'RF'),
         ('UK', 'Unknown')
@@ -98,8 +98,13 @@ class Sensor(models.Model):  # Model for IoT devices.
     def __str__(self):
         return self.sensor_code
 
+    def get_sensor_status(self):
+        d = dict(self.STATUS_CHOICES)
+        return d[str(self.sensor_status)]
+
     def get_sensor_type(self):
-        return str(self.sensor_model.sensor_type)
+        d = dict(DeviceModel.TYPE_CHOICES)
+        return d[str(self.sensor_model.sensor_type)]
 
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""

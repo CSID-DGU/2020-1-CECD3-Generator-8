@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" EVENT_GAP_TIME="0">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="d4c94fb0-0ff5-4d40-bdd8-994445b7833e" NAME="Web + Excel + 메일발송">
+      <EVENT KEY="62e9b84c-5218-492f-8ae3-65bf653e5cdf" EVENT_NAME="1. 브라우저 실행" EVENT_TYPE="33" STOPIFERR="1" BROWSER="0" URL="www.daum.net" MAXIMIZED_WINDOW="1" />
+      <EVENT KEY="382bf16f-638f-402e-bb69-e3a0a441a4a9" EVENT_NAME="2. 브라우저 활성화" EVENT_TYPE="22" STOPIFERR="1" MAXIMUM_RUNTIME="10000" CHECK_TYPE="0" TARGET_WINDOW="Daum - Internet Explorer" />
+      <EVENT KEY="13561f71-2e22-4683-9914-0b1b8951c393" EVENT_NAME="3. 스포츠 클릭" EVENT_TYPE="36" MAXIMUM_RUNTIME="10000" STOPIFERR="1" ATTRIBUTE_TYPE="click()" HTML_MAP="[TARGET]&#xD;&#xA;COUNT=2&#xD;&#xA;&#xD;&#xA;[1]&#xD;&#xA;TAG=#sportsTab&#xD;&#xA;[2]&#xD;&#xA;TAG=a&#xD;&#xA;" ATTRIBUTE_VALUE="" />
+      <EVENT KEY="5f6462bd-df58-4708-beee-b3225ffe305e" EVENT_NAME="4. 해외축구 클릭" EVENT_TYPE="36" MAXIMUM_RUNTIME="10000" STOPIFERR="1" ATTRIBUTE_TYPE="click()" HTML_MAP="[TARGET]&#xD;&#xA;COUNT=6&#xD;&#xA;&#xD;&#xA;[1]&#xD;&#xA;TAG=#sports&#xD;&#xA;[2]&#xD;&#xA;TAG=div:nth-child(2)&#xD;&#xA;[3]&#xD;&#xA;TAG=div&#xD;&#xA;[4]&#xD;&#xA;TAG=ul&#xD;&#xA;[5]&#xD;&#xA;TAG=li:nth-child(2)&#xD;&#xA;[6]&#xD;&#xA;TAG=a&#xD;&#xA;" ATTRIBUTE_VALUE="" />
+      <EVENT KEY="90c7b9de-8606-4849-8a6a-18f5f92a712e" EVENT_NAME="5. 최신뉴스 가져오기" EVENT_TYPE="35" STOPIFERR="1" MAXIMUM_RUNTIME="10000" HTML_MAP="[TARGET]&#xD;&#xA;COUNT=4&#xD;&#xA;&#xD;&#xA;[1]&#xD;&#xA;TAG=#cSub&#xD;&#xA;[2]&#xD;&#xA;TAG=div:nth-child(1)&#xD;&#xA;[3]&#xD;&#xA;TAG=div:nth-child(4)&#xD;&#xA;[4]&#xD;&#xA;TAG=ul&#xD;&#xA;" ATTRIBUTE_TYPE="innerText" PARAM_NAME="gisa_str" SHAREDRESOURCE="" />
+      <EVENT KEY="e7d7e774-8948-4598-952b-ea7c4617872a" EVENT_NAME="6. 브라우저 닫기" EVENT_TYPE="24" STOPIFERR="1" CLOSE_TITLE="{*} - Internet Explorer" />
+      <EVENT KEY="58f08e1e-ea14-435c-9a57-27656231c293" EVENT_NAME="7. 엑셀실행" EVENT_TYPE="50" EXCEL_ID="1" IS_VISIBLE="1" />
+      <EVENT KEY="6bac3eda-1e87-48cc-ad0c-917ac451532b" EVENT_NAME="8. 최신뉴스 데이터 엑셀 입력" EVENT_TYPE="59" EXCEL_ID="1" PRE_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PreRun(EvPPEntry_ExcelSetRangeCell EntryData)&#xD;&#xA;	{&#xD;&#xA;		string[] gisa_arr = gisa_str.Split('\n');&#xD;&#xA;		&#xD;&#xA;		gisa_table.Reset(); // gisa_arr 내용을 기사_테이블에 넣기 위해 기사 테이블을 리셋.&#xD;&#xA;		gisa_table.Columns.AddRange(new DataColumn[] {&#xD;&#xA;			                    	new DataColumn { ColumnName = &quot;gisa&quot;, Caption = &quot;기사&quot;, DataType = typeof(string)}&#xD;&#xA;			                    });&#xD;&#xA;		for (int i = 0; i &lt; gisa_arr.Length; i++)&#xD;&#xA;		{&#xD;&#xA;			PrintLog(gisa_arr [i].Trim());&#xD;&#xA;			DataRow dr = gisa_table.NewRow();&#xD;&#xA;			dr[0] = gisa_arr [i].Trim();&#xD;&#xA;			gisa_table.Rows.Add(dr);&#xD;&#xA;		}&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" CELL_DATATABLE="gisa_table" CELL_ADDRESS="A1" />
+      <EVENT KEY="04a4cb72-7316-41de-bc1f-b952b4aa433c" EVENT_NAME="9. 엑셀 저장" EVENT_TYPE="51" EXCEL_ID="1" PRE_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PreRun(EvPPEntry_ExcelSave EntryData)&#xD;&#xA;	{&#xD;&#xA;		EntryData.ExcelSaveFile = @&quot;c:\test.xlsx&quot;;&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+      <EVENT KEY="1eb4e03c-d7b9-424d-86b8-557c886eb064" EVENT_NAME="10. 엑셀 닫기" EVENT_TYPE="52" EXCEL_ID="1" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES>
+    <VARIABLE NAME="gisa_str" TYPE="string" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="gisa_table" TYPE="System.Data.DataTable" DEFAULT="" DESCRIPTION="" />
+  </VARIABLES>
+</TASKSCRIPT>
