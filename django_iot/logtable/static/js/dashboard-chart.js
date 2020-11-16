@@ -10,6 +10,7 @@
  * Copyright 2020 Jongyeon Yoon
  */
 $.getScript("https://unpkg.com/dateformat@3.0.3/lib/dateformat.js");
+var tempChart, humidChart, illumChart, radorChart, co2Chart, tvocChart;
 
 function ChartDataSets(label, backgroundColor, borderColor) {
     this.label = label;
@@ -115,17 +116,28 @@ function ChartDataSets(label, backgroundColor, borderColor) {
 
         // 각 값의 차트를 하나씩 생성
         var ctx = document.getElementById("temp_chart").getContext('2d');
-        var tempChart = new Chart(ctx, chart_data[0]);
+        if (tempChart) tempChart.destroy();
+        tempChart = new Chart(ctx, chart_data[0]);
+
         ctx = document.getElementById("humid_chart").getContext('2d');
-        var humidChart = new Chart(ctx, chart_data[1]);
+        if (humidChart) humidChart.destroy();
+        humidChart = new Chart(ctx, chart_data[1]);
+
         ctx = document.getElementById("illum_chart").getContext('2d');
-        var illumChart = new Chart(ctx, chart_data[2]);
+        if (illumChart) illumChart.destroy();
+        illumChart = new Chart(ctx, chart_data[2]);
+
         ctx = document.getElementById("rador_chart").getContext('2d');
-        var radorChart = new Chart(ctx, chart_data[3]);
+        if (radorChart) radorChart.destroy();
+        radorChart = new Chart(ctx, chart_data[3]);
+
         ctx = document.getElementById("co2_chart").getContext('2d');
-        var co2Chart = new Chart(ctx, chart_data[4]);
+        if (co2Chart) co2Chart.destroy();
+        co2Chart = new Chart(ctx, chart_data[4]);
+
         ctx = document.getElementById("tvoc_chart").getContext('2d');
-        var tvocChart = new Chart(ctx, chart_data[5]);
+        if (tvocChart) tvocChart.destroy();
+        tvocChart = new Chart(ctx, chart_data[5]);
       }
     };
     xmlhttp.open("GET", url, true);
