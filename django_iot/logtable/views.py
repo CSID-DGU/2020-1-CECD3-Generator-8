@@ -205,6 +205,12 @@ def monitoring_delete_all_rows(request):
     logs.update(is_handled='True')
     return redirect('monitoring')
 
+def monitoring_delete_from_database(request):
+    # check is_handled of all sensors
+    logs = FaultLog.objects.filter(is_handled='False')
+    logs.delete()
+    return redirect('monitoring')
+
 def floor(request,b_id,l_num):
     level_info = Level.objects.filter(building_id=b_id, level_num=l_num)
     sensor1 =Sensor.objects.filter(level__in=Subquery(Level.objects.filter(building_id=b_id, level_num=l_num).values('id')))

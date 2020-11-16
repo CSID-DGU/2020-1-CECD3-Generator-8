@@ -20,6 +20,7 @@ urlpatterns = [
     path('monitoring/process/update/<int:log_id>', views.monitoring_process_update_onerow, name='monitoring_process_update_onerow'),
     path('monitoring/delete/all', views.monitoring_delete_all_rows, name='monitoring_delete_allrows'),
     path('monitoring/delete/<int:log_id>', views.monitoring_delete_one_row, name='monitoring_delete_onerow'),  # delete monitoring row
+    path('monitoring/delete/from_database', views.monitoring_delete_from_database,name='delete_from_database'), #delete from database
     path('<int:b_id>/<slug:l_num>/', views.floor, name='floor'),
     path('sme20u/<slug:sensor_code>/json', views.get_sme20u_data_in_json, name='json'),  # http response url (센서의 전체 데이터 제공)
     path('sme20u/<slug:sensor_code>/json/days/<int:days>', views.get_sme20u_data_in_json_days, name='json'),  # http response url (센서의 특정 일까지의 데이터 제공)

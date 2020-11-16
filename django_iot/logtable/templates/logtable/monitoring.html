@@ -94,14 +94,33 @@
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   <button type="button" class="btn btn-primary"
-                    onclick=" location.href='{% url 'export_file_monitoring' %}';">Export</button>
+                    onclick=" location.href='{% url 'export_file_monitoring' %}';" data-toggle="modal" data-target="#deleteIshandled">Export</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <!-- 데이터베이스 삭제 -->
+      <div class="modal fade" id="deleteIshandled" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Complete!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" >
+              Are you sure you want to delete the handled log list?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" onclick=" location.href='{% url 'delete_from_database' %}';"> Confirm</button>
+              <button type="button" class="btn btn-secondary" >Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="btn-group mr-2">
         <!-- need onclick function -->
         <button type="button" class="btn btn-sm btn-outline-secondary" onclick="monitoringAllProcessHandler(this)"
@@ -209,20 +228,6 @@
       },
       buttonTitle: 'Check it out'
     });
-    // Kakao.API.request({
-    //   url: '/v2/api/talk/memo/default/send',
-    //   data: {
-    //     template_object:{
-          
-    //     },
-    //   },
-    //   success: function(response) {
-    //     console.log(response);
-    //   },
-    //   fail: function(error) {
-    //     console.log(error);
-    //   },
-    // });
   };
 </script>
 {% endblock %}
