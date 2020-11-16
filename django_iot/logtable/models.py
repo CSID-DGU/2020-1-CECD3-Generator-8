@@ -53,7 +53,7 @@ class Level(models.Model):
 class DeviceModel(models.Model):
     # Fields
     TYPE_CHOICES = (
-        ('IG', 'Intergration'),
+        ('IG', 'Intergrated'),
         ('RD', 'Radar'),
         ('RF', 'RF'),
         ('UK', 'Unknown')
@@ -73,16 +73,15 @@ class Sensor(models.Model):  # Model for IoT devices.
         ('OP', 'Operational'),
         ('TE', 'Temporary Error'),
         ('BR', 'Broken'),
-        ('ND', 'Not Defined')
-    )  # Has 4 sensor status choices
+        ('ND', 'Not Defined'),
+        ('WN', 'Warning')
+    )  # Has 5 sensor status choices
     sensor_code = models.CharField(max_length=10, unique=True, default="DGU")
     sensor_model = models.ForeignKey('DeviceModel', on_delete=models.CASCADE)
     # status that analyzed by data analyzing module.
     sensor_status = models.CharField(
         max_length=2, choices=STATUS_CHOICES, default='ND')
-
-    is_handled = models.BooleanField(default='False')
-    updated_time = models.DateTimeField(default=timezone.now)
+    updated_time = models.DateTimeField(default=timezone.now) # is_handled 삭제 -> Log 모델로 옮겨짐
 
     # Foreign key. Level ID that IoT Sensor is placed at(?)
     level = models.ForeignKey('Level', on_delete=models.CASCADE)
@@ -99,40 +98,23 @@ class Sensor(models.Model):  # Model for IoT devices.
     def __str__(self):
         return self.sensor_code
 
+    def get_sensor_status(self):
+        d = dict(self.STATUS_CHOICES)
+        return d[str(self.sensor_status)]
+
     def get_sensor_type(self):
-        return str(self.sensor_model.sensor_type)
+        d = dict(DeviceModel.TYPE_CHOICES)
+        return d[str(self.sensor_model.sensor_type)]
 
     def get_absolute_url(self):
         """Returns the url to access a particular instance of the model."""
         return reverse('model-detail-view', args=[str(self.id)])
-
-class SME20U_Value(models.Model):
-    sensor = models.ForeignKey(
-        'Sensor', on_delete=models.CASCADE)
-    updated_time = models.DateTimeField(default=timezone.now)
-
-    # sensor specification referenced in https://documenter.getpostman.com/view/527712/SW14WcyW?version=latest#9b1079ca-8760-457f-8e38-bb8f6b8ef6ad
-    temp = models.DecimalField(decimal_places=1, max_digits=3) # 온도 (-10.0 ~ +85.0 °C, ±1 °C)
-    humid = models.DecimalField(decimal_places=2, max_digits=5) # 습도 (0.00 ~ 100.00 %, ±5 %RH)
-    illum = models.DecimalField(decimal_places=2, max_digits=5) # 조도 (0.00 ~ 100.00 %, ±5 %CDS)
-    rador = models.IntegerField() # 10분당 움직임 수 (0.00 ~ )
-    last_movement_time = models.CharField(max_length=10) #	최종 움직임 감지 시간 (Unixtime +00:00) 연산 시 -9시간(9 * 60 *60)해야 한국 시간
-    co2 = models.IntegerField() # Co2(0 ~ 8192 ppm)
-    tvoc = models.IntegerField() #	tVOC(0 ~ 1187 ppb)
-
-    # Methods
-    def __str__(self):
-        return str(self.sensor) + ": " + str(self.updated_time)
     
 
 class Log(models.Model):  # Model for Logs.
     sensor = models.ForeignKey(
         'Sensor', on_delete=models.CASCADE, related_name='sensor')
     updated_time = models.DateTimeField(default=timezone.now)
-
-    # Metadata
-    class Meta:
-        ordering = ['-id']
 
     # Methods
     # basic methods
@@ -153,8 +135,27 @@ class Log(models.Model):  # Model for Logs.
         return str(self.sensor.sensor_status)
 
     def get_absolute_url(self):
-        """Returns the url to access a particular instance of the model."""
+        # Returns the url to access a particular instance of the model.
         return reverse('model-detail-view', args=[str(self.id)])
+
+
+class SME20U_Value(Log):
+    # sensor specification referenced in https://documenter.getpostman.com/view/527712/SW14WcyW?version=latest#9b1079ca-8760-457f-8e38-bb8f6b8ef6ad
+    temp = models.DecimalField(decimal_places=1, max_digits=3) # 온도 (-10.0 ~ +85.0 °C, ±1 °C)
+    humid = models.DecimalField(decimal_places=2, max_digits=5) # 습도 (0.00 ~ 100.00 %, ±5 %RH)
+    illum = models.DecimalField(decimal_places=2, max_digits=5) # 조도 (0.00 ~ 100.00 %, ±5 %CDS)
+    rador = models.IntegerField() # 10분당 움직임 수 (0.00 ~ )
+    last_movement_time = models.CharField(max_length=10) #	최종 움직임 감지 시간 (Unixtime +00:00) 연산 시 -9시간(9 * 60 *60)해야 한국 시간
+    co2 = models.IntegerField() # Co2(0 ~ 8192 ppm)
+    tvoc = models.IntegerField()  #	tVOC(0 ~ 1187 ppb)
+    
+class FaultLog(Log):
+    # Monitoring 페이지에서 보는, 고장 현상 테이블로 사용됨
+    fault_status = models.CharField(max_length=2, default='ND')
+    is_daily_reported = models.BooleanField(default='False') # 일일 보고서에 작성된 적 있음
+    is_reported = models.BooleanField(default='False') # 긴급 보고서 작성되었음
+    is_handled = models.BooleanField(default='False') # 고쳐짐 - 다음 일일보고서에 고쳐졌다고 명시 후 삭제
+
 
     """
     값 넣는 방법 :

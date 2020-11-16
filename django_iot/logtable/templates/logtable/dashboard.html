@@ -18,8 +18,6 @@
     this.borderColor = borderColor;
     this.pointRadius = 2;
     this.data = [];
-
-
   }
 
   function ChartData(label, backgroundColor, borderColor) {
@@ -53,8 +51,22 @@
         intersect: true,
       },
       scales: {
-        xAxis: [{
-          fontSize: 5
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+              suggestedMin: minValue,
+              suggestedMax: maxValue,
+              callback: function (value, index, values) {
+                return value + sign;
+              }
+            }
+          }
+        ],
+        xAxes: [{
+          ticks: {
+            fontSize: 10
+          }
         }]
       }
     };
@@ -65,17 +77,17 @@
     const borderColor = '#FF0000';
     const backgroundColor = "#e0e0e0";
     var charts = [
-      new ChartConfig('Temperature', backgroundColor, borderColor),
-      new ChartConfig('Humidity', backgroundColor, borderColor),
-      new ChartConfig('Illumination', backgroundColor, borderColor),
-      new ChartConfig('Rador', backgroundColor, borderColor),
-      new ChartConfig('CO2', backgroundColor, borderColor),
-      new ChartConfig('tVOC', backgroundColor, borderColor),
+      new ChartConfig('Temperature', '°C', backgroundColor, borderColor, -10, 85, 5),
+      new ChartConfig('Humidity', '%', backgroundColor, borderColor, 0, 100, 5),
+      new ChartConfig('Illumination', '%', backgroundColor, borderColor, 0, 100, 5),
+      new ChartConfig('Rador', '', backgroundColor, borderColor, 0, 100, 50),
+      new ChartConfig('CO2', 'ppm', backgroundColor, borderColor, 0, 8192, 400),
+      new ChartConfig('tVOC', 'ppb', backgroundColor, borderColor, 0, 1187, 50),
     ];
     var i, j;
     var date = "";
     var today = new Date();
-    for (i = 0; i < json_arr.length; i++) {
+    for (i = 0; i < json_arr.length / 2; i++) {
       var data_arr = [
         json_arr[i].fields.temp,
         json_arr[i].fields.humid,
@@ -85,7 +97,7 @@
         json_arr[i].fields.tvoc,
       ];
 
-      var updated_time = json_arr[i].fields.updated_time;
+      var updated_time = json_arr[i + json_arr.length / 2].fields.updated_time;
       var input_time = updated_time;
       var updated_date = updated_time.substring(0, 10);
 
@@ -93,22 +105,22 @@
         date = updated_date;
       } else {
         input_time = updated_time.substr(11);
-
       }
 
       for (j = 0; j < CHART_NUM; j++) {
         charts[j].data.labels.push(input_time);
         charts[j].data.datasets[0].data.push(data_arr[j]);
 
-        if (i === json_arr.length - 1) {
+        if (i === json_arr.length / 2 - 1) {
           charts[j].data.datasets[1].data.push(data_arr[j]);
         } else {
           charts[j].data.datasets[1].data.push(null);
         }
 
       }
-
     }
+    return charts;
+  }
 
     var data_arr = [
       json_arr[json_arr.length - 1].fields.temp,
@@ -181,15 +193,15 @@
 
     return charts;
   }
-
-
+  
   function chartButtonHandler(item) {
     var pid = item.parentNode.id;
     var sensor_code = pid.substring(5);
     document.getElementById("chartModalLabel").innerHTML = sensor_code;
 
     var xmlhttp = new XMLHttpRequest();
-    var url = "dashboard/sme20u/" + sensor_code;
+    const SEARCH_DAYS = 3;
+    var url = "sme20u/" + sensor_code + "/json/days/" + SEARCH_DAYS;
 
     xmlhttp.onreadystatechange = function () { // http response 받고 수행할 동작
       if (this.readyState == 4 && this.status == 200) {
@@ -211,12 +223,24 @@
         var tvocChart = new Chart(ctx, chart_data[5]);
       }
     };
-
-
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
   }
 </script>
+<style>
+  td[s_status="BR"] {
+    color: red;
+  }
+  td[s_status="TE"] {
+    color: purple;
+  }
+  td[s_status="OP"] {
+    color: green;
+  }
+  td[s_status="WN"] {
+    color: orange;
+  }
+</style>
 
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
   <h2>DIMS</h2>
@@ -229,11 +253,11 @@
           <span data-feather="printer"></span>
           Print
         </button>
-        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#exportModal">
           <span data-feather="file-text"></span>
           Export to file
         </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        <div class="modal fade" id="exportModal" tabindex="-1" role="dialog" aria-labelledby="exportModal"
           aria-hidden="true">
           <div class="modal-dialog" role="document" style="max-width:100%;width=auto;display:table;">
             <div class="modal-content">
@@ -241,18 +265,17 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
-                <h3 class="modal-title" id="exampleModalLabel"> Export to File!</h3>
+                <h1 class="modal-title" id="exportModallabel"> Export to File!</h1>
               </div>
               <div class="modal-body">
-                <div class="table-responsive" name="modalTable">
-                  {% load django_tables2 %}
-                  {% render_table table %}
-                </div>
+                <p>
+                <h3>Export complete, download into CSV File</h3>
+                </p>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary"
-                  onclick=" location.href='{% url 'export_file_dashboard' %}';">Export</button>
+                  onclick=" location.href='{% url 'export_file_dashboard' %}';">Download</button>
               </div>
             </div>
           </div>

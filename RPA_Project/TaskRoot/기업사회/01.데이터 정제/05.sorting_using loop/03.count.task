@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" EVENT_GAP_TIME="0">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="5a9a50cd-438a-488e-87a7-8de569930e7d" NAME="count">
+      <EVENT KEY="1ba90b14-14f9-4364-b3f5-3ab1e49e981d" EVENT_NAME="Excel Script" EVENT_TYPE="80" EXCEL_SCRIPT="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;using SymationModules.ExcelControl;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Excel_Script(ExcelControlClass xl)&#xD;&#xA;	{&#xD;&#xA;		xl.SetExcelID = &quot;excel01&quot;;&#xD;&#xA;		xl.ExcelAppExecute(xl.SetExcelID, true);&#xD;&#xA;		xl.SetWorkbookID = xl.ExcelFileOpen(xl.SetExcelID, @&quot;C:\DoIT\best_chosen.xlsx&quot;);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+      <EVENT KEY="23ea023c-14a1-4a66-81ef-3759c5e8aaf4" EVENT_NAME="Wait Time" EVENT_TYPE="10" WAIT_TIME="1000" />
+      <EVENT KEY="5e6f3074-d420-429e-948b-05174a27f957" EVENT_NAME="Active Window" EVENT_TYPE="22" STOPIFERR="1" MAXIMUM_RUNTIME="10000" CHECK_TYPE="0" TARGET_WINDOW="best_chosen.xlsx - Excel" />
+      <EVENT KEY="58658f82-357e-4d3c-8ee0-bd4aa6536618" EVENT_NAME="Excel Script" EVENT_TYPE="80" EXCEL_SCRIPT="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;using SymationModules.ExcelControl;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Excel_Script(ExcelControlClass xl)&#xD;&#xA;	{&#xD;&#xA;		xl.SelectCell(1,6);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+      <EVENT KEY="dc5cd9f7-7f37-4861-8c5b-cf8d88213f5a" EVENT_NAME="Key Typing" EVENT_TYPE="20" ISENCRYPTED="0" TYPEING_MODE="0" TYPEING_DELAY="0" USE_HW="0" TYPEING_TEXT="&lt;CTRL+DOWN&gt;" />
+      <EVENT KEY="110b9faf-d73f-41cb-9970-777bfaa9fabc" EVENT_NAME="Key Typing" EVENT_TYPE="20" ISENCRYPTED="0" TYPEING_MODE="0" TYPEING_DELAY="0" USE_HW="0" TYPEING_TEXT="&lt;DOWN&gt;" />
+      <EVENT KEY="6c6ca44a-8080-4c6f-95a4-13b516628c03" EVENT_NAME="Key Typing" EVENT_TYPE="20" ISENCRYPTED="0" TYPEING_MODE="0" TYPEING_DELAY="0" USE_HW="0" TYPEING_TEXT="&lt;F2&gt;" />
+      <EVENT KEY="aa466e30-9e4a-4085-b4f3-f34cf0250fce" EVENT_NAME="Key Typing" EVENT_TYPE="20" ISENCRYPTED="0" TYPEING_MODE="0" TYPEING_DELAY="0" USE_HW="0" TYPEING_TEXT="=ROW()-1-5" />
+      <EVENT KEY="8c8e7180-0b74-4693-9e96-b8d25a778fec" EVENT_NAME="Key Typing" EVENT_TYPE="20" ISENCRYPTED="0" TYPEING_MODE="0" TYPEING_DELAY="0" USE_HW="0" TYPEING_TEXT="&lt;ENTER&gt;" />
+      <EVENT KEY="eeb427eb-ee7f-418d-8fcf-ddbeda2219bf" EVENT_NAME="Key Typing" EVENT_TYPE="20" ISENCRYPTED="0" TYPEING_MODE="0" TYPEING_DELAY="0" USE_HW="0" TYPEING_TEXT="&lt;UP&gt;" />
+      <EVENT KEY="445ecb7d-2e24-4409-b5d0-1c9fa752e217" EVENT_NAME="Key Typing" EVENT_TYPE="20" ISENCRYPTED="0" TYPEING_MODE="0" TYPEING_DELAY="0" USE_HW="0" TYPEING_TEXT="&lt;CTRL+C&gt;" />
+      <EVENT KEY="7ecfbe59-c434-4924-9b77-11384420fc52" EVENT_NAME="Clipboard Read" EVENT_TYPE="41" STOPIFERR="1" PARAM_NAME="numOfAttribute" />
+      <EVENT KEY="9f47c0de-e93d-44da-a900-b38fcb0865ae" EVENT_NAME="Loop" EVENT_TYPE="14" LOOP_COUNT="0" PRE_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PreRun(EvPPEntry_Loop EntryData)&#xD;&#xA;	{&#xD;&#xA;		EntryData.LoopCount = int.Parse(numOfAttribute);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" POST_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PostRun()&#xD;&#xA;	{&#xD;&#xA;		&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;">
+        <EVENT KEY="e52a1374-787d-40b2-8e20-140944e7d5f8" EVENT_NAME="Excel Script" EVENT_TYPE="80" EXCEL_SCRIPT="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;using SymationModules.ExcelControl;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Excel_Script(ExcelControlClass xl)&#xD;&#xA;	{&#xD;&#xA;		criteria = &quot;=COUNTIF($B$2:$L$4,A&quot;;&#xD;&#xA;		criteria +=(6 + _LOOP_COUNT).ToString();&#xD;&#xA;		criteria += &quot;)&quot;;&#xD;&#xA;		xl.SelectCell(2, 6 + _LOOP_COUNT);&#xD;&#xA;		xl.SetOneCellValue(criteria);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+        <EVENT KEY="d6155e44-6f8d-4ec0-bd05-48eac4c71c8c" EVENT_NAME="Wait Time" EVENT_TYPE="10" WAIT_TIME="10" />
+      </EVENT>
+      <EVENT KEY="4fed3a7d-f5d3-42d7-a4b8-d748f88bb4ec" EVENT_NAME="Excel Script" EVENT_TYPE="80" EXCEL_SCRIPT="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;using SymationModules.ExcelControl;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Excel_Script(ExcelControlClass xl)&#xD;&#xA;	{&#xD;&#xA;		xl.ExcelFileSave(xl.SetExcelID, xl.SetWorkbookID, @&quot;C:\DoIT\best_chosen.xlsx&quot;);&#xD;&#xA;		xl.ExcelAppTerminate(xl.SetExcelID);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES>
+    <VARIABLE NAME="numOfAttribute" TYPE="string" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="criteria" TYPE="string" DEFAULT="" DESCRIPTION="" />
+  </VARIABLES>
+</TASKSCRIPT>

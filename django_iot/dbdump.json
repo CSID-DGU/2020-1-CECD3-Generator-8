@@ -85,6 +85,38 @@
 },
 {
     "model": "sessions.session",
+    "pk": "4k50w9g5o0s2u47k05xdb0viwk0ssu69",
+    "fields": {
+        "session_data": "OWM5ZjllMWY3ZjQwZjBhZWMyOGY0ZThjNDg3ZTlmYmM4NTVlN2E5Zjp7Il9hdXRoX3VzZXJfaWQiOiI0IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI2NmYwYzNhNDE2ODUyNDIzZWE0MWZkNjA2ZmY3NGIwNzZjMWZlNzAxIn0=",
+        "expire_date": "2020-11-22T01:30:06.711"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "4zg0cnf9s24xxbvazbmgv46sibb71t5d",
+    "fields": {
+        "session_data": "ZTYwMDJlYmY5NDQwMWZkYzBlMGY3OGY5YjQ4YjIyOTI4ZmQwM2E5Yjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1OTJjZmMwNWY5OTI5NzJmMTljNTBhYmQ3MTFhOGEyNmI4OGRmYzAzIn0=",
+        "expire_date": "2020-11-24T00:21:43.142"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "7aiyw1yrv09g799tkjklqfgamrxsu731",
+    "fields": {
+        "session_data": "ZTYwMDJlYmY5NDQwMWZkYzBlMGY3OGY5YjQ4YjIyOTI4ZmQwM2E5Yjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1OTJjZmMwNWY5OTI5NzJmMTljNTBhYmQ3MTFhOGEyNmI4OGRmYzAzIn0=",
+        "expire_date": "2020-11-18T13:33:07.766"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kgcqoinekgbduamsmzncfgf7rvavpc8s",
+    "fields": {
+        "session_data": "ZTYwMDJlYmY5NDQwMWZkYzBlMGY3OGY5YjQ4YjIyOTI4ZmQwM2E5Yjp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1OTJjZmMwNWY5OTI5NzJmMTljNTBhYmQ3MTFhOGEyNmI4OGRmYzAzIn0=",
+        "expire_date": "2020-11-15T14:37:59.480"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "oizqsfpcpxd3x35o14g106b6s5pv6qga",
     "fields": {
         "session_data": "YTUxZDM4NmRmYTA1YTcxZTdmMjBmZGUwM2U2NDVhZGIzZTQzYzJjNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1ZDY5NDdmMDNlZDlmYTE5NWRiYWI5ZGVmMzYwODIwYzM3ZmQwNjMyIn0=",
@@ -97,6 +129,22 @@
     "fields": {
         "session_data": "MzFlYTU0MTNlNjk1YjEzYTNkNmRkYjFhOTBjNzA0OTA4MmNiZGJiMTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJmYjNmNDA2YmVlYjc5MGVhYmUzMTFjMzEzZThjZDhjYjBlYzE2YWUxIn0=",
         "expire_date": "2020-11-10T16:30:25.388"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "rwml8ilv8qi3xs6vuykbu1kewykew19a",
+    "fields": {
+        "session_data": "MjBkODIxMGRmOTk0NjhkNGYwYjk4NGU1ZGE4Y2NkNzY0OWY4MjQ3OTp7Il9hdXRoX3VzZXJfaWQiOiI1IiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI1YWM3Yzc5MTliOTMwZmQ3YWY5YTQ2YTllNjI3NTE3MTc1Njg4ODBmIn0=",
+        "expire_date": "2020-11-23T23:04:25.690"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "v1sxa9i34r0rltpyz4txvssz72s6o4ys",
+    "fields": {
+        "session_data": "ZWQxOWUzZWU0MTYxNjNmNWU1YzQ1ZWQ5ZjZjMTEwOWU4MjVmN2FiYTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJhNmNiNDQ1NTMwZDI2OTMwODRhZTdlN2NhY2I2ZGQwNGEyNWY0MzY4In0=",
+        "expire_date": "2020-11-14T14:06:59.183"
     }
 },
 {
@@ -238,7 +286,6 @@
         "sensor_code": "DGU0006",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-12-13T21:07:33",
         "level": 1,
         "position_x": 33.469108700891034,
@@ -252,11 +299,10 @@
         "sensor_code": "DGU0001",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-12-12T04:50:20",
         "level": 1,
-        "position_x": 33.46182709996894,
-        "position_y": 124.87923413332385
+        "position_x": 33.46182709996895,
+        "position_y": 124.87923413332383
     }
 },
 {
@@ -266,7 +312,6 @@
         "sensor_code": "DGU0002",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2020-06-03T01:43:04",
         "level": 1,
         "position_x": 33.46266476825056,
@@ -280,8 +325,7 @@
         "sensor_code": "DGU0004",
         "sensor_model": 1,
         "sensor_status": "OP",
-        "is_handled": true,
-        "updated_time": "2020-10-29T22:38:52",
+        "updated_time": "2020-11-10T15:52:26",
         "level": 1,
         "position_x": 33.467966923645506,
         "position_y": 124.89422730008626
@@ -294,7 +338,6 @@
         "sensor_code": "DGU0005",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-12-24T13:07:35",
         "level": 1,
         "position_x": 33.46786232505503,
@@ -308,7 +351,6 @@
         "sensor_code": "DGU0003",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-12-20T16:21:14",
         "level": 1,
         "position_x": 33.467779028466616,
@@ -322,7 +364,6 @@
         "sensor_code": "DGU0020",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:20:12",
         "level": 1,
         "position_x": 33.45593812967827,
@@ -336,7 +377,6 @@
         "sensor_code": "DGU0008",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": true,
         "updated_time": "2020-10-14T17:12:34",
         "level": 1,
         "position_x": 33.46060456282381,
@@ -350,8 +390,7 @@
         "sensor_code": "DGU0009",
         "sensor_model": 1,
         "sensor_status": "OP",
-        "is_handled": true,
-        "updated_time": "2020-10-29T22:43:45",
+        "updated_time": "2020-11-10T15:54:04",
         "level": 1,
         "position_x": 33.45733103570495,
         "position_y": 124.89297046457136
@@ -364,7 +403,6 @@
         "sensor_code": "DGU0010",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2020-06-26T19:53:53",
         "level": 1,
         "position_x": 33.457265786732776,
@@ -378,7 +416,6 @@
         "sensor_code": "DGU0011",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2020-01-09T14:44:27",
         "level": 1,
         "position_x": 33.45365536798479,
@@ -391,9 +428,8 @@
     "fields": {
         "sensor_code": "DGU0012",
         "sensor_model": 1,
-        "sensor_status": "BR",
-        "is_handled": false,
-        "updated_time": "2020-09-25T15:57:33",
+        "sensor_status": "OP",
+        "updated_time": "2020-11-10T15:51:12",
         "level": 1,
         "position_x": 33.44926352823769,
         "position_y": 124.87995299201631
@@ -406,8 +442,7 @@
         "sensor_code": "DGU0007",
         "sensor_model": 1,
         "sensor_status": "OP",
-        "is_handled": true,
-        "updated_time": "2020-10-29T22:43:23",
+        "updated_time": "2020-11-10T15:53:31",
         "level": 1,
         "position_x": 33.46712794288123,
         "position_y": 124.9128317953306
@@ -420,7 +455,6 @@
         "sensor_code": "DGU0013",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:06:23",
         "level": 1,
         "position_x": 33.439599242921766,
@@ -434,7 +468,6 @@
         "sensor_code": "DGU0014",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-12-11T17:54:27",
         "level": 1,
         "position_x": 33.434449602443344,
@@ -448,7 +481,6 @@
         "sensor_code": "DGU0015",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2020-06-03T22:10:21",
         "level": 1,
         "position_x": 33.43365420682068,
@@ -462,7 +494,6 @@
         "sensor_code": "DGU0016",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-12-12T01:46:02",
         "level": 1,
         "position_x": 33.4443251139622,
@@ -476,7 +507,6 @@
         "sensor_code": "DGU0017",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2020-06-12T14:17:26",
         "level": 1,
         "position_x": 33.44904165203117,
@@ -490,7 +520,6 @@
         "sensor_code": "DGU0018",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2020-06-30T19:28:00",
         "level": 1,
         "position_x": 33.45283793903953,
@@ -504,7 +533,6 @@
         "sensor_code": "DGU0021",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:20:19",
         "level": 1,
         "position_x": 33.45413304044886,
@@ -518,7 +546,6 @@
         "sensor_code": "DGU0024",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:24:16",
         "level": 1,
         "position_x": 33.437410693243294,
@@ -532,7 +559,6 @@
         "sensor_code": "DGU0025",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:24:17",
         "level": 1,
         "position_x": 33.46018866133834,
@@ -546,7 +572,6 @@
         "sensor_code": "DGU0022",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:24:16",
         "level": 1,
         "position_x": 33.45050361524735,
@@ -560,7 +585,6 @@
         "sensor_code": "DGU0026",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:24:17",
         "level": 1,
         "position_x": 33.46047354739474,
@@ -574,7 +598,6 @@
         "sensor_code": "DGU0023",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:24:18",
         "level": 1,
         "position_x": 33.44871033010445,
@@ -588,7 +611,6 @@
         "sensor_code": "DGU0019",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:24:34",
         "level": 1,
         "position_x": 33.45792885857648,
@@ -602,7 +624,6 @@
         "sensor_code": "DGU0027",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:36:30",
         "level": 1,
         "position_x": 33.46609043307555,
@@ -616,7 +637,6 @@
         "sensor_code": "DGU0028",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:36:44",
         "level": 1,
         "position_x": 33.463932846726024,
@@ -630,7 +650,6 @@
         "sensor_code": "DGU0029",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:36:50",
         "level": 1,
         "position_x": 33.444904322090025,
@@ -644,7 +663,6 @@
         "sensor_code": "DGU0030",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:36:52",
         "level": 1,
         "position_x": -1.0,
@@ -658,7 +676,6 @@
         "sensor_code": "DGU0031",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:37:06",
         "level": 1,
         "position_x": -1.0,
@@ -672,7 +689,6 @@
         "sensor_code": "DGU0032",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:37:15",
         "level": 1,
         "position_x": -1.0,
@@ -686,7 +702,6 @@
         "sensor_code": "DGU0033",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:37:22",
         "level": 1,
         "position_x": -1.0,
@@ -700,7 +715,6 @@
         "sensor_code": "DGU0034",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:37:28",
         "level": 1,
         "position_x": -1.0,
@@ -714,7 +728,6 @@
         "sensor_code": "DGU0035",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:37:37",
         "level": 1,
         "position_x": -1.0,
@@ -728,7 +741,6 @@
         "sensor_code": "DGU0036",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:37:41",
         "level": 1,
         "position_x": -1.0,
@@ -742,7 +754,6 @@
         "sensor_code": "DGU0049",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:41:20",
         "level": 1,
         "position_x": -1.0,
@@ -756,7 +767,6 @@
         "sensor_code": "DGU0050",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:41:29",
         "level": 1,
         "position_x": -1.0,
@@ -770,7 +780,6 @@
         "sensor_code": "DGU0047",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:41:50",
         "level": 1,
         "position_x": -1.0,
@@ -784,7 +793,6 @@
         "sensor_code": "DGU0048",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:42:12",
         "level": 1,
         "position_x": -1.0,
@@ -798,7 +806,6 @@
         "sensor_code": "DGU0037",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:50:02",
         "level": 1,
         "position_x": -1.0,
@@ -812,7 +819,6 @@
         "sensor_code": "DGU0038",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:50:09",
         "level": 1,
         "position_x": -1.0,
@@ -826,7 +832,6 @@
         "sensor_code": "DGU0039",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:50:14",
         "level": 1,
         "position_x": -1.0,
@@ -840,7 +845,6 @@
         "sensor_code": "DGU0041",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:50:35",
         "level": 1,
         "position_x": -1.0,
@@ -854,7 +858,6 @@
         "sensor_code": "DGU0042",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:50:49",
         "level": 1,
         "position_x": -1.0,
@@ -868,7 +871,6 @@
         "sensor_code": "DGU0044",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T15:04:18",
         "level": 1,
         "position_x": -1.0,
@@ -882,7 +884,6 @@
         "sensor_code": "DGU0045",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T14:51:11",
         "level": 1,
         "position_x": -1.0,
@@ -896,7 +897,6 @@
         "sensor_code": "DGU0043",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T15:00:29",
         "level": 1,
         "position_x": -1.0,
@@ -910,7 +910,6 @@
         "sensor_code": "DGU0046",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T15:01:02",
         "level": 1,
         "position_x": -1.0,
@@ -924,1322 +923,10 @@
         "sensor_code": "DGU0040",
         "sensor_model": 1,
         "sensor_status": "BR",
-        "is_handled": false,
         "updated_time": "2019-11-15T15:02:37",
         "level": 1,
         "position_x": -1.0,
         "position_y": -1.0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 1,
-    "fields": {
-        "sensor": 1,
-        "updated_time": "2019-12-13T21:07:33",
-        "temp": "29.3",
-        "humid": "31.35",
-        "illum": "99.00",
-        "rador": 110,
-        "last_movement_time": "1576271245",
-        "co2": 648,
-        "tvoc": 37
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 2,
-    "fields": {
-        "sensor": 2,
-        "updated_time": "2019-12-12T04:50:20",
-        "temp": "25.9",
-        "humid": "29.40",
-        "illum": "84.00",
-        "rador": 96,
-        "last_movement_time": "1576126208",
-        "co2": 1343,
-        "tvoc": 143
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 3,
-    "fields": {
-        "sensor": 3,
-        "updated_time": "2020-06-03T01:43:04",
-        "temp": "26.8",
-        "humid": "53.65",
-        "illum": "77.00",
-        "rador": 64,
-        "last_movement_time": "1591148583",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 4,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T01:32:17",
-        "temp": "21.6",
-        "humid": "42.88",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602623100",
-        "co2": 2171,
-        "tvoc": 634
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 5,
-    "fields": {
-        "sensor": 5,
-        "updated_time": "2019-12-24T13:07:35",
-        "temp": "24.1",
-        "humid": "45.92",
-        "illum": "0.00",
-        "rador": 86,
-        "last_movement_time": "1577192841",
-        "co2": 1665,
-        "tvoc": 253
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 6,
-    "fields": {
-        "sensor": 6,
-        "updated_time": "2019-12-20T16:21:14",
-        "temp": "22.4",
-        "humid": "14.18",
-        "illum": "88.00",
-        "rador": 115,
-        "last_movement_time": "1576858872",
-        "co2": 731,
-        "tvoc": 50
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 7,
-    "fields": {
-        "sensor": 7,
-        "updated_time": "2019-11-15T14:20:12",
-        "temp": "23.2",
-        "humid": "27.55",
-        "illum": "81.00",
-        "rador": 71,
-        "last_movement_time": "1573827610",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 8,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T01:32:34",
-        "temp": "22.2",
-        "humid": "40.30",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602624596",
-        "co2": 6168,
-        "tvoc": 878
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 9,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T01:29:08",
-        "temp": "21.1",
-        "humid": "44.88",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629806",
-        "co2": 2482,
-        "tvoc": 317
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 10,
-    "fields": {
-        "sensor": 10,
-        "updated_time": "2020-06-26T19:53:53",
-        "temp": "24.9",
-        "humid": "70.59",
-        "illum": "35.00",
-        "rador": 43,
-        "last_movement_time": "1593201226",
-        "co2": 894,
-        "tvoc": 75
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 11,
-    "fields": {
-        "sensor": 11,
-        "updated_time": "2020-01-09T14:44:27",
-        "temp": "15.7",
-        "humid": "27.86",
-        "illum": "1.00",
-        "rador": 0,
-        "last_movement_time": "1578058648",
-        "co2": 455,
-        "tvoc": 8
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 12,
-    "fields": {
-        "sensor": 12,
-        "updated_time": "2020-09-25T15:57:33",
-        "temp": "25.8",
-        "humid": "57.91",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1600977459",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 13,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T01:31:34",
-        "temp": "22.3",
-        "humid": "44.67",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602629809",
-        "co2": 6274,
-        "tvoc": 894
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 14,
-    "fields": {
-        "sensor": 14,
-        "updated_time": "2019-11-15T14:06:23",
-        "temp": "23.5",
-        "humid": "28.03",
-        "illum": "84.00",
-        "rador": 70,
-        "last_movement_time": "1573826778",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 15,
-    "fields": {
-        "sensor": 15,
-        "updated_time": "2019-12-11T17:54:27",
-        "temp": "27.6",
-        "humid": "27.93",
-        "illum": "86.00",
-        "rador": 73,
-        "last_movement_time": "1576086858",
-        "co2": 793,
-        "tvoc": 59
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 16,
-    "fields": {
-        "sensor": 16,
-        "updated_time": "2020-06-03T22:10:21",
-        "temp": "26.4",
-        "humid": "66.47",
-        "illum": "66.00",
-        "rador": 11,
-        "last_movement_time": "1591222178",
-        "co2": 568,
-        "tvoc": 25
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 17,
-    "fields": {
-        "sensor": 17,
-        "updated_time": "2019-12-12T01:46:02",
-        "temp": "24.2",
-        "humid": "36.14",
-        "illum": "30.00",
-        "rador": 0,
-        "last_movement_time": "1576113804",
-        "co2": 615,
-        "tvoc": 32
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 18,
-    "fields": {
-        "sensor": 18,
-        "updated_time": "2020-06-12T14:17:26",
-        "temp": "26.4",
-        "humid": "60.39",
-        "illum": "99.00",
-        "rador": 119,
-        "last_movement_time": "1591971442",
-        "co2": 469,
-        "tvoc": 10
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 19,
-    "fields": {
-        "sensor": 19,
-        "updated_time": "2020-06-30T19:28:00",
-        "temp": "27.4",
-        "humid": "56.06",
-        "illum": "31.00",
-        "rador": 13,
-        "last_movement_time": "1593545027",
-        "co2": 435,
-        "tvoc": 5
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 20,
-    "fields": {
-        "sensor": 20,
-        "updated_time": "2019-11-15T14:20:19",
-        "temp": "23.4",
-        "humid": "27.02",
-        "illum": "87.00",
-        "rador": 78,
-        "last_movement_time": "1573827608",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 21,
-    "fields": {
-        "sensor": 21,
-        "updated_time": "2019-11-15T14:24:16",
-        "temp": "23.5",
-        "humid": "28.52",
-        "illum": "70.00",
-        "rador": 66,
-        "last_movement_time": "1573827836",
-        "co2": 457,
-        "tvoc": 8
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 22,
-    "fields": {
-        "sensor": 22,
-        "updated_time": "2019-11-15T14:24:17",
-        "temp": "23.3",
-        "humid": "28.13",
-        "illum": "78.00",
-        "rador": 66,
-        "last_movement_time": "1573827855",
-        "co2": 555,
-        "tvoc": 23
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 23,
-    "fields": {
-        "sensor": 23,
-        "updated_time": "2019-11-15T14:24:16",
-        "temp": "23.3",
-        "humid": "27.34",
-        "illum": "74.00",
-        "rador": 57,
-        "last_movement_time": "1573827832",
-        "co2": 420,
-        "tvoc": 3
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 24,
-    "fields": {
-        "sensor": 24,
-        "updated_time": "2019-11-15T14:24:17",
-        "temp": "23.3",
-        "humid": "28.61",
-        "illum": "79.00",
-        "rador": 68,
-        "last_movement_time": "1573827833",
-        "co2": 455,
-        "tvoc": 8
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 25,
-    "fields": {
-        "sensor": 25,
-        "updated_time": "2019-11-15T14:24:18",
-        "temp": "23.2",
-        "humid": "27.08",
-        "illum": "81.00",
-        "rador": 67,
-        "last_movement_time": "1573827833",
-        "co2": 476,
-        "tvoc": 11
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 26,
-    "fields": {
-        "sensor": 26,
-        "updated_time": "2019-11-15T14:24:34",
-        "temp": "23.3",
-        "humid": "28.26",
-        "illum": "73.00",
-        "rador": 52,
-        "last_movement_time": "1573827866",
-        "co2": 402,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 27,
-    "fields": {
-        "sensor": 27,
-        "updated_time": "2019-11-15T14:36:30",
-        "temp": "23.7",
-        "humid": "28.41",
-        "illum": "84.00",
-        "rador": 84,
-        "last_movement_time": "1573828579",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 28,
-    "fields": {
-        "sensor": 28,
-        "updated_time": "2019-11-15T14:36:44",
-        "temp": "23.6",
-        "humid": "28.14",
-        "illum": "79.00",
-        "rador": 80,
-        "last_movement_time": "1573828576",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 29,
-    "fields": {
-        "sensor": 29,
-        "updated_time": "2019-11-15T14:36:50",
-        "temp": "23.6",
-        "humid": "27.50",
-        "illum": "86.00",
-        "rador": 83,
-        "last_movement_time": "1573828578",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 30,
-    "fields": {
-        "sensor": 30,
-        "updated_time": "2019-11-15T14:36:52",
-        "temp": "23.6",
-        "humid": "27.91",
-        "illum": "86.00",
-        "rador": 78,
-        "last_movement_time": "1573828577",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 31,
-    "fields": {
-        "sensor": 31,
-        "updated_time": "2019-11-15T14:37:06",
-        "temp": "23.8",
-        "humid": "28.45",
-        "illum": "79.00",
-        "rador": 69,
-        "last_movement_time": "1573828573",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 32,
-    "fields": {
-        "sensor": 32,
-        "updated_time": "2019-11-15T14:37:15",
-        "temp": "23.6",
-        "humid": "29.61",
-        "illum": "83.00",
-        "rador": 73,
-        "last_movement_time": "1573828577",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 33,
-    "fields": {
-        "sensor": 33,
-        "updated_time": "2019-11-15T14:37:22",
-        "temp": "23.7",
-        "humid": "28.87",
-        "illum": "73.00",
-        "rador": 67,
-        "last_movement_time": "1573828574",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 34,
-    "fields": {
-        "sensor": 34,
-        "updated_time": "2019-11-15T14:37:28",
-        "temp": "23.6",
-        "humid": "28.31",
-        "illum": "77.00",
-        "rador": 63,
-        "last_movement_time": "1573828573",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 35,
-    "fields": {
-        "sensor": 35,
-        "updated_time": "2019-11-15T14:37:37",
-        "temp": "23.7",
-        "humid": "27.95",
-        "illum": "85.00",
-        "rador": 67,
-        "last_movement_time": "1573828572",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 36,
-    "fields": {
-        "sensor": 36,
-        "updated_time": "2019-11-15T14:37:41",
-        "temp": "23.4",
-        "humid": "28.30",
-        "illum": "78.00",
-        "rador": 64,
-        "last_movement_time": "1573828578",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 37,
-    "fields": {
-        "sensor": 37,
-        "updated_time": "2019-11-15T14:41:20",
-        "temp": "23.4",
-        "humid": "28.45",
-        "illum": "68.00",
-        "rador": 76,
-        "last_movement_time": "1573828876",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 38,
-    "fields": {
-        "sensor": 38,
-        "updated_time": "2019-11-15T14:41:29",
-        "temp": "23.4",
-        "humid": "29.74",
-        "illum": "87.00",
-        "rador": 70,
-        "last_movement_time": "1573828886",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 39,
-    "fields": {
-        "sensor": 39,
-        "updated_time": "2019-11-15T14:41:50",
-        "temp": "24.0",
-        "humid": "28.41",
-        "illum": "67.00",
-        "rador": 89,
-        "last_movement_time": "1573828907",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 40,
-    "fields": {
-        "sensor": 40,
-        "updated_time": "2019-11-15T14:42:12",
-        "temp": "24.3",
-        "humid": "27.28",
-        "illum": "69.00",
-        "rador": 84,
-        "last_movement_time": "1573828919",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 41,
-    "fields": {
-        "sensor": 41,
-        "updated_time": "2019-11-15T14:50:02",
-        "temp": "24.0",
-        "humid": "27.73",
-        "illum": "77.00",
-        "rador": 90,
-        "last_movement_time": "1573829399",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 42,
-    "fields": {
-        "sensor": 42,
-        "updated_time": "2019-11-15T14:50:09",
-        "temp": "24.1",
-        "humid": "29.72",
-        "illum": "84.00",
-        "rador": 93,
-        "last_movement_time": "1573829399",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 43,
-    "fields": {
-        "sensor": 43,
-        "updated_time": "2019-11-15T14:50:14",
-        "temp": "24.4",
-        "humid": "26.87",
-        "illum": "71.00",
-        "rador": 97,
-        "last_movement_time": "1573829412",
-        "co2": 403,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 44,
-    "fields": {
-        "sensor": 44,
-        "updated_time": "2019-11-15T14:50:35",
-        "temp": "24.0",
-        "humid": "28.33",
-        "illum": "75.00",
-        "rador": 89,
-        "last_movement_time": "1573829421",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 45,
-    "fields": {
-        "sensor": 45,
-        "updated_time": "2019-11-15T14:50:49",
-        "temp": "24.0",
-        "humid": "28.02",
-        "illum": "75.00",
-        "rador": 95,
-        "last_movement_time": "1573829448",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 46,
-    "fields": {
-        "sensor": 46,
-        "updated_time": "2019-11-15T15:04:18",
-        "temp": "25.0",
-        "humid": "26.70",
-        "illum": "73.00",
-        "rador": 58,
-        "last_movement_time": "1573830254",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 47,
-    "fields": {
-        "sensor": 47,
-        "updated_time": "2019-11-15T14:51:11",
-        "temp": "24.3",
-        "humid": "28.19",
-        "illum": "80.00",
-        "rador": 74,
-        "last_movement_time": "1573829414",
-        "co2": 401,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 48,
-    "fields": {
-        "sensor": 48,
-        "updated_time": "2019-11-15T15:00:29",
-        "temp": "26.8",
-        "humid": "24.07",
-        "illum": "82.00",
-        "rador": 67,
-        "last_movement_time": "1573830024",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 49,
-    "fields": {
-        "sensor": 49,
-        "updated_time": "2019-11-15T15:01:02",
-        "temp": "26.4",
-        "humid": "23.94",
-        "illum": "81.00",
-        "rador": 68,
-        "last_movement_time": "1573830054",
-        "co2": 402,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 50,
-    "fields": {
-        "sensor": 50,
-        "updated_time": "2019-11-15T15:02:37",
-        "temp": "26.0",
-        "humid": "25.45",
-        "illum": "79.00",
-        "rador": 68,
-        "last_movement_time": "1573830149",
-        "co2": 400,
-        "tvoc": 0
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 51,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:32:18",
-        "temp": "19.3",
-        "humid": "32.05",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702827",
-        "co2": 1229,
-        "tvoc": 126
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 52,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T17:12:34",
-        "temp": "22.6",
-        "humid": "35.81",
-        "illum": "99.00",
-        "rador": 2,
-        "last_movement_time": "1602695536",
-        "co2": 939,
-        "tvoc": 82
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 53,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:29:08",
-        "temp": "21.3",
-        "humid": "30.68",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702825",
-        "co2": 7368,
-        "tvoc": 1061
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 54,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:31:35",
-        "temp": "22.2",
-        "humid": "33.15",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1602702810",
-        "co2": 3171,
-        "tvoc": 421
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 55,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-29T22:38:52",
-        "temp": "18.1",
-        "humid": "33.86",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1604008403",
-        "co2": 1804,
-        "tvoc": 338
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 56,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-29T22:43:45",
-        "temp": "19.5",
-        "humid": "34.31",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1604008393",
-        "co2": 1355,
-        "tvoc": 145
-    }
-},
-{
-    "model": "logtable.sme20u_value",
-    "pk": 57,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-29T22:43:23",
-        "temp": "20.2",
-        "humid": "34.98",
-        "illum": "0.00",
-        "rador": 0,
-        "last_movement_time": "1604008397",
-        "co2": 1416,
-        "tvoc": 154
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 92,
-    "fields": {
-        "sensor": 1,
-        "updated_time": "2019-12-13T21:07:33"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 93,
-    "fields": {
-        "sensor": 2,
-        "updated_time": "2019-12-12T04:50:20"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 94,
-    "fields": {
-        "sensor": 3,
-        "updated_time": "2020-06-03T01:43:04"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 95,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T01:32:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 96,
-    "fields": {
-        "sensor": 5,
-        "updated_time": "2019-12-24T13:07:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 97,
-    "fields": {
-        "sensor": 6,
-        "updated_time": "2019-12-20T16:21:14"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 98,
-    "fields": {
-        "sensor": 7,
-        "updated_time": "2019-11-15T14:20:12"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 99,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T01:32:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 100,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T01:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 101,
-    "fields": {
-        "sensor": 10,
-        "updated_time": "2020-06-26T19:53:53"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 102,
-    "fields": {
-        "sensor": 11,
-        "updated_time": "2020-01-09T14:44:27"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 103,
-    "fields": {
-        "sensor": 12,
-        "updated_time": "2020-09-25T15:57:33"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 104,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T01:31:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 105,
-    "fields": {
-        "sensor": 14,
-        "updated_time": "2019-11-15T14:06:23"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 106,
-    "fields": {
-        "sensor": 15,
-        "updated_time": "2019-12-11T17:54:27"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 107,
-    "fields": {
-        "sensor": 16,
-        "updated_time": "2020-06-03T22:10:21"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 108,
-    "fields": {
-        "sensor": 17,
-        "updated_time": "2019-12-12T01:46:02"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 109,
-    "fields": {
-        "sensor": 18,
-        "updated_time": "2020-06-12T14:17:26"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 110,
-    "fields": {
-        "sensor": 19,
-        "updated_time": "2020-06-30T19:28:00"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 111,
-    "fields": {
-        "sensor": 20,
-        "updated_time": "2019-11-15T14:20:19"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 112,
-    "fields": {
-        "sensor": 21,
-        "updated_time": "2019-11-15T14:24:16"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 113,
-    "fields": {
-        "sensor": 22,
-        "updated_time": "2019-11-15T14:24:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 114,
-    "fields": {
-        "sensor": 23,
-        "updated_time": "2019-11-15T14:24:16"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 115,
-    "fields": {
-        "sensor": 24,
-        "updated_time": "2019-11-15T14:24:17"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 116,
-    "fields": {
-        "sensor": 25,
-        "updated_time": "2019-11-15T14:24:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 117,
-    "fields": {
-        "sensor": 26,
-        "updated_time": "2019-11-15T14:24:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 118,
-    "fields": {
-        "sensor": 27,
-        "updated_time": "2019-11-15T14:36:30"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 119,
-    "fields": {
-        "sensor": 28,
-        "updated_time": "2019-11-15T14:36:44"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 120,
-    "fields": {
-        "sensor": 29,
-        "updated_time": "2019-11-15T14:36:50"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 121,
-    "fields": {
-        "sensor": 30,
-        "updated_time": "2019-11-15T14:36:52"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 122,
-    "fields": {
-        "sensor": 31,
-        "updated_time": "2019-11-15T14:37:06"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 123,
-    "fields": {
-        "sensor": 32,
-        "updated_time": "2019-11-15T14:37:15"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 124,
-    "fields": {
-        "sensor": 33,
-        "updated_time": "2019-11-15T14:37:22"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 125,
-    "fields": {
-        "sensor": 34,
-        "updated_time": "2019-11-15T14:37:28"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 126,
-    "fields": {
-        "sensor": 35,
-        "updated_time": "2019-11-15T14:37:37"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 127,
-    "fields": {
-        "sensor": 36,
-        "updated_time": "2019-11-15T14:37:41"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 128,
-    "fields": {
-        "sensor": 37,
-        "updated_time": "2019-11-15T14:41:20"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 129,
-    "fields": {
-        "sensor": 38,
-        "updated_time": "2019-11-15T14:41:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 130,
-    "fields": {
-        "sensor": 39,
-        "updated_time": "2019-11-15T14:41:50"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 131,
-    "fields": {
-        "sensor": 40,
-        "updated_time": "2019-11-15T14:42:12"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 132,
-    "fields": {
-        "sensor": 41,
-        "updated_time": "2019-11-15T14:50:02"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 133,
-    "fields": {
-        "sensor": 42,
-        "updated_time": "2019-11-15T14:50:09"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 134,
-    "fields": {
-        "sensor": 43,
-        "updated_time": "2019-11-15T14:50:14"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 135,
-    "fields": {
-        "sensor": 44,
-        "updated_time": "2019-11-15T14:50:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 136,
-    "fields": {
-        "sensor": 45,
-        "updated_time": "2019-11-15T14:50:49"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 137,
-    "fields": {
-        "sensor": 46,
-        "updated_time": "2019-11-15T15:04:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 138,
-    "fields": {
-        "sensor": 47,
-        "updated_time": "2019-11-15T14:51:11"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 139,
-    "fields": {
-        "sensor": 48,
-        "updated_time": "2019-11-15T15:00:29"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 140,
-    "fields": {
-        "sensor": 49,
-        "updated_time": "2019-11-15T15:01:02"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 141,
-    "fields": {
-        "sensor": 50,
-        "updated_time": "2019-11-15T15:02:37"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 142,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-14T19:32:18"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 143,
-    "fields": {
-        "sensor": 8,
-        "updated_time": "2020-10-14T17:12:34"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 144,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-14T19:29:08"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 145,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-14T19:31:35"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 146,
-    "fields": {
-        "sensor": 4,
-        "updated_time": "2020-10-29T22:38:52"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 147,
-    "fields": {
-        "sensor": 9,
-        "updated_time": "2020-10-29T22:43:45"
-    }
-},
-{
-    "model": "logtable.log",
-    "pk": 148,
-    "fields": {
-        "sensor": 13,
-        "updated_time": "2020-10-29T22:43:23"
     }
 },
 {
@@ -2774,7 +1461,7 @@
     "model": "auth.user",
     "fields": {
         "password": "pbkdf2_sha256$150000$lJHPHoefnEWg$h2dEx6dzUrzaaGomGs3W2Id7wYJ0ACmPwZ6edWzTjuo=",
-        "last_login": "2020-10-06T00:09:24.995",
+        "last_login": "2020-10-31T14:06:59.178",
         "is_superuser": true,
         "username": "admin",
         "first_name": "",
@@ -2791,7 +1478,7 @@
     "model": "auth.user",
     "fields": {
         "password": "pbkdf2_sha256$150000$ME5gzqybYnH7$Y3aI8mkttyKezvwu6eoOl3dGonUFpmEbeaFVjDK962M=",
-        "last_login": "2020-10-27T16:30:25.382",
+        "last_login": "2020-11-10T00:21:43.137",
         "is_superuser": true,
         "username": "su001",
         "first_name": "",
@@ -2800,6 +1487,57 @@
         "is_staff": true,
         "is_active": true,
         "date_joined": "2020-10-27T16:30:20.253",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$4fXiZ8GbGsmR$Qa6YD7VE36tDQPJk99g5pS0+rITj4aK4Ob0+qHgx7fo=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "su",
+        "first_name": "",
+        "last_name": "",
+        "email": "1@1.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-10-31T14:36:45.701",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$Kf6kJCOAiCnZ$SQcsHhF4f+nD8oo0roBiuNcmKOxwBVDgMlHO8TENt7Y=",
+        "last_login": "2020-11-08T01:30:06.693",
+        "is_superuser": false,
+        "username": "Jongyeon",
+        "first_name": "",
+        "last_name": "",
+        "email": "0417yjy@naver.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-11-08T01:30:06.566",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$150000$8VPBhW7qJUdh$Uj0X1IMYMmpXhOPOXo0YAbxBViT2NIyEVeRv/xljhFc=",
+        "last_login": "2020-11-09T23:04:25.685",
+        "is_superuser": false,
+        "username": "woojoo527",
+        "first_name": "",
+        "last_name": "",
+        "email": "woojoo1602@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2020-11-08T02:00:12.478",
         "groups": [],
         "user_permissions": []
     }
@@ -5376,6 +4114,258 @@
         "object_repr": "DGU0029",
         "action_flag": 2,
         "change_message": "[{\"changed\": {\"fields\": [\"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+        "action_time": "2020-11-04T11:41:53.459",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0001",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"sensor_status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+        "action_time": "2020-11-04T11:44:22.850",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0001",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"sensor_status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+        "action_time": "2020-11-04T13:33:21.199",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0001",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"sensor_status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+        "action_time": "2020-11-04T13:46:42.660",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0123",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"sensor_code\", \"sensor_status\", \"level\", \"position_x\", \"position_y\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+        "action_time": "2020-11-04T13:48:21.670",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0123",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"is_handled\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+        "action_time": "2020-11-04T13:51:58.045",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0123",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+        "action_time": "2020-11-04T13:55:48.313",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0123",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"sensor_status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+        "action_time": "2020-11-04T13:56:15.380",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0123",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"sensor_status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+        "action_time": "2020-11-04T13:56:25.765",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0123",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+        "action_time": "2020-11-04T14:01:00.513",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0124",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"sensor_code\", \"position_x\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+        "action_time": "2020-11-04T14:17:42.064",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "3",
+        "object_repr": "DGU0002",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"sensor_status\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+        "action_time": "2020-11-04T14:19:03.940",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "3",
+        "object_repr": "DGU0002",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+        "action_time": "2020-11-04T14:20:06.821",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0001",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"sensor_code\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+        "action_time": "2020-11-04T14:34:47.122",
+        "user": [
+            "su001"
+        ],
+        "content_type": [
+            "logtable",
+            "sensor"
+        ],
+        "object_id": "2",
+        "object_repr": "DGU0001",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"level\"]}}]"
     }
 }
 ]

@@ -42,3 +42,4 @@ class IntegratedSensorSaver(ValueSaver):
             tvoc = int(device['DEVICE_FIELD11']),
             )
         new_values.save()
+        return new_values

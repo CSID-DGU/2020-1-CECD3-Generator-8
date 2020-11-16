@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="utf-8">
@@ -9,7 +9,6 @@
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v4.0.1">
   {% block titlename %}
-
   {% endblock %}
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/dashboard/">
@@ -32,28 +31,64 @@
         font-size: 3.5rem;
       }
     }
+
+    /* Closed submenu icon */
+    #sidebarMenu .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+      content: "∨";
+      font-family: FontAwesome;
+      display: inline;
+      text-align: right;
+      padding-left: 10px;
+    }
+
+    /* Opened submenu icon */
+    #sidebarMenu .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+      content: "＞";
+      font-family: FontAwesome;
+      display: inline;
+      text-align: right;
+      padding-left: 10px;
+    }
   </style>
   <!-- Custom styles for this template -->
   <link href="{% static 'css/base.css' %}" rel="stylesheet">
   <title>DIMS</title>
   <link rel="Shortcut icon" type="image/x-icon" href="/static/img/favicons/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(function tree_menu() {
+        $(".depth1 a").click(function () {
+          var origin = $(this).parent().next();
+          origin.slideToggle("fast", "swing");
+        });
+      });
+    });
+  </script>
+
 </head>
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
   <script type="text/javascript" src="/static/js/bootstrap.js"></script>
   <script type="text/javascript" src="/static/js/jquery.bootstrap.modal.forms.js"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-  <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- EmailJS-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function () {
+        emailjs.init("user_JSZzj8Ox3PwAOIhCx7qOU");
+      })();
+  </script>
+{% if user.is_authenticated %}
+  <!-- <div class="modal fade" tabindex="-1" rolr="dialog" id="modal">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
 
       </div>
     </div>
-  </div>
-  <!--img src="/static/img/favicons/android-icon-192x192.png" alt="Team Generator"-->
+  </div> -->
   <nav class="navbar navbar-dark sticky-top bg-danger flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="https://github.com/CSID-DGU/2020-1-CECD3-Generator-8/">
       <img src="/static/img/favicons/android-icon-48x48.png" alt="Team Generator">
@@ -62,9 +97,6 @@
       data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!--
-      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-    -->
     <div class="navbar-nav">
       <ul class="navbar-nav mx-auto flex-row">
         <li class="nav-item px-3">
@@ -72,6 +104,9 @@
         </li>
         <li class="nav-item px-3">
           <a class="nav-link active" href="#">Help</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link active" href="logout">Logout</a>
         </li>
       </ul>
     </div>
@@ -86,96 +121,130 @@
     </ul>
 
 
-    <ul class="navbar-nav px-3">
-      <li class="nav-item text-nowrap">
-        <a class="nav-link" href="https://github.com/CSID-DGU/2020-1-CECD3-Generator-8/">About us</a>
+    <ul class="navbar-nav mt-md-auto px-3">
+      <li class="navbar-text text-light">
+        <p>Welcome, {{ user.get_username }}.
       </li>
     </ul>
   </nav>
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-        <div class="sidebar-sticky pt-3">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="/" id="dashboard">
-                <span data-feather="home"></span>
-                Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/monitoring" id="monitoring">
-                <span data-feather="monitor"></span>
-                Monitoring
-              </a>
-            </li>
-            {%block Menu%}
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="shopping-cart"></span>
-                Menu3
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="users"></span>
-                Menu4
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="bar-chart-2"></span>
-                Menu5
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="layers"></span>
-                Menu6
-              </a>
-            </li>
-          </ul>
-          {%endblock%}
+      <div id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+        <!-- Bootstrap List Group -->
+        <ul class="list-group">
+          <!-- Separator with title -->
+          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+            <h2 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span><b>Menu</b></span>
+            </h2>
+          </li>
+          <!-- /END Separator -->
+          <a class="nav-link" href="/" id="dashboard">
+            <span data-feather="home"></span>
+            Dashboard
+          </a>
+          <a class="nav-link" href="/monitoring" id="monitoring">
+            <span data-feather="monitor"></span>
+            Monitoring
+          </a>
           {%block building%}
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-            <span>Building List</span>
-            <a class="d-flex align-items-center text-muted" href="#" aria-label="Add a new report">
-              <span data-feather="plus-circle"></span>
+          <!-- Separator with title -->
+          <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+            <h2 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span><b>Building List</b></span>
+            </h2>
+          </li>
+          <!-- /END Separator -->
+          {% for b in building %}
+          <!-- Menu with submenu -->
+          <a href="#submenu{{ b.id }}" data-toggle="collapse" aria-expanded="false"
+            class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-start align-items-center">
+              {{b.building_name}}
+              <span id="collapse-icon" class="submenu-icon ml-auto"></span>
+            </div>
+          </a>
+          <!-- Submenu content -->
+          <div id='submenu{{ b.id }}' class="collapse sidebar-submenu">
+            {%for l in b.level_set.all%}
+            <a class="list-group-item list-group-item-action" href="{%url 'floor' b.id l.level_num%}">
+              <span class="menu-collapsed">{{l.level_num}}</span>
             </a>
-          </h6>
-          {%for b in building%}
-          <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span data-feather="menu"></span>
-                {{b.building_name}}
-                {%for l in b.level_set.all%}
-            <li class="nav-item">
-              <a class="nav-link" href="{%url 'floor' b.id l.level_num%}">
-                &nbsp;&nbsp; <span data-feather="square"></span>
-                {{l.level_num}}</a>
-              {%endfor%}
-              {%endfor%}
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      {% endblock %}
+            {%endfor%}
+          </div>
+          {%endfor%}
+          {% endblock %}
+        </ul><!-- List Group END-->
+      </div><!-- sidebar-container END -->
       {% block content %}
 
       {% endblock %}
     </div>
   </div>
+  {% else %}
+  <div class="bg-danger"style="position: absolute;top: 0;right: 0;bottom: 0;left: 0;">
+    <div class=" bg-danger text-light" style="margin:0px auto;margin-top:10%;height: 35%px; text-align: center; width:30%;" >
+      <img src="/static/img/favicons/android-icon-192x192.png" class="rounded-circle mt-5" alt="Team Generator">
+      <p></p>
+      <div class="text-light", style="text-shadow: 2px 2px 4px #000000;">
+        <h3><small>Hello! Please Login First. <br>If you don't have any account, please sign up first.<br><br></small></h3>
+      </div>
+      <div>
+        <button type="button" class="btn btn-light mr-4 mb-5" onclick="location.href='login'" >Login</button>
+        <button type="button" class="btn btn-warning text-light ml-4 mb-5" onclick="location.href='signup'">Sign up</button>
+        <!-- <a class="btn btn-default" href="signup">Sign up</a>
+        <a class="btn btn-default" href="login">Login</a> -->
+      </div>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+    
+  {% endif %}
   <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
   <script src="{% static 'js/base.js' %}"></script>
+  <script>feather.replace()</script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script>
     var url = window.location.pathname;
     var object_name = url.substring(url.lastIndexOf('/') + 1)
-    $("#" + object_name).addClass('active');
+    if(object_name == 'monitoring' || object_name == 'dashboard') {
+      $("#" + object_name).addClass('active');
+    }
+
+    // Hide submenus
+    $('#body-row .collapse').collapse('hide');
+
+    // Collapse/Expand icon
+    $('#collapse-icon').addClass('fa-angle-double-left');
+
+    // Collapse click
+    $('[data-toggle=sidebar-colapse]').click(function () {
+      SidebarCollapse();
+    });
+
+    function SidebarCollapse() {
+      $('.menu-collapsed').toggleClass('d-none');
+      $('.sidebar-submenu').toggleClass('d-none');
+      $('.submenu-icon').toggleClass('d-none');
+      $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+
+      // Treating d-flex/d-none on separators with title
+      var SeparatorTitle = $('.sidebar-separator-title');
+      if (SeparatorTitle.hasClass('d-flex')) {
+        SeparatorTitle.removeClass('d-flex');
+      } else {
+        SeparatorTitle.addClass('d-flex');
+      }
+
+      // Collapse/Expand icon
+      $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+    }
   </script>
+
 </body>
 
 </html>

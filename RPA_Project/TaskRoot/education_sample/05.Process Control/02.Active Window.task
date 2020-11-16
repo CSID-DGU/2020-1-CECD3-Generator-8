@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" TASKMEMO="﻿&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xD;&#xA;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xD;&#xA;	&lt;head&gt;&#xD;&#xA;		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&lt;title&gt;&#xD;&#xA;		&lt;/title&gt;&#xD;&#xA;		&lt;style type=&quot;text/css&quot;&gt;&#xD;&#xA;			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}&#xD;&#xA;			.cs125E9EFE{color:#000000;background-color:transparent;font-family:'맑은 고딕 Semilight';font-size:11pt;font-weight:normal;font-style:normal;}&#xD;&#xA;		&lt;/style&gt;&#xD;&#xA;	&lt;/head&gt;&#xD;&#xA;	&lt;body&gt;&#xD;&#xA;		&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;시나리오&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- IE 3개를 각각 다음, 구글, 네이버의 주소를 입력하여 실행시킨다.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 1초 간격으로 각각의 브라우저를 활성화한다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="08cf1dc3-edbf-4142-ac0d-1658ea98be53" NAME="Start">
+      <EVENT KEY="0c62b33b-4f5f-4173-8455-9f567a18fcfa" EVENT_NAME="Process Kill" EVENT_TYPE="24" STOPIFERR="0" KILL_PROCESS="iexplore.exe" />
+      <EVENT KEY="6c58c5b4-28bd-4bfa-99ec-1ac0f871e329" EVENT_NAME="Internet Browser" EVENT_TYPE="33" STOPIFERR="1" BROWSER="0" URL="http://www.daum.net" MAXIMIZED_WINDOW="1" />
+      <EVENT KEY="bc142e1f-3b57-4c05-8e8e-d0332f977917" EVENT_NAME="Internet Browser" EVENT_TYPE="33" STOPIFERR="1" BROWSER="0" URL="http://www.google.co.kr" MAXIMIZED_WINDOW="1" />
+      <EVENT KEY="da177330-fe6e-4704-b7a9-2abebdcd1266" EVENT_NAME="Internet Browser" EVENT_TYPE="33" STOPIFERR="1" BROWSER="0" URL="http://www.naver.com" MAXIMIZED_WINDOW="1" />
+      <EVENT KEY="0e280b96-d766-4ac6-91ce-69e296d10fa9" EVENT_NAME="Wait Time" EVENT_TYPE="10" WAIT_TIME="1000" />
+      <EVENT KEY="5c06e07f-dbb2-420d-86ff-2b635bff0f5f" EVENT_NAME="Active Window" EVENT_TYPE="22" STOPIFERR="1" MAXIMUM_RUNTIME="10000" CHECK_TYPE="0" TARGET_WINDOW="Daum - Internet Explorer" />
+      <EVENT KEY="053a152b-987d-4549-b006-72786d9c2e79" EVENT_NAME="Wait Time" EVENT_TYPE="10" WAIT_TIME="1000" />
+      <EVENT KEY="0923db97-ae76-4f44-9c4e-f2119c0eb348" EVENT_NAME="Active Window" EVENT_TYPE="22" STOPIFERR="1" MAXIMUM_RUNTIME="10000" CHECK_TYPE="0" TARGET_WINDOW="Google - Internet Explorer" />
+      <EVENT KEY="4fec645b-1ca8-4fde-ac5d-2389b2a69e4d" EVENT_NAME="Wait Time" EVENT_TYPE="10" WAIT_TIME="1000" />
+      <EVENT KEY="696b5880-0827-4486-8450-9562e60a973e" EVENT_NAME="Active Window" EVENT_TYPE="22" STOPIFERR="1" MAXIMUM_RUNTIME="10000" CHECK_TYPE="0" TARGET_WINDOW="NAVER - Internet Explorer" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES />
+</TASKSCRIPT>

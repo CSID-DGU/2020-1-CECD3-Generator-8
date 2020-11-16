@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" TASKMEMO="﻿&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xD;&#xA;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xD;&#xA;	&lt;head&gt;&#xD;&#xA;		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&lt;title&gt;&#xD;&#xA;		&lt;/title&gt;&#xD;&#xA;		&lt;style type=&quot;text/css&quot;&gt;&#xD;&#xA;			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}&#xD;&#xA;			.cs125E9EFE{color:#000000;background-color:transparent;font-family:'맑은 고딕 Semilight';font-size:11pt;font-weight:normal;font-style:normal;}&#xD;&#xA;		&lt;/style&gt;&#xD;&#xA;	&lt;/head&gt;&#xD;&#xA;	&lt;body&gt;&#xD;&#xA;		&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;시나리오&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 엑셀을 열어서 Sheet List를 구한다.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- 마지막 시트([Sheet List].Count) 를 Active하고 종료한다.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="2c9a0ef9-e46f-45d7-9ef9-13dd90fb6ddd" NAME="Start">
+      <EVENT KEY="19073c12-5073-4806-99dc-b33ba7152132" EVENT_NAME="Excel Open" EVENT_TYPE="50" EXCEL_ID="1" IS_VISIBLE="1" EXCEL_FILE="C:\test1\checkMate\test.xlsx" />
+      <EVENT KEY="456e1d03-a52b-4b46-8d75-1d2d84490cee" EVENT_NAME="Excel Sheet List" EVENT_TYPE="53" EXCEL_ID="1" PARAM_NAME="excelSheetList" />
+      <EVENT KEY="a41582b2-bc7d-40ac-9d9c-6823d9500c96" EVENT_NAME="Excel Sheet Active" EVENT_TYPE="54" EXCEL_ID="1" ACTIVE_INDEX="0" PRE_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void PreRun(EvPPEntry_ExcelSheetActive EntryData)&#xD;&#xA;	{&#xD;&#xA;		EntryData.ActiveSheetIndex = excelSheetList.Count;&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+      <EVENT KEY="6d577b1c-b17c-4c8c-8fe7-d23266056c49" EVENT_NAME="Excel Close" EVENT_TYPE="52" EXCEL_ID="1" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES>
+    <VARIABLE NAME="excelSheetList" TYPE="List&lt;string&gt;" DEFAULT="" DESCRIPTION="" />
+  </VARIABLES>
+</TASKSCRIPT>

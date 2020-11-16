@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" TASKMEMO="﻿&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;&#xD;&#xA;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&#xD;&#xA;	&lt;head&gt;&#xD;&#xA;		&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;&lt;title&gt;&#xD;&#xA;		&lt;/title&gt;&#xD;&#xA;		&lt;style type=&quot;text/css&quot;&gt;&#xD;&#xA;			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}&#xD;&#xA;			.cs125E9EFE{color:#000000;background-color:transparent;font-family:'맑은 고딕 Semilight';font-size:11pt;font-weight:normal;font-style:normal;}&#xD;&#xA;		&lt;/style&gt;&#xD;&#xA;	&lt;/head&gt;&#xD;&#xA;	&lt;body&gt;&#xD;&#xA;		&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;시나리오&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- &amp;quot;00.PDF Download&amp;quot;를 실행하여 PDF를 다운로드 받는다.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- PDF의 전체 Page Count를 구한다.&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;cs2654AE3A&quot;&gt;&lt;span class=&quot;cs125E9EFE&quot;&gt;&amp;nbsp;- PDF의 10페이지 text를 구한다. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&#xD;&#xA;&lt;/html&gt;&#xD;&#xA;">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="f5d59fd3-0f0a-46d1-b04f-f1edda5f85ac" NAME="Start">
+      <EVENT KEY="f162f352-7147-4e04-ba05-807dcfa1023a" EVENT_NAME="Pdf Get PageCount" EVENT_TYPE="160" STOPIFERR="1" FILEPATH="C:\test1\checkMate\test.pdf" PARAM_NAME="pdfPageCount" />
+      <EVENT KEY="42630e4c-1746-4124-86ee-278df917eb25" EVENT_NAME="Pdf Get Text" EVENT_TYPE="161" STOPIFERR="1" PAGENUMBER="10" FILEPATH="C:\test1\checkMate\test.pdf" PARAM_NAME="pdfText" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <VARIABLES>
+    <VARIABLE NAME="pdfPageCount" TYPE="int" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="pdfText" TYPE="string" DEFAULT="" DESCRIPTION="" />
+  </VARIABLES>
+</TASKSCRIPT>
