@@ -13,6 +13,7 @@ from datetime import datetime, timedelta
 import djqscsv.djqscsv as djqscsv  # NOQA
 from djqscsv._csql import SELECT, EXCLUDE, AS, CONSTANT  # NOQA
 from djqscsv import render_to_csv_response
+import pandas as pd
 
 def download_file(request, filepath, client_filename):
     # fill these variables with real values
@@ -87,9 +88,15 @@ def get_sme20u_data_in_json_days(request, sensor_code, days):
     THRESHOLD_DAYS = days
     threshold_time = present_time - timedelta(days=THRESHOLD_DAYS)
 
-    data = SME20U_Value.objects.filter(log_ptr__sensor__sensor_code=sensor_code).filter(log_ptr__updated_time__gte=threshold_time)
-    all_objects = [*data, *Log.objects.filter(sensor__sensor_code=sensor_code).filter(updated_time__gte=threshold_time)]
-    json_data = serializers.serialize('json', all_objects)
+    sme20u_qs = SME20U_Value.objects.filter(log_ptr__sensor__sensor_code=sensor_code).filter(log_ptr__updated_time__gte=threshold_time)
+    sme20u_df = pd.DataFrame.from_records(sme20u_qs.values())
+    log_qs = Log.objects.filter(sensor__sensor_code=sensor_code).filter(updated_time__gte=threshold_time)
+    log_df = pd.DataFrame.from_records(log_qs.values())
+    merged_df = pd.merge(sme20u_df, log_df)
+
+    #all_objects = [*data, *Log.objects.filter(sensor__sensor_code=sensor_code).filter(updated_time__gte=threshold_time)]
+    #json_data = serializers.serialize('json', all_objects)
+    json_data = merged_df.to_json(orient='records')
     return HttpResponse(json_data, content_type="text/json-comment-filtered")
 
 def get_sme20u_data_in_json(request, sensor_code):
