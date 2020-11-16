@@ -200,26 +200,29 @@
   var text_message = 'Report status has been changed, Check it out\n Reported time : ' + time +'\n'+'';
 
   function sendText(){
-    Kakao.API.request({
-      url: '/v2/api/talk/memo/default/send',
-      data: {
-        template_object:{
-          object_type: "text",
-          text: text_message,
-          link: {
-              "web_url": "http://ec2-18-206-198-8.compute-1.amazonaws.com/monitoring",
-              "mobile_web_url": "http://ec2-18-206-198-8.compute-1.amazonaws.com/monitoring"
-          },
-          button_title: "Check it out"
-        },
+    Kakao.Link.sendDefault({
+      objectType: 'text',
+      text: text_message,
+      link: {
+            webUrl: 'http://ec2-18-206-198-8.compute-1.amazonaws.com/monitoring',
+            mobileWebUrl: 'http://ec2-18-206-198-8.compute-1.amazonaws.com/monitoring'
       },
-      success: function(response) {
-        console.log(response);
-      },
-      fail: function(error) {
-        console.log(error);
-      },
+      buttonTitle: 'Check it out'
     });
+    // Kakao.API.request({
+    //   url: '/v2/api/talk/memo/default/send',
+    //   data: {
+    //     template_object:{
+          
+    //     },
+    //   },
+    //   success: function(response) {
+    //     console.log(response);
+    //   },
+    //   fail: function(error) {
+    //     console.log(error);
+    //   },
+    // });
   };
 </script>
 {% endblock %}
