@@ -137,7 +137,6 @@ def run(call_time):
     mailMessage += '<i>'
     user_emails = User.objects.filter(is_active=True).exclude(email='').values_list('email', flat=True) # 모든 django 사용자 이메일 받아옴
     user_emails = list(user_emails) #쿼리셋을 리스트로 변경
-    print(user_emails)
     if len(not_good_sensors) != 0:  
         for email in user_emails:
             headers = {
