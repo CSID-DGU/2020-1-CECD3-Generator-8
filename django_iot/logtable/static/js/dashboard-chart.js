@@ -1,14 +1,15 @@
 /*
- * File: chartdataconstructor.js
+ * File: dashboard-chart.js
  * Project: js
- * File Created: Wednesday, 28th October 2020 4:25:19 pm
+ * File Created: Monday, 16th November 2020 11:57:57 pm
  * Author: Jongyeon Yoon (0417yjy@naver.com)
  * -----
- * Last Modified: Wednesday, 28th October 2020 4:25:35 pm
+ * Last Modified: Tuesday, 17th November 2020 12:02:20 am
  * Modified By: Jongyeon Yoon (0417yjy@naver.com>)
  * -----
  * Copyright 2020 Jongyeon Yoon
  */
+$.getScript("https://unpkg.com/dateformat@3.0.3/lib/dateformat.js");
 
 function ChartDataSets(label, backgroundColor, borderColor) {
     this.label = label;
@@ -73,16 +74,17 @@ function ChartDataSets(label, backgroundColor, borderColor) {
     ];
     var i, j;
     var date = "";
-    for (i = 0; i < json_arr.length / 2; i++) {
+    for (i = 0; i < json_arr.length; i++) {
       var data_arr = [
-        json_arr[i].fields.temp,
-        json_arr[i].fields.humid,
-        json_arr[i].fields.illum,
-        json_arr[i].fields.radar,
-        json_arr[i].fields.co2,
-        json_arr[i].fields.tvoc,
+        json_arr[i].temp,
+        json_arr[i].humid,
+        json_arr[i].illum,
+        json_arr[i].radar,
+        json_arr[i].co2,
+        json_arr[i].tvoc,
       ];
-      var updated_time = json_arr[i + json_arr.length / 2].fields.updated_time;
+      var updated_time = new Date(json_arr[i].updated_time);
+      updated_time = dateFormat(updated_time, "yyyy-mm-dd'T'HH:MM:ss");
       var updated_date = updated_time.substring(0, 10);
       if (date != updated_date) {
         date = updated_date;
