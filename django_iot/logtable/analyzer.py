@@ -48,6 +48,7 @@ class N_Sigma_Analyzer(Analyzer):
         self.sigma_value = v
 
     def update(self, log, time, device):
+        global not_good_sensors
         logtime = log.updated_time
         current_sensor = log.sensor
         operational_period = current_sensor.sensor_model.period
@@ -74,7 +75,9 @@ class N_Sigma_Analyzer(Analyzer):
         else:
             current_sensor.sensor_status = 'BR'
             faulty_flag = True
+
         current_sensor.save()
+
         if faulty_flag: 
             try:
                 # 있는지 탐색
@@ -96,6 +99,11 @@ class N_Sigma_Analyzer(Analyzer):
                     fault_status=current_sensor.sensor_status,
                 )
                 new_faultlog.save()
+        print(current_sensor.sensor_status)
+        if current_sensor.sensor_status !='OP': #현재 센서의 상태가 OP가 아니면
+            return current_sensor #현재 센서를 반환
+        else: # 아니면 None 반환
+            return None
                 
     def StateAnalysis(self, sensor, device):
         sensor_values = SME20U_Value.objects.filter(sensor_id=sensor.id)

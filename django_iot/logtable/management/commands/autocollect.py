@@ -14,12 +14,14 @@ import json
 import requests
 import os
 import time
+from collections import OrderedDict
 from django.core.management.base import BaseCommand
 from logtable.models import Sensor, Level, Log, Building, DeviceModel
 from datetime import datetime, timedelta
 from logtable.analyzer import N_Sigma_Analyzer
 from logtable.valuesaver import *
 from django.db.models import Q
+from django.contrib.auth.models import User
 
 def check_prerequisite():
     try:
@@ -97,6 +99,7 @@ def save_into_db(device):
 
 def run(call_time):
     #print('run() called')
+    not_good_sensors = [] # sensor_status가 OP가 아닌 센서들 담을 리스트
     url = "http://115.68.37.90/api/logs/latest"
     payload = {}
     headers = {
@@ -124,7 +127,27 @@ def run(call_time):
         if is_log_generated(i, call_time):
             # 센서 값은 로그가 생성됐을 때만 저장함
             log = save_into_db(i)
-            analyzer.update(log, call_time, i) # 새로 만든 로그에 대하여 분석
+            this_sensor = analyzer.update(log, call_time, i) # 새로 만든 로그에 대하여 분석
+            if this_sensor!= None: # update메서드로부터 반환된 this_sensor이 None이 아니면 
+                not_good_sensors.append(this_sensor) #센서 목록에 추가
+    nowTime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    mailMessage = '<i>'
+    for sensor in not_good_sensors:
+        mailMessage+= 'Sensor Code : '+sensor.sensor_code + '<br>'+'Sensor Status : '+sensor.sensor_status + '<br>'+'Reported time : ' + nowTime+'<br>'+'--------<br>'
+    mailMessage += '<i>'
+    user_emails = User.objects.filter(is_active=True).exclude(email='').values_list('email', flat=True) # 모든 django 사용자 이메일 받아옴
+    user_emails = list(user_emails) #쿼리셋을 리스트로 변경
+    print(user_emails)
+    if len(not_good_sensors) != 0:  
+        for email in user_emails:
+            headers = {
+                'Content-Type': 'application/json',
+            }
+            data = '{"service_id": "TeamGenerator", "template_id": "MyTemplate_001", "user_id": "user_JSZzj8Ox3PwAOIhCx7qOU", "template_params" : { "from_name" : "teamGenerator", "message" : "' +mailMessage+'", "to_email" : "'+ email+'"}}'
+            response = requests.post('https://api.emailjs.com/api/v1.0/email/send', headers=headers, data=data)
+            print(response.text)
+
+
     delete_operational_oldvalues_sme20u(call_time)
                    
     os.remove('result.json')  # 가져왔던 reuslt.json 삭제

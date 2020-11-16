@@ -101,22 +101,14 @@ def get_sme20u_data_in_json(request, sensor_code):
 def monitoring(request):
     building = Building.objects.exclude(levels=0)
     level = Level.objects.all()
-    # 수정 필요
-    # sensor_list = list(sensors_with_problems.values())
-    # for i in range(0,len(sensor_list)):
-    #     del sensor_list[i]['is_handled']
-    #     del sensor_list[i]['updated_time']
     logs_with_problems = FaultLog.objects.filter(is_handled=False)
     table = MonitoringTableQuerySet(
         logs_with_problems)  # make a table by sensor queryset
-    user_email = request.user.email
     # render table
     return render(request, 'logtable/monitoring.html', {
         'table': table,
         'building':building,
         'level':level,
-        #'sensor_list': sensor_list,
-        'to_email': user_email
     })
 
 #method for crawling monitoring page
