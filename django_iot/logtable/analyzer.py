@@ -32,14 +32,41 @@ class SimpleAnalyzer(Analyzer):
         
         elapsed_time = time - logtime
         diff = elapsed_time.total_seconds()
+        faulty_flag = False
         if diff <= operational_period + 3:
             # 정상 작동
             sensor.sensor_status = 'OP'
         elif diff <= operational_period * 3:
             sensor.sensor_status = 'TE'
+            faulty_flag = True
         else:
             sensor.sensor_status = 'BR'
+            faulty_flag = True
         sensor.save()
+
+        if faulty_flag:
+            current_sensor = sensor
+            try:
+                # 있는지 탐색
+                existing_log = FaultLog.objects.filter(log_ptr__updated_time=logtime).get(log_ptr__sensor=current_sensor)
+                # 있으면, TE에서 BR로 바뀌었을 때 값만 수정해줌
+                if existing_log.fault_status == 'TE':
+                    if current_sensor.sensor_status == 'BR':
+                        existing_log.fault_status = 'BR'
+                        # 보고서 재작성 필요
+                        existing_log.is_daily_reported = False
+                        existing_log.is_reported = False
+                        existing_log.is_handled = False
+                    
+            except FaultLog.DoesNotExist:
+                # 없으면 고장 로그 생성
+                new_faultlog = FaultLog(
+                    sensor=current_sensor,
+                    updated_time=logtime,
+                    fault_status=current_sensor.sensor_status,
+                )
+                new_faultlog.save()
+        print(current_sensor.sensor_status)
 
         if sensor.sensor_status != 'OP':  # 각 고장 현상에 대하여 한 번씩만 리포트하도록
             if not sensor.is_fault_monitored:
