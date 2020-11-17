@@ -70,8 +70,9 @@ class SimpleAnalyzer(Analyzer):
 
         if sensor.sensor_status != 'OP':  # 각 고장 현상에 대하여 한 번씩만 리포트하도록
             if not sensor.is_fault_monitored:
-                sensor.is_fault_monitored = True
-                sensor.save()
+                if current_sensor.sensor_status == 'TE' or current_sensor.sensor_status == 'BR':
+                    sensor.is_fault_monitored = True
+                    sensor.save()
                 return sensor
         return None
 
@@ -103,6 +104,7 @@ class N_Sigma_Analyzer(Analyzer):
             else:
                 current_sensor.sensor_status = 'WN'
                 print(current_sensor.sensor_code, ':', current_sensor.sensor_status)
+                current_sensor.is_fault_monitored = False
                 faulty_flag = True
             
         elif diff <= operational_period * 3:
@@ -138,8 +140,9 @@ class N_Sigma_Analyzer(Analyzer):
         print(current_sensor.sensor_status)
         if current_sensor.sensor_status != 'OP':  #현재 센서의 상태가 OP가 아니면
             # 새 로그가 생성되고 분석하므로 항상 리턴
-            current_sensor.is_fault_monitored = True
-            current_sensor.save()
+            if current_sensor.sensor_status == 'TE' or current_sensor.sensor_status == 'BR':
+                current_sensor.is_fault_monitored = True
+                current_sensor.save()
             return current_sensor
         return None
                 
