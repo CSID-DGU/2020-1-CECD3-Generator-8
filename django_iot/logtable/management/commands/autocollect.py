@@ -16,7 +16,7 @@ import os
 import time
 from collections import OrderedDict
 from django.core.management.base import BaseCommand
-from logtable.models import Sensor, Level, Log, Building, DeviceModel
+from logtable.models import Sensor, Level, Log, Building, DeviceModel, FaultLog
 from datetime import datetime, timedelta
 from logtable.analyzer import N_Sigma_Analyzer, SimpleAnalyzer
 from logtable.valuesaver import *
