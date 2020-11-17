@@ -66,7 +66,7 @@ class SimpleAnalyzer(Analyzer):
                     fault_status=current_sensor.sensor_status,
                 )
                 new_faultlog.save()
-        print(current_sensor.sensor_status)
+        print(sensor.sensor_status)
 
         if sensor.sensor_status != 'OP':  # 각 고장 현상에 대하여 한 번씩만 리포트하도록
             if not sensor.is_fault_monitored:
