@@ -16,9 +16,9 @@ import os
 import time
 from collections import OrderedDict
 from django.core.management.base import BaseCommand
-from logtable.models import Sensor, Level, Log, Building, DeviceModel
+from logtable.models import Sensor, Level, Log, Building, DeviceModel, FaultLog
 from datetime import datetime, timedelta
-from logtable.analyzer import N_Sigma_Analyzer
+from logtable.analyzer import N_Sigma_Analyzer, SimpleAnalyzer
 from logtable.valuesaver import *
 from django.db.models import Q
 from django.contrib.auth.models import User
@@ -122,14 +122,22 @@ def run(call_time):
     # json파일 내에 result에 있는 IoT 센서 정보를 IoTDevices 배열에 저장
     IoTDevices = json_data['result']
 
-    analyzer = N_Sigma_Analyzer(2) # Make 2_Sigma_Analyzer
+    sigma_analyzer = N_Sigma_Analyzer(2)  # Make 2_Sigma_Analyzer
+    simple_analyzer = SimpleAnalyzer()
     for i in IoTDevices:
         if is_log_generated(i, call_time):
             # 센서 값은 로그가 생성됐을 때만 저장함
             log = save_into_db(i)
-            this_sensor = analyzer.update(log, call_time, i) # 새로 만든 로그에 대하여 분석
+            this_sensor = sigma_analyzer.update(log, call_time, i) # 새로 만든 로그에 대하여 분석
             if this_sensor!= None: # update메서드로부터 반환된 this_sensor이 None이 아니면 
-                not_good_sensors.append(this_sensor) #센서 목록에 추가
+                not_good_sensors.append(this_sensor)  #센서 목록에 추가
+        else:
+            scode = i['DEVICE_SCODE']
+            log = Log.objects.filter(sensor__sensor_code=scode).latest('updated_time')
+            this_sensor = simple_analyzer.update(log, call_time)
+            if this_sensor!= None: # update메서드로부터 반환된 this_sensor이 None이 아니면 
+                not_good_sensors.append(this_sensor)  #센서 목록에 추가
+            
     nowTime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     mailMessage = '<i>'
     for sensor in not_good_sensors:
