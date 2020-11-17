@@ -98,7 +98,6 @@ def get_sme20u_data_in_json_days(request, sensor_code, days):
         
 
     sme20u_df = pd.DataFrame.from_records(sme20u_qs.values())
-    print(sme20u_df)
     log_qs = Log.objects.filter(sensor__sensor_code=sensor_code).filter(updated_time__gte=threshold_time)
     if no_logs_in_ndays:
         last_log_pk = Log.objects.filter(sensor__sensor_code=sensor_code).latest('updated_time').pk
