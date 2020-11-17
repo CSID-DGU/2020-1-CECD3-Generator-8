@@ -41,6 +41,13 @@ class SimpleAnalyzer(Analyzer):
             sensor.sensor_status = 'BR'
         sensor.save()
 
+        if sensor.sensor_status != 'OP':  # 각 고장 현상에 대하여 한 번씩만 리포트하도록
+            if not sensor.is_fault_monitored:
+                sensor.is_fault_monitored = True
+                sensor.save()
+                return sensor
+        return None
+
 class N_Sigma_Analyzer(Analyzer):
     sigma_value = 2  # default value is 2 (95%)
     
@@ -63,7 +70,9 @@ class N_Sigma_Analyzer(Analyzer):
                 # is_handled가 False로 되어 있는 오류들은 전부 True로 다시 바꾼다
                 handled_logs = FaultLog.objects.filter(log_ptr__sensor=current_sensor).filter(is_handled='False')
                 handled_logs.update(is_handled='True')
-                
+                # is_fault_monitored도 False로 바꿈
+                current_sensor.is_fault_monitored = False
+                current_sensor.save()
             else:
                 current_sensor.sensor_status = 'WN'
                 print(current_sensor.sensor_code, ':', current_sensor.sensor_status)
@@ -100,10 +109,12 @@ class N_Sigma_Analyzer(Analyzer):
                 )
                 new_faultlog.save()
         print(current_sensor.sensor_status)
-        if current_sensor.sensor_status !='OP': #현재 센서의 상태가 OP가 아니면
-            return current_sensor #현재 센서를 반환
-        else: # 아니면 None 반환
-            return None
+        if current_sensor.sensor_status != 'OP':  #현재 센서의 상태가 OP가 아니면
+            # 새 로그가 생성되고 분석하므로 항상 리턴
+            current_sensor.is_fault_monitored = True
+            current_sensor.save()
+            return current_sensor
+        return None
                 
     def StateAnalysis(self, sensor, device):
         sensor_values = SME20U_Value.objects.filter(sensor_id=sensor.id)
