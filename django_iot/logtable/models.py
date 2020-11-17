@@ -81,7 +81,8 @@ class Sensor(models.Model):  # Model for IoT devices.
     # status that analyzed by data analyzing module.
     sensor_status = models.CharField(
         max_length=2, choices=STATUS_CHOICES, default='ND')
-    updated_time = models.DateTimeField(default=timezone.now) # is_handled 삭제 -> Log 모델로 옮겨짐
+    updated_time = models.DateTimeField(default=timezone.now)  # is_handled 삭제 -> Log 모델로 옮겨짐
+    is_fault_monitored = models.BooleanField(default='False') # 고장 현상이 보고된 바 있음
 
     # Foreign key. Level ID that IoT Sensor is placed at(?)
     level = models.ForeignKey('Level', on_delete=models.CASCADE)
