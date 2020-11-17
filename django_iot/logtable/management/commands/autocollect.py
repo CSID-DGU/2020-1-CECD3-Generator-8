@@ -133,7 +133,7 @@ def run(call_time):
                 not_good_sensors.append(this_sensor)  #센서 목록에 추가
         else:
             scode = i['DEVICE_SCODE']
-            log = FaultLog.objects.filter(sensor__sensor_code=scode).latest('updated_time')
+            log = Log.objects.filter(sensor__sensor_code=scode).latest('updated_time')
             this_sensor = simple_analyzer.update(log, call_time)
             if this_sensor!= None: # update메서드로부터 반환된 this_sensor이 None이 아니면 
                 not_good_sensors.append(this_sensor)  #센서 목록에 추가

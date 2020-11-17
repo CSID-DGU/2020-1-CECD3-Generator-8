@@ -61,7 +61,7 @@ class SimpleAnalyzer(Analyzer):
                     # 있는데 마지막 로그가 WN이면, 현재 시간에 대하여 'TE' 표시
                     new_faultlog = FaultLog(
                         sensor=current_sensor,
-                        updated_time=logtime,
+                        updated_time=time,
                         fault_status=current_sensor.sensor_status,
                     )
                     new_faultlog.save()
