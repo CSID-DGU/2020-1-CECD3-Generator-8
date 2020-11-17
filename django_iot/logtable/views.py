@@ -87,15 +87,25 @@ def get_sme20u_data_in_json_days(request, sensor_code, days):
     present_time = datetime.now()
     THRESHOLD_DAYS = days
     threshold_time = present_time - timedelta(days=THRESHOLD_DAYS)
+    no_logs_in_ndays = False
 
     sme20u_qs = SME20U_Value.objects.filter(log_ptr__sensor__sensor_code=sensor_code).filter(log_ptr__updated_time__gte=threshold_time)
+    if sme20u_qs.count() == 0:
+        # no such value
+        last_log_pk = SME20U_Value.objects.filter(log_ptr__sensor__sensor_code=sensor_code).latest('updated_time').pk
+        sme20u_qs = SME20U_Value.objects.filter(pk=last_log_pk)
+        no_logs_in_ndays = True
+        
+
     sme20u_df = pd.DataFrame.from_records(sme20u_qs.values())
+    print(sme20u_df)
     log_qs = Log.objects.filter(sensor__sensor_code=sensor_code).filter(updated_time__gte=threshold_time)
+    if no_logs_in_ndays:
+        last_log_pk = Log.objects.filter(sensor__sensor_code=sensor_code).latest('updated_time').pk
+        log_qs = Log.objects.filter(pk=last_log_pk)
     log_df = pd.DataFrame.from_records(log_qs.values())
     merged_df = pd.merge(sme20u_df, log_df)
-
-    #all_objects = [*data, *Log.objects.filter(sensor__sensor_code=sensor_code).filter(updated_time__gte=threshold_time)]
-    #json_data = serializers.serialize('json', all_objects)
+    
     json_data = merged_df.to_json(orient='records')
     return HttpResponse(json_data, content_type="text/json-comment-filtered")
 
