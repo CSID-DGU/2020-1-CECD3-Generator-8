@@ -57,6 +57,14 @@ class SimpleAnalyzer(Analyzer):
                         existing_log.is_daily_reported = False
                         existing_log.is_reported = False
                         existing_log.is_handled = False
+                if existing_log.fault_status == 'WN':
+                    # 있는데 마지막 로그가 WN이면, 현재 시간에 대하여 'TE' 표시
+                    new_faultlog = FaultLog(
+                        sensor=current_sensor,
+                        updated_time=logtime,
+                        fault_status=current_sensor.sensor_status,
+                    )
+                    new_faultlog.save()
                     
             except FaultLog.DoesNotExist:
                 # 없으면 고장 로그 생성
