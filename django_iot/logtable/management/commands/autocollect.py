@@ -143,14 +143,15 @@ def run(call_time):
     for sensor in not_good_sensors:
         mailMessage+= 'Sensor Code : '+sensor.sensor_code + '<br>'+'Sensor Status : '+sensor.sensor_status + '<br>'+'Reported time : ' + nowTime+'<br>'+'--------<br>'
     mailMessage += '<i>'
-    user_emails = User.objects.filter(is_active=True).exclude(email='').values_list('email', flat=True) # 모든 django 사용자 이메일 받아옴
+    user_emails = User.objects.filter(is_staff=True).exclude(email='').values_list('email', flat=True) # 모든 django 사용자 이메일 받아옴
     user_emails = list(user_emails) #쿼리셋을 리스트로 변경
+    
     if len(not_good_sensors) != 0:  
         for email in user_emails:
             headers = {
                 'Content-Type': 'application/json',
             }
-            data = '{"service_id": "TeamGenerator", "template_id": "MyTemplate_001", "user_id": "user_JSZzj8Ox3PwAOIhCx7qOU", "template_params" : { "from_name" : "teamGenerator", "message" : "' +mailMessage+'", "to_email" : "'+ email+'"}}'
+            data = '{"service_id": "service_2x4h2rq", "template_id": "template_tg65and", "user_id": "user_d95fByibLOt38KFyLiTYg", "template_params" : { "from_name" : "teamGenerator", "message" : "' +mailMessage+'", "to_email" : "'+ email+'"}}'
             response = requests.post('https://api.emailjs.com/api/v1.0/email/send', headers=headers, data=data)
             print(response.text)
 
