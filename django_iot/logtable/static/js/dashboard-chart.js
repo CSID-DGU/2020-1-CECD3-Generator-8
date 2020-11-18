@@ -153,7 +153,7 @@ function getDataArray(json_arr) {
       console.log('Pushing ' + formated_missed_updated_time);
       for (k = 0; k < CHART_NUM; k++) {
         charts[k].data.labels.push(formated_missed_updated_time);
-        charts[k].data.datasets[0].data.push(null);
+        charts[k].data.datasets[0].data.push(null); // 여기에요 여기
         charts[k].data.datasets[1].data.push(data_arr[k]);
       }
     }
