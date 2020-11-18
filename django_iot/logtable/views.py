@@ -105,7 +105,8 @@ def get_sme20u_data_in_json_days(request, sensor_code, days):
     log_df = pd.DataFrame.from_records(log_qs.values())
     merged_df = pd.merge(sme20u_df, log_df)
     
-    json_data = merged_df.to_json(orient='records')
+    json_data = merged_df.to_json(orient='records', date_format="iso").replace('.000Z', '')
+    print(json_data)
     return HttpResponse(json_data, content_type="text/json-comment-filtered")
 
 def get_sme20u_data_in_json(request, sensor_code):
@@ -236,7 +237,8 @@ def floor(request,b_id,l_num):
     sensor_infos = list(sensor1.values())
     for i in range(0,len(sensor_infos)):
         del sensor_infos[i]['updated_time']
-        
+        del sensor_infos[i]['is_fault_monitored']
+
     return render(request, 'logtable/floor.html', {
         'level_info':level_info,
         'levels':levels,#level_info JSON test

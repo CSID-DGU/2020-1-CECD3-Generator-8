@@ -205,3 +205,4 @@ function chartButtonHandler(item) {
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
 }
+
