@@ -65,12 +65,12 @@ function ChartConfig(label, sign, backgroundColor, borderColor, minValue, maxVal
         }
       ],
       xAxes: [{
-        type: 'time',
-        time: {
-          displayFormats: {
-            second: "yyyy-mm-dd'T'HH:MM:ss"
-          }
-        },
+        // type: 'time',
+        // time: {
+        //   displayFormats: {
+        //     second: "yyyy-mm-dd'T'HH:MM:ss"
+        //   }
+        // },
         ticks: {
           fontSize: 10
         }
@@ -104,56 +104,59 @@ function getDataArray(json_arr) {
     ];
     var updated_time = new Date(json_arr[i].updated_time);
     var formated_updated_time = dateFormat(updated_time, "yyyy-mm-dd'T'HH:MM:ss");
-    // var updated_date = formated_updated_time.substring(0, 10);
-    // if (date != updated_date) {
-    //   date = updated_date;
-    // } else {
-    //   formated_updated_time = formated_updated_time.substr(11);
-    // }
+    var updated_date = formated_updated_time.substring(0, 10);
+    if (date != updated_date) {
+      date = updated_date;
+    } else {
+      formated_updated_time = formated_updated_time.substr(11);
+    }
 
     for (j = 0; j < CHART_NUM; j++) {
       charts[j].data.labels.push(formated_updated_time);
       charts[j].data.datasets[0].data.push(data_arr[j]);
+      charts[j].data.datasets[1].data.push(null);
     }
 
     if (i == json_arr.length - 1) {
       for (j = 0; j < CHART_NUM; j++) {
         charts[j].data.labels.push(dateFormat(new Date(), "yyyy-mm-dd'T'HH:MM:ss"));
         charts[j].data.datasets[0].data.push(data_arr[j]);
+        // charts[j].data.datasets[1].data.push(null);
       }
     }
 
-    // // check gap between next log
-    // var next_log_updated_time;
-    // // get next log's updated time
-    // if (i == json_arr.length - 1) {
-    //   next_log_updated_time = new Date(); // for the last log, next updated time is current time
-    // }
-    // else {
-    //   next_log_updated_time = new Date(json_arr[i + 1].updated_time);
-    // }
-    // console.log("cur: " + updated_time + "\nnext: " + next_log_updated_time);
-    // // calculate difference in minute
-    // var diff_minutes_between_logs = Math.floor(((next_log_updated_time - updated_time) / 1000) / 60);
-    // console.log(diff_minutes_between_logs);
-    // // calculate numbers of missed logs
-    // var num_missed_logs = diff_minutes_between_logs / PERIOD_MINUTE - 1;
-    // console.log(num_missed_logs);
-    // for (j = 1; j < num_missed_logs; j++) {
-    //   var missed_updated_time = new Date(updated_time.getTime() + j * 1000 * 60 * PERIOD_MINUTE);
-    //   var formated_missed_updated_time = dateFormat(missed_updated_time, "yyyy-mm-dd'T'HH:MM:ss");
-    //   var missed_updated_date = formated_missed_updated_time.substring(0, 10);
-    //   if (date != missed_updated_date) {
-    //     date = missed_updated_date;
-    //   } else {
-    //     formated_missed_updated_time = formated_missed_updated_time.substr(11);
-    //   }
-    //   console.log('Pushing ' + formated_missed_updated_time);
-    //   for (k = 0; k < CHART_NUM; k++) {
-    //     charts[k].data.labels.push(formated_missed_updated_time);
-    //     charts[k].data.datasets[1].data.push(data_arr[k]);
-    //   }
-    // }
+    // check gap between next log
+    var next_log_updated_time;
+    // get next log's updated time
+    if (i == json_arr.length - 1) {
+      next_log_updated_time = new Date(); // for the last log, next updated time is current time
+    }
+    else {
+      next_log_updated_time = new Date(json_arr[i + 1].updated_time);
+    }
+    console.log("cur: " + updated_time + "\nnext: " + next_log_updated_time);
+    // calculate difference in minute
+    var diff_minutes_between_logs = Math.floor(((next_log_updated_time - updated_time) / 1000) / 60);
+    console.log(diff_minutes_between_logs);
+    // calculate numbers of missed logs
+    var num_missed_logs = diff_minutes_between_logs / PERIOD_MINUTE - 1;
+    console.log(num_missed_logs);
+    for (j = 1; j < num_missed_logs; j++) {
+      var missed_updated_time = new Date(updated_time.getTime() + j * 1000 * 60 * PERIOD_MINUTE);
+      var formated_missed_updated_time = dateFormat(missed_updated_time, "yyyy-mm-dd'T'HH:MM:ss");
+      var missed_updated_date = formated_missed_updated_time.substring(0, 10);
+      if (date != missed_updated_date) {
+        date = missed_updated_date;
+      } else {
+        formated_missed_updated_time = formated_missed_updated_time.substr(11);
+      }
+      console.log('Pushing ' + formated_missed_updated_time);
+      for (k = 0; k < CHART_NUM; k++) {
+        charts[k].data.labels.push(formated_missed_updated_time);
+        charts[k].data.datasets[0].data.push(null); // 여기에요 여기
+        charts[k].data.datasets[1].data.push(data_arr[k]);
+      }
+    }
   }
 
   return charts;
@@ -202,3 +205,4 @@ function chartButtonHandler(item) {
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
 }
+
