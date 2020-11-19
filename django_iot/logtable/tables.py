@@ -22,7 +22,7 @@ class MonitoringTableQuerySet(tables.Table):
     sensor_code_column = tables.Column(accessor='get_sensor_code', verbose_name='Sensor Code')
     sensor_model_column = tables.Column(accessor='get_sensor_model', verbose_name='Sensor Model')
     sensor_type_column = tables.Column(accessor='get_sensor_type', verbose_name='Sensor Type')
-    fault_status_column = tables.Column(accessor='get_fault_status', verbose_name='Sensor status')
+    fault_status_column = tables.Column(accessor='get_fault_status', verbose_name='Sensor Status')
     action = tables.TemplateColumn(template_name='tables/monitoring_action_column.html')
     class Meta:
         fields = ['id', 'sensor_code_column', 'sensor_model_column',

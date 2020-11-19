@@ -157,8 +157,8 @@ class FaultLog(Log):
     is_reported = models.BooleanField(default='False') # 긴급 보고서 작성되었음
     is_handled = models.BooleanField(default='False') # 고쳐짐 - 다음 일일보고서에 고쳐졌다고 명시 후 삭제
 
-    d = dict(Sensor.STATUS_CHOICES)
     def get_fault_status(self):
+        d = dict(Sensor.STATUS_CHOICES)
         return d[str(self.fault_status)]
 
     """
