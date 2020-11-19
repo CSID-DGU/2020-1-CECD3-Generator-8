@@ -170,7 +170,8 @@ function displaySensors(sensor){
     markerImage, // 커스텀마커 이미지
     markerPosition // 마커가 표시될 위치입니다
   //센서 상태 고장일 때   
-  if(sensor['sensor_status']=='BR'){ 
+  if(sensor['sensor_status']=='BR'){
+    sensor['sensor_status']='Down';
     imageSrc = '/static/img/BR.png'; 
     imageSize = new kakao.maps.Size(10, 10);
     imageOption = {offset: new kakao.maps.Point(5, 5)};
@@ -178,7 +179,8 @@ function displaySensors(sensor){
     markerPosition = new kakao.maps.LatLng(sensor['position_x'], sensor['position_y']); 
   }
   // 센서 상태가 정상작동일 때 
-  else if(sensor['sensor_status']=='OP'){ 
+  else if(sensor['sensor_status']=='OP'){
+    sensor['sensor_status']='Active'; 
     imageSrc = '/static/img/OP.png';  
     imageSize = new kakao.maps.Size(10, 10); 
     imageOption = {offset: new kakao.maps.Point(5, 5)}; 
@@ -187,7 +189,8 @@ function displaySensors(sensor){
   }
   //센서가 위험상황일 때
   else if(sensor['sensor_status']=='WN'){ 
-    imageSrc = '/static/img/WN.png';  
+    imageSrc = '/static/img/WN.png';
+    sensor['sensor_status']='Warning';  
     imageSize = new kakao.maps.Size(10, 10); 
     imageOption = {offset: new kakao.maps.Point(5, 5)}; 
     markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
