@@ -70,10 +70,10 @@ class DeviceModel(models.Model):
 
 class Sensor(models.Model):  # Model for IoT devices.
     STATUS_CHOICES = (
-        ('OP', 'Operational'),
-        ('TE', 'Temporary Error'),
-        ('BR', 'Broken'),
-        ('ND', 'Not Defined'),
+        ('OP', 'Active'),
+        ('TE', 'Error'),
+        ('BR', 'Down'),
+        ('ND', 'Unknown'),
         ('WN', 'Warning')
     )  # Has 5 sensor status choices
     sensor_code = models.CharField(max_length=10, unique=True, default="DGU")
@@ -130,10 +130,10 @@ class Log(models.Model):  # Model for Logs.
         return str(self.sensor.sensor_model)
 
     def get_sensor_type(self):
-        return str(self.sensor.sensor_model.sensor_type)
+        return str(self.sensor.get_sensor_type())
 
     def get_sensor_status(self):
-        return str(self.sensor.sensor_status)
+        return str(self.sensor.get_sensor_status())
 
     def get_absolute_url(self):
         # Returns the url to access a particular instance of the model.
@@ -157,6 +157,9 @@ class FaultLog(Log):
     is_reported = models.BooleanField(default='False') # 긴급 보고서 작성되었음
     is_handled = models.BooleanField(default='False') # 고쳐짐 - 다음 일일보고서에 고쳐졌다고 명시 후 삭제
 
+    def get_fault_status(self):
+        d = dict(Sensor.STATUS_CHOICES)
+        return d[str(self.fault_status)]
 
     """
     값 넣는 방법 :
