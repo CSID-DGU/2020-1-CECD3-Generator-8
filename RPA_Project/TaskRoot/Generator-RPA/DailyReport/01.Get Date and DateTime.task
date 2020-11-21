@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" EVENT_GAP_TIME="0">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="069fef8c-9677-453e-b4bd-3bea748223cf" NAME="Get Date and DateTime">
+      <EVENT KEY="778a8564-e37f-4682-b71c-8a06a1e6b52b" EVENT_NAME="Script Code (Get Date and DateTime)" EVENT_TYPE="11" STOPIFERR="1" SCRIPT_CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Execute_Code()&#xD;&#xA;	{&#xD;&#xA;		dateTime = System.DateTime.Now.ToString(&quot;yyyyMMddHHmmss&quot;);&#xD;&#xA;		date = System.DateTime.Now.ToString(&quot;yyyyMMdd&quot;);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <TASKGROUP TYPE="EXCEPTION" />
+  <TASKGROUP TYPE="FINALLY" />
+  <VARIABLES>
+    <VARIABLE NAME="dateTime" TYPE="string" DEFAULT="" DESCRIPTION="yyyyMMddHHmmss" />
+    <VARIABLE NAME="date" TYPE="string" DEFAULT="" DESCRIPTION="yyyyMMdd" />
+  </VARIABLES>
+</TASKSCRIPT>

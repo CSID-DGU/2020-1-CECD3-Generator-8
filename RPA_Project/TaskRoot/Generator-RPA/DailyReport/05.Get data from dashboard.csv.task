@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TASKSCRIPT PACING_TIME="0" EVENT_GAP_TIME="0">
+  <TASKGROUP TYPE="TRANSACTION">
+    <EVENTLISTS KEY="ba042c3f-79f7-46b1-86ff-69497bdc651a" NAME="Get data from dashboard.csv">
+      <EVENT KEY="9d1f817e-ee0b-40b7-9838-52fedfdebc90" EVENT_NAME="Data를 읽어서 Clipboard에 저장" EVENT_TYPE="80" EXCEL_SCRIPT="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;using SymationModules.ExcelControl;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public void Excel_Script(ExcelControlClass xl)&#xD;&#xA;	{&#xD;&#xA;		&#xD;&#xA;		xl.SetExcelID = &quot;dashboardCopyCSV&quot;;&#xD;&#xA;		xl.ExcelAppExecute(xl.SetExcelID, true);&#xD;&#xA;		&#xD;&#xA;		xl.SetWorkbookID = xl.ExcelFileOpen(xl.SetExcelID, @&quot;C:/RPA_Generator/Report/Dashboard CSV File/dashboard_&quot; + dateTime + &quot;.csv&quot;);&#xD;&#xA;		&#xD;&#xA;		xl.ActiveSheet(1);&#xD;&#xA;		&#xD;&#xA;		string address;&#xD;&#xA;		&#xD;&#xA;		// get sensorCode&#xD;&#xA;		address = &quot;B&quot; + sensorIndex.ToString();&#xD;&#xA;		sensorCode = xl.GetOneCellValue(address);&#xD;&#xA;		&#xD;&#xA;		// get sensorName&#xD;&#xA;		address = &quot;C&quot; + sensorIndex.ToString();&#xD;&#xA;		sensorName = xl.GetOneCellValue(address);&#xD;&#xA;		&#xD;&#xA;		// get sensorType&#xD;&#xA;		address = &quot;D&quot; + sensorIndex.ToString();&#xD;&#xA;		sensorType = xl.GetOneCellValue(address);&#xD;&#xA;		&#xD;&#xA;		// get updatedTime ex)2019-12-12T04:50:20&#xD;&#xA;		address = &quot;E&quot; + sensorIndex.ToString();&#xD;&#xA;		updatedTime = xl.GetOneCellValue(address); &#xD;&#xA;		&#xD;&#xA;		// get sensorStatus&#xD;&#xA;		address = &quot;F&quot; + sensorIndex.ToString();&#xD;&#xA;		sensorStatus = xl.GetOneCellValue(address);&#xD;&#xA;		&#xD;&#xA;		// get buildingName&#xD;&#xA;		address = &quot;G&quot; + sensorIndex.ToString();&#xD;&#xA;		buildingName = xl.GetOneCellValue(address);&#xD;&#xA;		&#xD;&#xA;		// get buildingLvlNum&#xD;&#xA;		address = &quot;H&quot; + sensorIndex.ToString();&#xD;&#xA;		buildingLvlNum = xl.GetOneCellValue(address);&#xD;&#xA;		&#xD;&#xA;		&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" />
+    </EVENTLISTS>
+  </TASKGROUP>
+  <TASKGROUP TYPE="CUSTOM" />
+  <TASKGROUP TYPE="EXCEPTION" />
+  <TASKGROUP TYPE="FINALLY" />
+  <VARIABLES>
+    <VARIABLE NAME="dateTime" TYPE="string" DEFAULT="" DESCRIPTION="yyyyMMddhhmmss" />
+    <VARIABLE NAME="date" TYPE="string" DEFAULT="" DESCRIPTION="yyyyMMdd" />
+    <VARIABLE NAME="sensorCode" TYPE="string" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="sensorName" TYPE="string" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="sensorType" TYPE="string" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="updatedTime" TYPE="string" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="sensorStatus" TYPE="string" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="buildingName" TYPE="string" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="buildingLvlNum" TYPE="string" DEFAULT="" DESCRIPTION="" />
+    <VARIABLE NAME="sensorIndex" TYPE="int" DEFAULT="" DESCRIPTION="" />
+  </VARIABLES>
+</TASKSCRIPT>
