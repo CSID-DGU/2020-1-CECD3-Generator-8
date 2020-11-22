@@ -138,13 +138,13 @@ function getDataArray(json_arr) {
       }
 
 
-
-      for (j = 0; j < CHART_NUM; j++) {
-        charts[j].data.labels.push(dateFormat(new Date(), "yyyy-mm-dd'T'HH:MM:ss"));
-        charts[j].data.datasets[0].data.push(data_arr[j]);
-        // charts[j].data.datasets[1].data.push(null);
+      if (i = json_arr.length - 1) {
+        for (j = 0; j < CHART_NUM; j++) {
+          charts[j].data.labels.push(dateFormat(new Date(), "yyyy-mm-dd'T'HH:MM:ss"));
+          charts[j].data.datasets[0].data.push(data_arr[j]);
+          // charts[j].data.datasets[1].data.push(null);
+        }
       }
-
 
       // check gap between next log
       var next_log_updated_time;
