@@ -137,7 +137,7 @@ function getDataArray(json_arr) {
       }
 
 
-      if (i = json_arr.length - 1) {
+      if (i == json_arr.length - 1) {
         for (j = 0; j < CHART_NUM; j++) {
           charts[j].data.labels.push(dateFormat(new Date(), "yyyy-mm-dd'T'HH:MM:ss"));
           charts[j].data.datasets[0].data.push(data_arr[j]);
