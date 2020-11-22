@@ -106,7 +106,6 @@ function getDataArray(json_arr) {
     var today_minus_3 = today;
     today_minus_3.setDate(today_minus_3.getDate() - 3);
     var updated_time = new Date(json_arr[i].updated_time);
-    var updated_time2 = new Date(json_arr[i].updated_time);
     var formated_updated_time = dateFormat(updated_time, "yyyy-mm-dd'T'HH:MM:ss");
     var updated_date = formated_updated_time.substring(0, 10);
 
@@ -116,7 +115,7 @@ function getDataArray(json_arr) {
       formated_updated_time = formated_updated_time.substr(11);
     }
 
-    if (updated_time2 < today_minus_3) {//처음 들어온 데이터가 3일전이면 고장
+    if (updated_time < today_minus_3) {//처음 들어온 데이터가 3일전이면 고장
 
       for (j = 0; j < CHART_NUM; j++) {
         charts[j].data.labels.push(formated_updated_time);
