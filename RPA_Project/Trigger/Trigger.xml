@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<TRIGGERLIST>
+  <TRIGGER KEY="b34d6de8-b0c4-4a69-9171-eaf7f4c880ca" ACTIVE="0" NAME="test" TYPE="100" EXECUTE_FILE="C:\Users\K\Desktop\Develop\Project\Generator-RPA\2020-1-CECD3-Generator-8\2020-1-CECD3-Generator-8\RPA_Project\FlowRoot\Daily Report\Daily Report.Flow" PREVKILL="1" TIMEOUTKILL="0" TIMEOUT="30">
+    <TRIGGERDATA CODE="using System;&#xD;&#xA;using System.IO;&#xD;&#xA;using System.Collections;&#xD;&#xA;using System.Collections.Generic;&#xD;&#xA;using System.Data;&#xD;&#xA;using System.Text;&#xD;&#xA;&#xD;&#xA;public partial class CustomScript&#xD;&#xA;{&#xD;&#xA;	public Tuple&lt;bool, string&gt; TriggerCommand_ScriptResult()&#xD;&#xA;	{&#xD;&#xA;		bool TriggerExecution = false;&#xD;&#xA;		string ScriptCodeInputData = &quot;&quot;;&#xD;&#xA;		&#xD;&#xA;		&#xD;&#xA;		return new Tuple&lt;bool, string&gt;(TriggerExecution, ScriptCodeInputData);&#xD;&#xA;	}&#xD;&#xA;}&#xD;&#xA;" REFERENCE_DOTNET="" REFERENCE_COM="" REFERENCE_JAR="" INTERVAL="10000" SYNC="" />
+  </TRIGGER>
+  <TRIGGER KEY="64517ef1-4736-499e-b6f2-b748cfbe940f" ACTIVE="0" NAME="zsaaa" TYPE="40" EXECUTE_FILE="C:\Users\K\Desktop\Develop\Project\Generator-RPA\2020-1-CECD3-Generator-8\2020-1-CECD3-Generator-8\RPA_Project\FlowRoot\Daily Report\Daily Report.Flow" PREVKILL="0" TIMEOUTKILL="0" TIMEOUT="30">
+    <TRIGGERDATA FILEPATH="C:\RPA_Generator\Exec Files\DailyReport.exe" MONITORING_TYPE="0" INTERVAL="500" />
+  </TRIGGER>
+</TRIGGERLIST>
