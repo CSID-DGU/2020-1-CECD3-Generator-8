@@ -1,6 +1,7 @@
 # 2020-1-CECD3-Generator-8
 RPA를 활용한 IoT 디바이스 제어 및 관리 서비스  
-[웹 사이트](http://ec2-18-206-198-8.compute-1.amazonaws.com)
+[웹 사이트](http://ec2-18-206-198-8.compute-1.amazonaws.com)  
+[![Video Demo](http://img.youtube.com/vi/qZX2BgOCRh0/0.jpg)](https://www.youtube.com/watch?v=qZX2BgOCRh0 "Video Demo")
 ## Recent Update
 * Export 기능 재구현
   * 기존 방법은 html에서 테이블의 내용을 긁어서 csv로 로컬에 저장 후 클라이언트에게 가져다 줬음
